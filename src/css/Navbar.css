@@ -1,0 +1,153 @@
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    /* Add this to create a stacking context */
+    z-index: 3;
+    /* Increase the z-index to make sure the menu is above the content */
+}
+
+.menu {
+    display: grid;
+    flex-direction: column;
+    position: fixed;
+    /* Change to fixed position */
+    top: 0;
+    left: 0;
+    /* Align to the left of the viewport */
+    width: 100%;
+    /* Make the menu full width */
+    height: 50vh;
+    /* Set the height to the full viewport height */
+    background-color: #333;
+    transform: translateY(-105%);
+    /* Initially slide the menu off-screen */
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    box-shadow: #000 0px 0px 10px;
+}
+
+.top-menu {
+    padding: 20px;
+}
+
+.menu-title {
+    color: #fff;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 20px;
+    font-size: 2em;
+}
+
+.menu-links a:hover {
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    color: #FF7300;
+}
+
+.menu-socials {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.menu-socials a {
+    margin: 0 15px;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.menu-socials a:hover {
+    color: #FF7300;
+}
+
+.menu.open {
+    transform: translateY(0);
+    /* Slide the menu in */
+}
+
+.menu .menu-item {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu .menu-item {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.menu .menu-item:hover {
+    transform: translateX(-10px);
+}
+
+.btm-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* Change to fixed position */
+    top: 0;
+    left: 0;
+    /* Align to the left of the viewport */
+    width: 100%;
+    /* Make the menu full width */
+    height: 60vh;
+    /* Set the height to the full viewport height */
+    background-color: #333;
+    transform: translateY(-150%);
+    /* Initially slide the menu off-screen */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.btm-menu .btm-menu-year {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    font-size: 8em;
+    transform: translateY(15px);
+
+}
+
+.btm-menu .btm-menu-year p {
+    transition: 0.5s;
+}
+
+.btm-menu .btm-menu-year p:hover {
+    transform: translatex(10px);
+}
+
+.btm-menu .btm-menu-links a {
+    color: #fff;
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+    font-size: 2em;
+    transition: 0.2s;
+}
+
+.btm-menu .btm-menu-links a:hover {
+    color: #FF7300;
+}
+
+.nav-btn {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    color: rgb(32, 32, 32);
+}

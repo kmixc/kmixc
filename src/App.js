@@ -1,11 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+
+//PAGES
+import Navbar from './components/Navbar';
+import Home from './pages/home.jsx';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact';
+import Videography from './pages/Videography';
+import NotFound from './pages/NotFound';
+import Icon from './components/Icon';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <Navbar />
+      <Icon></Icon>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
 

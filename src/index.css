@@ -1,13 +1,89 @@
-body {
+@import url(https://db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended+Bold);
+@import url(https://db.onlinewebfonts.com/c/440b48c0e71d1803a24ba06df2ae32bf?family=Monument+Extended);
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Monument Extended";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  overflow-x: hidden;
+}
+
+/* HOME */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(56, 56, 56);
+  opacity: 1;
+  z-index: 1;
+  /* Place the overlay below the content */
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  position: relative;
+  z-index: 0;
+  /* Place the content above the overlay */
+  text-align: center;
+}
+
+.content .logo {
+  width: 100%;
+}
+
+.content-two {
+  height: 100vh;
+  background-color: #202020;
+}
+
+.cycle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 1.3em;
+  color: rgb(32, 32, 32);
+}
+
+.icon img {
+  height: 125px;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 50%;
+}
+
+#follow {
+  position: absolute;
+  text-align: center;
+  z-index: -5;
+  overflow: hidden;
+}
+
+@keyframes rotate {
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

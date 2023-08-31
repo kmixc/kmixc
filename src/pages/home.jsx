@@ -1,0 +1,64 @@
+import React, { useEffect } from 'react';
+import Logo from '../img/logo.svg'
+import { gsap } from 'gsap';
+import TextTransition, { presets } from 'react-text-transition';
+
+const TEXTS = [
+    "Social Media Managment",
+    "Logo Creation",
+    "Brand Development",
+    "Videography",
+    "Photography",
+    "Web Development"
+];
+
+const Home = () => {
+    const [index, setIndex] = React.useState(0);
+
+    React.useEffect(() => {
+        const intervalId = setInterval(
+            () => setIndex((index) => index + 1),
+            1500, // every 3 seconds
+        );
+        return () => clearTimeout(intervalId);
+    }, []);
+
+    useEffect(() => {
+        // Reveal Animation
+        const tl = gsap.timeline();
+
+        // Elements to animate
+        const overlay = document.querySelector('.overlay');
+        // const title = document.querySelector('.title');
+        // const subtitle = document.querySelector('.subtitle');
+        // const features = document.querySelectorAll('.feature');
+
+        // Initial state (hidden)
+        //tl.set([title, subtitle, features], { autoAlpha: 0 });
+
+        // Animation
+        tl.to(overlay, { duration: 1, delay: 0.5, ease: "power4.inOut", y: -1100 });
+
+        // tl.to(title, { autoAlpha: 1, y: -20, duration: 1 });
+        // tl.to(subtitle, { autoAlpha: 1, y: -10, duration: 1 });a
+        // tl.to(features, { autoAlpha: 1, y: -10, duration: 0.5, stagger: 0.2 });
+    }, []);
+
+    return (
+        <div>
+
+            <div className="home">
+                <div className="overlay"></div>
+                <div className="content">
+                    <img src={Logo} className="logo" />
+                </div>
+            </div>
+            <div className='content-two'>
+                a
+            </div>
+            <TextTransition className='cycle' springConfig={presets.default}>{TEXTS[index % TEXTS.length]}</TextTransition>
+        </div>
+    )
+}
+
+export default Home;
