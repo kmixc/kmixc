@@ -32,7 +32,7 @@ body {
   bottom: 0;
   padding: 20px;
   color: #fff;
-  transform: translateY(50px);
+  transform: translateX(50px);
 }
 
 .marquee-overlay {
@@ -62,7 +62,7 @@ body {
 }
 
 .content-two {
-  height: 100vh;
+  height: 0vh;
   background-color: #202020;
 }
 

@@ -50,6 +50,16 @@ const Home = () => {
         const tl = gsap.timeline();
         const overlay = document.querySelector('.overlay');
         tl.to(overlay, { duration: 1, ease: "power4.inOut", y: -1100 });
+
+        const tlTwo = gsap.timeline();
+        const contentTwo = document.querySelector('.content-two');
+        tlTwo.set([contentTwo], { height: 0 });
+        tlTwo.to(contentTwo, { duration: 2, ease: "power4.inOut", height: "100vh" });
+
+        const logoTl = gsap.timeline();
+        const logo = document.querySelector('.logo');
+        logoTl.set([logo], { autoAlpha: 0, y: 50 });
+        logoTl.to(logo, { autoAlpha: 1, duration: 1, delay: 0.2, ease: "power4.inOut", y: 0 });
     };
 
     return (
