@@ -15,7 +15,7 @@ export default function icon() {
 
     return (
         <div className="icon" id="follow">
-            <img src={Circ} alt="icon" />
+            <img draggable="false" src={Circ} alt="icon" />
         </div>
     )
 }

@@ -23,8 +23,22 @@ body {
   height: 100%;
   background-color: rgb(56, 56, 56);
   opacity: 1;
-  z-index: 1;
-  /* Place the overlay below the content */
+  z-index: 3;
+}
+
+.countup-overlay {
+  font-size: 15em;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  color: #fff;
+  transform: translateY(50px);
+}
+
+.marquee-overlay {
+  font-size: 4em;
+  padding-left: 50px;
+  color: #fff;
 }
 
 .home {
@@ -62,7 +76,7 @@ body {
   width: 100%;
   margin-bottom: 30px;
   font-size: 1.3em;
-  color: rgb(32, 32, 32);
+  color: rgb(0, 0, 0);
 }
 
 .icon img {
@@ -82,7 +96,6 @@ body {
 }
 
 @keyframes rotate {
-
   100% {
     transform: rotate(360deg);
   }

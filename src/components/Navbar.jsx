@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
 import { Cross as Hamburger } from 'hamburger-react';
 import '../css/Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBehance, faInstagram, faLinkedin, faTiktok, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { text } from '@fortawesome/fontawesome-svg-core';
+import { faBehance, faInstagram, faLinkedin, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +56,6 @@ export default function Navbar() {
         gsap.to('.menu', { y: '-100%', duration: 0.3, ease: 'power4.inOut', onComplete: resetMenu });
         gsap.to('.btm-menu', { y: '-100%', duration: 0.3, ease: 'power4.inOut', onComplete: resetMenu });
         gsap.to('.hamburger-react', { color: "rgb(32, 32, 32)", duration: 1, ease: 'power4.out' });
-
     };
 
     const resetMenu = () => {
