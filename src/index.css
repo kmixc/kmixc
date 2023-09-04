@@ -15,7 +15,7 @@ body {
 
 /* HOME */
 
-.overlay {
+.home .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -64,6 +64,24 @@ body {
 .content-two {
   height: 0vh;
   background-color: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-two .boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-two .boxes .box {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
 }
 
 .cycle {

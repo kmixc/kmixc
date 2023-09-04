@@ -12,7 +12,7 @@
 }
 
 .menu {
-    display: grid;
+    display: flex;
     flex-direction: column;
     position: fixed;
     /* Change to fixed position */
@@ -21,7 +21,7 @@
     /* Align to the left of the viewport */
     width: 100%;
     /* Make the menu full width */
-    height: 50vh;
+    height: 60vh;
     /* Set the height to the full viewport height */
     background-color: #333;
     transform: translateY(-105%);
@@ -104,7 +104,7 @@
     /* Align to the left of the viewport */
     width: 100%;
     /* Make the menu full width */
-    height: 60vh;
+    height: 70vh;
     /* Set the height to the full viewport height */
     background-color: #333;
     transform: translateY(-150%);

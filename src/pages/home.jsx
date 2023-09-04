@@ -78,6 +78,20 @@ const Home = () => {
                 </div>
             </div>
             <div className='content-two'>
+                <div className='boxes'>
+                    <div className='box'>
+                        <div className="title">Videography</div>
+                        <div className="desc">Wide range of video services</div>
+                    </div>
+                    <div className='box'>
+                        <div className="title">Videography</div>
+                        <div className="desc">Wide range of video services</div>
+                    </div>
+                    <div className='box'>
+                        <div className="title">Videography</div>
+                        <div className="desc">Wide range of video services</div>
+                    </div>
+                </div>
             </div>
             <TextTransition className='cycle' springConfig={presets.default}>{TEXTS[index % TEXTS.length]}</TextTransition>
         </div>

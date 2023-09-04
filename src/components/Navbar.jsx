@@ -73,6 +73,7 @@ export default function Navbar() {
                     <div className='menu-links'>
                         <Link className='menu-item' onClick={toggleMenu} to="/">home</Link>
                         <Link className='menu-item' onClick={toggleMenu} to="/about">about</Link>
+                        <Link className='menu-item' onClick={toggleMenu} to="/contact">portfolio</Link>
                         <Link className='menu-item' onClick={toggleMenu} to="/contact">videography</Link>
                         <Link className='menu-item' onClick={toggleMenu} to="/contact">social management</Link>
                     </div>
