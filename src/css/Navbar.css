@@ -1,5 +1,16 @@
 /* NAVBAR */
 
+.nav-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #FF7300;
+    opacity: 0;
+    z-index: -2;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -9,6 +20,13 @@
     /* Add this to create a stacking context */
     z-index: 3;
     /* Increase the z-index to make sure the menu is above the content */
+}
+
+.navbar-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .menu {
@@ -110,6 +128,7 @@
     transform: translateY(-150%);
     /* Initially slide the menu off-screen */
     transition: transform 0.3s ease-in-out;
+    box-shadow: #000 0px 0px 10px;
     z-index: 1;
 }
 

@@ -1,5 +1,7 @@
 @import url(https://db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended+Bold);
 @import url(https://db.onlinewebfonts.com/c/440b48c0e71d1803a24ba06df2ae32bf?family=Monument+Extended);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,300&family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 * {
   padding: 0;
@@ -15,12 +17,23 @@ body {
 
 /* HOME */
 
-.home .overlay {
+.home .overlay-transparent {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: transparent;
+  opacity: 1;
+  z-index: 4;
+}
+
+.home .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4000px;
   background-color: rgb(56, 56, 56);
   opacity: 1;
   z-index: 3;
@@ -61,29 +74,6 @@ body {
   width: 100%;
 }
 
-.content-two {
-  height: 0vh;
-  background-color: #202020;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.content-two .boxes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content-two .boxes .box {
-  background-color: #fff;
-  padding: 10px;
-  margin: 10px;
-  height: 200px;
-  width: 200px;
-  border-radius: 5px;
-}
-
 .cycle {
   display: flex;
   justify-content: center;
@@ -95,6 +85,132 @@ body {
   margin-bottom: 30px;
   font-size: 1.3em;
   color: rgb(0, 0, 0);
+}
+
+.content-two {
+  height: 100vh;
+  background-color: #2b2b2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-two .boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content-two .boxes .box {
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  height: 400px;
+  width: 800px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+.content-two .boxes .box:nth-child(1) {
+  background-color: #FF7300;
+}
+
+.content-two .boxes .box:nth-child(2) {
+  background-color: #4169E1;
+}
+
+.content-two .boxes .box:nth-child(3) {
+  background-color: #707070;
+}
+
+.content-two .boxes .box:nth-child(4) {
+  background-color: #000000;
+}
+
+
+.content-two .boxes .box .title {
+  font-size: 3em;
+  text-align: center;
+}
+
+.content-three {
+  height: 100vh;
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-three .video {
+  background-color: #000000;
+  height: 600px;
+  width: 90%;
+}
+
+.content-three .video .video-overlay {
+  background-color: rgba(0, 0, 0, 0.801);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  height: 600px;
+  width: 90%;
+  opacity: 1;
+  transition: 2s;
+}
+
+.content-three .video .video-overlay div {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.content-three .video .video-overlay div p {
+  padding: 10px;
+}
+
+.content-three .video .video-overlay div svg {
+  font-size: 2em;
+  padding: 2px;
+}
+
+.content-three .clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.content-three .clients .worked-with {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-three .clients .worked-with .top {
+  font-size: 5em;
+}
+
+.content-three .clients .worked-with .bottom {
+  font-size: 3em;
+  font-family: 'Courgette', cursive;
+  font-weight: 100;
+}
+
+.content-three .clients .marquee-clients {
+  padding: 30px 0;
+}
+
+.content-three .clients .marquee-clients img {
+  width: 25%;
 }
 
 .icon img {
@@ -118,3 +234,164 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.overlay-vid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* ABOUT */
+
+/* CONTACT */
+
+/* WEBSITE DEVELOPMENT */
+
+/* VIDEOGRAPHY */
+
+.videography-page {}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.top-bar .logo {
+  width: 10%;
+  padding: 20px;
+  position: absolute;
+}
+
+.videography-title {
+  height: 100vh;
+  padding: 4% 0;
+}
+
+.videography-title div {
+  text-align: center;
+}
+
+.videography-title h1 {
+  font-size: 10em;
+  cursor: default;
+  transition: 0.2s ease;
+}
+
+.videography-title h1:hover {
+  color: #FF7300;
+}
+
+.videography-title .text-change {
+  font-family: 'Courgette', cursive;
+  font-weight: 100;
+}
+
+.title-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-1 h1 {
+  padding: 0 20px;
+}
+
+.title-2 h1 {
+  margin: 0 60px;
+}
+
+.title-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-3 h1 {
+  padding: 0 20px;
+}
+
+.title-3 h1 .text-change:nth-child(2) {
+  text-decoration: underline;
+}
+
+.title-4 h1 {
+  margin: 0 80px;
+}
+
+.square-one {
+  height: 125px;
+  width: 700px;
+  background-color: #FF7300;
+  z-index: -2;
+}
+
+.square-two {
+  height: 125px;
+  width: 500px;
+  background-color: #FF7300;
+  z-index: -2;
+}
+
+.videography-title p {
+  text-align: center;
+}
+
+.videography-two {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.videography-two h1 {
+  font-size: 12em;
+  padding: 10px 50px;
+}
+
+.videography-two .video-section {
+  position: relative;
+  bottom: 20%;
+  left: 20%;
+}
+
+.videography-two .video-section p {
+  text-align: end;
+}
+
+.videography-two .video-section .video {
+  height: 576px;
+  width: 1024px;
+  background-color: #202020;
+}
+
+.videography-two .video-section .vid-circ img {
+  position: absolute;
+  height: 350px;
+  right: 100px;
+  top: 400px;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.videography-three {
+  height: 100vh;
+}
+
+.videography-three h1 {
+  font-size: 10em;
+}
+
+/* SOCIAL MEDIA MANAGEMENT */

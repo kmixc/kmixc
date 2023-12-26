@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
 import { Cross as Hamburger } from 'hamburger-react';
@@ -28,12 +28,14 @@ export default function Navbar() {
         const linksTl = gsap.timeline();
         const yearTl = gsap.timeline();
         const contactTl = gsap.timeline();
+        const overlayTl = gsap.timeline();
 
         const title = document.querySelector('.menu-title');
         const year = document.querySelector('.btm-menu-year');
         const contact = document.querySelector('.btm-menu-item');
         const links = document.querySelector('.menu-links');
         const socials = document.querySelector('.menu-socials');
+        const overlay = document.querySelector('.nav-overlay');
 
         textTl.set([title], { autoAlpha: 0 });
         textTl.set([title], { y: -50 });
@@ -50,12 +52,18 @@ export default function Navbar() {
 
         socialsTl.set([socials], { y: 20, autoAlpha: 0 });
         socialsTl.to([socials], { delay: 0.5, autoAlpha: 1, y: 0, duration: 1, ease: 'power2.out' });
+
+        overlayTl.set([overlay], { y: '-200%', opacity: 1, zIndex: -5, height: '200%' });
+        overlayTl.to([overlay], { y: '-0%', duration: 2, ease: 'power2.out', opacity: 1, height: '300%', zIndex: 3 });
+
     };
 
     const closeMenu = () => {
         gsap.to('.menu', { y: '-100%', duration: 0.3, ease: 'power4.inOut', onComplete: resetMenu });
         gsap.to('.btm-menu', { y: '-100%', duration: 0.3, ease: 'power4.inOut', onComplete: resetMenu });
         gsap.to('.hamburger-react', { color: "rgb(32, 32, 32)", duration: 1, ease: 'power4.out' });
+        gsap.to('.nav-overlay', { y: '-100%', duration: 1, ease: 'power2.out' });
+        gsap.to('.nav-overlay', { y: '-100%', duration: 1, ease: 'power2.out', height: '0%' });
     };
 
     const resetMenu = () => {
@@ -65,6 +73,7 @@ export default function Navbar() {
 
     return (
         <div>
+            <div className='nav-overlay'></div>
             <div className='navbar'>
                 <div className={`menu ${isOpen ? 'open' : ''}`}>
                     <div className='top-menu'>
@@ -73,9 +82,10 @@ export default function Navbar() {
                     <div className='menu-links'>
                         <Link className='menu-item' onClick={toggleMenu} to="/">home</Link>
                         <Link className='menu-item' onClick={toggleMenu} to="/about">about</Link>
-                        <Link className='menu-item' onClick={toggleMenu} to="/contact">portfolio</Link>
-                        <Link className='menu-item' onClick={toggleMenu} to="/contact">videography</Link>
-                        <Link className='menu-item' onClick={toggleMenu} to="/contact">social management</Link>
+                        <Link className='menu-item' onClick={toggleMenu} to="/our-work">our work</Link>
+                        <Link className='menu-item' onClick={toggleMenu} to="/videography">videography</Link>
+                        <Link className='menu-item' onClick={toggleMenu} to="/social-media-management">social management</Link>
+                        <Link className='menu-item' onClick={toggleMenu} to="/website-development">website development</Link>
                     </div>
                     <div className='menu-socials'>
                         <a href="https://www.instagram.com/kmixcvisuals/" target='social'>

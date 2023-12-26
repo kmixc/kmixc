@@ -9,7 +9,7 @@ export default function icon() {
         $("#follow").css({
             left: e.pageX - 60,
             top: e.pageY - 60,
-            zIndex: 0
+            zIndex: -1
         })
     });
 
