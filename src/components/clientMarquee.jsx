@@ -13,7 +13,7 @@ import Renogurus_Logo from '../img/client_logos/renogurus_logo.png'
 import Chair_Logo from '../img/client_logos/chair_logo.png'
 import OTP_Logo from '../img/client_logos/otp_logo.png'
 import GTA_Logo from '../img/client_logos/gtaexotics_logo.png'
-import CGR_Logo from '../img/client_logos/CGR_logo.png'
+import CGR_Logo from '../img/client_logos/customglassrailings_logo.png'
 
 export default function clientMarquee() {
     return (
