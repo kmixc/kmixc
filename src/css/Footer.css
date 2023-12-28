@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+
+.footer {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.footer .logo {
+    text-align: center;
+}
+
+.footer .logo img {
+    width: 60%;
+    transition: 0.5s;
+}
+
+.footer .logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer .quick-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .quick-links .icon {
+    padding: 0 5px;
+    font-size: 2em;
+    color: #000;
+    transition: 0.3s;
+}
+
+.footer .quick-links .icon:hover {
+    color: #FF7300;
+}
+
+.footer .quick-links .text {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+    transition: 0.3s;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+}
+
+.footer .quick-links .text:hover {
+    color: #FF7300;
+    border: 2px solid #FF7300;
+}
+
+.footer .nav {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.footer .links {
+    padding: 20px 50px;
+}
+
+.footer .links p {
+    font-size: 1.5em;
+}
+
+.footer .links ul {
+    text-decoration: none;
+}
+
+.footer .links ul li {
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 0;
+}
+
+.footer ul li a {
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #FF7300;
+}

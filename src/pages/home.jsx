@@ -4,20 +4,19 @@ import { gsap } from 'gsap';
 import TextTransition, { presets } from 'react-text-transition';
 import CountUp from 'react-countup';
 import Marquee from "react-fast-marquee";
+import $ from 'jquery'
+
+//COMPONENTS
+import ClientMarquee from '../components/clientMarquee.jsx'
+import Footer from '../components/Footer.jsx'
 
 //ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCirclePlay, faP } from '@fortawesome/free-solid-svg-icons';
-
-//CLIENT LOGOS
-import Millworx_Logo from '../img/client_logos/millworx_logo.png'
-import Cedonia_Logo from '../img/client_logos/cedonia_logo.png'
-import BB_Logo from '../img/client_logos/bb_logo.png'
-import FP_Logo from '../img/client_logos/facilityplus_logo.png'
-import Duralock_Logo from '../img/client_logos/duralock_logo.png'
-import BH_Logo from '../img/client_logos/basemhanna_logo.png'
-import Renogurus_Logo from '../img/client_logos/renogurus_logo.png'
-import _Logo from '../img/client_logos/duralock_logo.png'
+import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
+import { faWandMagicSparkles } from '@fortawesome/free-solid-svg-icons';
+import { faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faUsersViewfinder } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 const TEXTS = [
     "Social Media Managment",
@@ -81,6 +80,15 @@ const Home = () => {
         overlay.style.visibility = "hidden";
     }
 
+    function activateOverlay() {
+        let overlay = document.querySelector('.video-overlay');
+        setTimeout(() => {
+            overlay.style.opacity = 1;
+            overlay.style.visibility = "visible";
+        }, 5000);
+    }
+
+
     return (
         <div>
             <div className="home">
@@ -100,47 +108,68 @@ const Home = () => {
 
             <div className='content-two'>
                 <div className='boxes'>
-                    <a href="/videography" className='box'>
-                        <div className="title">VIDEOGRAPHY</div>
+                    <a href="/videography" className='box hover-underline-animation'>
+                        <p className='num'>01</p>
+                        <div className="title">
+                            <p>
+                                VIDEOGRAPHY
+                            </p>
+                            <FontAwesomeIcon icon={faVideo} />
+                        </div>
                     </a>
-                    <a href="/social-media-management" className='box'>
-                        <div className="title">SOCIAL MEDIA MANAGEMENT</div>
+                    <a href="/social-media-management" className='box hover-underline-animation'>
+                        <p className='num'>02</p>
+                        <div className="title">
+                            <p>
+                                SOCIAL MEDIA
+                            </p>
+                            <FontAwesomeIcon icon={faThumbsUp} />
+                        </div>
                     </a>
-                    <a href="/website-development" className='box'>
-                        <div className="title">WEB DESIGN</div>
+                    <a href="/website-development" className='box hover-underline-animation'>
+                        <p className='num'>03</p>
+                        <div className="title">
+                            <p>
+                                WEB DESIGN
+                            </p>
+                            <FontAwesomeIcon icon={faWandMagicSparkles} />
+                        </div>
                     </a>
-                    <a href="/our-work" className='box'>
-                        <div className="title">OUR WORK</div>
+                    <a href="/our-work" className='box hover-underline-animation'>
+                        <p className='num'>04</p>
+                        <div className="title">
+                            <p>
+                                OUR WORK
+                            </p>
+                            <FontAwesomeIcon icon={faUsersViewfinder} />
+                        </div>
                     </a>
                 </div>
             </div>
 
             <div className='content-three'>
-                <div onMouseEnter={disableOverlay} className='video'>
+                <div onMouseEnter={disableOverlay} onMouseLeave={activateOverlay} className='video'>
                     <div className='video-overlay'>
                         <div>
                             <p>see through my lens</p>
                             <FontAwesomeIcon icon={faCirclePlay} />
                         </div>
                     </div>
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ABxbSUmVDAg?si=S7LW23n9ltn7_ADi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ABxbSUmVDAg?si=S7LW23n9ltn7_ADi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
                 <div className='clients'>
                     <div className='worked-with'>
                         <h1 className='top'>We worked with</h1>
                         <h1 className='bottom'>Not just clients, but partners</h1>
                     </div>
-                    <Marquee className='marquee-clients'>
-                        <img src={Millworx_Logo} alt="" />
-                        <img src={BB_Logo} alt="" />
-                        <img src={Cedonia_Logo} alt="" />
-                        <img src={BH_Logo} alt="" />
-                        <img src={FP_Logo} alt="" />
-                        <img src={Renogurus_Logo} alt="" />
-                        <img src={Duralock_Logo} alt="" />
-                    </Marquee>
                 </div>
+                <ClientMarquee></ClientMarquee>
             </div>
+
+            <div className='content-four'>
+
+            </div>
+            <Footer></Footer>
         </div >
     )
 }

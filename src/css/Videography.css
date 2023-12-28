@@ -1,0 +1,141 @@
+/* VIDEOGRAPHY */
+
+.videography-page {}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.top-bar .logo {
+    width: 10%;
+    padding: 20px;
+    position: absolute;
+}
+
+.videography-title {
+    height: 100vh;
+    padding: 4% 0;
+}
+
+.videography-title div {
+    text-align: center;
+}
+
+.videography-title h1 {
+    font-size: 10em;
+    cursor: default;
+    transition: 0.2s ease;
+}
+
+.videography-title h1:hover {
+    color: #FF7300;
+}
+
+.videography-title .text-change {
+    font-family: 'Courgette', cursive;
+    font-weight: 100;
+}
+
+.title-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-1 h1 {
+    padding: 0 20px;
+}
+
+.title-2 h1 {
+    margin: 0 60px;
+}
+
+.title-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-3 h1 {
+    padding: 0 20px;
+}
+
+.title-3 h1 .text-change:nth-child(2) {
+    text-decoration: underline;
+}
+
+.title-4 h1 {
+    margin: 0 80px;
+}
+
+.square-one {
+    height: 125px;
+    width: 700px;
+    background-color: #FF7300;
+    z-index: -2;
+}
+
+.square-two {
+    height: 125px;
+    width: 500px;
+    background-color: #FF7300;
+    z-index: -2;
+}
+
+.videography-title p {
+    text-align: center;
+}
+
+.videography-two {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.videography-two h1 {
+    font-size: 12em;
+    padding: 10px 50px;
+}
+
+.videography-two .video-section {
+    position: relative;
+    bottom: 20%;
+    left: 20%;
+}
+
+.videography-two .video-section p {
+    text-align: end;
+}
+
+.videography-two .video-section .video {
+    height: 576px;
+    width: 1024px;
+    background-color: #202020;
+}
+
+.videography-two .video-section .vid-circ img {
+    position: absolute;
+    height: 350px;
+    right: 100px;
+    top: 400px;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.videography-three {
+    height: 100vh;
+}
+
+.videography-three h1 {
+    font-size: 10em;
+}

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import '../css/Videography.css'
 import { gsap } from 'gsap';
 import { Link } from 'react-router-dom'
 import Logo from '../img/logo.svg'

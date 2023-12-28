@@ -1,9 +1,10 @@
 import React from 'react'
+import ClientMarquee from '../components/clientMarquee'
 
 export default function About() {
     return (
         <div>
-            About
+            <ClientMarquee></ClientMarquee>
         </div>
     )
 }
