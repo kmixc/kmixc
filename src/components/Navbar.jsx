@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
-import { Cross as Hamburger } from 'hamburger-react';
 import '../css/Navbar.css'
+import Logo from '../img/logo-white.svg'
+
+
+//ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBehance, faInstagram, faLinkedin, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { Cross as Hamburger } from 'hamburger-react';
+
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -53,8 +58,8 @@ export default function Navbar() {
         socialsTl.set([socials], { y: 20, autoAlpha: 0 });
         socialsTl.to([socials], { delay: 0.5, autoAlpha: 1, y: 0, duration: 1, ease: 'power2.out' });
 
-        overlayTl.set([overlay], { y: '-200%', opacity: 1, zIndex: -5, height: '200%' });
-        overlayTl.to([overlay], { y: '-0%', duration: 2, ease: 'power2.out', opacity: 1, height: '300%', zIndex: 3 });
+        overlayTl.set([overlay], { y: '-200%', opacity: 1, zIndex: -2, height: '200%' });
+        overlayTl.to([overlay], { y: '-0%', duration: 2, ease: 'power2.out', opacity: 1, height: '900%', zIndex: 3 });
 
     };
 
@@ -77,10 +82,9 @@ export default function Navbar() {
             <div className='navbar'>
                 <div className={`menu ${isOpen ? 'open' : ''}`}>
                     <div className='top-menu'>
-                        <p className='menu-title'>kmixc visuals</p>
+                        <Link to="/"><img className='menu-title' src={Logo} alt="Kmixc-Logo" /></Link>
                     </div>
                     <div className='menu-links'>
-                        <Link className='menu-item' onClick={toggleMenu} to="/">home</Link>
                         <Link className='menu-item' onClick={toggleMenu} to="/about">about</Link>
                         <Link className='menu-item' onClick={toggleMenu} to="/our-work">our work</Link>
                         <Link className='menu-item' onClick={toggleMenu} to="/videography">videography</Link>

@@ -19,37 +19,37 @@ export default function clientMarquee() {
     return (
         <Marquee pauseOnHover={true} speed={150} loop={10} className='marquee-clients'>
             <a href='https://cgrcanada.com/' target='client_site'>
-                <img src={CGR_Logo} alt="" />
+                <img src={CGR_Logo} alt="CGR LOGO" />
             </a>
             <a href='http://www.cedonia.ca/' target='client_site'>
-                <img src={Cedonia_Logo} alt="" />
+                <img src={Cedonia_Logo} alt="CEDONIA" />
             </a>
             <a href='https://www.millworx.ca/' target='client_site'>
-                <img src={Millworx_Logo} alt="" />
+                <img src={Millworx_Logo} alt="Millworx_Logo" />
             </a>
             <a href='https://duralockinterlocking.ca/' target='client_site'>
-                <img src={Duralock_Logo} alt="" />
+                <img src={Duralock_Logo} alt="Duralock_Logo" />
             </a>
             <a href='https://renogurus.ca/' target='client_site'>
-                <img src={Renogurus_Logo} alt="" />
+                <img src={Renogurus_Logo} alt="Renogurus_Logo" />
             </a>
             <a href='https://basemhanna.com/' target='client_site'>
-                <img src={BH_Logo} alt="" />
+                <img src={BH_Logo} alt="BH_Logo" />
             </a>
             <a href='https://facilityplus.ca/' target='client_site'>
-                <img src={FP_Logo} alt="" />
+                <img src={FP_Logo} alt="FP_Logo" />
             </a>
             <a href='https://gtaexotics.ca/' target='client_site'>
-                <img src={GTA_Logo} alt="" />
+                <img src={GTA_Logo} alt="GTA_Logo" />
             </a>
             <a href='https://www.instagram.com/bobbybulletss/' target='client_site'>
-                <img src={BB_Logo} alt="" />
+                <img src={BB_Logo} alt="BB_Logo" />
             </a>
-            <a>
-                <img src={Chair_Logo} alt="" />
-            </a>
+            <div>
+                <img src={Chair_Logo} alt="Chair_Logo" />
+            </div>
             <a href='https://www.instagram.com/optimal.trim.carpentry/' target='client_site'>
-                <img src={OTP_Logo} alt="" />
+                <img src={OTP_Logo} alt="OTP_Logo" />
             </a>
         </Marquee>
     )

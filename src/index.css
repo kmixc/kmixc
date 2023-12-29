@@ -2,6 +2,8 @@
 @import url(https://db.onlinewebfonts.com/c/440b48c0e71d1803a24ba06df2ae32bf?family=Monument+Extended);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,300&family=Roboto:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
 
 * {
   padding: 0;
@@ -220,6 +222,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 70px;
 }
 
 .content-three .clients .worked-with {
@@ -230,17 +233,34 @@ body {
 }
 
 .content-three .clients .worked-with .top {
-  font-size: 5em;
+  font-size: 6em;
 }
 
 .content-three .clients .worked-with .bottom {
-  font-size: 3em;
+  font-size: 4em;
   font-family: 'Courgette', cursive;
   font-weight: 100;
 }
 
+.content-three .clients .worked-with .bottom span {
+  font-family: 'Courgette', cursive;
+  font-weight: 100;
+}
+
+.content-three .clients .worked-with .bottom .underline {
+  text-decoration: line-through;
+}
+
+.content-three .clients .worked-with .bottom .color {
+  color: #FF7300;
+}
+
+.content-three .marquee-clients {
+  padding: 50px;
+}
+
 .content-three .marquee-clients img {
-  height: 200px;
+  height: 175px;
   padding: 20px;
   filter: grayscale(1);
   transition: 0.4s;

@@ -4,7 +4,6 @@ import { gsap } from 'gsap';
 import TextTransition, { presets } from 'react-text-transition';
 import CountUp from 'react-countup';
 import Marquee from "react-fast-marquee";
-import $ from 'jquery'
 
 //COMPONENTS
 import ClientMarquee from '../components/clientMarquee.jsx'
@@ -101,7 +100,7 @@ const Home = () => {
                 </div>
                 <div className="overlay"></div>
                 <div className="content">
-                    <img src={Logo} draggable="false" className="logo" />
+                    <img src={Logo} draggable="false" className="logo" alt='Kmixc-logo' />
                 </div>
                 <TextTransition className='cycle' springConfig={presets.default}>{TEXTS[index % TEXTS.length]}</TextTransition>
             </div>
@@ -160,7 +159,7 @@ const Home = () => {
                 <div className='clients'>
                     <div className='worked-with'>
                         <h1 className='top'>We worked with</h1>
-                        <h1 className='bottom'>Not just clients, but partners</h1>
+                        <h1 className='bottom'>Not just <span className='underline'>clients</span>, but <span className='color'>partners</span>.</h1>
                     </div>
                 </div>
                 <ClientMarquee></ClientMarquee>
