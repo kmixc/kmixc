@@ -38,7 +38,7 @@ export default function Videography() {
 
     useEffect(() => {
         gsap.fromTo(".square-three", { xPercent: 100, display: 'none' }, {
-            xPercent: 2,
+            xPercent: 0,
             duration: 1.5,
             display: 'flex',
             ease: 'power4.inOut',

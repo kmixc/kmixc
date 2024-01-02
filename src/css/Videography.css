@@ -492,3 +492,179 @@
 .videography-six .marquee-clients img:hover {
     filter: grayscale(0);
 }
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 400px) {
+    .top-bar .logo {
+        width: 10%;
+        padding: 20px;
+        position: absolute;
+    }
+
+    .videography-title {
+        height: 100%;
+        padding: 4% 0;
+    }
+
+    .videography-title .title-1 h1 {
+        padding: 0 10px;
+    }
+
+    .videography-title .title-2 h1 {
+        margin: 0 30px;
+    }
+
+    .videography-title .title-3 h1 {
+        padding: 0 10px;
+    }
+
+    .videography-title .title-4 h1 {
+        margin: 0 30px;
+    }
+
+    .videography-title .y2k-1 {
+        width: 13%;
+        right: 0;
+        top: 230px;
+    }
+
+    .videography-title .y2k-2 {
+        width: 12%;
+        left: 10px;
+        top: 110px;
+    }
+
+    .videography-title div {
+        text-align: center;
+    }
+
+    .videography-title h1 {
+        font-size: 3.8em;
+        line-height: 80px;
+    }
+
+    .videography-title .square-one {
+        height: 50px;
+        width: 700px;
+        background-color: #FF7300;
+        z-index: -2;
+    }
+
+    .videography-title .square-two {
+        height: 50px;
+        width: 500px;
+        background-color: #FF7300;
+        z-index: -2;
+    }
+
+    .videography-two {
+        height: 100%;
+    }
+
+    .videography-two h1 {
+        font-size: 2.98em;
+        text-align: left;
+        padding: 5px;
+        z-index: 1;
+    }
+
+    .videography-two .video-section {
+        position: static;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: end;
+    }
+
+    .videography-two .video-section p {
+        padding: 5px;
+    }
+
+    .videography-two .video-section .video {
+        width: 100%;
+        height: 300px;
+    }
+
+    .videography-two .video-section .square-three {
+        width: 70%;
+        height: 100px;
+        bottom: 260px;
+    }
+
+    .videography-two .vid-circ img {
+        display: none;
+    }
+
+    .videography-three h1 {
+        font-size: 2em;
+    }
+
+    .videography-four .square-four {
+        display: none;
+        width: 100%;
+    }
+
+    .videography-four .square-five {
+        display: none;
+        width: 100%;
+    }
+
+    .videography-four .desc {
+        line-height: normal;
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    .videography-four .desc .name {
+        font-size: 1.5em;
+    }
+
+    .videography-five {
+        display: none;
+    }
+
+    .videography-six {
+        height: 100%;
+    }
+
+    .videography-six .title-area {
+        padding: 10px;
+    }
+
+    .videography-six .title-area .title {
+        font-size: 2.5em;
+    }
+
+    .videography-six .title-area .text-change {
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+    .videography-six .expand {
+        padding: 5px;
+        float: none;
+    }
+
+    .videography-six .expand .dropdown .top {
+        font-size: 1.5em;
+    }
+
+    .videography-six .expand .dropdown .top .text {
+        padding-right: 10px;
+    }
+
+    .videography-six .expand .dropdown .div-hide .list-item {
+        font-size: 0.8em;
+    }
+
+    .videography-six .marquee-clients {
+        padding: 20px;
+    }
+
+    .videography-six .marquee-clients img {
+        height: 125px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {}
+
+@media (min-width: 600px) and (max-width: 900px) {}
