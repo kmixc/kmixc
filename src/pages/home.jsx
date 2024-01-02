@@ -65,7 +65,7 @@ const Home = () => {
 
         const text_tl = gsap.timeline();
         const text_overlay = document.querySelector('.overlay-transparent');
-        text_tl.to(text_overlay, { duration: 1, ease: "power4.inOut", y: -1100 });
+        text_tl.to(text_overlay, { duration: 1, ease: "power4.inOut", y: -4100 });
 
         const logoTl = gsap.timeline();
         const logo = document.querySelector('.logo');

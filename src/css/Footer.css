@@ -89,3 +89,17 @@
 .footer ul li a:hover {
     color: #FF7300;
 }
+
+@media only screen and (max-width: 400px) {
+    .footer .nav {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .footer .nav {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {}

@@ -139,7 +139,6 @@
     bottom: 0;
     font-size: 8em;
     transform: translateY(15px);
-
 }
 
 .btm-menu .btm-menu-year p {
@@ -171,3 +170,42 @@
     padding: 20px;
     color: rgb(32, 32, 32);
 }
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        height: 50vh;
+    }
+
+    .menu-title {
+        color: #fff;
+        width: 25%;
+    }
+
+    .btm-menu {
+        height: 60vh;
+    }
+
+    .btm-menu .btm-menu-year {
+        font-size: 2em;
+        bottom: 32px;
+        left: 20px;
+    }
+
+    .menu .menu-item {
+        font-size: 0.6em;
+        height: 100%;
+        text-align: right;
+    }
+
+    .btm-menu .btm-menu-links a {
+        bottom: 25px;
+        right: 40px;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {}
+
+@media (min-width: 600px) and (max-width: 900px) {}
