@@ -382,20 +382,32 @@ body {
   .content-two .boxes .box {
     flex-direction: column;
     width: 100%;
-    height: 300px;
+    height: 150px;
+  }
+
+  .content-two .boxes .box .title {
+    font-size: 2em;
+  }
+
+  .content-three .video .video-overlay {
+    height: 400px;
+  }
+
+  .content-three .video {
+    height: 400px;
   }
 
   .content-three .clients {
-    padding: 20px;
+    padding: 10px;
   }
 
   .content-three .clients .worked-with .top {
-    font-size: 2.5em;
+    font-size: 1.9em;
     text-align: center;
   }
 
   .content-three .clients .worked-with .bottom {
-    font-size: 2em;
+    font-size: 1.6em;
     text-align: center;
   }
 
