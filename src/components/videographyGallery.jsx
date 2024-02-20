@@ -23,7 +23,7 @@ export default function videographyGallery() {
                     <p className="title">RENOVATION <br /> VIDEOGRAPHY</p>
                     <img src={RENOVATION} alt="Renovations" />
                 </a>
-                <a href='#' className='card-wide'>
+                <a href='#' className='card'>
                     <p className="title">EVENT <br /> VIDEOGRAPHY</p>
                     <img src={EVENT} alt="Events" />
                 </a>
@@ -35,7 +35,7 @@ export default function videographyGallery() {
                     <p className="title">BARBER <br /> VIDEOGRAPHY</p>
                     <img src={BARBER} alt="Barber" />
                 </a>
-                <a href='#' className='card-wide'>
+                <a href='#' className='card'>
                     <p className="title">AUTOMOTIVE <br /> VIDEOGRAPHY</p>
                     <img src={AUTOMOTIVE} alt="Automotive" />
                 </a>
