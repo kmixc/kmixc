@@ -1,0 +1,22 @@
+.about-page {
+    height: 100vh;
+}
+
+.about-top-bar .logo {
+    width: 10%;
+    padding: 20px;
+}
+
+.about-page .title {
+    padding: 20px;
+}
+
+.about-page .title p {
+    font-size: 6em;
+}
+
+.about-page .picture-box {}
+
+.about-page .picture-box .picture {}
+
+.about-page .picture-box .info {}

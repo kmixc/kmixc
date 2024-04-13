@@ -1,51 +1,40 @@
 import React from 'react'
-import Logo from '../img/logo.svg'
 import '../css/Footer.css'
 
 //ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faSquareBehance, faSquareInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 
 
 
 export default function Footer() {
     return (
         <div className='footer'>
-            <div className='logo'>
-                <img src={Logo} alt="" />
-            </div>
-            <div className='quick-links'>
-                <a className='icon' href="#"><FontAwesomeIcon icon={faEnvelope} /></a>
-                <a className='text' href="/contact">Contact Today</a>
-                <a className='text' href="#">Join the team</a>
-                <a className='icon' href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-            </div>
-            <div className='nav'>
+            <div className='footer-top'>
                 <div className='links'>
-                    <p>Explore</p>
-                    <ul>
-                        <li><a href="#">Explore</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Insights</a></li>
-                    </ul>
+                    <a href="/our-work">WORK</a>
+                    <a href="/about">ABOUT</a>
+                    <a href="/contact">CONTACT</a>
                 </div>
-                <div className='links'>
-                    <p>Expertise</p>
-                    <ul>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">Creative</a></li>
-                        <li><a href="#">Capabilities</a></li>
-                    </ul>
+
+                <div className='socials'>
+                    <a href="https://www.instagram.com/kmixcvisuals/" target='social'>
+                        <FontAwesomeIcon icon={faSquareInstagram} size='xl' />
+                    </a>
+                    <a href="https://www.linkedin.com/in/oliver-kmiec-5b601b1b0/" target='social'>
+                        <FontAwesomeIcon icon={faLinkedin} size='xl' />
+                    </a>
+                    <a href="https://www.behance.net/kmixc" target='social'>
+                        <FontAwesomeIcon icon={faSquareBehance} size='xl' />
+                    </a>
                 </div>
-                <div className='links'>
-                    <p>Solutions</p>
-                    <ul>
-                        <li><a href="#">Videography</a></li>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Social Media</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
+            </div>
+
+            <div className='box-holder'>
+                <div className='box'>
+                    <a href="#top">BACK TO THE TOP</a>
+                    <p>©2024 KMIXC VISUALS</p>
                 </div>
             </div>
         </div>

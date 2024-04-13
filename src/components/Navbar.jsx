@@ -95,7 +95,7 @@ export default function Navbar() {
                         <a href="https://www.instagram.com/kmixcvisuals/" target='social'>
                             <FontAwesomeIcon icon={faInstagram} size='xl' />
                         </a>
-                        <a href="https://www.youtube.com/@kmixc/shorts" target='social'>
+                        <a href="https://www.youtube.com/@kmixc/" target='social'>
                             <FontAwesomeIcon icon={faYoutube} size='xl' />
                         </a>
                         <a href="https://www.tiktok.com/@kmixc" target='social'>

@@ -14,26 +14,81 @@
 
 .contact-page .title .underline {
     text-decoration: underline;
+    transition: 0.3s;
+}
+
+.contact-page .title .underline:hover {
+    color: #FF7300;
 }
 
 .contact-page .form-offset {
     display: flex;
     justify-content: right;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
+}
+
+.form-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.round-button {
+    width: 20%;
+}
+
+.round-button-circle {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #FF7300;
+    margin-left: 100px;
+    transition: 0.5s;
+}
+
+.round-button-circle:hover {
+    background: #000000;
+}
+
+.round-button p {
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    line-height: 1em;
+    margin-top: -0.5em;
+
+    text-align: center;
+    color: #e2eaf3;
+    font-size: 2em;
+    text-decoration: none;
 }
 
 .contact-page .form-offset .desc {
-    width: 50%;
     font-size: 2.3em;
     text-align: right;
     padding: 20px;
 }
 
+.contact-page .form-offset .desc .underline {
+    text-decoration: underline;
+}
+
+.contact-page .form-offset .desc .text-change {
+    font-family: 'Courgette', cursive;
+    font-size: 1.4em;
+    line-height: 40px;
+}
+
 .contact-page .form {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
     padding: 20px;
 }

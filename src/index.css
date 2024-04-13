@@ -205,7 +205,7 @@ body {
 .content-three .video .video-overlay div {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .content-three .video .video-overlay div p {

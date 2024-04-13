@@ -6,8 +6,8 @@ import Circle from '../img/circle_text_for_video.svg'
 import $ from 'jquery'
 
 //COMPONENTS
-import VideographyGallery from '../components/videographyGallery'
 import ClientMarquee from '../components/clientMarquee'
+import Footer from '../components/Footer.jsx'
 
 //ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -259,10 +259,6 @@ export default function Videography() {
                 </div>
             </div>
 
-            <div className='videography-five'>
-                <VideographyGallery />
-            </div>
-
             <div className='videography-six'>
                 <div className='title-area'>
                     <p className='title'>SERVICES</p>
@@ -429,6 +425,7 @@ export default function Videography() {
                     </div>
                 </div>
                 <ClientMarquee />
+                <Footer></Footer>
             </div>
         </div >
     )

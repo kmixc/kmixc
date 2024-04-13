@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Website_Development() {
+export default function Social_Media_Management() {
     return (
         <div>
             Currently Under Development
