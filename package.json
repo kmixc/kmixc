@@ -26,6 +26,7 @@
     "react-scripts": "^5.0.1",
     "react-social-media-embed": "^2.5.13",
     "react-text-transition": "^3.1.0",
+    "swiper": "^11.1.1",
     "typeit-react": "^2.6.4",
     "web-vitals": "^2.1.4"
   },
