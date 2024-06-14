@@ -40,7 +40,7 @@ body {
   z-index: 3;
 }
 
-.countup-overlay {
+.home .overlay-transparent .countup-overlay {
   font-size: 15em;
   position: absolute;
   bottom: 0;

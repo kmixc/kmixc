@@ -2,21 +2,71 @@
     height: 100vh;
 }
 
+.about-top-bar {
+    display: flex;
+}
+
 .about-top-bar .logo {
-    width: 10%;
+    width: 80%;
     padding: 20px;
 }
 
-.about-page .title {
+.about-top-bar .page-text {
+    width: 10%;
     padding: 20px;
+    font-size: 20px;
 }
 
 .about-page .title p {
     font-size: 6em;
 }
 
-.about-page .picture-box {}
+.about-section-1 {
+    height: 50vh;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
 
-.about-page .picture-box .picture {}
+.about-section-1 .text {
+    width: 50%;
+    font-size: 3em;
+    padding: 20px;
+}
 
-.about-page .picture-box .info {}
+.about-picture .picture {
+    width: 100%;
+    padding: 20px;
+}
+
+.about-section-2 {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.about-section-2 .text {
+    font-size: 4em;
+    padding: 20px;
+}
+
+.about-section-3 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section-3 .big-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 250px;
+    font-size: 20em;
+    padding: 20px;
+}
+
+.about-section-4 .picture {
+    width: 20%;
+}
