@@ -10,6 +10,8 @@ import { faSortDown } from '@fortawesome/free-solid-svg-icons';
 
 import { InstagramEmbed } from 'react-social-media-embed';
 
+import Demo_Reel from '../img/Demo_Reel_2023_Website.mp4'
+
 export default function Our_Work() {
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
@@ -51,7 +53,7 @@ export default function Our_Work() {
 
                 <div className='video-background'>
                     <video autoplay="autoplay" loop="loop" muted defaultMuted playsInline style={{ maxWidth: "1000%" }} id='myVideo'>
-                        <source src=""></source>
+                        <source src={Demo_Reel} />
                     </video>
                 </div>
             </div>

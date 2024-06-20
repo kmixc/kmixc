@@ -61,7 +61,7 @@
     z-index: -3;
 }
 
-.video-background iframe {
+.video-background video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -70,19 +70,26 @@
     transform: translate(-50%, -50%);
 }
 
+#myVideo {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000%;
+}
+
 @media (min-aspect-ratio: 16/9) {
-    .video-background iframe {
+    .video-background video {
         /* height = 100 * (9 / 16) = 56.25 */
         height: 56.25vw;
     }
 }
 
 @media (max-aspect-ratio: 16/9) {
-    .video-background iframe {
+    .video-background video {
         /* width = 100 / (9 / 16) = 177.777777 */
         width: 177.78vh;
     }
 }
+
 
 .youtube-content .section {
     display: flex;
