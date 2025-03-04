@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import '../css/Videography.css'
 import { Link } from 'react-router-dom'
-import Logo from '../img/logo.svg'
+import Logo from '../img/logos/logo.svg'
 import Circle from '../img/circle_text_for_video.svg'
 import $ from 'jquery'
 

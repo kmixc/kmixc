@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
 import '../css/Navbar.css'
-import Logo from '../img/logo-white.svg'
+import Logo from '../img/logos/logo-white.svg'
 
 
 //ICONS

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import '../css/Contact.css'
-import Logo from '../img/logo.svg'
+import Logo from '../img/logos/logo.svg'
 import { Link } from 'react-router-dom'
 
 //COMPONENTS

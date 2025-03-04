@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,700;1,700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,300&family=Roboto:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 
 
 * {
@@ -10,18 +7,153 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-
-  font-family: "Arimo", sans-serif;
+  font-family: "Arimo", serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
 }
 
-body {
-  overflow-x: hidden;
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: white;
+  overflow: hidden;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 50px;
+  padding-top: 120px;
 }
 
-/* HOME */
+.hero-section .banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Adjust the opacity (0 = transparent, 1 = fully black) */
+  z-index: -1;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
+.hero-logo img {
+  height: 65px;
+  /* Adjust size */
+  width: auto;
+}
+
+/* Background Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* Ensures full width */
+  height: 100vh;
+  /* Ensures full height */
+  object-fit: cover;
+  /* Prevents white gaps */
+  z-index: -2;
+}
+
+/* Text Content */
+
+.hero-text span {
+  position: relative;
+  font-size: 7.7rem;
+  /* Large text */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  line-height: 0.85;
+  display: flex;
+  flex-direction: column;
+  /* Stacks spans on top of each other */
+}
+
+/* Subtext */
+.hero-subtext {
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 360px;
+  text-align: justify;
+  line-height: 1;
+  padding: 20px 0;
+}
+
+/* Contact Button */
+.hero-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #FF7300;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero-button:hover {
+  background-color: #1d1d1d;
+}
+
+/* SERVICE SECTION */
+.services-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  background-color: white;
+}
+
+/* Large Title */
+.services-section-title {
+  font-size: 8.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Highlight the word "production" */
+.highlight {
+  color: #FF7300;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+/* Links Container */
+.services-section-links {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 150px;
+  text-decoration: underline;
+}
+
+/* Individual Links */
+.services-section-links a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.services-section-links a:hover {
+  color: #FF7300;
+}
+
 
 .home .overlay-transparent {
   position: absolute;
@@ -69,131 +201,20 @@ body {
   height: 100vh;
 }
 
-.content {
-  position: relative;
-  z-index: 0;
-  /* Place the content above the overlay */
-  text-align: center;
-}
-
-.content .logo {
-  width: 100%;
-}
-
-.cycle {
+.projects-recap {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-bottom: 30px;
-  font-size: 1.3em;
-  color: rgb(0, 0, 0);
-}
-
-.content-two {
-  height: 100vh;
-  background-color: #2b2b2bf5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.content-two .boxes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.content-two .boxes .box {
-  color: #fff;
-  margin: 10px;
-  height: 400px;
-  width: 45%;
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.074);
-  border-radius: 0.7rem;
-  transition: all ease 0.5s;
-}
-
-.content-two .boxes .box:hover {
-  box-shadow: 0px 0px 20px 1px #FF7300;
-  color: #FF7300;
-}
-
-.content-two .boxes .box .num {
-  position: absolute;
-  padding: 20px;
-  z-index: 2;
-}
-
-.content-two .boxes .box .title {
-  font-size: 3em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.hover-underline-animation div p {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-}
-
-.hover-underline-animation div p::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #bdbdbd;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover div p::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.hover-underline-animation div svg {
-  display: inline-block;
-  position: absolute;
-  opacity: 0;
-  transition: ease 0.7s;
-  transform: scale(1);
-  filter: blur(20px);
-  z-index: 0;
-}
-
-.hover-underline-animation div:hover svg {
-  filter: blur(0px);
-  opacity: 1;
-  transform: scale(4);
-  color: #ffffff31;
-}
-
-.content-three {
-  display: flex;
-  margin-top: 50px;
   align-items: center;
   flex-direction: column;
 }
 
-.content-three .video {
+.projects-recap .video {
   background-color: #000000;
   height: 600px;
   width: 90%;
   margin-bottom: 50px;
 }
 
-.content-three .video .video-overlay {
+.projects-recap .video .video-overlay {
   background-color: rgba(0, 0, 0, 0.801);
   display: flex;
   justify-content: center;
@@ -206,22 +227,60 @@ body {
   transition: 1s;
 }
 
-.content-three .video .video-overlay div {
+.projects-recap .video .video-overlay div {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-.content-three .video .video-overlay div p {
+.projects-recap .video .video-overlay div p {
   padding: 10px;
 }
 
-.content-three .video .video-overlay div svg {
+.projects-recap .video .video-overlay div svg {
   font-size: 2em;
   padding: 2px;
 }
 
-.content-three .clients {
+.projects {
+  padding: 50px 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Two equal columns */
+  grid-gap: 10px;
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.project-wide {
+  grid-column: span 2;
+  /* Makes LZ World Tour stretch across */
+}
+
+
+
+.worked-with-section .clients {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,54 +288,49 @@ body {
   padding: 70px;
 }
 
-.content-three .clients .worked-with {
+.worked-with-section .clients .worked-with {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.content-three .clients .worked-with .top {
+.worked-with-section .clients .worked-with .top {
   font-size: 6em;
 }
 
-.content-three .clients .worked-with .bottom {
+.worked-with-section .clients .worked-with .bottom {
   font-size: 4em;
   font-family: 'Courgette', cursive;
   font-weight: 100;
 }
 
-.content-three .clients .worked-with .bottom span {
+.worked-with-section .clients .worked-with .bottom span {
   font-family: 'Courgette', cursive;
   font-weight: 100;
 }
 
-.content-three .clients .worked-with .bottom .underline {
+.worked-with-section .clients .worked-with .bottom .underline {
   text-decoration: line-through;
 }
 
-.content-three .clients .worked-with .bottom .color {
+.worked-with-section .clients .worked-with .bottom .color {
   color: #FF7300;
 }
 
-.content-three .marquee-clients {
+.worked-with-section .marquee-clients {
   padding: 50px;
 }
 
-.content-three .marquee-clients img {
+.worked-with-section .marquee-clients img {
   height: 175px;
   padding: 20px;
   filter: grayscale(1);
   transition: 0.4s;
 }
 
-.content-three .marquee-clients img:hover {
+.worked-with-section .marquee-clients img:hover {
   filter: grayscale(0);
-}
-
-.content-four {
-  height: 200vh;
-  background-color: #707070;
 }
 
 .icon img {
@@ -484,14 +538,3 @@ body {
     display: none;
   }
 }
-
-/* TABLET VIEW */
-
-
-/* ABOUT */
-
-/* CONTACT */
-
-/* WEBSITE DEVELOPMENT */
-
-/* SOCIAL MEDIA MANAGEMENT */

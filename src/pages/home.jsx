@@ -1,9 +1,15 @@
 import React from 'react';
-import Logo from '../img/logo.svg'
+import Logo from '../img/logos/logo-white.svg'
+import Video from '../img/backgrounds/Website_Banner.mp4'
 import { gsap } from 'gsap';
 import TextTransition, { presets } from 'react-text-transition';
 import CountUp from 'react-countup';
 import Marquee from "react-fast-marquee";
+
+//IMAGES
+import Wedding from '../img/client_imgs/Wedding.jpg'
+import Millworx from '../img/client_imgs/Millworx.jpg'
+import Event from '../img/client_imgs/Event-3.jpg'
 
 //COMPONENTS
 import ClientMarquee from '../components/clientMarquee.jsx'
@@ -12,19 +18,6 @@ import Footer from '../components/Footer.jsx'
 //ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
-import { faWandMagicSparkles } from '@fortawesome/free-solid-svg-icons';
-import { faVideo } from '@fortawesome/free-solid-svg-icons';
-import { faUsersViewfinder } from '@fortawesome/free-solid-svg-icons';
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-
-const TEXTS = [
-    "Social Media Managment",
-    "Logo Creation",
-    "Brand Development",
-    "Videography",
-    "Photography",
-    "Web Development"
-];
 
 const Home = () => {
     const [index, setIndex] = React.useState(0);
@@ -67,10 +60,6 @@ const Home = () => {
         const text_overlay = document.querySelector('.overlay-transparent');
         text_tl.to(text_overlay, { duration: 1, ease: "power4.inOut", y: -4100 });
 
-        const logoTl = gsap.timeline();
-        const logo = document.querySelector('.logo');
-        logoTl.set([logo], { autoAlpha: 0, y: 50 });
-        logoTl.to(logo, { autoAlpha: 1, duration: 1, delay: 0.2, ease: "power4.inOut", y: 0 });
     };
 
     function disableOverlay() {
@@ -87,7 +76,6 @@ const Home = () => {
         }, 5000);
     }
 
-
     return (
         <div>
             <div className="home">
@@ -98,64 +86,89 @@ const Home = () => {
                         welcome to your new branding.
                     </Marquee>
                 </div>
+
                 <div className="overlay"></div>
-                <div className="content">
-                    <img src={Logo} draggable="false" className="logo" alt='Kmixc-logo' />
-                </div>
-                <TextTransition className='cycle' springConfig={presets.default}>{TEXTS[index % TEXTS.length]}</TextTransition>
-            </div>
 
-            <div className='content-two'>
-                <div className='boxes'>
-                    <a href="/videography" className='box hover-underline-animation'>
-                        <p className='num'>01</p>
-                        <div className="title">
-                            <p>
-                                VIDEOGRAPHY
-                            </p>
-                            <FontAwesomeIcon icon={faVideo} />
-                        </div>
-                    </a>
-                    <a href="/social-media-management" className='box hover-underline-animation'>
-                        <p className='num'>02</p>
-                        <div className="title">
-                            <p>
-                                SOCIAL MEDIA
-                            </p>
-                            <FontAwesomeIcon icon={faThumbsUp} />
-                        </div>
-                    </a>
-                    <a href="/website-development" className='box hover-underline-animation'>
-                        <p className='num'>03</p>
-                        <div className="title">
-                            <p>
-                                WEB DESIGN
-                            </p>
-                            <FontAwesomeIcon icon={faWandMagicSparkles} />
-                        </div>
-                    </a>
-                    <a href="/our-work" className='box hover-underline-animation'>
-                        <p className='num'>04</p>
-                        <div className="title">
-                            <p>
-                                OUR WORK
-                            </p>
-                            <FontAwesomeIcon icon={faUsersViewfinder} />
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div className='content-three'>
-                <div onMouseEnter={disableOverlay} onMouseLeave={activateOverlay} className='video'>
-                    <div className='video-overlay'>
-                        <div>
-                            <p>see through my lens</p>
-                            <FontAwesomeIcon icon={faCirclePlay} />
-                        </div>
+                <div className="hero-section">
+                    <video autoPlay loop muted playsInline className="background-video">
+                        <source src={Video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <div className="banner-overlay"></div>
+                    <div className="hero-logo">
+                        <img src={Logo} alt="Kmixc Visuals Logo" />
                     </div>
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kPjIu5laeTg?si=qpe3gYyt__agqVh-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <h1 className="hero-text">
+                        <span>HARNESS THE</span>
+                        <span>POTENTIAL OF YOUR</span>
+                        <span>BUSINESS WITH STUNNING</span>
+                        <span>VISUALS & DIGITAL</span>
+                        <span>EXPERTISE.</span>
+                    </h1>
+                    <p className="hero-subtext">
+                        Providing businesses and companies with high-quality videography,
+                        photography, and marketing solutions.
+                    </p>
+                    <a href="/contact" className="hero-button">Contact Us</a>
                 </div>
+            </div>
+
+            <div className="services-section">
+                <h2 className="services-section-title">
+                    A <span className="highlight">production</span> partner for brands and agencies.
+                </h2>
+
+                <div className="services-section-links">
+                    <a href="/our-work">Our Work</a>
+                    <a href="/about">About</a>
+                    <a href="/videography">Videography</a>
+                    <a href="/web-development">Web Development</a>
+                    <a href="/photography">Photography</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
+
+            <div className="projects-section">
+                <div className='projects-recap'>
+                    <div onMouseEnter={disableOverlay} onMouseLeave={activateOverlay} className='video'>
+                        <div className='video-overlay'>
+                            <div>
+                                <p>see through my lens</p>
+                                <FontAwesomeIcon icon={faCirclePlay} />
+                            </div>
+                        </div>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/t0KDxGAAD0I?si=mki6Q-kBWQUL79fm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    </div>
+                </div>
+                <h2 className="projects-section-title">PROJECTS</h2>
+                <section className="projects">
+                    <div className="projects-grid">
+                        <a className="project-item">
+                            <img src={Wedding} alt="Tommy & Victoria" />
+                            <div className="project-info">
+                                <h3>Tommy & Victoria</h3>
+                                <p>Wedding Videography</p>
+                            </div>
+                        </a>
+                        <a className="project-item">
+                            <img src={Millworx} alt="Millworx" />
+                            <div className="project-info">
+                                <h3>Millworx</h3>
+                                <p>Company Showcase</p>
+                            </div>
+                        </a>
+                        <a href='#' className="project-item project-wide">
+                            <img src={Event} alt="LZ World Tour" />
+                            <div className="project-info">
+                                <h3>LZ World Tour</h3>
+                                <p>Event Coverage</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <div className="worked-with-section">
                 <div className='clients'>
                     <div className='worked-with'>
                         <h1 className='top'>We worked with</h1>
@@ -165,9 +178,7 @@ const Home = () => {
                 <ClientMarquee></ClientMarquee>
             </div>
 
-            <div className='content-four'>
 
-            </div>
             <Footer></Footer>
         </div >
     )

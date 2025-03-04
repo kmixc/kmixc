@@ -1,42 +1,73 @@
 import React from 'react'
 import '../css/Footer.css'
 
-//ICONS
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareBehance, faSquareInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-
-
-
-
 export default function Footer() {
     return (
-        <div className='footer'>
-            <div className='footer-top'>
-                <div className='links'>
-                    <a href="/our-work">WORK</a>
-                    <a href="/about">ABOUT</a>
-                    <a href="/contact">CONTACT</a>
+        <footer className="footer">
+            <div className="footer-section">
+                <div className="footer-links" id='hide-mobile'>
+                    <a href="/our-work">Our Work</a>
+                    <a href="/about">About</a>
+                    <a href="/videography">Videography</a>
+                    <a href="/web-development">Web Design</a>
                 </div>
 
-                <div className='socials'>
-                    <a href="https://www.instagram.com/kmixcvisuals/" target='social'>
-                        <FontAwesomeIcon icon={faSquareInstagram} size='xl' />
-                    </a>
-                    <a href="https://www.linkedin.com/in/oliver-kmiec-5b601b1b0/" target='social'>
-                        <FontAwesomeIcon icon={faLinkedin} size='xl' />
-                    </a>
-                    <a href="https://www.behance.net/kmixc" target='social'>
-                        <FontAwesomeIcon icon={faSquareBehance} size='xl' />
-                    </a>
+                <h2 className="footer-title" >
+                    We collaborate with ambitious brands and people to create, capture, and grow.
+                </h2>
+            </div>
+
+            <div className="footer-section" id='hide-mobile'>
+                <div className="footer-links">
+                    <p>Strategy</p>
+                    <p>SMM</p>
+                    <p>Marketing</p>
+                </div>
+
+                <a href="/contact" className="footer-link">Start the project</a>
+
+                <div className="footer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
                 </div>
             </div>
 
-            <div className='box-holder'>
-                <div className='box'>
-                    <a href="#top">BACK TO THE TOP</a>
-                    <p>©2024 KMIXC VISUALS</p>
+            <div className='footer-section' id='hide-desktop'>
+                <div className="footer-links">
+                    <a href="/our-work">Our Work</a>
+                    <a href="/about">About</a>
+                    <a href="/videography">Videography</a>
+                    <a href="/web-development">Web Design</a>
+                </div>
+
+                <a href="/contact" className="footer-link">Start the project</a>
+
+            </div>
+
+            <div className='footer-section' id='hide-desktop'>
+                <div className="footer-links">
+                    <p>Strategy</p>
+                    <p>SMM</p>
+                    <p>Marketing</p>
+                </div>
+
+                <div className="footer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
                 </div>
             </div>
-        </div>
+
+
+            <div className="footer-bottom">
+                <span>© KMIXCVISUALS</span>
+                <span id='hide-mobile'>IN GOOD MARKETING WE TRUST</span>
+                <div>
+                    <a href="/terms">TERMS,</a>
+                    <a href="/terms"> PRIVACY POLICY</a>
+                </div>
+            </div>
+        </footer>
     )
 }
