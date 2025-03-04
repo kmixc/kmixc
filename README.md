@@ -12,7 +12,7 @@
     <img src="public/365days.svg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Day of the Year</h3>
+  <h3 align="center">Kmixc Visuals Website</h3>
 
   <p align="center">
     Counter that displays what day of the year it is!
