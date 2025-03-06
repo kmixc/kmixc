@@ -17,6 +17,9 @@ import EventThree from '../img/client_imgs/Event.jpg'
 //VIDEOS
 import CompanyShowcaseVideo from "../img/videos/Millworx.mp4";
 import EventVideo from "../img/videos/LZ_World_Tour.mp4";
+import EventTwoVideo from "../img/videos/Power_Yoga_Canada.mp4";
+import EventThreeVideo from "../img/videos/Facility_Plus.mp4";
+import WeddingVideo from "../img/videos/Tommy_&_Victoria.mp4";
 
 //COMPONENTS
 import ClientMarquee from '../components/clientMarquee.jsx'
@@ -200,10 +203,10 @@ const Home = () => {
                                         autoPlay
                                         loop
                                         muted
-                                        className="project-video"
+                                        className={`project-video ${hoveredProject === index ? 'visible' : ''}`}
                                     ></video>
                                 ) : (
-                                    <img src={project.imgSrc} alt={project.title} />
+                                    <img className='project-image' src={project.imgSrc} alt={project.title} />
                                 )}
                                 <div className="project-info">
                                     <h3>{project.title}</h3>
