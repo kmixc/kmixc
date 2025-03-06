@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from "react";
 import Logo from '../img/logos/logo-white.svg'
 import Video from '../img/backgrounds/Website_Banner.mp4'
 import { gsap } from 'gsap';
@@ -8,8 +9,14 @@ import Marquee from "react-fast-marquee";
 
 //IMAGES
 import Wedding from '../img/client_imgs/Wedding.jpg'
-import Millworx from '../img/client_imgs/Millworx.jpg'
+import CompanyShowcase from '../img/client_imgs/Millworx.jpg'
 import Event from '../img/client_imgs/Event-3.jpg'
+import EventTwo from '../img/client_imgs/Yoga.jpg'
+import EventThree from '../img/client_imgs/Event.jpg'
+
+//VIDEOS
+import CompanyShowcaseVideo from "../img/videos/Millworx.mp4";
+import EventVideo from "../img/videos/LZ_World_Tour.mp4";
 
 //COMPONENTS
 import ClientMarquee from '../components/clientMarquee.jsx'
@@ -75,6 +82,42 @@ const Home = () => {
             overlay.style.visibility = "visible";
         }, 5000);
     }
+
+    const projectData = [
+        {
+            title: "Tommy & Victoria",
+            description: "Wedding Videography",
+            imgSrc: Wedding,
+            videoSrc: WeddingVideo,
+        },
+        {
+            title: "Millworx",
+            description: "Company Showcase",
+            imgSrc: CompanyShowcase,
+            videoSrc: CompanyShowcaseVideo,
+        },
+        {
+            title: "LZ World Tour",
+            description: "Event Coverage",
+            imgSrc: Event,
+            videoSrc: EventVideo,
+            wide: true,
+        },
+        {
+            title: "Power Yoga Canada",
+            description: "Promotional & Event",
+            imgSrc: EventTwo,
+            videoSrc: EventTwoVideo,
+        },
+        {
+            title: "Facility Plus",
+            description: "Event Coverage",
+            imgSrc: EventThree,
+            videoSrc: EventThreeVideo,
+        },
+    ];
+
+    const [hoveredProject, setHoveredProject] = useState(null);
 
     return (
         <div>
@@ -143,27 +186,31 @@ const Home = () => {
                 <h2 className="projects-section-title">PROJECTS</h2>
                 <section className="projects">
                     <div className="projects-grid">
-                        <a className="project-item">
-                            <img src={Wedding} alt="Tommy & Victoria" />
-                            <div className="project-info">
-                                <h3>Tommy & Victoria</h3>
-                                <p>Wedding Videography</p>
-                            </div>
-                        </a>
-                        <a className="project-item">
-                            <img src={Millworx} alt="Millworx" />
-                            <div className="project-info">
-                                <h3>Millworx</h3>
-                                <p>Company Showcase</p>
-                            </div>
-                        </a>
-                        <a href='#' className="project-item project-wide">
-                            <img src={Event} alt="LZ World Tour" />
-                            <div className="project-info">
-                                <h3>LZ World Tour</h3>
-                                <p>Event Coverage</p>
-                            </div>
-                        </a>
+                        {projectData.map((project, index) => (
+                            <a
+                                href="#"
+                                className={`project-item ${project.wide ? "project-wide" : ""}`}
+                                key={index}
+                                onMouseEnter={() => setHoveredProject(index)}
+                                onMouseLeave={() => setHoveredProject(null)}
+                            >
+                                {hoveredProject === index ? (
+                                    <video
+                                        src={project.videoSrc}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        className="project-video"
+                                    ></video>
+                                ) : (
+                                    <img src={project.imgSrc} alt={project.title} />
+                                )}
+                                <div className="project-info">
+                                    <h3>{project.title}</h3>
+                                    <p>{project.description}</p>
+                                </div>
+                            </a>
+                        ))}
                     </div>
                 </section>
             </div>
@@ -178,6 +225,28 @@ const Home = () => {
                 <ClientMarquee></ClientMarquee>
             </div>
 
+            <div className="contact-section">
+                {/* Background Image */}
+                <div className="contact-image"></div>
+
+                {/* Dark Overlay */}
+                <div className="contact-overlay"></div>
+
+                {/* Content */}
+                <div className="content">
+                    <h2>&emsp;&emsp;UNLOCK VISUALS THAT<br />ELEVATE YOUR BRAND</h2>
+                    <div className='content-text'>
+                        <p>
+                            Have a project in mind? We’re here to help bring your vision to life with high-quality videography, photography, and marketing solutions tailored to your brand. Whether you’re looking to elevate your business or create something truly unique, let’s make it happen. Get in touch today and let’s get started!
+                        </p>
+
+                        {/* Contact Button */}
+                        <a href="/contact" className="contact-button">
+                            <p>BOOK A CONSULT</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <Footer></Footer>
         </div >

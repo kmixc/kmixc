@@ -242,13 +242,19 @@
   padding: 2px;
 }
 
+.projects-section-title {
+  text-align: center;
+  font-size: 8em;
+  line-height: 1;
+  font-weight: bold;
+}
+
 .projects {
-  padding: 50px 0;
+  padding: 50px 10px;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   /* Two equal columns */
   grid-gap: 10px;
 }
@@ -256,6 +262,8 @@
 .project-item {
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
+
 }
 
 .project-item img {
@@ -269,16 +277,28 @@
   bottom: 10px;
   left: 10px;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
   padding: 10px;
+  line-height: 1;
+}
+
+.project-info h3 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.project-info p {
+  font-size: 1.3em;
+  font-weight: 100;
 }
 
 .project-wide {
   grid-column: span 2;
-  /* Makes LZ World Tour stretch across */
+  height: 500px;
 }
 
-
+.project-wide img {
+  transform: translateY(-35%) scale(1.2);
+}
 
 .worked-with-section .clients {
   display: flex;
@@ -333,6 +353,109 @@
   filter: grayscale(0);
 }
 
+/* ContactSection.css */
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Background Image */
+.contact-image {
+  position: absolute;
+  top: 50%;
+  /* Move the image up by 50% of its container */
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: url('./img/team/kmixcvisuals-1.jpg') no-repeat center center/cover;
+  filter: grayscale(100%);
+  transform: translate(-50%, -50%);
+  /* Centers the image */
+  z-index: -2;
+}
+
+/* Dark Overlay */
+.contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Adjust opacity to control darkness */
+  z-index: -1;
+}
+
+/* Content Styling */
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h2 {
+  font-size: 7rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 0.85;
+}
+
+.content-text {
+  display: flex;
+  margin-top: -20px;
+}
+
+.content-text p {
+  max-width: 500px;
+  text-align: justify;
+  font-size: 0.8rem;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
+/* Circular Button */
+.contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  color: white;
+  background-color: #ff6600;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+  margin: 20px 40px;
+}
+
+.contact-button a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+
+  color: #e2eaf3;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+.contact-button:hover {
+  background-color: #e05500;
+}
+
+
 .icon img {
   height: 125px;
   animation-name: rotate;
@@ -348,6 +471,263 @@
   z-index: -5;
   overflow: hidden;
 }
+
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 20px;
+    padding-top: 80px;
+  }
+
+  .hero-text span {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    max-width: 300px;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .services-section {
+    padding: 50px 20px;
+  }
+
+  .services-section-title {
+    font-size: 3.5rem;
+  }
+
+  .services-section-links {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .projects-section-title {
+    font-size: 4rem;
+    line-height: 0.5;
+  }
+
+  .projects-recap .video {
+    height: 400px;
+    width: 90%;
+  }
+
+  .projects-recap .video .video-overlay {
+    height: 400px;
+    width: 90%;
+    display: none;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project-wide {
+    height: 100%;
+  }
+
+  .project-wide img {
+    transform: translateY(-0%) scale(1);
+  }
+
+  .worked-with-section .clients {
+    padding: 10px;
+  }
+
+  .worked-with-section .clients .worked-with .top {
+    font-size: 3.5rem;
+  }
+
+  .worked-with-section .clients .worked-with .bottom {
+    font-size: 2rem;
+    line-height: 0.3;
+  }
+
+  .contact-section {
+    height: 400px;
+  }
+
+  .contact-section .content {
+    padding: 0 20px;
+  }
+
+  .contact-section .content h2 {
+    font-size: 2rem;
+  }
+
+  .contact-section .content p {
+    font-size: 0.6rem;
+  }
+
+  .content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-text p {
+    margin-bottom: 0;
+    padding: 10px;
+  }
+
+  .contact-button {
+    font-size: 0.7em;
+    margin: 0;
+  }
+
+  .worked-with-section .marquee-clients img {
+    height: 125px;
+    padding: 5px;
+    filter: grayscale(1);
+    transition: 0.4s;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 20px;
+    padding-top: 80px;
+  }
+
+  .hero-text span {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    max-width: 300px;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .services-section {
+    padding: 50px 20px;
+  }
+
+  .services-section-title {
+    font-size: 3.5rem;
+  }
+
+  .services-section-links {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .projects-section-title {
+    font-size: 4rem;
+    line-height: 0.5;
+  }
+
+  .projects-recap .video {
+    height: 400px;
+    width: 90%;
+  }
+
+  .projects-recap .video .video-overlay {
+    height: 400px;
+    width: 90%;
+    display: none;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project-wide {
+    height: 100%;
+  }
+
+  .project-wide img {
+    transform: translateY(-0%) scale(1);
+  }
+
+  .worked-with-section .clients {
+    padding: 10px;
+  }
+
+  .worked-with-section .clients .worked-with .top {
+    font-size: 3.5rem;
+  }
+
+  .worked-with-section .clients .worked-with .bottom {
+    font-size: 2rem;
+    line-height: 0.3;
+  }
+
+  .contact-section {
+    height: 400px;
+  }
+
+  .contact-section .content {
+    padding: 0 20px;
+  }
+
+  .contact-section .content h2 {
+    font-size: 2rem;
+  }
+
+  .contact-section .content p {
+    font-size: 0.6rem;
+  }
+
+  .content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-text p {
+    margin-bottom: 0;
+    padding: 10px;
+  }
+
+  .contact-button {
+    font-size: 0.7em;
+    margin: 0;
+  }
+
+  .worked-with-section .marquee-clients img {
+    height: 125px;
+    padding: 5px;
+    filter: grayscale(1);
+    transition: 0.4s;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .hero-text span {
+    font-size: 3rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.9rem;
+  }
+
+  .services-section-title {
+    font-size: 3rem;
+  }
+
+  .projects-section-title {
+    font-size: 3.5rem;
+  }
+
+  .services-section-links {
+    gap: 30px;
+  }
+}
+
 
 @keyframes rotate {
   100% {
