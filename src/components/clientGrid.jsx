@@ -1,5 +1,5 @@
 import React from 'react'
-import Marquee from "react-fast-marquee";
+import '../css/clientGrid.css'
 
 //CLIENT LOGOS
 import Millworx_Logo from '../img/client_logos/millworx_logo.png'
@@ -14,9 +14,9 @@ import OTP_Logo from '../img/client_logos/otp_logo.png'
 import GTA_Logo from '../img/client_logos/gtaexotics_logo.png'
 import CGR_Logo from '../img/client_logos/customglassrailings_logo.png'
 
-export default function clientMarquee() {
+export default function clientGrid() {
     return (
-        <Marquee pauseOnHover={true} speed={150} loop={10} className='marquee-clients'>
+        <div className='client-grid'>
             <a href='https://cgrcanada.com/' target='client_site'>
                 <img src={CGR_Logo} alt="CGR LOGO" />
             </a>
@@ -50,6 +50,6 @@ export default function clientMarquee() {
             <a href='https://www.instagram.com/optimal.trim.carpentry/' target='client_site'>
                 <img src={OTP_Logo} alt="OTP_Logo" />
             </a>
-        </Marquee>
+        </div>
     )
 }

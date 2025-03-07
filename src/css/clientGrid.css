@@ -1,0 +1,7 @@
+.client-grid {
+    display: flex;
+}
+
+.client-grid a img {
+    height: 50px;
+}

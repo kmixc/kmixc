@@ -6,9 +6,14 @@ import Logo from '../img/logos/logo-white.svg'
 //IMAGES & VIDEO
 import Video from '../img/backgrounds/WEBSITE_MOTION_GRAPHIC.mp4'
 import TeamOne from '../img/team/kmixcvisuals-1.jpg'
+import TeamTwo from '../img/team/kmixcvisuals-2.JPG'
+import TeamThree from '../img/team/kmixcvisuals-3.jpg'
+import TeamFour from '../img/team/kmixcvisuals-4.jpg'
+import TeamFive from '../img/team/kmixcvisuals-5.jpg'
 
 //COMPONENTS
-import Footer from '../components/Footer'
+import clientGrid from '../components/clientGrid.jsx'
+import Footer from '../components/Footer.jsx'
 
 //GSAP
 import { gsap } from 'gsap';
@@ -17,17 +22,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export default function About() {
-
-    // useEffect(() => {
-    //     gsap.to(".logo", {
-    //         width: 300,
-    //         scrollTrigger: {
-    //             trigger: ".about-top-bar",
-    //             scrub: true,
-    //             markers: true
-    //         },
-    //     });
-    // }, []);
 
     return (
         <div className='about-page'>
@@ -40,6 +34,36 @@ export default function About() {
                 <div className="about-logo">
                     <img src={Logo} alt="Kmixc Visuals Logo" />
                 </div>
+            </div>
+
+            <div>
+                <p>Empowering brands to conjure up creative stories</p>
+            </div>
+
+            <div>
+                <img src={TeamThree} alt="" />
+            </div>
+
+            <div>
+                <p>We’re a studio with diverse roots that want to help companies and organizations with everything creative, art and technology. We work with a passion for the craft and embrace innovation in our process.</p>
+            </div>
+
+            <div>
+                <img src={TeamOne} alt="" />
+                <img src={TeamFour} alt="" />
+            </div>
+
+            <div>
+                <p>We’re a studio with diverse roots that want to help companies and organizations with everything creative, art and technology. We work with a passion for the craft and embrace innovation in our process.</p>
+            </div>
+
+            <div>
+                <img src={TeamFive} alt="" />
+            </div>
+
+            <div>
+                <p>some of the brands I've collaborated with over the years</p>
+                <clientGrid />
             </div>
 
             <Footer></Footer>
