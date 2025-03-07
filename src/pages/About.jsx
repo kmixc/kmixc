@@ -5,6 +5,7 @@ import Logo from '../img/logos/logo-white.svg'
 
 //IMAGES & VIDEO
 import Video from '../img/backgrounds/WEBSITE_MOTION_GRAPHIC.mp4'
+import TeamOne from '../img/team/kmixcvisuals-1.jpg'
 
 //COMPONENTS
 import Footer from '../components/Footer'
