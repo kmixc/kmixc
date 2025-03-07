@@ -1,32 +1,15 @@
 /* NAVBAR */
 
 .nav-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 0%;
-    background-color: #FF7300;
+    height: 100%;
+    background: #000000;
     opacity: 0;
-    z-index: -2;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    /* Add this to create a stacking context */
-    z-index: 3;
-    /* Increase the z-index to make sure the menu is above the content */
-}
-
-.navbar-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    z-index: 1;
+    visibility: hidden;
 }
 
 .menu {
@@ -34,77 +17,50 @@
     flex-direction: column;
     position: fixed;
     /* Change to fixed position */
-    top: 0;
-    left: 0;
+    top: 1.5rem;
+    right: 1.5rem;
     /* Align to the left of the viewport */
-    width: 100%;
+    width: 30rem;
     /* Make the menu full width */
-    height: 60vh;
+    height: calc(100vh - 3rem);
     /* Set the height to the full viewport height */
-    background-color: #333;
-    transform: translateY(-105%);
+    background-color: #ffffff;
+    transform: translateX(150%);
     /* Initially slide the menu off-screen */
     transition: transform 0.3s ease-in-out;
     z-index: 2;
-    box-shadow: #000 0px 0px 10px;
-}
-
-.top-menu {
-    padding: 20px;
-}
-
-.menu-title {
-    color: #fff;
-    width: 10%;
+    color: #000000;
 }
 
 .menu-links {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    padding: 20px;
+    align-items: start;
+    padding: 50px;
     font-size: 2em;
 }
 
 .menu-links a:hover {
     transition: 0.3s;
-}
-
-.menu-links a:hover {
     color: #FF7300;
-}
 
-.menu-socials {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 20px;
-}
-
-.menu-socials a {
-    margin: 0 15px;
-    color: #fff;
-    transition: 0.2s;
-}
-
-.menu-socials a:hover {
-    color: #FF7300;
 }
 
 .menu.open {
-    transform: translateY(0);
+    transform: translateX(0);
     /* Slide the menu in */
 }
 
 .menu .menu-item {
     padding: 10px 20px;
-    color: white;
     text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 100;
+    font-size: 4rem;
 }
 
 .menu .menu-item {
     padding: 10px 20px;
-    color: white;
     text-decoration: none;
     transition: 0.5s;
 }
@@ -113,99 +69,48 @@
     transform: translateX(-10px);
 }
 
-.btm-menu {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    /* Change to fixed position */
-    top: 0;
-    left: 0;
-    /* Align to the left of the viewport */
-    width: 100%;
-    /* Make the menu full width */
-    height: 70vh;
-    /* Set the height to the full viewport height */
-    background-color: #333;
-    transform: translateY(-150%);
-    /* Initially slide the menu off-screen */
-    transition: transform 0.3s ease-in-out;
-    box-shadow: #000 0px 0px 10px;
-    z-index: 1;
-}
-
-.btm-menu .btm-menu-year {
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    font-size: 8em;
-    transform: translateY(15px);
-}
-
-.btm-menu .btm-menu-year p {
+.nav-contact-link {
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.5em;
+    border: 1px #000000 solid;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    margin: 0 10px;
+    text-align: center;
+    text-decoration: none;
     transition: 0.5s;
 }
 
-.btm-menu .btm-menu-year p:hover {
-    transform: translatex(10px);
-}
-
-.btm-menu .btm-menu-links a {
-    color: #fff;
-    position: absolute;
-    bottom: 25px;
-    right: 50px;
-    font-size: 2em;
-    transition: 0.2s;
-}
-
-.btm-menu .btm-menu-links a:hover {
+.nav-contact-link:hover {
+    border: 1px #FF7300 solid;
     color: #FF7300;
+}
+
+.nav-bottom {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bottom {}
+
+.nav-bottom span {
+    padding: 10px;
+    font-weight: 100;
+    color: #000000;
+}
+
+.nav-bottom span a {
+    font-weight: 100;
 }
 
 .nav-btn {
     position: fixed;
     z-index: 2;
-    top: 0;
-    right: 0;
+    top: 1.5rem;
+    right: 1.5rem;
     padding: 20px;
     color: rgb(32, 32, 32);
 }
-
-/* MOBILE VIEW */
-
-@media only screen and (max-width: 600px) {
-    .menu {
-        height: 50vh;
-    }
-
-    .menu-title {
-        color: #fff;
-        width: 25%;
-    }
-
-    .btm-menu {
-        height: 60vh;
-    }
-
-    .btm-menu .btm-menu-year {
-        font-size: 2em;
-        bottom: 32px;
-        left: 20px;
-    }
-
-    .menu .menu-item {
-        font-size: 0.6em;
-        height: 100%;
-        text-align: right;
-    }
-
-    .btm-menu .btm-menu-links a {
-        bottom: 25px;
-        right: 40px;
-        font-size: 1.5em;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 600px) {}
-
-@media (min-width: 600px) and (max-width: 900px) {}

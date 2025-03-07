@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 
-
 * {
   padding: 0;
   margin: 0;
@@ -300,7 +299,6 @@
   transform: translateY(-35%) scale(1.2);
 }
 
-
 .project-image,
 .project-video {
   top: 0;
@@ -309,22 +307,6 @@
   height: 100%;
   object-fit: cover;
   transition: opacity 0.3s ease-in-out;
-}
-
-/* Hide the video by default */
-.project-video {
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Show the video smoothly when hovered */
-.project-video.visible {
-  opacity: 1;
-}
-
-/* Reduce opacity of image when hovered */
-.project-item:hover .project-image {
-  opacity: 0;
 }
 
 .worked-with-section .clients {
@@ -728,6 +710,23 @@
     padding: 5px;
     filter: grayscale(1);
     transition: 0.4s;
+  }
+
+  .home .overlay-transparent .countup-overlay {
+    font-size: 8em;
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    color: #fff;
+    transform: translateX(50px);
+    font-weight: bold;
+
+  }
+
+  .marquee-overlay {
+    font-size: 3em;
+    padding-left: 50px;
+    color: #fff;
   }
 }
 
