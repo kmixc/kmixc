@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from "react";
 import Logo from '../img/logos/logo-white.svg'
-import Video from '../img/backgrounds/Website_Banner.mp4'
 import { gsap } from 'gsap';
 import TextTransition, { presets } from 'react-text-transition';
 import CountUp from 'react-countup';
@@ -15,6 +14,7 @@ import EventTwo from '../img/client_imgs/Yoga.jpg'
 import EventThree from '../img/client_imgs/Event.jpg'
 
 //VIDEOS
+import Video from '../img/backgrounds/Website_Banner.mp4'
 import CompanyShowcaseVideo from "../img/videos/Millworx.mp4";
 import EventVideo from "../img/videos/LZ_World_Tour.mp4";
 import EventTwoVideo from "../img/videos/Power_Yoga_Canada.mp4";
@@ -24,21 +24,13 @@ import WeddingVideo from "../img/videos/Tommy_&_Victoria.mp4";
 //COMPONENTS
 import ClientMarquee from '../components/clientMarquee.jsx'
 import Footer from '../components/Footer.jsx'
+import Icon from '../components/Icon';
 
 //ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
-    const [index, setIndex] = React.useState(0);
-
-    React.useEffect(() => {
-        const intervalId = setInterval(
-            () => setIndex((index) => index + 1),
-            1500, // every 3 seconds
-        );
-        return () => clearTimeout(intervalId);
-    }, []);
 
     //useEffect(() => {
     // Reveal Animation
@@ -120,10 +112,9 @@ const Home = () => {
         },
     ];
 
-    const [hoveredProject, setHoveredProject] = useState(null);
-
     return (
         <div>
+            <Icon></Icon>
             <div className="home">
                 <div className="overlay-transparent">
                     <CountUp onEnd={countEnd} className='countup-overlay' suffix='%' end={100} />
@@ -189,31 +180,50 @@ const Home = () => {
                 <h2 className="projects-section-title">PROJECTS</h2>
                 <section className="projects">
                     <div className="projects-grid">
-                        {projectData.map((project, index) => (
-                            <a
-                                href="#"
-                                className={`project-item ${project.wide ? "project-wide" : ""}`}
-                                key={index}
-                                onMouseEnter={() => setHoveredProject(index)}
-                                onMouseLeave={() => setHoveredProject(null)}
-                            >
-                                {hoveredProject === index ? (
-                                    <video
-                                        src={project.videoSrc}
-                                        autoPlay
-                                        loop
-                                        muted
-                                        className={`project-video ${hoveredProject === index ? 'visible' : ''}`}
-                                    ></video>
-                                ) : (
-                                    <img className='project-image' src={project.imgSrc} alt={project.title} />
-                                )}
-                                <div className="project-info">
-                                    <h3>{project.title}</h3>
-                                    <p>{project.description}</p>
-                                </div>
-                            </a>
-                        ))}
+                        <a href='#' className="project-item">
+                            <img src={Wedding} alt="Tommy & Victoria" />
+                            <div className="project-info">
+                                <h3>Tommy & Victoria</h3>
+                                <p>Wedding Videography</p>
+                            </div>
+                        </a>
+                        <a href='#' className="project-item">
+                            <img src={CompanyShowcase} alt="Millworx" />
+                            <div className="project-info">
+                                <h3>Millworx</h3>
+                                <p>Company Showcase</p>
+                            </div>
+                        </a>
+                        <a href='#' className="project-item project-wide">
+                            <video
+                                src={EventVideo}
+                                autoPlay
+                                loop
+                                muted
+                                className={"project-video"}
+                            ></video>
+                            <div className="project-info">
+                                <h3>LZ World Tour</h3>
+                                <p>Event Coverage</p>
+                            </div>
+                        </a>
+                        <a href='#' className="project-item">
+                            <img src={EventTwo} alt="Power Yoga Canada" />
+                            <div className="project-info">
+                                <h3>Power Yoga Canada</h3>
+                                <p>Promotional & Event</p>
+                            </div>
+                        </a>
+                        <a
+                            href="#"
+                            className="project-item"
+                        >
+                            <img src={EventThree} alt="Facility Plus" />
+                            <div className="project-info">
+                                <h3>Facility Plus</h3>
+                                <p>Event Coverage</p>
+                            </div>
+                        </a>
                     </div>
                 </section>
             </div>

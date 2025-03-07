@@ -1,57 +1,279 @@
-.not-found {
+.not-found-section {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 20px;
 }
 
-.not-found .container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    z-index: 1;
-    line-height: 35px;
-}
-
-.not-found .overlay {
+.not-found-section img {
+    height: 70px;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 20px;
+    left: 20px;
+}
+
+.not-found-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
     height: 100%;
-    background-color: rgb(56, 56, 56);
-    opacity: 1;
-    z-index: 3;
 }
 
-.not-found .container .title {
-    font-size: 3em;
+.section-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 50px;
+    width: 800px;
+    float: left;
 }
 
-.not-found .container .desc {
-    font-size: 1.2em;
+.section-one .links {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    line-height: 1;
 }
 
-.not-found .container .btn {
-    border: none;
-    background-color: #FF7300;
-    text-decoration: none;
-    padding: 5px 15px;
-    color: #fff;
-    border-radius: 5px;
+.links .item-link {
+    transition: 0.5s;
+}
+
+.section-one .links .item-link:hover:not(:first-child) {
+    font-weight: bold;
+    color: #ff7000;
+    font-size: 2.3rem;
+
+}
+
+.section-two .links .item-link:hover {
+    font-size: 8rem;
+    font-weight: bold;
+    color: #ff7000;
+}
+
+
+.section-one .big-link {
+    font-size: 7rem;
+    font-weight: bold;
+    line-height: 0.8;
     transition: 0.3s;
-    margin-top: 5px;
-    font-size: 1.2em;
+
 }
 
-.not-found .container .btn:hover {
-    background-color: #333;
+.section-one .big-link:hover {
+    color: #ff7000;
 }
 
-.not-found .logo {
-    position: absolute;
-    width: 40%;
+
+.section-one .email {
+    text-decoration: underline;
+    font-size: 1.5rem;
+    font-weight: 100;
+    transition: 0.3s;
+}
+
+.section-one .email:hover {
+    color: #ff7000;
+    font-weight: bold;
+}
+
+.section-one .socials a {
+    font-weight: 100;
+    padding-right: 10px;
+    transition: 0.3s;
+}
+
+.section-one .socials a:hover {
+    font-weight: bold;
+}
+
+.section-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0 50px;
+}
+
+.section-two .links {
+    display: flex;
+    flex-direction: column;
+    font-size: 7rem;
+    line-height: 0.8;
+}
+
+.section-two .links a {
+    font-weight: bold;
+}
+
+.section-two .bottom a {
+    padding-right: 10px;
+    font-weight: 100;
+    transition: 0.3s;
+}
+
+.section-two .bottom a:hover {
+    font-weight: bold;
+}
+
+.middle-mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.middle-mobile .email {
+    text-decoration: underline;
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.middle-mobile .email:hover {
+    color: #ff7000;
+}
+
+.middle-mobile .socials a {
+    margin-right: 15px;
+    font-weight: 100;
+    transition: 0.3s;
+    font-size: 1.5rem;
+}
+
+.middle-mobile .socials a:hover {
+    font-weight: bold;
+}
+
+#hide-desktop {
+    display: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .not-found-section {
+        padding: 0;
+        height: 100%;
+    }
+
+    .not-found-info {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .section-one,
+    .section-two,
+    .middle-mobile {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        margin-top: 80px;
+    }
+
+    .not-found-section img {
+        position: relative;
+        height: 70px;
+        top: 30px;
+        left: 30px;
+    }
+
+    .section-one .big-link {
+        font-size: 6.5rem;
+    }
+
+    .section-one .links {
+        font-size: 2.5rem;
+    }
+
+    .section-one .links .item-link:hover:not(:first-child) {
+        font-weight: bold;
+        color: #ff7000;
+        font-size: 3rem;
+    }
+
+    .section-one .email {
+        font-size: 1rem;
+    }
+
+    .section-two .links {
+        font-size: 7rem;
+        text-align: left;
+    }
+
+    .section-two .links .item-link:hover {
+        font-size: 7rem;
+    }
+
+    .section-two .bottom a {
+        font-size: 0.9rem;
+    }
+
+    #hide-mobile {
+        display: none;
+    }
+
+    #hide-desktop {
+        display: flex;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .not-found-section {
+        padding: 0;
+        height: 100%;
+    }
+
+    .not-found-section img {
+        position: relative;
+        height: 50px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .section-one,
+    .section-two,
+    .middle-mobile {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        margin-top: 110px;
+    }
+
+    .section-one .big-link {
+        font-size: 5rem;
+    }
+
+    .section-one .links {
+        font-size: 2rem;
+    }
+
+    .section-one .links .item-link:hover:not(:first-child) {
+        font-weight: bold;
+        color: #ff7000;
+        font-size: 2rem;
+    }
+
+    .section-one .email {
+        font-size: 1rem;
+    }
+
+    .section-two .links {
+        font-size: 6rem;
+        text-align: left;
+    }
+
+    .section-two .links .item-link:hover {
+        font-size: 6rem;
+    }
+
+    .section-two .bottom a {
+        font-size: 0.9rem;
+    }
+
+    #hide-mobile {
+        display: none;
+    }
+
+    #hide-desktop {
+        display: flex;
+    }
 }

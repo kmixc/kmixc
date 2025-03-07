@@ -1,15 +1,16 @@
 import React from 'react'
 import '../css/Footer.css'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer-section">
                 <div className="footer-links" id='hide-mobile'>
-                    <a href="/our-work">Our Work</a>
-                    <a href="/about">About</a>
-                    <a href="/videography">Videography</a>
-                    <a href="/web-development">Web Design</a>
+                    <Link to="/projects">Projects</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/videography">Videography</Link>
+                    <Link to="/website-development">Web Design</Link>
                 </div>
 
                 <h2 className="footer-title" >
@@ -24,24 +25,24 @@ export default function Footer() {
                     <p>Marketing</p>
                 </div>
 
-                <a href="/contact" className="footer-link">Start the project</a>
+                <Link to="/contact" className="footer-link">Start the project</Link>
 
                 <div className="footer-socials">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a href="https://instagram.com/kmixcvisuals" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.linkedin.com/in/oliver-kmiec-5b601b1b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.youtube.com/@kmixc" target="_blank" rel="noopener noreferrer">YouTube</a>
                 </div>
             </div>
 
             <div className='footer-section' id='hide-desktop'>
                 <div className="footer-links">
-                    <a href="/our-work">Our Work</a>
-                    <a href="/about">About</a>
-                    <a href="/videography">Videography</a>
-                    <a href="/web-development">Web Design</a>
+                    <Link to="/projects">Projects</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/videography">Videography</Link>
+                    <Link to="/website-development">Web Design</Link>
                 </div>
 
-                <a href="/contact" className="footer-link">Start the project</a>
+                <Link to="/contact" className="footer-link">Start the project</Link>
 
             </div>
 
@@ -53,9 +54,9 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-socials">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a href="https://instagram.com/kmixcvisuals" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.linkedin.com/in/oliver-kmiec-5b601b1b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.youtube.com/@kmixc" target="_blank" rel="noopener noreferrer">YouTube</a>
                 </div>
             </div>
 

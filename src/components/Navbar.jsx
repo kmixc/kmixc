@@ -1,72 +1,75 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
-import { gsap } from 'gsap';
-import '../css/Navbar.css'
-import Logo from '../img/logos/logo-white.svg'
-
-
-//ICONS
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBehance, faInstagram, faLinkedin, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { Cross as Hamburger } from 'hamburger-react';
-
+import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import Hamburger from "hamburger-react";
+import "../css/Navbar.css";
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const menuRef = useRef(null);
+    const overlayRef = useRef(null);
+    const linksRef = useRef([]);
 
-    const toggleMenu = () => {
-        if (isOpen) {
-            closeMenu();
+    useEffect(() => {
+        if (menuOpen) {
+            gsap.to(overlayRef.current, { opacity: 1, duration: 0.3, display: "block" });
+            gsap.to(menuRef.current, { x: 0, duration: 0.6, ease: "power2.out" });
+            gsap.fromTo(
+                linksRef.current,
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, stagger: 0.15, duration: 0.5, delay: 0.3 }
+            );
         } else {
-            openMenu();
+            gsap.to(menuRef.current, { x: "100%", duration: 0.5, ease: "power2.in" });
+            gsap.to(overlayRef.current, { opacity: 0, duration: 0.3, display: "none", delay: 0.5 });
         }
-        setIsOpen(!isOpen);
-    };
+    }, [menuOpen]);
 
-    const openMenu = () => {
-        gsap.to('.menu', { x: 0, duration: 0.3, ease: 'power4.out' });
-        gsap.to('.btm-menu', { x: 0, duration: 0.3, ease: 'power4.out' });
-        gsap.to('.hamburger-react', { color: "#000", duration: 1, ease: 'power4.out' });
-        gsap.to('.nav-overlay', { opacity: "0.7", visibility: "visible", duration: 1, ease: 'power4.out' });
-    };
-
-    const closeMenu = () => {
-        gsap.to('.menu', { x: '-100%', duration: 0.3, ease: 'power4.inOut', onComplete: resetMenu });
-        gsap.to('.btm-menu', { x: '-100%', duration: 0.3, ease: 'power4.inOut', onComplete: resetMenu });
-        gsap.to('.hamburger-react', { color: "rgb(32, 32, 32)", duration: 1, ease: 'power4.out' });
-        gsap.to('.nav-overlay', { opacity: "0", visibility: "hidden", duration: 5, ease: 'power4.out' });
-    };
-
-    const resetMenu = () => {
-        gsap.set('.menu', { clearProps: 'all' });
-        gsap.set('.btm-menu', { clearProps: 'all' });
-    };
+    const closeMenu = () => setMenuOpen(false);
 
     return (
-        <div>
-            <div className='nav-overlay'></div>
-            <div className='navbar'>
-                <div className={`menu ${isOpen ? 'open' : ''}`}>
-                    <div className='menu-links'>
-                        <Link className='menu-item' onClick={toggleMenu} to="/home">home</Link>
-                        <Link className='menu-item' onClick={toggleMenu} to="/our-work">projects</Link>
-                        <Link className='menu-item' onClick={toggleMenu} to="/videography">services</Link>
-                        <Link className='menu-item' onClick={toggleMenu} to="/about">about</Link>
-                    </div>
+        <div className="navbar">
+            {/* Hamburger Menu Button */}
+            <div className="menu-btn">
+                <Hamburger toggled={menuOpen} toggle={setMenuOpen} size={40} />
+            </div>
 
-                    <a className='nav-contact-link' href="#">Start A Project</a>
+            {/* Overlay */}
+            <div ref={overlayRef} className="nav__overlay" onClick={closeMenu}></div>
 
-                    <div className='nav-bottom'>
-                        <span className=''>© Kmixc Visuals 2025</span>
-                        <span>|</span>
-                        <span><a href="#">Privacy Policy</a></span>
-                    </div>
+            {/* Menu */}
+            <div ref={menuRef} className="nav__menu">
+                {/* Close Button (Hamburger) */}
+                <div className="menu-btn">
+                    <Hamburger toggled={menuOpen} toggle={setMenuOpen} size={40} />
                 </div>
 
-                <div className="nav-btn">
-                    <Hamburger toggled={isOpen} toggle={toggleMenu} />
+                <div className="nav__links">
+                    {["Home", "Projects", "Services", "About"].map((text, i) => (
+                        <Link
+                            key={text}
+                            to={text}
+                            ref={el => (linksRef.current[i] = el)}
+                            className="nav__link"
+                            onClick={closeMenu} // Closes menu when clicked
+                        >
+                            <span className="nav__linkInner">{text}</span>
+                        </Link>
+                    ))}
+                </div>
+
+                <div className="nav__buttons">
+                    <Link to="/contact" onClick={closeMenu} className="button nav__menuButton">
+                        <span className="button__inner">Start a Project</span>
+                    </Link>
+                </div>
+
+                <div className="nav__footer">
+                    <span>© Kmixc Visuals 2025</span>
+                    <span className="footer__spacer"> | </span>
+                    <a href="#">Privacy Policy</a>
                 </div>
             </div>
         </div>
-    )
+    );
 }

@@ -1,1 +1,49 @@
 .about-page {}
+
+.about-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    color: white;
+    overflow: hidden;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.about-section .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Adjust the opacity (0 = transparent, 1 = fully black) */
+    z-index: -1;
+}
+
+.about-logo {
+    margin: auto auto;
+}
+
+.about-logo img {
+    height: 250px;
+    /* Adjust size */
+    width: auto;
+}
+
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Ensures full width */
+    height: 100vh;
+    /* Ensures full height */
+    object-fit: cover;
+    /* Prevents white gaps */
+    z-index: -2;
+}
