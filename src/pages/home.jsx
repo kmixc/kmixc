@@ -121,7 +121,7 @@ const Home = () => {
                     A <span className="highlight">production</span> partner for brands and agencies.
                 </h2>
 
-                <div className="services-section-links">
+                <div className="services-section-links" id='hide-mobile'>
                     <a href="/our-work">Our Work</a>
                     <a href="/about">About</a>
                     <a href="/videography">Videography</a>
@@ -162,12 +162,14 @@ const Home = () => {
                         </a>
                         <a href='#' className="project-item project-wide">
                             <video
+                                id='hide-mobile'
                                 src={EventVideo}
                                 autoPlay
                                 loop
                                 muted
                                 className={"project-video"}
                             ></video>
+                            <img id='hide-desktop' src={Event} alt="Millworx" />
                             <div className="project-info">
                                 <h3>LZ World Tour</h3>
                                 <p>Event Coverage</p>
@@ -221,7 +223,7 @@ const Home = () => {
 
                         {/* Contact Button */}
                         <a href="/contact" className="contact-button">
-                            <p>BOOK A CONSULT</p>
+                            BOOK A CONSULT
                         </a>
                     </div>
                 </div>

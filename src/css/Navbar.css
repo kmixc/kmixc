@@ -8,10 +8,11 @@
     border: none;
     cursor: pointer;
     position: fixed;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     z-index: 3;
-    color: #000;
+    color: #ffffff;
+    mix-blend-mode: difference;
 }
 
 /* Overlay */
@@ -114,7 +115,20 @@
     font-weight: 100;
 }
 
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+    .nav__menu {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .nav__links {
+        margin-top: 20%;
+    }
+
+    .nav__link {
+        font-size: 4rem;
+    }
+}
 
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
@@ -130,5 +144,24 @@
     .nav__link {
         font-size: 4rem;
     }
+}
 
+@media (max-height: 450px) {
+    .nav__menu {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .nav__links {
+        margin-top: 0;
+    }
+
+    .nav__link {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    .nav__buttons {
+        margin-top: 0;
+    }
 }

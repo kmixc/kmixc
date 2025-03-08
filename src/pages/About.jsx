@@ -28,7 +28,7 @@ export default function About() {
     return (
         <div className='about-page'>
             <Icon></Icon>
-            <Link className='' to={"/home"}>
+            <Link className='logo' to={"/home"}>
                 <img src={Logo2} alt="Kmixc Visuals" />
             </Link>
             <div className="about-section">

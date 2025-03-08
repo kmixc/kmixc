@@ -31,7 +31,7 @@ export default function NotFound() {
 
                 <div className='middle-mobile' id='hide-desktop'>
                     <Link to="/contact" className='email'>OLIVER@KMIXC.COM</Link>
-                    <div className='socials' >
+                    <div className='socials'>
                         <a href="#">INSTAGRAM</a>
                         <a href="#">LINKEDIN</a>
                         <a href="#">YOUTUBE</a>
