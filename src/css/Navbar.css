@@ -113,3 +113,22 @@
 .nav__footer a {
     font-weight: 100;
 }
+
+@media (max-width: 1024px) {}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .nav__menu {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .nav__links {
+        margin-top: 20%;
+    }
+
+    .nav__link {
+        font-size: 4rem;
+    }
+
+}
