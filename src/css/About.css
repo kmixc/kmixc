@@ -1,4 +1,14 @@
-.about-page {}
+.about-page {
+    overflow: hidden;
+}
+
+.about-page a img {
+    height: 70px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
 
 .about-section {
     position: relative;
@@ -21,11 +31,12 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     /* Adjust the opacity (0 = transparent, 1 = fully black) */
-    z-index: -1;
+    z-index: 2;
 }
 
 .about-logo {
     margin: auto auto;
+    z-index: 3;
 }
 
 .about-logo img {
@@ -35,7 +46,7 @@
 }
 
 /* Background Video */
-.background-video {
+.about-section .background-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -45,5 +56,421 @@
     /* Ensures full height */
     object-fit: cover;
     /* Prevents white gaps */
-    z-index: -2;
+    z-index: 2;
+}
+
+.about-intro {
+    padding: 150px 50px;
+}
+
+.about-intro p {
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.about-team {
+    filter: grayscale(1);
+}
+
+.about-team--single {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: translateX(300px);
+}
+
+.about-team--single img {
+    margin-top: -200px;
+    margin-bottom: -200px;
+}
+
+.about-description-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    padding: 150px 0;
+}
+
+.about-description-one span {
+    font-weight: bold;
+    color: #ff7000;
+    font-size: 0.6em;
+    margin-right: 150px;
+}
+
+.about-description-one p {
+    width: 90%;
+    font-size: 3.7rem;
+    text-align: justify;
+}
+
+.about-team--double {
+    display: flex;
+    padding: 0 20px;
+}
+
+.about-team--double img {
+    width: 50%;
+    padding: 20px;
+}
+
+.about-description-two {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.about-description-two h1 {
+    font-size: 6rem;
+    /* Large text */
+    line-height: 0.85;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-description-two h1 span {
+    font-weight: bold;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 30px;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 100;
+}
+
+.btn-primary {
+    background-color: #ff7000;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #e66400;
+}
+
+.btn-secondary {
+    border: 2px solid black;
+    color: black;
+}
+
+.btn-secondary:hover {
+    background-color: black;
+    color: white;
+}
+
+.about-text {
+    max-width: 600px;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    text-align: justify;
+}
+
+.about-text p {
+    font-weight: 100;
+}
+
+.about-team--single-btm {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.about-team--single-btm img {
+    margin-top: -350px;
+    margin-bottom: -250px;
+}
+
+.about-clients {
+    margin-bottom: 50px;
+}
+
+.about-clients p {
+    text-align: center;
+    padding: 100px 0;
+    font-size: 2rem;
+}
+
+.about-clients p .text-change {
+    font-family: 'Courgette', cursive;
+    font-weight: 100;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .about-logo img {
+        height: 150px;
+    }
+
+    .about-intro {
+        padding: 100px 0px;
+    }
+
+    .about-intro p {
+        font-size: 5rem;
+    }
+
+    .about-team--single {
+        transform: translateX(100px);
+    }
+
+    .about-team--single img {
+        margin-top: -100px;
+        margin-bottom: -100px;
+    }
+
+    .about-description-one {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.1;
+        padding: 100px 20px;
+    }
+
+    .about-description-one p {
+        width: 90%;
+        font-size: 3rem;
+        text-align: justify;
+    }
+
+    .about-description-one span {
+        margin-right: 50px;
+    }
+
+    .about-team--double {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .about-team--double img {
+        width: 90%;
+        padding: 0;
+        margin-top: -50px;
+        margin-bottom: -100px;
+    }
+
+    #hide-mobile {
+        display: none;
+    }
+
+    .about-description-two {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .about-description-two h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .about-description-two h1 span {
+        font-weight: bold;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+    }
+
+    .about-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 30px 0;
+    }
+
+    .btn {
+        font-size: 1.3rem;
+    }
+
+    .about-text {
+        max-width: 700px;
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .about-team--single-btm {
+        padding: 0px;
+    }
+
+    .about-team--single-btm img {
+        margin-top: -175px;
+        margin-bottom: -150px;
+    }
+
+    .about-clients {
+        margin-bottom: 50px;
+    }
+
+    .about-clients p {
+        text-align: center;
+        padding: 100px 20px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+    .about-page a img {
+        height: 50px;
+    }
+
+    .about-logo img {
+        height: 150px;
+    }
+
+    .about-intro {
+        padding: 50px 0px;
+    }
+
+    .about-intro p {
+        font-size: 2.5rem;
+    }
+
+    .about-team--single {
+        transform: translateX(50px);
+    }
+
+    .about-team--single img {
+        margin-top: -0px;
+        margin-bottom: -0px;
+    }
+
+    .about-description-one {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.1;
+        padding: 50px 20px;
+    }
+
+    .about-description-one p {
+        width: 90%;
+        font-size: 2rem;
+        text-align: justify;
+    }
+
+    .about-description-one span {
+        margin-right: 50px;
+    }
+
+    .about-team--double {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .about-team--double img {
+        width: 90%;
+        padding: 0;
+        margin-top: -10px;
+        margin-bottom: -30px;
+    }
+
+    #hide-mobile {
+        display: none;
+    }
+
+    .about-description-two {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .about-description-two h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .about-description-two h1 span {
+        font-weight: bold;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+    }
+
+    .about-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 30px 0;
+    }
+
+    .btn {
+        font-size: 1.3rem;
+    }
+
+    .about-text {
+        max-width: 100%;
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .about-team--single-btm {
+        padding: 0px;
+    }
+
+    .about-team--single-btm img {
+        margin-top: -50px;
+        margin-bottom: -50px;
+    }
+
+    .about-clients {
+        margin-bottom: 50px;
+    }
+
+    .about-clients p {
+        text-align: center;
+        padding: 50px 20px;
+        font-size: 1rem;
+    }
 }

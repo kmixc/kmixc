@@ -78,40 +78,6 @@ const Home = () => {
         }, 5000);
     }
 
-    const projectData = [
-        {
-            title: "Tommy & Victoria",
-            description: "Wedding Videography",
-            imgSrc: Wedding,
-            videoSrc: WeddingVideo,
-        },
-        {
-            title: "Millworx",
-            description: "Company Showcase",
-            imgSrc: CompanyShowcase,
-            videoSrc: CompanyShowcaseVideo,
-        },
-        {
-            title: "LZ World Tour",
-            description: "Event Coverage",
-            imgSrc: Event,
-            videoSrc: EventVideo,
-            wide: true,
-        },
-        {
-            title: "Power Yoga Canada",
-            description: "Promotional & Event",
-            imgSrc: EventTwo,
-            videoSrc: EventTwoVideo,
-        },
-        {
-            title: "Facility Plus",
-            description: "Event Coverage",
-            imgSrc: EventThree,
-            videoSrc: EventThreeVideo,
-        },
-    ];
-
     return (
         <div>
             <Icon></Icon>
