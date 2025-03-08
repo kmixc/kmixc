@@ -45,7 +45,7 @@ export default function Contact() {
     return (
         <div className='contact-page'>
             <div className='contact-top-bar' id='#top'>
-                <Link to="/"><img className='logo' src={Logo} alt="kmixcvisuals" /></Link>
+                <Link to="/home"><img className='logo' src={Logo} alt="kmixcvisuals" /></Link>
             </div>
             <div className='title'>
                 <p>LET'S <span className='underline'>START</span> SOMETHING.</p>
