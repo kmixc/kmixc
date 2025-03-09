@@ -8,7 +8,7 @@ export default function NotFound() {
 
     return (
         <div className='not-found-section'>
-            <Link to={"/home"}>
+            <Link to={"/"}>
                 <img src={Logo} alt="Kmixc Visuals" />
             </Link>
             <div className='not-found-info'>
@@ -23,18 +23,18 @@ export default function NotFound() {
                         <Link to="/contact" className='email' id='hide-mobile'>OLIVER@KMIXC.COM</Link>
                     </div>
                     <div className='socials' id='hide-mobile'>
-                        <a href="#">INSTAGRAM</a>
-                        <a href="#">LINKEDIN</a>
-                        <a href="#">YOUTUBE</a>
+                        <a href="https://instagram.com/kmixcvisuals" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.linkedin.com/in/oliver-kmiec-5b601b1b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://www.youtube.com/@kmixc" target="_blank" rel="noopener noreferrer">YouTube</a>
                     </div>
                 </div>
 
                 <div className='middle-mobile' id='hide-desktop'>
                     <Link to="/contact" className='email'>OLIVER@KMIXC.COM</Link>
                     <div className='socials'>
-                        <a href="#">INSTAGRAM</a>
-                        <a href="#">LINKEDIN</a>
-                        <a href="#">YOUTUBE</a>
+                        <a href="https://instagram.com/kmixcvisuals" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.linkedin.com/in/oliver-kmiec-5b601b1b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://www.youtube.com/@kmixc" target="_blank" rel="noopener noreferrer">YouTube</a>
                     </div>
                 </div>
 

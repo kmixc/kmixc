@@ -5,6 +5,13 @@ import Hamburger from "hamburger-react";
 import "../css/Navbar.css";
 
 export default function Navbar() {
+    const navLinks = [
+        { name: "Home", path: "/" },
+        { name: "Projects", path: "/projects" },
+        { name: "Services", path: "/services" },
+        { name: "About", path: "/about" }
+    ];
+
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef(null);
     const overlayRef = useRef(null);
@@ -45,15 +52,15 @@ export default function Navbar() {
                 </div>
 
                 <div className="nav__links">
-                    {["Home", "Projects", "Services", "About"].map((text, i) => (
+                    {navLinks.map((link, i) => (
                         <Link
-                            key={text}
-                            to={text}
+                            key={link.name}
+                            to={link.path}
                             ref={el => (linksRef.current[i] = el)}
                             className="nav__link"
                             onClick={closeMenu} // Closes menu when clicked
                         >
-                            <span className="nav__linkInner">{text}</span>
+                            <span className="nav__linkInner">{link.name}</span>
                         </Link>
                     ))}
                 </div>

@@ -75,6 +75,7 @@ export default function Projects() {
                                 autoPlay
                                 loop
                                 muted
+                                playsInline
                                 className={"project-video"}
                             ></video>
                             <img id='hide-desktop' src={Event} alt="Millworx" />
@@ -107,6 +108,7 @@ export default function Projects() {
                                 autoPlay
                                 loop
                                 muted
+                                playsInline
                                 className={"project-video"}
                             ></video>
                             <img id='hide-desktop' src={Renovation} alt="Millworx" />
@@ -117,6 +119,7 @@ export default function Projects() {
                         </a>
                     </div>
                 </section>
+                <section className=''></section>
             </div>
         </div>
     )

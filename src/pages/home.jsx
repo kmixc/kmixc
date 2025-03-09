@@ -167,6 +167,7 @@ const Home = () => {
                                 autoPlay
                                 loop
                                 muted
+                                playsInline
                                 className={"project-video"}
                             ></video>
                             <img id='hide-desktop' src={Event} alt="Millworx" />

@@ -13,14 +13,17 @@ import Videography from './pages/Videography';
 import WebsiteDevelopment from './pages/Website_Development.jsx';
 import SocialMediaManagement from './pages/Social_Media_Management.jsx';
 
+import ScrollToTop from './components/ScrollToTop.jsx'
+
 import NotFound from './pages/NotFound';
 
 function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <Routes>
-        <Route path='/home' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/services' element={<Services />} />
