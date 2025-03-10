@@ -71,6 +71,18 @@
     opacity: 1;
 }
 
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
 .projects-logo {
     margin: auto auto;
     z-index: 3;
@@ -121,6 +133,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    grid-row: 0;
 }
 
 .project-item img {

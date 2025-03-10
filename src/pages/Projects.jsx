@@ -30,17 +30,17 @@ import RenovationVideo from '../img/videos/CGR.mp4'
 import Footer from '../components/Footer.jsx'
 
 const projectsData = [
-    { id: 1, categories: ["Special Event"], title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography" },
-    { id: 2, categories: ["Business"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase" },
-    { id: 3, categories: ["Event", "Automotive"], title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage" },
+    { id: 1, categories: ["Special Event"], title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography", wide: false },
+    { id: 2, categories: ["Business"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase", wide: false },
+    { id: 3, categories: ["Event", "Automotive"], title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", wide: true },
     { id: 5, categories: ["Event"], title: "Facility Plus", img: EventThree, description: "Event Coverage" },
-    { id: 7, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography" },
-    { id: 6, categories: ["Renovation"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation" },
-    { id: 8, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography" },
-    { id: 9, categories: ["Dental"], title: "Luka Dental Care", img: DentalOne, description: "Company Promo" },
-    { id: 4, categories: ["Event"], title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, description: "Promotional & Event" },
-    { id: 10, categories: ["Dental"], title: "Queen Street Dental", img: DentalTwo, description: "Company Promo" },
-    { id: 11, categories: ["Construction"], title: "Custom Glass Railings", img: ConstructionOne, description: "Company Showcase" },
+    { id: 7, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", wide: false },
+    { id: 6, categories: ["Renovation"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation", wide: true },
+    { id: 8, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", wide: false },
+    { id: 9, categories: ["Dental"], title: "Luka Dental Care", img: DentalOne, description: "Company Promo", wide: false },
+    { id: 4, categories: ["Event"], title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, description: "Promotional & Event", wide: true },
+    { id: 10, categories: ["Dental"], title: "Queen Street Dental", img: DentalTwo, description: "Company Promo", wide: false },
+    { id: 11, categories: ["Construction"], title: "Custom Glass Railings", img: ConstructionOne, description: "Company Showcase", wide: false },
 ];
 
 const projects = [
@@ -60,27 +60,58 @@ const categories = ["All", "Event", "Business", "Automotive", "Special Event", "
 export default function Projects() {
     const [videoLoaded, setVideoLoaded] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState("All");
-    const [visibleCount, setVisibleCount] = useState(6); // Show 6 projects initially
+    const [visibleCount, setVisibleCount] = useState(6);
+    const [projectsPerRow, setProjectsPerRow] = useState(3);
     const projectGridRef = useRef(null);
 
-
-    // Filter projects based on category
     const filteredProjects = selectedCategory === "All"
         ? projectsData
-        : projectsData.filter(project => project.categories.includes(selectedCategory));
+        : projectsData.filter((project) => project.categories.includes(selectedCategory));
 
-    // Show limited projects initially
     const visibleProjects = filteredProjects.slice(0, visibleCount);
 
+    const calculateProjectsPerRow = () => {
+        if (projectGridRef.current) {
+            const projectItems = projectGridRef.current.querySelectorAll(".project-item");
+            if (projectItems.length > 0) {
+                const gridWidth = projectGridRef.current.offsetWidth;
+                const itemWidth = projectItems[0].offsetWidth;
+                const itemsPerRow = Math.floor(gridWidth / itemWidth);
+                setProjectsPerRow(itemsPerRow || 3);
+            }
+        }
+    };
+
+    useEffect(() => {
+        calculateProjectsPerRow();
+        window.addEventListener("resize", calculateProjectsPerRow);
+        return () => window.removeEventListener("resize", calculateProjectsPerRow);
+    }, []);
+
+    // 🟢 **Animation when filtering or updating projects**
     useEffect(() => {
         if (projectGridRef.current) {
+            const newItems = Array.from(projectGridRef.current.children).slice(visibleCount - projectsPerRow);
             gsap.fromTo(
-                projectGridRef.current.children,
+                newItems,
                 { opacity: 0, y: 20 },
                 { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" }
             );
         }
-    }, [selectedCategory, visibleCount]);
+    }, [visibleCount]);
+
+    const loadMoreProjects = () => {
+        let newVisibleCount = visibleCount;
+        let columnsFilled = 0;
+
+        while (columnsFilled < projectsPerRow && newVisibleCount < filteredProjects.length) {
+            const project = filteredProjects[newVisibleCount];
+            columnsFilled += project.wide ? 2 : 1;
+            newVisibleCount++;
+        }
+
+        setVisibleCount(newVisibleCount);
+    };
 
     return (
         <div className='projects-page'>
@@ -131,13 +162,15 @@ export default function Projects() {
 
                     <section className="projects">
                         <div ref={projectGridRef} className="projects-grid">
-                            {visibleProjects.map(project => (
-                                <a key={project.id} href='#' className={`project-item ${project.video ? "project-wide" : ""}`}>
+                            {visibleProjects.map((project) => (
+                                <a key={project.id} href="#" className={`project-item ${project.wide ? "project-wide" : ""}`}>
+                                    <div className="project-overlay"></div>
+
                                     {/* Conditionally Render Video or Image */}
                                     {project.video ? (
                                         <>
-                                            <video id='hide-mobile' src={project.video} autoPlay loop muted playsInline className="project-video"></video>
-                                            <img id='hide-desktop' src={project.img} alt={project.title} />
+                                            <video id="hide-mobile" src={project.video} autoPlay loop muted playsInline className="project-video"></video>
+                                            <img id="hide-desktop" src={project.img} alt={project.title} />
                                         </>
                                     ) : (
                                         <img src={project.img} alt={project.title} />
@@ -151,10 +184,9 @@ export default function Projects() {
                         </div>
                     </section>
 
-                    {/* Load More Button (Only shows if there are more projects to load) */}
                     {visibleCount < filteredProjects.length && (
                         <div className="load-more-container">
-                            <button className="load-more" onClick={() => setVisibleCount(prev => prev + 2)}>
+                            <button className="load-more" onClick={loadMoreProjects}>
                                 Load More Projects
                             </button>
                         </div>
