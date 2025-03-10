@@ -50,8 +50,18 @@
   width: auto;
 }
 
+.hero-section .banner-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("./img/client_imgs/CGR.jpg") center/cover no-repeat;
+  z-index: -2;
+}
+
 /* Background Video */
-.background-video {
+.hero-section .background-video {
   position: absolute;
   top: 0;
   left: 0;
@@ -61,7 +71,12 @@
   /* Ensures full height */
   object-fit: cover;
   /* Prevents white gaps */
-  z-index: -2;
+  z-index: -3;
+  opacity: 0;
+}
+
+.hero-section .background-video.loaded {
+  opacity: 1;
 }
 
 /* Text Content */

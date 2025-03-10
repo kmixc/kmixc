@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/About.css'
 import { Link } from 'react-router-dom'
 import Logo from '../img/logos/logo-white.svg'
@@ -24,18 +24,31 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export default function About() {
+    const [videoLoaded, setVideoLoaded] = useState(false);
 
     return (
         <div className='about-page'>
             <Icon></Icon>
-            <Link className='logo' to={"/home"}>
+            <Link className='logo' to={"/"}>
                 <img src={Logo2} alt="Kmixc Visuals" />
             </Link>
             <div className="about-section">
-                <video autoPlay loop muted playsInline className="background-video">
+
+                {!videoLoaded && <div className="banner-placeholder"></div>}
+
+                {/* Video Element */}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className={`background-video ${videoLoaded ? "loaded" : ""}`}
+                    onLoadedData={() => setVideoLoaded(true)}
+                >
                     <source src={Video} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
+
                 <div className="banner-overlay"></div>
                 <div className="about-logo">
                     <img src={Logo} loading="lazy" alt="Kmixc Visuals Logo" />

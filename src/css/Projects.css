@@ -3,7 +3,7 @@
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .projects-hero {
@@ -41,6 +41,16 @@
     width: auto;
 }
 
+.projects-hero .banner-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/client_imgs/Millworx.jpg") center/cover no-repeat;
+    z-index: -2;
+}
+
 /* Background Video */
 .projects-hero .background-video {
     position: absolute;
@@ -52,7 +62,13 @@
     /* Ensures full height */
     object-fit: cover;
     /* Prevents white gaps */
-    z-index: 2;
+    z-index: -3;
+    opacity: 0;
+    transition: 1s;
+}
+
+.projects-hero .background-video.loaded {
+    opacity: 1;
 }
 
 .projects-logo {
@@ -66,11 +82,28 @@
     width: auto;
 }
 
+.projects-section {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
 .projects-section-title {
     text-align: center;
     font-size: 8em;
     line-height: 1;
     font-weight: bold;
+}
+
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projects-filter button {
+    font-size: 2rem;
+    padding: 20px;
 }
 
 .projects {
@@ -133,6 +166,68 @@
     object-fit: cover;
 }
 
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.load-more {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.load-more:hover {
+    background: #333;
+}
+
+.more-projects-section {
+    padding: 40px;
+}
+
+.more-projects-section h2 {
+    font-size: 8rem;
+    margin-bottom: 20px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.more-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    margin: auto;
+}
+
+/* Individual Project Item */
+.more-projects-grid .project-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.more-projects-grid .project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/* Hover Effect */
+.more-projects-grid .project-item:hover {
+    transform: scale(1.02);
+}
+
+
 @media (max-width: 1024px) {
     .projects-section-title {
         font-size: 4rem;
@@ -151,6 +246,10 @@
     .project-wide img {
         transform: translateY(-0%) scale(1);
     }
+
+    .more-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -166,6 +265,11 @@
 
     .project-wide {
         height: 100%;
+    }
+
+    .more-projects-section h2 {
+        font-size: 3.5rem;
+        line-height: 0.9;
     }
 
     .project-wide img {
@@ -197,5 +301,14 @@
 
     .project-wide img {
         transform: translateY(-0%) scale(1);
+    }
+
+    .more-projects-section h2 {
+        font-size: 3.5rem;
+        line-height: 0.9;
+    }
+
+    .more-projects-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

@@ -7,7 +7,7 @@ import CountUp from 'react-countup';
 import Marquee from "react-fast-marquee";
 
 //IMAGES
-import Wedding from '../img/client_imgs/Wedding.jpg'
+import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
 import CompanyShowcase from '../img/client_imgs/Millworx.jpg'
 import Event from '../img/client_imgs/Event-3.jpg'
 import EventTwo from '../img/client_imgs/Yoga.jpg'
@@ -31,6 +31,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
+    const [videoLoaded, setVideoLoaded] = useState(false);
 
     //useEffect(() => {
     // Reveal Animation
@@ -93,10 +94,22 @@ const Home = () => {
                 <div className="overlay"></div>
 
                 <div className="hero-section">
-                    <video autoPlay loop muted playsInline className="background-video">
+
+                    {!videoLoaded && <div className="banner-placeholder"></div>}
+
+                    {/* Video Element */}
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={`background-video ${videoLoaded ? "loaded" : ""}`}
+                        onLoadedData={() => setVideoLoaded(true)}
+                    >
                         <source src={Video} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
+
                     <div className="banner-overlay"></div>
                     <div className="hero-logo">
                         <img src={Logo} alt="Kmixc Visuals Logo" />
@@ -147,7 +160,7 @@ const Home = () => {
                 <section className="projects">
                     <div className="projects-grid">
                         <a href='#' className="project-item">
-                            <img src={Wedding} alt="Tommy & Victoria" />
+                            <img src={SpecialEventOne} alt="Tommy & Victoria" />
                             <div className="project-info">
                                 <h3>Tommy & Victoria</h3>
                                 <p>Wedding Videography</p>
