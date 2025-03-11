@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
-
 //PAGES
 import Navbar from './components/Navbar';
 import Home from './pages/home.jsx';
@@ -35,6 +34,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <SpeedInsights />
     </>
   );
 }
