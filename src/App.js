@@ -1,5 +1,7 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 
 
 //PAGES

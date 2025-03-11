@@ -64,7 +64,6 @@
     /* Prevents white gaps */
     z-index: -3;
     opacity: 0;
-    transition: 1s;
 }
 
 .projects-hero .background-video.loaded {
@@ -127,6 +126,8 @@
     display: grid;
     /* Two equal columns */
     grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+
 }
 
 .project-item {
