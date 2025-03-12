@@ -1,0 +1,226 @@
+.services-page {
+    margin: 0 auto;
+}
+
+.services-page .logo img {
+    height: 50px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+.services-hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    color: white;
+    overflow: hidden;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.services-hero .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Adjust the opacity (0 = transparent, 1 = fully black) */
+    z-index: 2;
+}
+
+.services-hero .banner-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/client_imgs/Millworx.jpg") center/cover no-repeat;
+    z-index: -2;
+}
+
+/* Background Video */
+.services-hero .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Ensures full width */
+    height: 100vh;
+    /* Ensures full height */
+    object-fit: cover;
+    /* Prevents white gaps */
+    z-index: -3;
+    opacity: 0;
+}
+
+.services-hero .background-video.loaded {
+    opacity: 1;
+}
+
+.services-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    line-height: 0.9;
+}
+
+.service-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.service-number {
+    font-size: 2rem;
+    color: #666;
+    font-weight: 300;
+}
+
+.service-link {
+    font-size: 8rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 100;
+    transition: font-variation-settings 0.3s ease-in-out;
+    font-variation-settings: "wght" 100;
+}
+
+.service-link:hover {
+    font-variation-settings: "wght" 700;
+}
+
+.service-description {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-size: 1.5rem;
+    color: #666;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Right-side Image */
+.service-image-container {
+    width: 40%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* 📌 RESPONSIVE DESIGN */
+
+/* Max-width: 1480px (Large Screens) */
+@media (max-width: 1480px) {
+    .service-link {
+        font-size: 6rem;
+    }
+
+    .service-number {
+        font-size: 1.8rem;
+    }
+
+    .service-description {
+        font-size: 1.3rem;
+    }
+
+    .service-image-container {
+        width: 35%;
+    }
+}
+
+/* Max-width: 1024px (Tablets & Smaller Desktops) */
+@media (max-width: 1024px) {
+    .services-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .services-container {
+        align-items: center;
+    }
+
+    .service-link {
+        font-size: 5rem;
+    }
+
+    .service-number {
+        font-size: 1.5rem;
+    }
+
+    .service-description {
+        font-size: 1.2rem;
+    }
+
+    .service-image-container {
+        width: 70%;
+        height: 400px;
+    }
+}
+
+/* Max-width: 768px (iPads & Large Phones) */
+@media (max-width: 768px) {
+    .service-link {
+        font-size: 4rem;
+    }
+
+    .service-number {
+        font-size: 1.3rem;
+    }
+
+    .service-description {
+        font-size: 1rem;
+    }
+
+    .service-image-container {
+        width: 80%;
+        height: 350px;
+    }
+}
+
+/* Max-width: 480px (Mobile Phones) */
+@media (max-width: 480px) {
+    .service-link {
+        font-size: 3rem;
+    }
+
+    .service-number {
+        font-size: 1.2rem;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+    }
+
+    .service-image-container {
+        width: 90%;
+        height: 300px;
+    }
+}

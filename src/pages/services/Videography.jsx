@@ -1,22 +1,22 @@
 import React, { useEffect } from 'react'
-import '../css/Videography.css'
+import '../../css/Videography.css'
 import { Link } from 'react-router-dom'
-import Logo from '../img/logos/logo.svg'
-import Circle from '../img/circle_text_for_video.svg'
+import Logo from '../../img/logos/logo.svg'
+import Circle from '../../img/circle_text_for_video.svg'
 import $ from 'jquery'
 
 //COMPONENTS
-import ClientMarquee from '../components/clientMarquee'
-import Footer from '../components/Footer.jsx'
+import ClientMarquee from '../../components/clientMarquee'
+import Footer from '../../components/Footer.jsx'
 
 //ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSortDown } from '@fortawesome/free-solid-svg-icons';
 import { faSquare } from '@fortawesome/free-solid-svg-icons';
 
-import Y2K_1 from '../img/svg_icons/8.svg'
-import Y2K_2 from '../img/svg_icons/7.svg'
-import Y2K_3 from '../img/svg_icons/23.svg'
+import Y2K_1 from '../../img/svg_icons/8.svg'
+import Y2K_2 from '../../img/svg_icons/7.svg'
+import Y2K_3 from '../../img/svg_icons/23.svg'
 
 //GSAP
 import { gsap } from 'gsap';
