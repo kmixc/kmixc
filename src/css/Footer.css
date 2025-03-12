@@ -33,6 +33,10 @@
     flex-direction: column;
 }
 
+.footer-links a {
+    text-decoration: none;
+}
+
 .footer-links p {
     display: flex;
     font-weight: 500;
@@ -58,6 +62,10 @@
 .footer-socials {
     display: flex;
     flex-direction: column;
+}
+
+.footer-socials a {
+    text-decoration: none;
 }
 
 /* Footer bottom section */

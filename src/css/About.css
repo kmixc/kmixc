@@ -103,6 +103,7 @@
 .about-team--single img {
     margin-top: -200px;
     margin-bottom: -200px;
+    width: 100%;
 }
 
 .about-description-one {
@@ -219,6 +220,7 @@
 .about-team--single-btm img {
     margin-top: -350px;
     margin-bottom: -250px;
+    width: 100%;
 }
 
 .about-clients {

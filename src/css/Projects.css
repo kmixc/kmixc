@@ -9,7 +9,7 @@
 .projects-hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     color: white;
     overflow: hidden;
@@ -114,13 +114,15 @@
 
 .projects-filter button {
     font-size: 2rem;
-    padding: 20px;
+    margin: 20px;
     transition: 0.3s;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .projects-filter button:hover {
     font-size: 2rem;
-    padding: 20px;
     color: #ff7000;
 }
 

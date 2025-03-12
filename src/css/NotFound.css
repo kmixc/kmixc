@@ -38,6 +38,8 @@
 
 .links .item-link {
     transition: 0.5s;
+    text-decoration: none;
+    color: #000;
 }
 
 .section-one .links .item-link:hover:not(:first-child) {
@@ -72,6 +74,7 @@
     font-size: 1.5rem;
     font-weight: 100;
     transition: 0.3s;
+    color: #000;
 }
 
 .section-one .email:hover {
@@ -83,6 +86,8 @@
     font-weight: 100;
     padding-right: 10px;
     transition: 0.3s;
+    text-decoration: none;
+    color: #000;
 }
 
 .section-one .socials a:hover {
@@ -111,6 +116,8 @@
     padding-right: 10px;
     font-weight: 100;
     transition: 0.3s;
+    text-decoration: none;
+    color: #000;
 }
 
 .section-two .bottom a:hover {
@@ -127,6 +134,7 @@
     text-decoration: underline;
     font-size: 2rem;
     transition: 0.3s;
+    color: #000;
 }
 
 .middle-mobile .email:hover {
@@ -138,6 +146,8 @@
     font-weight: 100;
     transition: 0.3s;
     font-size: 1.5rem;
+    text-decoration: none;
+    color: #000;
 }
 
 .middle-mobile .socials a:hover {

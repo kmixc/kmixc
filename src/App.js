@@ -1,6 +1,5 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 //PAGES
@@ -36,7 +35,6 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-      <SpeedInsights />
     </>
   );
 }

@@ -20,7 +20,6 @@ import WeddingVideo from "../img/videos/Tommy_&_Victoria.mp4";
 //COMPONENTS
 import ClientMarquee from '../components/clientMarquee.jsx'
 import Footer from '../components/Footer.jsx'
-import Icon from '../components/Icon';
 import Preloader from '../components/Preloader.jsx';
 
 //ICONS
@@ -46,7 +45,6 @@ const Home = () => {
 
     return (
         <div>
-            <Icon></Icon>
             <Preloader />
             <div className="home">
                 <div className="hero-section">
@@ -89,16 +87,9 @@ const Home = () => {
                 <h2 className="services-section-title">
                     A <span className="highlight">production</span> partner for brands and agencies.
                 </h2>
-
-                <div className="services-section-links" id='hide-mobile'>
-                    <Link to="/projects">Projects</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/services">Services</Link>
-                    <Link to="/contact">Contact</Link>
-                </div>
             </div>
 
-            <div className="projects-section">
+            <div className="projects-section-home">
                 <div className='projects-recap'>
                     <div onMouseEnter={disableOverlay} onMouseLeave={activateOverlay} className='video'>
                         <div className='video-overlay'>
@@ -107,7 +98,7 @@ const Home = () => {
                                 <FontAwesomeIcon icon={faCirclePlay} />
                             </div>
                         </div>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/t0KDxGAAD0I?si=mki6Q-kBWQUL79fm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/t0KDxGAAD0I?si=mki6Q-kBWQUL79fm" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
                 </div>
                 <h2 className="projects-section-title">PROJECTS</h2>

@@ -23,10 +23,5 @@
 }
 
 .preloader-logo {
-    width: 100px;
-    /* Adjust the size as needed */
-    height: 100px;
-    /* Adjust the size as needed */
-    transform: translateY(100%);
-    z-index: 9999;
+    opacity: 0;
 }

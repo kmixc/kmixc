@@ -83,7 +83,7 @@
 
 .hero-text span {
   position: relative;
-  font-size: 7.7rem;
+  font-size: 6rem;
   /* Large text */
   font-weight: bold;
   text-transform: uppercase;
@@ -96,9 +96,9 @@
 
 /* Subtext */
 .hero-subtext {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 400;
-  max-width: 360px;
+  max-width: 450px;
   text-align: justify;
   line-height: 1;
   padding: 20px 0;
@@ -126,7 +126,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 100px 20px;
+  padding: 60px 20px;
   background-color: white;
 }
 
@@ -144,32 +144,6 @@
   font-weight: bolder;
   text-decoration: underline;
 }
-
-/* Links Container */
-.services-section-links {
-  margin-top: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 150px;
-  text-decoration: underline;
-}
-
-/* Individual Links */
-.services-section-links a {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.services-section-links a:hover {
-  color: #FF7300;
-}
-
-
-
 
 .home {
   display: flex;
@@ -229,7 +203,7 @@
 }
 
 .projects {
-  padding: 50px 10px;
+  padding: 10px;
   background-color: #fff;
 }
 
@@ -447,25 +421,14 @@
   background-color: #e05500;
 }
 
-
-.icon img {
-  height: 125px;
-  animation-name: rotate;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  border-radius: 50%;
-}
-
-#follow {
-  position: absolute;
-  text-align: center;
-  z-index: -5;
-  overflow: hidden;
-}
-
 #hide-desktop {
   display: none;
+}
+
+@media (max-width: 1400px) {
+  .hero-text span {
+    font-size: 4.5rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -475,11 +438,11 @@
   }
 
   .hero-text span {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
   }
 
   .hero-subtext {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     max-width: 500px;
     padding: 30px 0;
   }
@@ -584,14 +547,6 @@
     padding: 5px;
     filter: grayscale(1);
     transition: 0.4s;
-  }
-
-  .icon img {
-    display: none;
-  }
-
-  #follow {
-    display: none;
   }
 
   #hide-mobile {
@@ -734,14 +689,6 @@
     padding-left: 50px;
     color: #fff;
   }
-
-  .icon img {
-    display: none;
-  }
-
-  #follow {
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
@@ -870,14 +817,6 @@
     font-size: 3em;
     padding-left: 50px;
     color: #fff;
-  }
-
-  .icon img {
-    display: none;
-  }
-
-  #follow {
-    display: none;
   }
 }
 

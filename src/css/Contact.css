@@ -91,8 +91,10 @@ textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
+    border: none;
     border-bottom: 1px solid #ccc;
     font-size: 16px;
+    background: none;
 }
 
 textarea {
@@ -137,6 +139,12 @@ textarea {
     }
 }
 
+@media (max-width: 1480px) {
+    .contact-info h1 {
+        font-size: 6rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .contact-page {
         width: 100%;
@@ -149,7 +157,7 @@ textarea {
         background: #fff;
         border-radius: 8px;
         overflow: hidden;
-        flex-direction: row;
+        flex-direction: column;
         padding-top: 80px;
     }
 
@@ -159,7 +167,7 @@ textarea {
     }
 
     .contact-info h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .contact-info .subtext {
@@ -198,7 +206,7 @@ textarea {
     }
 
     .contact-info h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .contact-info .subtext {

@@ -35,7 +35,7 @@ const projectsData = [
     { id: 1, categories: ["Special Event"], title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography", route: "/weddings" },
     { id: 2, categories: ["Business"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase", route: "#" },
     { id: 3, categories: ["Event", "Automotive"], title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", route: "#" },
-    { id: 5, categories: ["Event"], title: "Facility Plus", img: EventThree, description: "Event Coverage" },
+    { id: 5, categories: ["Event"], title: "Facility Plus", img: EventThree, description: "Event Coverage", route: "#" },
     { id: 7, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", route: "#" },
     { id: 6, categories: ["Renovation"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation", route: "#" },
     { id: 8, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", route: "#" },
@@ -60,7 +60,6 @@ const projects = [
 const categories = ["All", "Event", "Business", "Automotive", "Special Event", "Real Estate", "Renovation"];
 
 export default function Projects() {
-    gsap.registerPlugin(ScrollTrigger);
     const [videoLoaded, setVideoLoaded] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [visibleCount, setVisibleCount] = useState(6);
@@ -115,41 +114,6 @@ export default function Projects() {
         }
     }, [selectedCategory]);
 
-    useEffect(() => {
-        // Select all project items
-        const projectItems = gsap.utils.toArray(".project-item");
-
-        projectItems.forEach((item) => {
-            const info = item.querySelector(".project-info");
-
-            // Set initial state
-            gsap.set(info, { opacity: 0, y: 10 });
-
-            // Hover effect
-            item.addEventListener("mouseenter", () => {
-                gsap.to(info, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" });
-            });
-
-            item.addEventListener("mouseleave", () => {
-                gsap.to(info, { opacity: 0, y: 10, duration: 0.3, ease: "power2.out" });
-            });
-        });
-
-        // Cleanup function to remove event listeners
-        return () => {
-            projectItems.forEach((item) => {
-                const info = item.querySelector(".project-info");
-                item.removeEventListener("mouseenter", () => {
-                    gsap.to(info, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" });
-                });
-
-                item.removeEventListener("mouseleave", () => {
-                    gsap.to(info, { opacity: 0, y: 10, duration: 0.3, ease: "power2.out" });
-                });
-            });
-        };
-    }, [visibleProjects]); // Runs whenever visibleProjects updates
-
     const loadMoreProjects = () => {
         let newVisibleCount = visibleCount;
         let columnsFilled = 0;
@@ -193,9 +157,6 @@ export default function Projects() {
                 </video>
 
                 <div className="banner-overlay"></div>
-                <div className="projects-logo">
-                    <img src={Logo} loading="lazy" alt="Kmixc Visuals Logo" />
-                </div>
             </div>
             <div className='projects-section'>
                 <h2 className="projects-section-title">PROJECTS</h2>

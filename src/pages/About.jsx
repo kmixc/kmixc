@@ -14,7 +14,6 @@ import TeamFive from '../img/team/kmixcvisuals-5.jpg';
 
 //COMPONENTS
 import ClientGrid from '../components/clientGrid.jsx';
-import Icon from '../components/Icon.jsx';
 import Footer from '../components/Footer.jsx';
 import Preloader from '../components/Preloader.jsx';
 
@@ -49,7 +48,6 @@ export default function About() {
 
     return (
         <div className='about-page'>
-            <Icon />
             <Preloader />
             <Link className='logo' to={"/"}>
                 <img src={Logo2} alt="Kmixc Visuals" />
@@ -69,21 +67,14 @@ export default function About() {
                 </video>
                 <div className="banner-overlay"></div>
                 <div className="about-logo">
-                    <img src={Logo} loading="lazy" alt="Kmixc Visuals Logo" />
+                    <img src={Logo} alt="Kmixc Visuals Logo" />
                 </div>
             </div>
             <div className="about-intro">
                 <p>Empowering brands to conjure up creative stories</p>
             </div>
             <div className="about-team about-team--single">
-                <img ref={el => imageRefs.current[0] = el} src={TeamThree} loading="lazy" alt="Our Team" />
-            </div>
-            <div className="about-description-one">
-                <p><span>ABOUT</span>We’re a studio with diverse roots that want to help companies and organizations with everything creative, art, and technology. We work with a passion for the craft and embrace innovation in our process.</p>
-            </div>
-            <div className="about-team about-team--double">
-                <img ref={el => imageRefs.current[1] = el} src={TeamOne} loading="lazy" id='hide-mobile' alt="Team Member 1" />
-                <img ref={el => imageRefs.current[2] = el} src={TeamFour} loading="lazy" alt="Team Member 2" />
+                <img ref={el => imageRefs.current[0] = el} src={TeamThree} alt="Our Team" />
             </div>
             <section className="about-description-two">
                 <h1>
@@ -92,8 +83,8 @@ export default function About() {
                 </h1>
                 <div className="about-content">
                     <div className="about-buttons">
-                        <a href="#" className="btn btn-primary">Start A Project</a>
-                        <a href="#" className="btn btn-secondary">See Projects</a>
+                        <Link to="/contact" className="btn btn-primary">Start A Project</Link>
+                        <Link to="/projects" className="btn btn-secondary">See Projects</Link>
                     </div>
                     <div className="about-text">
                         <p>We’re a full-stack video marketing agency. Yes, that is a thing. We help brands big and small think up great ideas and transform them into videos and marketing tactics that work. We know that video marketing is always changing and consistently becoming more important in the digital landscape.</p>
@@ -102,8 +93,16 @@ export default function About() {
                     </div>
                 </div>
             </section>
+
+            <div className="about-team about-team--double">
+                <img ref={el => imageRefs.current[1] = el} src={TeamOne} id='hide-mobile' alt="Team Member 1" />
+                <img ref={el => imageRefs.current[2] = el} src={TeamFour} alt="Team Member 2" />
+            </div>
+            <div className="about-description-one">
+                <p><span>ABOUT</span>We’re a studio with diverse roots that want to help companies and organizations with everything creative, art, and technology. We work with a passion for the craft and embrace innovation in our process.</p>
+            </div>
             <div className="about-team about-team--single-btm">
-                <img ref={el => imageRefs.current[3] = el} src={TeamFive} loading="lazy" alt="Team Member" />
+                <img ref={el => imageRefs.current[3] = el} src={TeamFive} alt="Team Member" />
             </div>
             <div className="about-clients">
                 <p>Some of the <span className='text-change'>brands</span> I've collaborated with over the years</p>
