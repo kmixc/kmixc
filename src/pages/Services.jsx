@@ -1,7 +1,12 @@
 import React from 'react'
+import Preloader from '../components/Preloader.jsx'
+
 
 export default function Services() {
     return (
-        <div>Services</div>
+        <div>
+            <Preloader />
+            Services
+        </div>
     )
 }

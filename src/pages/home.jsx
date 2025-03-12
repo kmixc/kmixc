@@ -1,10 +1,5 @@
-import React from 'react';
-import { useState } from "react";
+import React, { useState } from 'react';
 import Logo from '../img/logos/logo-white.svg'
-import { gsap } from 'gsap';
-import TextTransition, { presets } from 'react-text-transition';
-import CountUp from 'react-countup';
-import Marquee from "react-fast-marquee";
 
 //IMAGES
 import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
@@ -25,6 +20,7 @@ import WeddingVideo from "../img/videos/Tommy_&_Victoria.mp4";
 import ClientMarquee from '../components/clientMarquee.jsx'
 import Footer from '../components/Footer.jsx'
 import Icon from '../components/Icon';
+import Preloader from '../components/Preloader.jsx';
 
 //ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -32,38 +28,6 @@ import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
-
-    //useEffect(() => {
-    // Reveal Animation
-    //const tl = gsap.timeline();
-
-    // Elements to animate
-    //const overlay = document.querySelector('.overlay');
-    // const title = document.querySelector('.title');
-    // const subtitle = document.querySelector('.subtitle');
-    // const features = document.querySelectorAll('.feature');
-
-    // Initial state (hidden)
-    //tl.set([title, subtitle, features], { autoAlpha: 0 });
-
-    // Animation
-    //tl.to(overlay, { duration: 1, delay: 1.2, ease: "power4.inOut", y: -1100 });
-
-    // tl.to(title, { autoAlpha: 1, y: -20, duration: 1 });
-    // tl.to(subtitle, { autoAlpha: 1, y: -10, duration: 1 });a
-    // tl.to(features, { autoAlpha: 1, y: -10, duration: 0.5, stagger: 0.2 });
-    //}, []);
-
-    const countEnd = () => {
-        const tl = gsap.timeline();
-        const overlay = document.querySelector('.overlay');
-        tl.to(overlay, { duration: 1, ease: "power4.inOut", y: -4100 });
-
-        const text_tl = gsap.timeline();
-        const text_overlay = document.querySelector('.overlay-transparent');
-        text_tl.to(text_overlay, { duration: 1, ease: "power4.inOut", y: -4100 });
-
-    };
 
     function disableOverlay() {
         let overlay = document.querySelector('.video-overlay');
@@ -82,17 +46,8 @@ const Home = () => {
     return (
         <div>
             <Icon></Icon>
+            <Preloader />
             <div className="home">
-                <div className="overlay-transparent">
-                    <CountUp onEnd={countEnd} className='countup-overlay' suffix='%' end={100} />
-                    <Marquee className='marquee-overlay'>
-                        welcome to your new branding.
-                        welcome to your new branding.
-                    </Marquee>
-                </div>
-
-                <div className="overlay"></div>
-
                 <div className="hero-section">
 
                     {!videoLoaded && <div className="banner-placeholder"></div>}

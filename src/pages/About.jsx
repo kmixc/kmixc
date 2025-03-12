@@ -16,6 +16,8 @@ import TeamFive from '../img/team/kmixcvisuals-5.jpg'
 import ClientGrid from '../components/clientGrid.jsx'
 import Icon from '../components/Icon.jsx'
 import Footer from '../components/Footer.jsx'
+import Preloader from '../components/Preloader.jsx';
+
 
 //GSAP
 import { gsap } from 'gsap';
@@ -29,6 +31,7 @@ export default function About() {
     return (
         <div className='about-page'>
             <Icon></Icon>
+            <Preloader />
             <Link className='logo' to={"/"}>
                 <img src={Logo2} alt="Kmixc Visuals" />
             </Link>

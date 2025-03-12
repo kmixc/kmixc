@@ -169,42 +169,7 @@
 }
 
 
-.home .overlay-transparent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  opacity: 1;
-  z-index: 4;
-}
 
-.home .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4000px;
-  background-color: rgb(56, 56, 56);
-  opacity: 1;
-  z-index: 3;
-}
-
-.home .overlay-transparent .countup-overlay {
-  font-size: 15em;
-  position: absolute;
-  bottom: 0;
-  padding: 20px;
-  color: #fff;
-  transform: translateX(50px);
-}
-
-.marquee-overlay {
-  font-size: 4em;
-  padding-left: 50px;
-  color: #fff;
-}
 
 .home {
   display: flex;

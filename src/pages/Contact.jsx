@@ -5,6 +5,7 @@ import Logo from '../img/logos/logo.svg'
 import { Link } from 'react-router-dom'
 
 //COMPONENTS
+import Preloader from '../components/Preloader.jsx'
 import Footer from '../components/Footer.jsx'
 
 export default function Contact() {
@@ -44,6 +45,7 @@ export default function Contact() {
 
     return (
         <div className='contact-page'>
+            <Preloader />
             <div className='contact-top-bar' id='#top'>
                 <Link to="/home"><img className='logo' src={Logo} alt="kmixcvisuals" /></Link>
             </div>

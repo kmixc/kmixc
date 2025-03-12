@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
 import Logo from '../img/logos/logo.svg'
 
+import Preloader from '../components/Preloader';
+
 export default function NotFound() {
 
     return (
         <div className='not-found-section'>
+            <Preloader />
             <Link to={"/"}>
                 <img src={Logo} alt="Kmixc Visuals" />
             </Link>

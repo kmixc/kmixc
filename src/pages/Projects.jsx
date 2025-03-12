@@ -3,6 +3,7 @@ import '../css/Projects.css'
 import Logo from '../img/logos/logo-white.svg'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 //IMAGES
 import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
@@ -27,20 +28,21 @@ import WeddingVideo from "../img/videos/Tommy_&_Victoria.mp4";
 import RenovationVideo from '../img/videos/CGR.mp4'
 
 //COMPONENTS
+import Preloader from '../components/Preloader';
 import Footer from '../components/Footer.jsx'
 
 const projectsData = [
-    { id: 1, categories: ["Special Event"], title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography", wide: false },
-    { id: 2, categories: ["Business"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase", wide: false },
-    { id: 3, categories: ["Event", "Automotive"], title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", wide: true },
+    { id: 1, categories: ["Special Event"], title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography", route: "/weddings" },
+    { id: 2, categories: ["Business"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase", route: "#" },
+    { id: 3, categories: ["Event", "Automotive"], title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", route: "#" },
     { id: 5, categories: ["Event"], title: "Facility Plus", img: EventThree, description: "Event Coverage" },
-    { id: 7, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", wide: false },
-    { id: 6, categories: ["Renovation"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation", wide: true },
-    { id: 8, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", wide: false },
-    { id: 9, categories: ["Dental"], title: "Luka Dental Care", img: DentalOne, description: "Company Promo", wide: false },
-    { id: 4, categories: ["Event"], title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, description: "Promotional & Event", wide: true },
-    { id: 10, categories: ["Dental"], title: "Queen Street Dental", img: DentalTwo, description: "Company Promo", wide: false },
-    { id: 11, categories: ["Construction"], title: "Custom Glass Railings", img: ConstructionOne, description: "Company Showcase", wide: false },
+    { id: 7, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", route: "#" },
+    { id: 6, categories: ["Renovation"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation", route: "#" },
+    { id: 8, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", route: "#" },
+    { id: 9, categories: ["Dental"], title: "Luka Dental Care", img: DentalOne, description: "Company Promo", route: "#" },
+    { id: 4, categories: ["Event"], title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, description: "Promotional & Event", route: "#" },
+    { id: 10, categories: ["Dental"], title: "Queen Street Dental", img: DentalTwo, description: "Company Promo", route: "#" },
+    { id: 11, categories: ["Construction"], title: "Custom Glass Railings", img: ConstructionOne, description: "Company Showcase", route: "#" },
 ];
 
 const projects = [
@@ -58,6 +60,7 @@ const projects = [
 const categories = ["All", "Event", "Business", "Automotive", "Special Event", "Real Estate", "Renovation"];
 
 export default function Projects() {
+    gsap.registerPlugin(ScrollTrigger);
     const [videoLoaded, setVideoLoaded] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [visibleCount, setVisibleCount] = useState(6);
@@ -100,13 +103,68 @@ export default function Projects() {
         }
     }, [visibleCount]);
 
+    // 🟢 **Overlay animation when changing category**
+    useEffect(() => {
+        if (projectGridRef.current) {
+            const projectItems = projectGridRef.current.querySelectorAll(".project-item .overlay");
+            gsap.fromTo(
+                projectItems,
+                { y: "0%" },
+                { y: "-100%", duration: 0.6, stagger: 0.1, ease: "power2.out" }
+            );
+        }
+    }, [selectedCategory]);
+
+    useEffect(() => {
+        // Select all project items
+        const projectItems = gsap.utils.toArray(".project-item");
+
+        projectItems.forEach((item) => {
+            const info = item.querySelector(".project-info");
+
+            // Set initial state
+            gsap.set(info, { opacity: 0, y: 10 });
+
+            // Hover effect
+            item.addEventListener("mouseenter", () => {
+                gsap.to(info, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" });
+            });
+
+            item.addEventListener("mouseleave", () => {
+                gsap.to(info, { opacity: 0, y: 10, duration: 0.3, ease: "power2.out" });
+            });
+        });
+
+        // Cleanup function to remove event listeners
+        return () => {
+            projectItems.forEach((item) => {
+                const info = item.querySelector(".project-info");
+                item.removeEventListener("mouseenter", () => {
+                    gsap.to(info, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" });
+                });
+
+                item.removeEventListener("mouseleave", () => {
+                    gsap.to(info, { opacity: 0, y: 10, duration: 0.3, ease: "power2.out" });
+                });
+            });
+        };
+    }, [visibleProjects]); // Runs whenever visibleProjects updates
+
     const loadMoreProjects = () => {
         let newVisibleCount = visibleCount;
         let columnsFilled = 0;
 
-        while (columnsFilled < projectsPerRow && newVisibleCount < filteredProjects.length) {
+        while (columnsFilled < projectsPerRow * 2 && newVisibleCount < filteredProjects.length) {
             const project = filteredProjects[newVisibleCount];
-            columnsFilled += project.wide ? 2 : 1;
+
+            // Ensure undefined projects don't break it
+            if (!project) break;
+
+            // Default to 1 column, but if it's a wide project, count it as 2
+            const projectWidth = project.video ? 2 : 1;
+            columnsFilled += projectWidth;
+
+            // Increment only when adding a project
             newVisibleCount++;
         }
 
@@ -115,13 +173,12 @@ export default function Projects() {
 
     return (
         <div className='projects-page'>
+            <Preloader />
             <Link className='logo' to={"/"}>
                 <img src={Logo} alt="Kmixc Visuals" />
             </Link>
             <div className="projects-hero">
-
                 {!videoLoaded && <div className="banner-placeholder"></div>}
-
                 {/* Video Element */}
                 <video
                     autoPlay
@@ -140,7 +197,6 @@ export default function Projects() {
                     <img src={Logo} loading="lazy" alt="Kmixc Visuals Logo" />
                 </div>
             </div>
-
             <div className='projects-section'>
                 <h2 className="projects-section-title">PROJECTS</h2>
                 <div>
@@ -159,31 +215,29 @@ export default function Projects() {
                             </button>
                         ))}
                     </div>
-
                     <section className="projects">
                         <div ref={projectGridRef} className="projects-grid">
-                            {visibleProjects.map((project) => (
-                                <a key={project.id} href="#" className={`project-item ${project.wide ? "project-wide" : ""}`}>
-                                    <div className="project-overlay"></div>
+                            {visibleProjects.map((project, index) => {
+                                const isThirdItem = (index + 1) % 3 === 0;
+                                return (
+                                    <a key={project.id} href={project.route} className={`project-item ${isThirdItem ? "project-wide" : ""}`}>
+                                        <div className="overlay"></div>
 
-                                    {/* Conditionally Render Video or Image */}
-                                    {project.video ? (
-                                        <>
-                                            <video id="hide-mobile" src={project.video} autoPlay loop muted playsInline className="project-video"></video>
-                                            <img id="hide-desktop" src={project.img} alt={project.title} />
-                                        </>
-                                    ) : (
-                                        <img src={project.img} alt={project.title} />
-                                    )}
-                                    <div className="project-info">
-                                        <h3>{project.title}</h3>
-                                        <p>{project.description}</p>
-                                    </div>
-                                </a>
-                            ))}
+                                        {isThirdItem && project.video ? (
+                                            <video src={project.video} autoPlay loop muted playsInline className="project-video"></video>
+                                        ) : (
+                                            <img src={project.img} alt={project.title} />
+                                        )}
+
+                                        <div className="project-info">
+                                            <h3>{project.title}</h3>
+                                            <p>{project.description}</p>
+                                        </div>
+                                    </a>
+                                );
+                            })}
                         </div>
                     </section>
-
                     {visibleCount < filteredProjects.length && (
                         <div className="load-more-container">
                             <button className="load-more" onClick={loadMoreProjects}>
@@ -203,7 +257,6 @@ export default function Projects() {
                     ))}
                 </div>
             </div>
-
             <Footer></Footer>
         </div>
     )
