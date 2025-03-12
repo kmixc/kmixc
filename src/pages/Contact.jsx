@@ -1,88 +1,81 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import '../css/Contact.css'
-import Logo from '../img/logos/logo.svg'
-import { Link } from 'react-router-dom'
+import '../css/Contact.css';
+import { Link } from 'react-router-dom';
+import Logo from '../img/logos/logo.svg';
 
-//COMPONENTS
-import Preloader from '../components/Preloader.jsx'
-import Footer from '../components/Footer.jsx'
+import Preloader from '../components/Preloader';
+import Footer from '../components/Footer';
 
 export default function Contact() {
-
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [organization, setOrganization] = useState('');
     const [message, setMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Your EmailJS service ID, template ID, and Public Key
         const serviceId = process.env.REACT_APP_SERVICE_ID;
         const formId = process.env.REACT_APP_FORM_ID;
         const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
-        // Create a new object that contains dynamic template params
         const templateParams = {
             from_name: name,
             from_email: email,
-            to_name: 'Kmixc Visuals',
+            from_organization: organization,
             message: message,
         };
 
-        // Send the email using EmailJS
         emailjs.send(serviceId, formId, templateParams, publicKey)
             .then((response) => {
                 console.log('Email sent successfully!', response);
                 setName('');
                 setEmail('');
+                setOrganization('');
                 setMessage('');
+                setSuccessMessage('Your message has been sent successfully!');
+                setTimeout(() => setSuccessMessage(''), 5000);
             })
             .catch((error) => {
                 console.error('Error sending email:', error);
             });
-    }
+    };
 
     return (
         <div className='contact-page'>
             <Preloader />
-            <div className='contact-top-bar' id='#top'>
-                <Link to="/home"><img className='logo' src={Logo} alt="kmixcvisuals" /></Link>
-            </div>
-            <div className='title'>
-                <p>LET'S <span className='underline'>START</span> SOMETHING.</p>
-            </div>
-
-            <div className='form-section'>
-                <a href="mailto:oliver.kmixc@gmail.com" className='round-button'>
-                    <div className='round-button-circle'>
-                        <p className='round-button'>GET IN TOUCH</p>
-                    </div>
-                </a>
-
-                <div className='form-offset'>
-                    <div className='desc'>
-                        <p>Ready to discuss <span className='underline'>your project</span>?</p>
-                        <p>Feel like we might be a <span className='underline'>great</span> fit?</p>
-                        <p>We <span className='text-change'>would love</span> to <span className='text-change'>hear</span> about it!</p>
-                    </div>
-                    <form className='form' onSubmit={handleSubmit}>
-                        <div className='form-flex'>
-                            <div className='form-input'>
-                                <input type="text" placeholder='NAME' name="user_name" value={name} onChange={(e) => setName(e.target.value)} />
-                            </div>
-                            <div className='form-input'>
-                                <input type="email" placeholder='EMAIL*' required name="user_email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                            </div>
-                        </div>
-                        <div className='form-input'>
-                            <textarea name="message" placeholder='PROJECT INFORMATION*' required cols="45" rows="8" value={message} onChange={(e) => setMessage(e.target.value)} />
-                        </div>
-                        <input className='form-btn' type="submit" value="SEND AWAY" />
+            <Link to="/"><img className='logo' src={Logo} alt="Kmixc Visuals" /></Link>
+            <div className='contact-container'>
+                <div className='contact-info'>
+                    <h1>Contact Us</h1>
+                    <p className='subtext'>FOR BUSINESS INQUIRIES</p>
+                    <a href='mailto:oliver.kmixc@gmail.com' className='contact-link'>oliver.kmixc@gmail.com</a>
+                    <p className='contact-number'>+1 (647) 401-7166</p>
+                    <p className='subtext'>SCHEDULE A CALL</p>
+                    <a href='https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1SqVFfx3zs2lGoBdVfsfDYqdxb9QiF8-bwpy_992TauerAHMR2DVrSyq_glCfMfW4jpCErrDog' target='_blank' className='contact-link'>Book a Time</a>
+                    {
+                        /*
+                        <p className='subtext'>TO JOIN OUR TEAM</p>
+                        <a href='mailto:oliver.kmixc@gmail.com' className='contact-link'>oliver.kmixc@gmail.com</a>
+                        */
+                    }
+                </div>
+                <div className='contact-form'>
+                    <h2>LET'S START SOMETHING.</h2>
+                    <p className='form-subtext'>Ready to discuss your project? Feel like we might be a great fit? We would love to hear about it!</p>
+                    <form onSubmit={handleSubmit}>
+                        <input type='text' placeholder='Full Name' value={name} onChange={(e) => setName(e.target.value)} required />
+                        <input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
+                        <input type='text' placeholder='Organization/Business Name' value={organization} onChange={(e) => setOrganization(e.target.value)} required />
+                        <textarea placeholder='Message' value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
+                        <button type='submit'>SEND AWAY</button>
                     </form>
+                    {successMessage && <p className='success-message fade-in'>{successMessage}</p>}
                 </div>
             </div>
-            <Footer></Footer>
+            <Footer />
         </div>
-    )
+    );
 }

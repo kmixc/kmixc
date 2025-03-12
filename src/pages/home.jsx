@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Logo from '../img/logos/logo-white.svg'
+import { Link } from 'react-router-dom';
 
 //IMAGES
 import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
@@ -90,12 +91,10 @@ const Home = () => {
                 </h2>
 
                 <div className="services-section-links" id='hide-mobile'>
-                    <a href="/our-work">Our Work</a>
-                    <a href="/about">About</a>
-                    <a href="/videography">Videography</a>
-                    <a href="/web-development">Web Development</a>
-                    <a href="/photography">Photography</a>
-                    <a href="/contact">Contact</a>
+                    <Link to="/projects">Projects</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/services">Services</Link>
+                    <Link to="/contact">Contact</Link>
                 </div>
             </div>
 

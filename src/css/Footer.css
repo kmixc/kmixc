@@ -125,6 +125,7 @@ span {
         font-size: 2em;
         max-width: 100%;
         text-align: justify;
+        padding: 0;
     }
 
     .footer-bottom {
