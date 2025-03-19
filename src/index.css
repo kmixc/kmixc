@@ -12,6 +12,18 @@
   font-style: normal;
 }
 
+::-moz-selection {
+  background: #ff7000;
+}
+
+::-webkit-selection {
+  background: #ff7000;
+}
+
+::selection {
+  background: #ff7000;
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;

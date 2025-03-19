@@ -61,6 +61,10 @@ export default function Services() {
                 <img src={Logo} alt="Kmixc Visuals" />
             </Link>
 
+            <div className="services-intro">
+                <p>Step into a world of creative possibilities. Our agency offers a range of services designed to elevate your brand and engage your audience. From captivating visuals to immersive storytelling, we specialize in crafting solutions that make an impact. Explore our services and let us bring your vision to life.                </p>
+            </div>
+
 
             <div className="services-wrapper">
                 <h1 className="services-header">(Services)</h1>
@@ -84,11 +88,11 @@ export default function Services() {
             {/* Call-to-Action Section */}
             <div className="services-cta">
                 <p className="cta-text">
-                    If you have any other questions, please feel free to contact us.
+                    If you need more information, please feel free to
                 </p>
                 {/* Use Link if you want it to route within React, or <a> for external links */}
                 <Link to="/contact" className="cta-button">
-                    Contact Us
+                    get in touch.
                 </Link>
             </div>
 
