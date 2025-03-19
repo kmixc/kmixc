@@ -3,7 +3,6 @@ import '../css/Projects.css'
 import Logo from '../img/logos/logo-white.svg'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 //IMAGES
 import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
@@ -20,11 +19,8 @@ import ConstructionOne from '../img/client_imgs/Construction_1.jpg'
 
 //VIDEOS
 import Video from '../img/backgrounds/Projects_Banner.mp4'
-import CompanyShowcaseVideo from "../img/videos/Millworx.mp4";
 import EventVideo from "../img/videos/LZ_World_Tour.mp4";
 import EventTwoVideo from "../img/videos/Power_Yoga_Canada.mp4";
-import EventThreeVideo from "../img/videos/Facility_Plus.mp4";
-import WeddingVideo from "../img/videos/Tommy_&_Victoria.mp4";
 import RenovationVideo from '../img/videos/CGR.mp4'
 
 //COMPONENTS

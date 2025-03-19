@@ -11,11 +11,7 @@ import EventThree from '../img/client_imgs/Event.jpg'
 
 //VIDEOS
 import Video from '../img/backgrounds/Website_Banner.mp4'
-import CompanyShowcaseVideo from "../img/videos/Millworx.mp4";
 import EventVideo from "../img/videos/LZ_World_Tour.mp4";
-import EventTwoVideo from "../img/videos/Power_Yoga_Canada.mp4";
-import EventThreeVideo from "../img/videos/Facility_Plus.mp4";
-import WeddingVideo from "../img/videos/Tommy_&_Victoria.mp4";
 
 //COMPONENTS
 import ClientMarquee from '../components/clientMarquee.jsx'

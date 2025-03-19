@@ -10,217 +10,150 @@
     z-index: 3;
 }
 
-.services-hero {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    color: white;
-    overflow: hidden;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-    padding: 50px;
-}
-
-.services-hero .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    /* Adjust the opacity (0 = transparent, 1 = fully black) */
-    z-index: 2;
-}
-
-.services-hero .banner-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url("../img/client_imgs/Millworx.jpg") center/cover no-repeat;
-    z-index: -2;
-}
-
-/* Background Video */
-.services-hero .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    /* Ensures full width */
-    height: 100vh;
-    /* Ensures full height */
-    object-fit: cover;
-    /* Prevents white gaps */
-    z-index: -3;
-    opacity: 0;
-}
-
-.services-hero .background-video.loaded {
-    opacity: 1;
-}
-
-.services-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 50px;
-}
-
-.services-container {
-    display: flex;
-    flex-direction: column;
+.service-marquee {
+    padding: 0 20px;
     text-transform: uppercase;
-    line-height: 0.9;
+    font-size: 5rem;
+    font-weight: bold;
 }
 
-.service-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.service-number {
-    font-size: 2rem;
-    color: #666;
-    font-weight: 300;
-}
-
-.service-link {
-    font-size: 8rem;
-    text-decoration: none;
-    color: #000;
-    font-weight: 100;
-    transition: font-variation-settings 0.3s ease-in-out;
-    font-variation-settings: "wght" 100;
-}
-
-.service-link:hover {
-    font-variation-settings: "wght" 700;
-}
-
-.service-description {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    font-size: 1.5rem;
-    color: #666;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-/* Right-side Image */
-.service-image-container {
-    width: 40%;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.service-image-container img {
+/* Container for all services */
+.services-container {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    opacity: 0;
-    transform: scale(1.1);
-    transition: opacity 0.5s, transform 0.5s;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-/* 📌 RESPONSIVE DESIGN */
+/* Each service row */
+.service-item {
+    display: grid;
+    grid-template-columns: 5% 500px 1fr;
+    /* Adjust as needed */
+    border-top: 1px solid #e5e5e5;
+    height: 20vh;
+    /* Space between columns */
+}
 
-/* Max-width: 1480px (Large Screens) */
+/* Left Column: Number */
+.service-number {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+/* Middle Column: Title */
+.service-title {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #000;
+    justify-content: start;
+    line-height: 0.8;
+}
+
+/* Right Column: Description */
+.service-description {
+    font-size: 1.5rem;
+    color: #555;
+    text-align: left;
+}
+
+/* Call-to-Action Section */
+.services-cta {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta-text {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.cta-button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+/* -------------- Responsive Breakpoints -------------- */
+
+/* ~1480px screens */
 @media (max-width: 1480px) {
-    .service-link {
-        font-size: 6rem;
-    }
-
-    .service-number {
-        font-size: 1.8rem;
+    .service-title {
+        font-size: 1.6rem;
     }
 
     .service-description {
-        font-size: 1.3rem;
-    }
-
-    .service-image-container {
-        width: 35%;
+        font-size: 0.95rem;
     }
 }
 
-/* Max-width: 1024px (Tablets & Smaller Desktops) */
+/* ~1024px screens */
 @media (max-width: 1024px) {
-    .services-wrapper {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .service-item {
+        grid-template-columns: 70px 150px 1fr;
     }
 
-    .services-container {
-        align-items: center;
-    }
-
-    .service-link {
-        font-size: 5rem;
-    }
-
-    .service-number {
-        font-size: 1.5rem;
-    }
-
-    .service-description {
-        font-size: 1.2rem;
-    }
-
-    .service-image-container {
-        width: 70%;
-        height: 400px;
+    .service-title {
+        font-size: 1.4rem;
     }
 }
 
-/* Max-width: 768px (iPads & Large Phones) */
+/* ~768px screens */
 @media (max-width: 768px) {
-    .service-link {
-        font-size: 4rem;
+    .service-item {
+        grid-template-columns: 50px 120px 1fr;
     }
 
-    .service-number {
-        font-size: 1.3rem;
-    }
-
-    .service-description {
-        font-size: 1rem;
-    }
-
-    .service-image-container {
-        width: 80%;
-        height: 350px;
-    }
-}
-
-/* Max-width: 480px (Mobile Phones) */
-@media (max-width: 480px) {
-    .service-link {
-        font-size: 3rem;
-    }
-
-    .service-number {
+    .service-title {
         font-size: 1.2rem;
     }
 
     .service-description {
         font-size: 0.9rem;
     }
+}
 
-    .service-image-container {
-        width: 90%;
-        height: 300px;
+/* ~480px screens */
+@media (max-width: 480px) {
+    .service-item {
+        grid-template-columns: 50px 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .service-title {
+        font-size: 1.1rem;
+    }
+
+    .service-number {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .service-title {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .service-description {
+        grid-row: 2;
+        grid-column: 2;
+        font-size: 0.85rem;
     }
 }

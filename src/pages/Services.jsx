@@ -2,54 +2,57 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 import '../css/Services.css';
 import { gsap } from "gsap";
+import Marquee from "react-fast-marquee";
 
 
 //IMAGES & VIDEO
 import Logo from '../img/logos/logo.svg'
-import Video from '../img/backgrounds/Projects_Banner.mp4'
-
-import videoImg from '../img/client_imgs/CGR.jpg'
-import photoImg from '../img/client_imgs/Construction_1.jpg'
-import webImg from '../img/client_imgs/Dental_1.jpg'
-import socialImg from '../img/client_imgs/Event-2.jpg'
-import marketingImg from '../img/client_imgs/Millworx-2.jpg'
-import strategyImg from '../img/client_imgs/RX7.jpg'
 
 //COMPONENTS
 import Preloader from '../components/Preloader.jsx'
 import Footer from "../components/Footer.jsx";
 
+
 const services = [
-    { number: "01", title: "Videography", description: "Capture stunning visuals with expert videography services.", image: videoImg },
-    { number: "02", title: "Photography", description: "High-quality photography for events, products, and branding.", image: photoImg },
-    { number: "03", title: "Web Design", description: "Custom-built websites that are fast, modern, and responsive.", image: webImg },
-    { number: "04", title: "Social Media", description: "Grow your brand with expert social media management.", image: socialImg },
-    { number: "05", title: "Marketing", description: "Strategic marketing campaigns tailored to your business.", image: marketingImg },
-    { number: "06", title: "Strategy", description: "Developing effective business strategies for success.", image: strategyImg }
+    {
+        number: "01.",
+        title: "Videography",
+        description:
+            "Capture brand stories with cinematic flair. From events to commercials, we deliver high-quality video content that resonates with audiences and elevates your brand’s narrative.",
+    },
+    {
+        number: "02.",
+        title: "Photography",
+        description:
+            "Showcase your brand’s essence through captivating imagery. Our photography services highlight every detail—from product shoots to lifestyle portraits—ensuring visual consistency and storytelling.",
+    },
+    {
+        number: "03.",
+        title: "Web Design",
+        description:
+            "Create a user-friendly digital presence with our custom-designed, responsive websites. We fuse aesthetics and performance to deliver seamless online experiences that engage and convert.",
+    },
+    {
+        number: "04.",
+        title: "Social Media",
+        description:
+            "Boost your brand’s influence with tailored social media strategies. We produce engaging content, foster community interactions, and expand your digital footprint across platforms.",
+    },
+    {
+        number: "05.",
+        title: "Marketing",
+        description:
+            "Drive growth and brand awareness with data-driven marketing campaigns. Our innovative approaches ensure maximum ROI, building deeper connections between you and your audience.",
+    },
+    {
+        number: "06.",
+        title: "Strategy",
+        description:
+            "Lay the groundwork for sustainable success. Our strategic solutions address core business challenges, streamline operations, and position you for long-term growth and market impact.",
+    },
 ];
 
-
 export default function Services() {
-    const [videoLoaded, setVideoLoaded] = useState(false);
-    const descriptions = useRef([]);
-    const [activeImage, setActiveImage] = useState(services[0].image);
-    const imageRef = useRef(null);
-
-    useEffect(() => {
-        gsap.set(descriptions.current, { opacity: 0, y: 10 });
-        gsap.set(imageRef.current, { opacity: 0, scale: 1.1 });
-    }, []);
-
-    const handleHover = (index) => {
-        gsap.to(descriptions.current[index], { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" });
-        gsap.to(imageRef.current, { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" });
-        setActiveImage(services[index].image);
-    };
-
-    const handleLeave = (index) => {
-        gsap.to(descriptions.current[index], { opacity: 0, y: 10, duration: 0.3, ease: "power2.out" });
-        gsap.to(imageRef.current, { opacity: 0, scale: 1.1, duration: 0.5, ease: "power2.out" });
-    };
 
     return (
         <div className="services-page">
@@ -57,44 +60,36 @@ export default function Services() {
             <Link className="logo" to={"/"}>
                 <img src={Logo} alt="Kmixc Visuals" />
             </Link>
-            <div className="services-hero">
-                {!videoLoaded && <div className="banner-placeholder"></div>}
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className={`background-video ${videoLoaded ? "loaded" : ""}`}
-                    onLoadedData={() => setVideoLoaded(true)}
-                >
-                    <source src={Video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <div className="banner-overlay"></div>
-            </div>
+
 
             <div className="services-wrapper">
+                <h1 className="services-header">(Services)</h1>
+                <Marquee autoFill={true}>
+                    <h1 className="service-marquee">
+                        Expertise
+                    </h1>
+                </Marquee>
+
                 <div className="services-container">
                     {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className="service-item"
-                            onMouseEnter={() => handleHover(index)}
-                            onMouseLeave={() => handleLeave(index)}
-                        >
-                            <span className="service-number">{service.number}</span>
-                            <Link to="#" className="service-link">{service.title}</Link>
-                            <p className="service-description" ref={(el) => (descriptions.current[index] = el)}>
-                                {service.description}
-                            </p>
+                        <div className="service-item" key={index}>
+                            <div className="service-number">{service.number}</div>
+                            <div className="service-title">{service.title}</div>
+                            <div className="service-description">{service.description}</div>
                         </div>
                     ))}
                 </div>
+            </div>
 
-                {/* Image Preview on Hover */}
-                <div className="service-image-container">
-                    <img src={activeImage} alt="Service Preview" ref={imageRef} />
-                </div>
+            {/* Call-to-Action Section */}
+            <div className="services-cta">
+                <p className="cta-text">
+                    If you have any other questions, please feel free to contact us.
+                </p>
+                {/* Use Link if you want it to route within React, or <a> for external links */}
+                <Link to="/contact" className="cta-button">
+                    Contact Us
+                </Link>
             </div>
 
             <Footer />
