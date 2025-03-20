@@ -38,8 +38,7 @@
         "title": "LZ World Tour",
         "description": "Capturing the adrenaline and excitement of the LZ World Tour.",
         "videos": [
-            "https://www.youtube.com/embed/video-id-2",
-            "https://www.youtube.com/embed/video-id-3"
+            "https://www.youtube.com/embed/3RdVGqgXXAM?si=Z3jKqhLwfRc-noSK"
         ],
         "images": [
             "lzworldtour1.jpg"
@@ -131,7 +130,20 @@
             "https://www.youtube.com/embed/KpFji-ZCb3s?si=1LDSqIgzXx0A6CM3"
         ],
         "images": [
-            "Special_Event_1.jpg"
+            "special_events/tommy&victoria1.jpg",
+            "special_events/tommy&victoria2.jpg",
+            "special_events/tommy&victoria3.jpg",
+            "special_events/tommy&victoria4.jpg",
+            "special_events/tommy&victoria5.jpg",
+            "special_events/tommy&victoria6.jpg",
+            "special_events/tommy&victoria7.jpg",
+            "special_events/tommy&victoria8.jpg",
+            "special_events/tommy&victoria9.jpg",
+            "special_events/tommy&victoria10.jpg",
+            "special_events/tommy&victoria11.jpg",
+            "special_events/tommy&victoria12.jpg",
+            "special_events/tommy&victoria13.jpg",
+            "special_events/tommy&victoria14.jpg"
         ]
     }
 ]

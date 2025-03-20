@@ -11,24 +11,28 @@ const ProjectDetail = () => {
     const { projectId } = useParams();
     const project = projectsData.find((p) => p.id === projectId);
 
-    // Merge videos + images into one array
-    const mediaItems = [
-        ...project.videos.map((video) => ({ type: "video", src: video })),
-        ...project.images.map((image) => ({
-            type: "image",
-            // For images in public/img/projects or src/assets, adjust accordingly:
-            src: require(`../assets/img/projects/${image}`)
-        })),
-    ];
-
-    // Shuffle the array once, so it doesn't reorder on every re-render
-    const shuffledMedia = useMemo(() => {
-        return [...mediaItems].sort(() => Math.random() - 0.5);
-        // Using useMemo ensures it doesn't re-shuffle constantly
-    }, [projectId]);
-
     if (!project) {
         return <h1>Project Not Found</h1>;
+    }
+
+    // Create arrays for videos and images
+    const videos = project.videos.map((video) => ({ type: "video", src: video }));
+    const images = project.images.map((image) => ({
+        type: "image",
+        src: require(`../assets/img/projects/${image}`)
+    }));
+
+    let mediaItems;
+
+    if (videos.length === 1) {
+        // If there's only one video, place it first, then shuffle images
+        mediaItems = [
+            videos[0],
+            ...images.sort(() => Math.random() - 0.5)
+        ];
+    } else {
+        // Otherwise, merge & shuffle all items
+        mediaItems = [...videos, ...images].sort(() => Math.random() - 0.5);
     }
 
     return (
@@ -44,7 +48,7 @@ const ProjectDetail = () => {
                 </div>
 
                 <div className="media-masonry">
-                    {shuffledMedia.map((item, index) => (
+                    {mediaItems.map((item, index) => (
                         <div className="media-item" key={index}>
                             {item.type === "video" ? (
                                 <iframe
