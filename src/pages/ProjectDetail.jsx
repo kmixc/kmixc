@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import "../css/ProjectDetail.css";
@@ -38,7 +38,7 @@ const ProjectDetail = () => {
     return (
         <div className="detail-page">
             <Preloader />
-            <Link className='logo' to={"/"}>
+            <Link className='logo' to={"/projects"}>
                 <img src={Logo} alt="Kmixc Visuals" />
             </Link>
             <div className="project-detail">

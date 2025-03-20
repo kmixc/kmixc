@@ -41,7 +41,14 @@
             "https://www.youtube.com/embed/3RdVGqgXXAM?si=Z3jKqhLwfRc-noSK"
         ],
         "images": [
-            "lzworldtour1.jpg"
+            "lz_world_tour/lzworldtour1.jpg",
+            "lz_world_tour/lzworldtour3.jpg",
+            "lz_world_tour/lzworldtour4.jpg",
+            "lz_world_tour/lzworldtour5.jpg",
+            "lz_world_tour/lzworldtour6.jpg",
+            "lz_world_tour/lzworldtour7.jpg",
+            "lz_world_tour/lzworldtour8.jpg",
+            "lz_world_tour/lzworldtour9.jpg"
         ]
     },
     {
@@ -49,7 +56,9 @@
         "title": "Facility Plus",
         "description": "Professional maintenance and facility management solutions for businesses.",
         "videos": [
-            "https://www.youtube.com/embed/video-id-4"
+            "https://www.youtube.com/embed/VAETpBy2oBs?si=hD4j6mxrZojL0Pun",
+            "https://www.youtube.com/embed/VAETpBy2oBs?si=hD4j6mxrZojL0Pun",
+            "https://www.youtube.com/embed/VAETpBy2oBs?si=hD4j6mxrZojL0Pun"
         ],
         "images": [
             "facilityplus1.jpg",
@@ -144,6 +153,39 @@
             "special_events/tommy&victoria12.jpg",
             "special_events/tommy&victoria13.jpg",
             "special_events/tommy&victoria14.jpg"
+        ]
+    },
+    {
+        "id": "finkle-street-tap-&-grill",
+        "title": "Finkle Street Tap & Grill",
+        "description": "Serving up great food, drinks, and atmosphere in a welcoming space.",
+        "videos": [
+            "https://www.youtube.com/embed/ahnXQj-UPso?si=xjV2aePdaiUrvOMz"
+        ],
+        "images": [
+            ""
+        ]
+    },
+    {
+        "id": "roberto-&-lorena",
+        "title": "Roberto & Lorena",
+        "description": "Celebrating love and joy with a beautiful engagement party story.",
+        "videos": [
+            "https://www.youtube.com/embed/aCyuAgN3RCE?si=xpW15YZcnbRWFyTF"
+        ],
+        "images": [
+            ""
+        ]
+    },
+    {
+        "id": "north-york-dental",
+        "title": "North York Dental",
+        "description": "North York Dental - Excellence in Dental Care.",
+        "videos": [
+            "https://www.youtube.com/embed/iAJucpCEn3A?si=EILRsWi7XgrkeO_v"
+        ],
+        "images": [
+            ""
         ]
     }
 ]
