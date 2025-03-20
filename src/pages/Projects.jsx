@@ -8,7 +8,7 @@ import { gsap } from 'gsap';
 import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
 import SpecialEventTwo from '../img/client_imgs/Special_Event_2.jpg'
 import SpecialEventThree from '../img/client_imgs/Special_Event_3.jpg'
-import CompanyShowcase from '../img/client_imgs/Millworx.jpg'
+import CompanyShowcase from '../img/client_imgs/Millworx-1.jpg'
 import Event from '../img/client_imgs/Event-3.jpg'
 import EventTwo from '../img/client_imgs/Yoga.jpg'
 import EventThree from '../img/client_imgs/Event.jpg'
@@ -28,17 +28,17 @@ import Preloader from '../components/Preloader';
 import Footer from '../components/Footer.jsx'
 
 const projectsData = [
-    { id: 1, categories: ["Special Event"], title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography", route: "/weddings" },
-    { id: 2, categories: ["Business"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase", route: "#" },
-    { id: 3, categories: ["Event", "Automotive"], title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", route: "#" },
-    { id: 5, categories: ["Event"], title: "Facility Plus", img: EventThree, description: "Event Coverage", route: "#" },
-    { id: 7, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", route: "#" },
-    { id: 6, categories: ["Renovation"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation", route: "#" },
-    { id: 8, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", route: "#" },
-    { id: 9, categories: ["Dental"], title: "Luka Dental Care", img: DentalOne, description: "Company Promo", route: "#" },
-    { id: 4, categories: ["Event"], title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, description: "Promotional & Event", route: "#" },
-    { id: 10, categories: ["Dental"], title: "Queen Street Dental", img: DentalTwo, description: "Company Promo", route: "#" },
-    { id: 11, categories: ["Construction"], title: "Custom Glass Railings", img: ConstructionOne, description: "Company Showcase", route: "#" },
+    { id: 1, categories: ["Special Event"], title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography", route: "/projects/tommy-&-victoria" },
+    { id: 2, categories: ["Business"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase", route: "/projects/millworx" },
+    { id: 3, categories: ["Event", "Automotive"], title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", route: "/projects/lz-world-tour" },
+    { id: 5, categories: ["Event"], title: "Facility Plus", img: EventThree, description: "Event Coverage", route: "/projects/facility-plus" },
+    { id: 7, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", route: "/projects/mike-&-brittany" },
+    { id: 6, categories: ["Renovation"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation", route: "/projects/custom-glass-railings" },
+    { id: 8, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", route: "/projects/janine-&-lucas" },
+    { id: 9, categories: ["Dental"], title: "Luka Dental Care", img: DentalOne, description: "Company Promo", route: "/projects/luka-dental-care" },
+    { id: 4, categories: ["Event"], title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, description: "Promotional & Event", route: "/projects/power-yoga-canada" },
+    { id: 10, categories: ["Dental"], title: "Queen Street Dental", img: DentalTwo, description: "Company Promo", route: "/projects/queen-street-dental" },
+    { id: 11, categories: ["Construction"], title: "Custom Glass Railings", img: ConstructionOne, description: "Company Showcase", route: "/projects/custom-glass-railings" },
 ];
 
 const projects = [

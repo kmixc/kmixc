@@ -67,13 +67,13 @@ export default function Services() {
 
 
             <div className="services-wrapper">
-                <h1 className="services-header">(Services)</h1>
                 <Marquee autoFill={true}>
                     <h1 className="service-marquee">
                         Expertise
                     </h1>
                 </Marquee>
 
+                <h1 className="services-header">(Services)</h1>
                 <div className="services-container">
                     {services.map((service, index) => (
                         <div className="service-item" key={index}>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 //IMAGES
 import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
-import CompanyShowcase from '../img/client_imgs/Millworx.jpg'
+import CompanyShowcase from '../img/client_imgs/Millworx-1.jpg'
 import Event from '../img/client_imgs/Event-3.jpg'
 import EventTwo from '../img/client_imgs/Yoga.jpg'
 import EventThree from '../img/client_imgs/Event.jpg'

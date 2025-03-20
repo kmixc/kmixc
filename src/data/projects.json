@@ -1,0 +1,121 @@
+[
+    {
+        "id": "millworx",
+        "title": "Millworx",
+        "description": "High-quality custom millwork solutions for residential and commercial projects.",
+        "videos": [
+            "https://www.youtube.com/embed/2S7qwty2A24?si=EHA2HLW07ty4bmbi",
+            "https://www.youtube.com/embed/hnaYiIUzJaA?si=24TJoHvYbXCwtnZt",
+            "https://www.youtube.com/embed/Eky4PTUeJPw?si=TCeRr4sfSDUVCYU3"
+        ],
+        "images": [
+            "millworx/millworx1.jpg",
+            "millworx/millworx2.jpg",
+            "millworx/millworx3.jpg",
+            "millworx/millworx4.jpg",
+            "millworx/millworx5.jpg",
+            "millworx/millworx6.jpg"
+        ]
+    },
+    {
+        "id": "lz-world-tour",
+        "title": "LZ World Tour",
+        "description": "Capturing the adrenaline and excitement of the LZ World Tour.",
+        "videos": [
+            "https://www.youtube.com/embed/video-id-2",
+            "https://www.youtube.com/embed/video-id-3"
+        ],
+        "images": [
+            "lzworldtour1.jpg"
+        ]
+    },
+    {
+        "id": "facility-plus",
+        "title": "Facility Plus",
+        "description": "Professional maintenance and facility management solutions for businesses.",
+        "videos": [
+            "https://www.youtube.com/embed/video-id-4"
+        ],
+        "images": [
+            "facilityplus1.jpg",
+            "facilityplus2.jpg"
+        ]
+    },
+    {
+        "id": "custom-glass-railings",
+        "title": "Custom Glass Railings",
+        "description": "Innovative solutions and services for modern businesses.",
+        "videos": [
+            "https://www.youtube.com/embed/video-id-5"
+        ],
+        "images": []
+    },
+    {
+        "id": "mike-&-brittany",
+        "title": "Mike & Brittany",
+        "description": "A beautiful story captured through cinematography.",
+        "videos": [
+            "https://www.youtube.com/embed/video-id-6"
+        ],
+        "images": [
+            "mikebrittany1.jpg",
+            "mikebrittany2.jpg"
+        ]
+    },
+    {
+        "id": "janine-&-lucas",
+        "title": "Janine & Lucas",
+        "description": "Celebrating love and special moments with stunning visuals.",
+        "videos": [
+            "https://www.youtube.com/embed/video-id-7"
+        ],
+        "images": [
+            "janine_lucas1.jpg"
+        ]
+    },
+    {
+        "id": "luka-dental-care",
+        "title": "Luka Dental Care",
+        "description": "Providing high-quality dental care services with professionalism and care.",
+        "videos": [
+            "https://www.youtube.com/embed/video-id-8"
+        ],
+        "images": [
+            "lukadentalcare1.jpg",
+            "lukadentalcare2.jpg"
+        ]
+    },
+    {
+        "id": "power-yoga-canada",
+        "title": "Power Yoga Canada",
+        "description": "Empowering individuals through movement, mindfulness, and strength.",
+        "videos": [
+            "https://www.youtube.com/embed/video-id-9"
+        ],
+        "images": [
+            "poweryoga1.jpg"
+        ]
+    },
+    {
+        "id": "queen-street-dental",
+        "title": "Queen Street Dental",
+        "description": "Premium dental care services in a comfortable environment.",
+        "videos": [
+            "https://www.youtube.com/embed/video-id-10"
+        ],
+        "images": [
+            "queenstreetdental1.jpg"
+        ]
+    },
+    {
+        "id": "tommy-&-victoria",
+        "title": "Tommy & Victoria",
+        "description": "A special wedding story captured beautifully.",
+        "videos": [
+            "https://www.youtube.com/embed/t0KDxGAAD0I?si=6KszqB5y1LBz2s05"
+        ],
+        "images": [
+            "Special_Event_1.jpg"
+        ]
+    }
+]

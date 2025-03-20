@@ -23,7 +23,7 @@
 /* Contact Info */
 .contact-info {
     flex: 1;
-    padding: 40px;
+    padding-left: 40px;
     background: #ffffff;
     display: flex;
     justify-content: center;
@@ -31,14 +31,14 @@
 }
 
 .contact-info h1 {
-    font-size: 8rem;
+    font-size: 6.5rem;
 }
 
 
 .contact-info .contact-link,
 .contact-number {
     display: block;
-    font-size: 3rem;
+    font-size: 2.3rem;
     margin: 5px 0;
     text-decoration: none;
     color: #000;
@@ -65,7 +65,7 @@
 /* Contact Form */
 .contact-form {
     flex: 1;
-    padding: 40px;
+    padding-right: 40px;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -75,7 +75,7 @@
 }
 
 .contact-form h2 {
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -140,8 +140,20 @@ textarea {
 }
 
 @media (max-width: 1480px) {
+    .contact-info {
+        padding: 50px;
+    }
+
+    .contact-form {
+        padding: 50px;
+    }
+
     .contact-info h1 {
-        font-size: 6rem;
+        font-size: 5rem;
+    }
+
+    .contact-form h2 {
+        font-size: 2rem;
     }
 }
 
@@ -205,6 +217,7 @@ textarea {
         padding: 20px;
     }
 
+
     .contact-info h1 {
         font-size: 4rem;
     }
@@ -216,6 +229,10 @@ textarea {
     .contact-info .contact-link,
     .contact-number {
         font-size: 1.5rem;
+    }
+
+    .contact-form h2 {
+        font-size: 2.5rem;
     }
 
     .contact-form {
@@ -242,6 +259,10 @@ textarea {
 
     .contact-info {
         padding: 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 1.6rem;
     }
 
     .contact-info h1 {
