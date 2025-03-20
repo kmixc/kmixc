@@ -63,6 +63,13 @@ const ProjectDetail = () => {
                     ))}
                 </div>
             </div>
+
+            <div className="back-button-container">
+                <Link to="/projects" className="back-button">
+                    ← Back to Projects
+                </Link>
+            </div>
+
             <Footer />
         </div>
     );
