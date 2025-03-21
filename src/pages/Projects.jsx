@@ -18,6 +18,7 @@ import DentalOne from '../img/client_imgs/Dental_1.jpg'
 import DentalTwo from '../img/client_imgs/Dental_2.jpg'
 import DentalThree from '../img/client_imgs/Dental_3.jpg'
 import ConstructionOne from '../img/client_imgs/Construction_1.jpg'
+import ConstructionTwo from '../assets/img/projects/the_doors_ltd/thedoorsltd1.jpg'
 import Restaurant from '../img/client_imgs/Finkle.jpg'
 
 //VIDEOS
@@ -48,7 +49,7 @@ const projectsData = [
 ];
 
 const projects = [
-    { id: 1, image: `${SpecialEventOne}`, link: "/project-1" },
+    { id: 1, image: `${ConstructionTwo}`, link: "/projects/the-doors-ltd" },
     { id: 2, image: `${SpecialEventOne}`, link: "/project-2" },
     { id: 3, image: `${SpecialEventOne}`, link: "/project-3" },
     { id: 4, image: `${SpecialEventOne}`, link: "/project-4" },

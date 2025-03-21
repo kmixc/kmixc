@@ -56,13 +56,26 @@
         "title": "Facility Plus",
         "description": "Professional maintenance and facility management solutions for businesses.",
         "videos": [
-            "https://www.youtube.com/embed/VAETpBy2oBs?si=hD4j6mxrZojL0Pun",
-            "https://www.youtube.com/embed/VAETpBy2oBs?si=hD4j6mxrZojL0Pun",
-            "https://www.youtube.com/embed/VAETpBy2oBs?si=hD4j6mxrZojL0Pun"
+            "https://www.youtube.com/embed/kKZjSjp9Fyk?si=5z7-u0L8SlAXuLDc",
+            "https://www.youtube.com/embed/Zg2onp591lo?si=RvYB8yD7UsGg2E-B",
+            "https://www.youtube.com/embed/68PnjlvJP7k?si=GCUr1xLVeYwdWp-G"
         ],
         "images": [
-            "facilityplus1.jpg",
-            "facilityplus2.jpg"
+            "facility_plus/facilityplus1.jpg",
+            "facility_plus/facilityplus2.jpg",
+            "facility_plus/facilityplus3.jpg",
+            "facility_plus/facilityplus4.jpg",
+            "facility_plus/facilityplus5.jpg",
+            "facility_plus/facilityplus6.jpg",
+            "facility_plus/facilityplus7.jpg",
+            "facility_plus/facilityplus8.jpg",
+            "facility_plus/facilityplus9.jpg",
+            "facility_plus/facilityplus10.jpg",
+            "facility_plus/facilityplus11.jpg",
+            "facility_plus/facilityplus12.jpg",
+            "facility_plus/facilityplus13.jpg",
+            "facility_plus/facilityplus14.jpg",
+            "facility_plus/facilityplus15.jpg"
         ]
     },
     {
@@ -94,11 +107,11 @@
         "title": "Mike & Brittany",
         "description": "A beautiful story captured through cinematography.",
         "videos": [
-            "https://www.youtube.com/embed/video-id-6"
+            "https://www.youtube.com/embed/YefOXVoOAJk?si=zyqAggofDIgazRaE"
         ],
         "images": [
-            "mikebrittany1.jpg",
-            "mikebrittany2.jpg"
+            "",
+            ""
         ]
     },
     {
@@ -285,6 +298,46 @@
             "stairs_4u/stairs4u7.jpg",
             "stairs_4u/stairs4u8.jpg",
             "stairs_4u/stairs4u9.jpg"
+        ]
+    },
+    {
+        "id": "the-doors-ltd",
+        "title": "The Doors Ltd",
+        "description": "Providing premium custom door solutions with expert craftsmanship.",
+        "videos": [],
+        "images": [
+            "the_doors_ltd/thedoorsltd1.jpg",
+            "the_doors_ltd/thedoorsltd2.jpg",
+            "the_doors_ltd/thedoorsltd3.jpg",
+            "the_doors_ltd/thedoorsltd4.jpg",
+            "the_doors_ltd/thedoorsltd5.jpg",
+            "the_doors_ltd/thedoorsltd6.jpg",
+            "the_doors_ltd/thedoorsltd7.jpg",
+            "the_doors_ltd/thedoorsltd8.jpg",
+            "the_doors_ltd/thedoorsltd9.jpg",
+            "the_doors_ltd/thedoorsltd10.jpg",
+            "the_doors_ltd/thedoorsltd11.jpg",
+            "the_doors_ltd/thedoorsltd12.jpg"
+        ]
+    },
+    {
+        "id": "chamber-of-commerce",
+        "title": "Chamber of Commerce",
+        "description": "Connecting businesses and professionals to strengthen economic ties.",
+        "videos": [],
+        "images": [
+            "the_doors_ltd/thedoorsltd1.jpg",
+            "the_doors_ltd/thedoorsltd2.jpg",
+            "the_doors_ltd/thedoorsltd3.jpg",
+            "the_doors_ltd/thedoorsltd4.jpg",
+            "the_doors_ltd/thedoorsltd5.jpg",
+            "the_doors_ltd/thedoorsltd6.jpg",
+            "the_doors_ltd/thedoorsltd7.jpg",
+            "the_doors_ltd/thedoorsltd8.jpg",
+            "the_doors_ltd/thedoorsltd9.jpg",
+            "the_doors_ltd/thedoorsltd10.jpg",
+            "the_doors_ltd/thedoorsltd11.jpg",
+            "the_doors_ltd/thedoorsltd12.jpg"
         ]
     }
 ]
