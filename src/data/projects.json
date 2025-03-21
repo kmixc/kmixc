@@ -336,6 +336,26 @@
         ]
     },
     {
+        "id": "JDRF-walk",
+        "title": "JDRF Walk to Cure Diabetes",
+        "description": "Bringing communities together to raise awareness and funds for type 1 diabetes research, driving progress toward a cure.",
+        "videos": [
+            "https://www.youtube.com/embed/D1GEsBEw7c4?si=Se9JNLJXVcZCIDqM"
+        ],
+        "images": [
+            "jdrf_walk/jdrfwalk1.jpg",
+            "jdrf_walk/jdrfwalk2.jpg",
+            "jdrf_walk/jdrfwalk3.jpg",
+            "jdrf_walk/jdrfwalk4.jpg",
+            "jdrf_walk/jdrfwalk5.jpg",
+            "jdrf_walk/jdrfwalk6.jpg",
+            "jdrf_walk/jdrfwalk7.jpg",
+            "jdrf_walk/jdrfwalk8.jpg",
+            "jdrf_walk/jdrfwalk9.jpg",
+            "jdrf_walk/jdrfwalk10.jpg"
+        ]
+    },
+    {
         "id": "copernicus-lodge-galaxy-ball",
         "title": "Copernicus Lodge Galaxy Ball",
         "description": "An elegant evening of celebration and philanthropy, supporting Copernicus Lodge's mission.",
@@ -351,6 +371,21 @@
             "copernicus_lodge_galaxy_ball/copernicuslodge6.jpg",
             "copernicus_lodge_galaxy_ball/copernicuslodge7.jpg",
             "copernicus_lodge_galaxy_ball/copernicuslodge8.jpg"
+        ]
+    },
+    {
+        "id": "waterloo-family-dental",
+        "title": "Waterloo Family Dental",
+        "description": "Providing compassionate, high-quality dental care for the whole family in a welcoming and professional environment.",
+        "videos": [
+            "https://www.youtube.com/embed/9qzkp_4ra3Y?si=n-Qk3srRwZXxuEVRs"
+        ],
+        "images": [
+            "waterloo_family_dental/waterloofamilydental1.jpg",
+            "waterloo_family_dental/waterloofamilydental2.jpg",
+            "waterloo_family_dental/waterloofamilydental3.jpg",
+            "waterloo_family_dental/waterloofamilydental4.jpg",
+            "waterloo_family_dental/waterloofamilydental5.jpg"
         ]
     }
 ]
