@@ -17,8 +17,8 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const serviceId = process.env.REACT_APP_SERVICE_ID;
-        const formId = process.env.REACT_APP_FORM_ID;
+        const serviceId = "service_z8y12vk";
+        const formId = "kmixc_form";
         const publicKey = "FB7tjAxo2Zs8SQ3nS";
 
         const templateParams = {
@@ -69,7 +69,7 @@ export default function Contact() {
                         <input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
                         <input type='text' placeholder='Organization/Business Name' value={organization} onChange={(e) => setOrganization(e.target.value)} required />
                         <textarea placeholder='Message' value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
-                        <button type='submit'>SEND AWAY</button>
+                        <button type='submit'>SEND</button>
                     </form>
                     {successMessage && <p className='success-message fade-in'>{successMessage}</p>}
                 </div>
