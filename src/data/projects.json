@@ -332,7 +332,18 @@
         "description": "Connecting businesses and professionals to strengthen economic ties.",
         "videos": [],
         "images": [
-            "the_doors_ltd/thedoorsltd1.jpg"
+            "chamber_of_commerce/chamberofcommerce1.jpg",
+            "chamber_of_commerce/chamberofcommerce2.jpg",
+            "chamber_of_commerce/chamberofcommerce3.jpg",
+            "chamber_of_commerce/chamberofcommerce4.jpg",
+            "chamber_of_commerce/chamberofcommerce5.jpg",
+            "chamber_of_commerce/chamberofcommerce6.jpg",
+            "chamber_of_commerce/chamberofcommerce7.jpg",
+            "chamber_of_commerce/chamberofcommerce8.jpg",
+            "chamber_of_commerce/chamberofcommerce9.jpg",
+            "chamber_of_commerce/chamberofcommerce10.jpg",
+            "chamber_of_commerce/chamberofcommerce11.jpg",
+            "chamber_of_commerce/chamberofcommerce12.jpg"
         ]
     },
     {
@@ -386,6 +397,29 @@
             "waterloo_family_dental/waterloofamilydental3.jpg",
             "waterloo_family_dental/waterloofamilydental4.jpg",
             "waterloo_family_dental/waterloofamilydental5.jpg"
+        ]
+    },
+    {
+        "id": "brilliant-minded-women",
+        "title": "Brilliant Minded Women",
+        "description": "Celebrating and empowering exceptional women in business, leadership, and philanthropy.",
+        "videos": [],
+        "images": [
+            "brilliant_minded_women/brilliantmindedwomen1.jpg",
+            "brilliant_minded_women/brilliantmindedwomen2.jpg",
+            "brilliant_minded_women/brilliantmindedwomen3.jpg",
+            "brilliant_minded_women/brilliantmindedwomen4.jpg",
+            "brilliant_minded_women/brilliantmindedwomen5.jpg",
+            "brilliant_minded_women/brilliantmindedwomen6.jpg",
+            "brilliant_minded_women/brilliantmindedwomen7.jpg",
+            "brilliant_minded_women/brilliantmindedwomen8.jpg",
+            "brilliant_minded_women/brilliantmindedwomen9.jpg",
+            "brilliant_minded_women/brilliantmindedwomen10.jpg",
+            "brilliant_minded_women/brilliantmindedwomen11.jpg",
+            "brilliant_minded_women/brilliantmindedwomen12.jpg",
+            "brilliant_minded_women/brilliantmindedwomen13.jpg",
+            "brilliant_minded_women/brilliantmindedwomen14.jpg",
+            "brilliant_minded_women/brilliantmindedwomen15.jpg"
         ]
     }
 ]

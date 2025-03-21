@@ -14,6 +14,9 @@ import Event from '../img/client_imgs/Event-3.jpg'
 import EventTwo from '../img/client_imgs/Yoga.jpg'
 import EventThree from '../img/client_imgs/Event.jpg'
 import EventFour from '../img/client_imgs/Event-4.jpg'
+import EventFive from '../img/client_imgs/Event-5.jpg'
+import EventSix from '../assets/img/projects/chamber_of_commerce/chamberofcommerce1.jpg'
+import EventSeven from '../assets/img/projects/brilliant_minded_women/brilliantmindedwomen11.jpg'
 import Renovation from '../img/client_imgs/CGR.jpg'
 import DentalOne from '../img/client_imgs/Dental_1.jpg'
 import DentalTwo from '../img/client_imgs/Dental_2.jpg'
@@ -54,9 +57,9 @@ const projects = [
     { id: 1, image: `${ConstructionTwo}`, link: "/projects/the-doors-ltd", title: "The Doors Ltd", description: "Company Showcase" },
     { id: 2, image: `${EventFour}`, link: "/projects/copernicus-lodge-galaxy-ball", title: "Galaxy Ball", description: "Event Coverage" },
     { id: 3, image: `${DentalFour}`, link: "/projects/waterloo-family-dental", title: "Waterloo Family Dental", description: "Company Promo" },
-    { id: 4, image: `${SpecialEventOne}`, link: "/project-4" },
-    { id: 5, image: `${SpecialEventOne}`, link: "/project-5" },
-    { id: 6, image: `${SpecialEventOne}`, link: "/project-6" }
+    { id: 4, image: `${EventFive}`, link: "/projects/JDRF-walk", title: "JDRF Walk", description: "Event Coverage" },
+    { id: 5, image: `${EventSix}`, link: "/projects/chamber-of-commerce", title: "Chamber of Commerce", description: "Event Coverage" },
+    { id: 6, image: `${EventSeven}`, link: "/projects/brilliant-minded-women", title: "Brilliant Minded Women", description: "Event Coverage" },
 ];
 
 const categories = ["All", "Event", "Business", "Automotive", "Special Event", "Dental", "Renovation"];
