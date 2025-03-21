@@ -193,7 +193,7 @@ export default function Projects() {
                             {visibleProjects.map((project, index) => {
                                 const isThirdItem = (index + 1) % 3 === 0;
                                 return (
-                                    <a key={project.id} href={project.route} target="project" className={`project-item ${isThirdItem ? "project-wide" : ""}`}>
+                                    <a key={project.id} href={project.route} className={`project-item ${isThirdItem ? "project-wide" : ""}`}>
                                         <div className="overlay"></div>
 
                                         {isThirdItem && project.video && !isMobile ? (
