@@ -8,6 +8,7 @@ import { gsap } from 'gsap';
 import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
 import SpecialEventTwo from '../img/client_imgs/Special_Event_2.jpg'
 import SpecialEventThree from '../img/client_imgs/Special_Event_3.jpg'
+import SpecialEventFour from '../img/client_imgs/Special_Event_4.jpg'
 import CompanyShowcase from '../img/client_imgs/Millworx-1.jpg'
 import Event from '../img/client_imgs/Event-3.jpg'
 import EventTwo from '../img/client_imgs/Yoga.jpg'
@@ -16,8 +17,8 @@ import Renovation from '../img/client_imgs/CGR.jpg'
 import DentalOne from '../img/client_imgs/Dental_1.jpg'
 import DentalTwo from '../img/client_imgs/Dental_2.jpg'
 import DentalThree from '../img/client_imgs/Dental_3.jpg'
-import DentalFour from '../img/client_imgs/Dental_4.jpg'
 import ConstructionOne from '../img/client_imgs/Construction_1.jpg'
+import Restaurant from '../img/client_imgs/Finkle.jpg'
 
 //VIDEOS
 import Video from '../img/backgrounds/Projects_Banner.mp4'
@@ -42,7 +43,8 @@ const projectsData = [
     { id: 10, categories: ["Dental"], title: "Queen Street Dental", img: DentalOne, description: "Company Promo", route: "/projects/queen-street-dental" },
     { id: 11, categories: ["Construction"], title: "Custom Glass Railings", img: ConstructionOne, description: "Company Showcase", route: "/projects/custom-glass-railings" },
     { id: 12, categories: ["Dental"], title: "North York Dental", img: DentalTwo, description: "Company Promo", route: "/projects/north-york-dental" },
-    { id: 13, categories: ["Business"], title: "Finkle Street Tap & Grill", img: DentalTwo, description: "Restaurant Coverage", route: "/projects/finkle-street-tap-&-grill" },
+    { id: 13, categories: ["Business"], title: "Finkle Street Tap & Grill", img: Restaurant, description: "Restaurant Coverage", route: "/projects/finkle-street-tap-&-grill" },
+    { id: 14, categories: ["Special Event"], title: "Roberto & Lorena", img: SpecialEventFour, description: "Engagement Videography", route: "/projects/roberto-&-lorena" },
 ];
 
 const projects = [

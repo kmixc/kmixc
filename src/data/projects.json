@@ -127,11 +127,20 @@
         "title": "Luka Dental Care",
         "description": "Providing high-quality dental care services with professionalism and care.",
         "videos": [
-            "https://www.youtube.com/embed/video-id-8"
+            "https://www.youtube.com/embed/9OieecyW-Xk?si=i1OrrhVfAOREtbz5",
+            "https://www.youtube.com/embed/oR6LfoPRcp0?si=IrdR8YQX9sC5OcVz"
         ],
         "images": [
-            "lukadentalcare1.jpg",
-            "lukadentalcare2.jpg"
+            "luka_dental_care/lukadentalcare1.jpg",
+            "luka_dental_care/lukadentalcare2.jpg",
+            "luka_dental_care/lukadentalcare3.jpg",
+            "luka_dental_care/lukadentalcare4.jpg",
+            "luka_dental_care/lukadentalcare5.jpg",
+            "luka_dental_care/lukadentalcare6.jpg",
+            "luka_dental_care/lukadentalcare7.jpg",
+            "luka_dental_care/lukadentalcare8.jpg",
+            "luka_dental_care/lukadentalcare9.jpg",
+            "luka_dental_care/lukadentalcare10.jpg"
         ]
     },
     {
@@ -229,7 +238,14 @@
             "https://www.youtube.com/embed/aCyuAgN3RCE?si=xpW15YZcnbRWFyTF"
         ],
         "images": [
-            ""
+            "roberto_&_lorena/roberto&lorena1.jpg",
+            "roberto_&_lorena/roberto&lorena2.jpg",
+            "roberto_&_lorena/roberto&lorena3.jpg",
+            "roberto_&_lorena/roberto&lorena4.jpg",
+            "roberto_&_lorena/roberto&lorena5.jpg",
+            "roberto_&_lorena/roberto&lorena6.jpg",
+            "roberto_&_lorena/roberto&lorena7.jpg",
+            "roberto_&_lorena/roberto&lorena8.jpg"
         ]
     },
     {
@@ -248,6 +264,27 @@
             "north_york_dental/northyorkdental6.jpg",
             "north_york_dental/northyorkdental7.jpg",
             "north_york_dental/northyorkdental8.jpg"
+        ]
+    },
+    {
+        "id": "stairs-4u",
+        "title": "Stairs 4u",
+        "description": "Crafting high-quality, custom stair solutions that blend design, durability, and functionality.",
+        "videos": [
+            "https://www.youtube.com/embed/uau9GJiBWkY?si=5BZrL3Tosyhi2pai",
+            "https://www.youtube.com/embed/iys2F8726-Y?si=EbVWB-SRjA82lXgB",
+            "https://www.youtube.com/embed/NZZhP6pzh8o?si=ARNqu5LoIlAoNafZ"
+        ],
+        "images": [
+            "stairs_4u/stairs4u1.jpg",
+            "stairs_4u/stairs4u2.jpg",
+            "stairs_4u/stairs4u3.jpg",
+            "stairs_4u/stairs4u4.jpg",
+            "stairs_4u/stairs4u5.jpg",
+            "stairs_4u/stairs4u6.jpg",
+            "stairs_4u/stairs4u7.jpg",
+            "stairs_4u/stairs4u8.jpg",
+            "stairs_4u/stairs4u9.jpg"
         ]
     }
 ]
