@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Logo from '../img/logos/logo-white.svg'
-import { Link } from 'react-router-dom';
 
 //IMAGES
 import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
@@ -100,21 +99,21 @@ const Home = () => {
                 <h2 className="projects-section-title">PROJECTS</h2>
                 <section className="projects">
                     <div className="projects-grid">
-                        <a href='#' className="project-item">
+                        <a href='/projects/tommy-&-victoria' className="project-item">
                             <img src={SpecialEventOne} alt="Tommy & Victoria" />
                             <div className="project-info">
                                 <h3>Tommy & Victoria</h3>
                                 <p>Wedding Videography</p>
                             </div>
                         </a>
-                        <a href='#' className="project-item">
+                        <a href='/projects/millworx' className="project-item">
                             <img src={CompanyShowcase} alt="Millworx" />
                             <div className="project-info">
                                 <h3>Millworx</h3>
                                 <p>Company Showcase</p>
                             </div>
                         </a>
-                        <a href='#' className="project-item project-wide">
+                        <a href='/projects/lz-world-tour' className="project-item project-wide">
                             <video
                                 id='hide-mobile'
                                 src={EventVideo}
@@ -124,13 +123,13 @@ const Home = () => {
                                 playsInline
                                 className={"project-video"}
                             ></video>
-                            <img id='hide-desktop' src={Event} alt="Millworx" />
+                            <img id='hide-desktop' src={Event} alt="LZ World Tour" />
                             <div className="project-info">
                                 <h3>LZ World Tour</h3>
                                 <p>Event Coverage</p>
                             </div>
                         </a>
-                        <a href='#' className="project-item">
+                        <a href='/projects/power-yoga-canada' className="project-item">
                             <img src={EventTwo} alt="Power Yoga Canada" />
                             <div className="project-info">
                                 <h3>Power Yoga Canada</h3>
@@ -138,7 +137,7 @@ const Home = () => {
                             </div>
                         </a>
                         <a
-                            href="#"
+                            href="/projects/facility-plus"
                             className="project-item"
                         >
                             <img src={EventThree} alt="Facility Plus" />

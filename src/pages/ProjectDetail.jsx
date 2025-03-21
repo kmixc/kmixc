@@ -38,7 +38,7 @@ const ProjectDetail = () => {
     return (
         <div className="detail-page">
             <Preloader />
-            <Link className='logo' to={"/projects"}>
+            <Link className='logo' to={"/"}>
                 <img src={Logo} alt="Kmixc Visuals" />
             </Link>
             <div className="project-detail">

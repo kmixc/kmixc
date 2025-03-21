@@ -373,4 +373,8 @@
         cursor: pointer;
         color: #000;
     }
+
+    .more-projects-section {
+        padding: 10px;
+    }
 }

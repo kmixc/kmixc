@@ -38,11 +38,11 @@ import Footer from '../components/Footer.jsx'
 
 const projectsData = [
     { id: 1, categories: ["Special Event"], title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography", route: "/projects/tommy-&-victoria" },
-    { id: 2, categories: ["Business"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase", route: "/projects/millworx" },
+    { id: 2, categories: ["Business", "Renovation"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase", route: "/projects/millworx" },
     { id: 3, categories: ["Event", "Automotive"], title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", route: "/projects/lz-world-tour" },
     { id: 4, categories: ["Event"], title: "Facility Plus", img: EventThree, description: "Event Coverage", route: "/projects/facility-plus" },
     { id: 5, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", route: "/projects/mike-&-brittany" },
-    { id: 6, categories: ["Renovation"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation", route: "/projects/custom-glass-railings" },
+    { id: 6, categories: ["Renovation", "Business"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation", route: "/projects/custom-glass-railings" },
     { id: 7, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", route: "/projects/janine-&-lucas" },
     { id: 8, categories: ["Dental"], title: "Luka Dental Care", img: DentalThree, description: "Company Promo", route: "/projects/luka-dental-care" },
     { id: 9, categories: ["Event"], title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, description: "Promotional & Event", route: "/projects/power-yoga-canada" },
@@ -62,7 +62,7 @@ const projects = [
     { id: 6, image: `${EventSeven}`, link: "/projects/brilliant-minded-women", title: "Brilliant Minded Women", description: "Event Coverage" },
 ];
 
-const categories = ["All", "Event", "Business", "Automotive", "Special Event", "Dental", "Renovation"];
+const categories = ["All", "Event", "Business", "Special Event", "Dental", "Renovation"];
 
 export default function Projects() {
     const [videoLoaded, setVideoLoaded] = useState(false);
@@ -140,6 +140,13 @@ export default function Projects() {
         setVisibleCount(newVisibleCount);
     };
 
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <div className='projects-page'>
             <Preloader />
@@ -186,10 +193,10 @@ export default function Projects() {
                             {visibleProjects.map((project, index) => {
                                 const isThirdItem = (index + 1) % 3 === 0;
                                 return (
-                                    <a key={project.id} href={project.route} target="_blank" className={`project-item ${isThirdItem ? "project-wide" : ""}`}>
+                                    <a key={project.id} href={project.route} target="project" className={`project-item ${isThirdItem ? "project-wide" : ""}`}>
                                         <div className="overlay"></div>
 
-                                        {isThirdItem && project.video ? (
+                                        {isThirdItem && project.video && !isMobile ? (
                                             <video src={project.video} autoPlay loop muted playsInline className="project-video"></video>
                                         ) : (
                                             <img src={project.img} alt={project.title} />
