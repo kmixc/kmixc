@@ -114,10 +114,17 @@
         "title": "Power Yoga Canada",
         "description": "Empowering individuals through movement, mindfulness, and strength.",
         "videos": [
-            "https://www.youtube.com/embed/video-id-9"
+            "https://www.youtube.com/embed/yOJ7_RExd2A?si=Lv_PfU7YlZ1YiA51",
+            "https://www.youtube.com/embed/OILQycxvreM?si=yWXnOxgWsEWdKnt1"
         ],
         "images": [
-            "poweryoga1.jpg"
+            "power_yoga_canada/pyc1.jpg",
+            "power_yoga_canada/pyc2.jpg",
+            "power_yoga_canada/pyc3.jpg",
+            "power_yoga_canada/pyc4.jpg",
+            "power_yoga_canada/pyc5.jpg",
+            "power_yoga_canada/pyc6.jpg",
+            "power_yoga_canada/pyc7.jpg"
         ]
     },
     {
@@ -125,10 +132,10 @@
         "title": "Queen Street Dental",
         "description": "Premium dental care services in a comfortable environment.",
         "videos": [
-            "https://www.youtube.com/embed/video-id-10"
+            "https://www.youtube.com/embed/07zGsnGiNOg?si=HGPGQoQMW0WWF5ry"
         ],
         "images": [
-            "queenstreetdental1.jpg"
+            "queen_street_dental/queenstreetdental1.jpg"
         ]
     },
     {
@@ -185,7 +192,14 @@
             "https://www.youtube.com/embed/iAJucpCEn3A?si=EILRsWi7XgrkeO_v"
         ],
         "images": [
-            ""
+            "north_york_dental/northyorkdental1.jpg",
+            "north_york_dental/northyorkdental2.jpg",
+            "north_york_dental/northyorkdental3.jpg",
+            "north_york_dental/northyorkdental4.jpg",
+            "north_york_dental/northyorkdental5.jpg",
+            "north_york_dental/northyorkdental6.jpg",
+            "north_york_dental/northyorkdental7.jpg",
+            "north_york_dental/northyorkdental8.jpg"
         ]
     }
 ]
