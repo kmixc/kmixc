@@ -19,7 +19,7 @@ export default function Contact() {
 
         const serviceId = process.env.REACT_APP_SERVICE_ID;
         const formId = process.env.REACT_APP_FORM_ID;
-        const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+        const publicKey = FB7tjAxo2Zs8SQ3nS;
 
         const templateParams = {
             from_name: name,

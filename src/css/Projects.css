@@ -14,7 +14,7 @@
     color: white;
     overflow: hidden;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
     padding: 50px;
 }
