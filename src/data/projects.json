@@ -332,18 +332,25 @@
         "description": "Connecting businesses and professionals to strengthen economic ties.",
         "videos": [],
         "images": [
-            "the_doors_ltd/thedoorsltd1.jpg",
-            "the_doors_ltd/thedoorsltd2.jpg",
-            "the_doors_ltd/thedoorsltd3.jpg",
-            "the_doors_ltd/thedoorsltd4.jpg",
-            "the_doors_ltd/thedoorsltd5.jpg",
-            "the_doors_ltd/thedoorsltd6.jpg",
-            "the_doors_ltd/thedoorsltd7.jpg",
-            "the_doors_ltd/thedoorsltd8.jpg",
-            "the_doors_ltd/thedoorsltd9.jpg",
-            "the_doors_ltd/thedoorsltd10.jpg",
-            "the_doors_ltd/thedoorsltd11.jpg",
-            "the_doors_ltd/thedoorsltd12.jpg"
+            "the_doors_ltd/thedoorsltd1.jpg"
+        ]
+    },
+    {
+        "id": "copernicus-lodge-galaxy-ball",
+        "title": "Copernicus Lodge Galaxy Ball",
+        "description": "An elegant evening of celebration and philanthropy, supporting Copernicus Lodge's mission.",
+        "videos": [
+            "https://www.youtube.com/embed/_DthADJmtHA?si=LV3zTNHGqDURMto6"
+        ],
+        "images": [
+            "copernicus_lodge_galaxy_ball/copernicuslodge1.jpg",
+            "copernicus_lodge_galaxy_ball/copernicuslodge2.jpg",
+            "copernicus_lodge_galaxy_ball/copernicuslodge3.jpg",
+            "copernicus_lodge_galaxy_ball/copernicuslodge4.jpg",
+            "copernicus_lodge_galaxy_ball/copernicuslodge5.jpg",
+            "copernicus_lodge_galaxy_ball/copernicuslodge6.jpg",
+            "copernicus_lodge_galaxy_ball/copernicuslodge7.jpg",
+            "copernicus_lodge_galaxy_ball/copernicuslodge8.jpg"
         ]
     }
 ]

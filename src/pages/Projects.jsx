@@ -13,6 +13,7 @@ import CompanyShowcase from '../img/client_imgs/Millworx-1.jpg'
 import Event from '../img/client_imgs/Event-3.jpg'
 import EventTwo from '../img/client_imgs/Yoga.jpg'
 import EventThree from '../img/client_imgs/Event.jpg'
+import EventFour from '../img/client_imgs/Event-4.jpg'
 import Renovation from '../img/client_imgs/CGR.jpg'
 import DentalOne from '../img/client_imgs/Dental_1.jpg'
 import DentalTwo from '../img/client_imgs/Dental_2.jpg'
@@ -49,8 +50,8 @@ const projectsData = [
 ];
 
 const projects = [
-    { id: 1, image: `${ConstructionTwo}`, link: "/projects/the-doors-ltd" },
-    { id: 2, image: `${SpecialEventOne}`, link: "/project-2" },
+    { id: 1, image: `${ConstructionTwo}`, link: "/projects/the-doors-ltd", title: "The Doors Ltd", description: "Company Showcase" },
+    { id: 2, image: `${EventFour}`, link: "/projects/copernicus-lodge-galaxy-ball", title: "Galaxy Ball", description: "Event Coverage" },
     { id: 3, image: `${SpecialEventOne}`, link: "/project-3" },
     { id: 4, image: `${SpecialEventOne}`, link: "/project-4" },
     { id: 5, image: `${SpecialEventOne}`, link: "/project-5" },
@@ -217,6 +218,10 @@ export default function Projects() {
                     {projects.map((project) => (
                         <a key={project.id} href={project.link} className="project-item">
                             <img src={project.image} alt={`Project ${project.id}`} loading="lazy" />
+                            <div className="project-info">
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+                            </div>
                         </a>
                     ))}
                 </div>
