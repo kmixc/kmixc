@@ -33,16 +33,16 @@ const projectsData = [
     { id: 1, categories: ["Special Event"], title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography", route: "/projects/tommy-&-victoria" },
     { id: 2, categories: ["Business"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase", route: "/projects/millworx" },
     { id: 3, categories: ["Event", "Automotive"], title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", route: "/projects/lz-world-tour" },
-    { id: 5, categories: ["Event"], title: "Facility Plus", img: EventThree, description: "Event Coverage", route: "/projects/facility-plus" },
-    { id: 7, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", route: "/projects/mike-&-brittany" },
+    { id: 4, categories: ["Event"], title: "Facility Plus", img: EventThree, description: "Event Coverage", route: "/projects/facility-plus" },
+    { id: 5, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", route: "/projects/mike-&-brittany" },
     { id: 6, categories: ["Renovation"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation", route: "/projects/custom-glass-railings" },
-    { id: 8, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", route: "/projects/janine-&-lucas" },
-    { id: 9, categories: ["Dental"], title: "Luka Dental Care", img: DentalThree, description: "Company Promo", route: "/projects/luka-dental-care" },
-    { id: 4, categories: ["Event"], title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, description: "Promotional & Event", route: "/projects/power-yoga-canada" },
+    { id: 7, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", route: "/projects/janine-&-lucas" },
+    { id: 8, categories: ["Dental"], title: "Luka Dental Care", img: DentalThree, description: "Company Promo", route: "/projects/luka-dental-care" },
+    { id: 9, categories: ["Event"], title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, description: "Promotional & Event", route: "/projects/power-yoga-canada" },
     { id: 10, categories: ["Dental"], title: "Queen Street Dental", img: DentalOne, description: "Company Promo", route: "/projects/queen-street-dental" },
     { id: 11, categories: ["Construction"], title: "Custom Glass Railings", img: ConstructionOne, description: "Company Showcase", route: "/projects/custom-glass-railings" },
-    { id: 9, categories: ["Dental"], title: "North York Dental", img: DentalTwo, description: "Company Promo", route: "/projects/north-york-dental" },
-    { id: 9, categories: ["Dental"], title: "Luka Dental Care", img: DentalTwo, description: "Company Promo", route: "/projects/luka-dental-care" },
+    { id: 12, categories: ["Dental"], title: "North York Dental", img: DentalTwo, description: "Company Promo", route: "/projects/north-york-dental" },
+    { id: 13, categories: ["Business"], title: "Finkle Street Tap & Grill", img: DentalTwo, description: "Restaurant Coverage", route: "/projects/finkle-street-tap-&-grill" },
 ];
 
 const projects = [
@@ -57,7 +57,7 @@ const projects = [
     { id: 9, image: `${SpecialEventOne}`, link: "/project-9" },
 ];
 
-const categories = ["All", "Event", "Business", "Automotive", "Special Event", "Real Estate", "Renovation"];
+const categories = ["All", "Event", "Business", "Automotive", "Special Event", "Dental", "Renovation"];
 
 export default function Projects() {
     const [videoLoaded, setVideoLoaded] = useState(false);
@@ -181,7 +181,7 @@ export default function Projects() {
                             {visibleProjects.map((project, index) => {
                                 const isThirdItem = (index + 1) % 3 === 0;
                                 return (
-                                    <a key={project.id} href={project.route} className={`project-item ${isThirdItem ? "project-wide" : ""}`}>
+                                    <a key={project.id} href={project.route} target="_blank" className={`project-item ${isThirdItem ? "project-wide" : ""}`}>
                                         <div className="overlay"></div>
 
                                         {isThirdItem && project.video ? (

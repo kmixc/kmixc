@@ -70,9 +70,24 @@
         "title": "Custom Glass Railings",
         "description": "Innovative solutions and services for modern businesses.",
         "videos": [
-            "https://www.youtube.com/embed/video-id-5"
+            "https://www.youtube.com/embed/mLtXuQadGLo?si=tuplqwMoVhCfF6yy",
+            "https://www.youtube.com/embed/2Ts2fBgAQd0?si=X3NTkkqGr340davb",
+            "https://www.youtube.com/embed/pjdsNb-our8?si=23JK6wjygZGBtd12",
+            "https://www.youtube.com/embed/ePFF4_1J4Z4?si=-T7a8MlD__BEr161",
+            "https://www.youtube.com/embed/1SIoRBa8wbk?si=Bp86WzvWwWRPmuJW",
+            "https://www.youtube.com/embed/JT4qyZXRCY4?si=D_xDRa4gR0QBKA-o",
+            "https://www.youtube.com/embed/Tro7zI-LCIM?si=hDneZo6_lo5N2bTm",
+            "https://www.youtube.com/embed/MzLKg01xltg?si=Dfr6MFC2FAty-n7v"
         ],
-        "images": []
+        "images": [
+            "custom_glass_railings/cgr1.jpg",
+            "custom_glass_railings/cgr2.jpg",
+            "custom_glass_railings/cgr3.jpg",
+            "custom_glass_railings/cgr4.jpg",
+            "custom_glass_railings/cgr5.jpg",
+            "custom_glass_railings/cgr6.jpg",
+            "custom_glass_railings/cgr7.jpg"
+        ]
     },
     {
         "id": "mike-&-brittany",
@@ -91,10 +106,20 @@
         "title": "Janine & Lucas",
         "description": "Celebrating love and special moments with stunning visuals.",
         "videos": [
-            "https://www.youtube.com/embed/video-id-7"
+            "https://www.youtube.com/embed/zFLSrdMu0QY?si=j67-FPayzq5BaM1V"
         ],
         "images": [
-            "janine_lucas1.jpg"
+            "janine_&_lucas/janine&lucas1.jpg",
+            "janine_&_lucas/janine&lucas2.jpg",
+            "janine_&_lucas/janine&lucas3.jpg",
+            "janine_&_lucas/janine&lucas4.jpg",
+            "janine_&_lucas/janine&lucas5.jpg",
+            "janine_&_lucas/janine&lucas6.jpg",
+            "janine_&_lucas/janine&lucas7.jpg",
+            "janine_&_lucas/janine&lucas8.jpg",
+            "janine_&_lucas/janine&lucas9.jpg",
+            "janine_&_lucas/janine&lucas10.jpg",
+            "janine_&_lucas/janine&lucas11.jpg"
         ]
     },
     {
@@ -135,7 +160,17 @@
             "https://www.youtube.com/embed/07zGsnGiNOg?si=HGPGQoQMW0WWF5ry"
         ],
         "images": [
-            "queen_street_dental/queenstreetdental1.jpg"
+            "queen_street_dental/queenstreetdental1.jpg",
+            "queen_street_dental/queenstreetdental2.jpg",
+            "queen_street_dental/queenstreetdental3.jpg",
+            "queen_street_dental/queenstreetdental4.jpg",
+            "queen_street_dental/queenstreetdental5.jpg",
+            "queen_street_dental/queenstreetdental6.jpg",
+            "queen_street_dental/queenstreetdental7.jpg",
+            "queen_street_dental/queenstreetdental8.jpg",
+            "queen_street_dental/queenstreetdental9.jpg",
+            "queen_street_dental/queenstreetdental10.jpg",
+            "queen_street_dental/queenstreetdental11.jpg"
         ]
     },
     {
