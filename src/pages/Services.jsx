@@ -1,7 +1,5 @@
-import { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 import '../css/Services.css';
-import { gsap } from "gsap";
 import Marquee from "react-fast-marquee";
 
 

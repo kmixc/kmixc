@@ -15,6 +15,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop.jsx'
 import PageTransition from './components/PageTransition';
+import Redirect from './components/redirect.jsx';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/projects/:projectId" element={<ProjectDetail />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/dist/redirect.html' element={<Redirect />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </>
