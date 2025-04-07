@@ -83,23 +83,6 @@ export default function Projects() {
 
     const visibleProjects = filteredProjects.slice(0, visibleCount);
 
-    const calculateProjectsPerRow = () => {
-        if (projectGridRef.current) {
-            const projectItems = projectGridRef.current.querySelectorAll(".project-item");
-            if (projectItems.length > 0) {
-                const gridWidth = projectGridRef.current.offsetWidth;
-                const itemWidth = projectItems[0].offsetWidth;
-                const itemsPerRow = Math.floor(gridWidth / itemWidth);
-                setProjectsPerRow(itemsPerRow || 3);
-            }
-        }
-    };
-
-    useEffect(() => {
-        calculateProjectsPerRow();
-        window.addEventListener("resize", calculateProjectsPerRow);
-        return () => window.removeEventListener("resize", calculateProjectsPerRow);
-    }, []);
 
     // 🟢 **Animation when filtering or updating projects**
     useEffect(() => {
@@ -126,24 +109,9 @@ export default function Projects() {
     }, [selectedCategory]);
 
     const loadMoreProjects = () => {
-        let newVisibleCount = visibleCount;
-        let columnsFilled = 0;
-
-        while (columnsFilled < projectsPerRow * 2 && newVisibleCount < filteredProjects.length) {
-            const project = filteredProjects[newVisibleCount];
-
-            // Ensure undefined projects don't break it
-            if (!project) break;
-
-            // Default to 1 column, but if it's a wide project, count it as 2
-            const projectWidth = project.video ? 2 : 1;
-            columnsFilled += projectWidth;
-
-            // Increment only when adding a project
-            newVisibleCount++;
-        }
-
-        setVisibleCount(newVisibleCount);
+        const remaining = filteredProjects.length - visibleCount;
+        const nextCount = Math.min(projectsPerRow, remaining);
+        setVisibleCount(prev => prev + nextCount);
     };
 
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);

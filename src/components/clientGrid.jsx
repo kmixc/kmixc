@@ -11,11 +11,16 @@ import Client5 from '../img/client_logos/duralock_logo.png'
 import Client6 from '../img/client_logos/basemhanna_logo.png'
 import Client7 from '../img/client_logos/renogurus_logo.png'
 import Client8 from '../img/client_logos/chair_logo.png'
-import Client9 from '../img/client_logos/otp_logo.png'
-import Client10 from '../img/client_logos/gtaexotics_logo.png'
 import Client11 from '../img/client_logos/customglassrailings_logo.png'
+import Client12 from '../img/client_logos/lululemon_logo.png'
+import Client13 from '../img/client_logos/newhamburg_logo.png'
+import Client14 from '../img/client_logos/odin_logo.png'
+import Client15 from '../img/client_logos/pyc_logo.png'
+import Client16 from '../img/client_logos/waterloofamilydental_logo.png'
+import Client17 from '../img/client_logos/cardp_logo.png'
+import Client18 from '../img/client_logos/lukadental_logo.png'
 
-const clients = [Client1, Client2, Client3, Client4, Client5, Client6, Client7, Client8, Client9, Client10, Client11];
+const clients = [Client1, Client12, Client18, Client4, Client15, Client14, Client16, Client17, Client11, Client2, Client13, Client6, Client5, Client7, Client8, Client3];
 
 
 export default function clientGrid() {
