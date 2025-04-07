@@ -421,5 +421,70 @@
             "brilliant_minded_women/brilliantmindedwomen14.jpg",
             "brilliant_minded_women/brilliantmindedwomen15.jpg"
         ]
+    },
+    {
+        "id": "dentistry-on-lawrence",
+        "title": "Dentistry On Lawrence",
+        "description": "Delivering personalized and professional dental care with a focus on comfort, innovation, and lasting smiles.",
+        "videos": [
+            "https://www.youtube.com/embed/AaHEt5W3BLo?si=ydefxLeipexOX9aD"
+        ],
+        "images": [
+            "dentistry_on_lawrence/dentistryonlawrence1.jpg",
+            "dentistry_on_lawrence/dentistryonlawrence2.jpg",
+            "dentistry_on_lawrence/dentistryonlawrence3.jpg",
+            "dentistry_on_lawrence/dentistryonlawrence4.jpg",
+            "dentistry_on_lawrence/dentistryonlawrence5.jpg",
+            "dentistry_on_lawrence/dentistryonlawrence6.jpg",
+            "dentistry_on_lawrence/dentistryonlawrence7.jpg",
+            "dentistry_on_lawrence/dentistryonlawrence8.jpg",
+            "dentistry_on_lawrence/dentistryonlawrence9.jpg",
+            "dentistry_on_lawrence/dentistryonlawrence10.jpg",
+            "dentistry_on_lawrence/dentistryonlawrence11.jpg"
+        ]
+    },
+    {
+        "id": "lululemon-madness",
+        "title": "Lululemon Madness",
+        "description": "A high-energy community event hosted by Lululemon, bringing people together through movement, mindfulness, and fun.",
+        "videos": [],
+        "images": [
+            "lululemon_madness/lululemonmadness1.jpg",
+            "lululemon_madness/lululemonmadness2.jpg",
+            "lululemon_madness/lululemonmadness3.jpg",
+            "lululemon_madness/lululemonmadness4.jpg",
+            "lululemon_madness/lululemonmadness5.jpg",
+            "lululemon_madness/lululemonmadness6.jpg",
+            "lululemon_madness/lululemonmadness7.jpg",
+            "lululemon_madness/lululemonmadness8.jpg",
+            "lululemon_madness/lululemonmadness9.jpg",
+            "lululemon_madness/lululemonmadness10.jpg",
+            "lululemon_madness/lululemonmadness11.jpg",
+            "lululemon_madness/lululemonmadness12.jpg",
+            "lululemon_madness/lululemonmadness13.jpg",
+            "lululemon_madness/lululemonmadness14.jpg",
+            "lululemon_madness/lululemonmadness15.jpg"
+        ]
+    },
+    {
+        "id": "slammedenuff-sevierville-2024",
+        "title": "Slammedenuff Sevierville 2024 ",
+        "description": "An unforgettable showcase of custom cars and automotive culture, Slammedenuff Sevierville 2024 brought enthusiasts together for a weekend of style, creativity, and community.",
+        "videos": [
+            "https://www.youtube.com/embed/a7nHnHiAZeQ?si=GSfLXHxHGZb63uO4"
+        ],
+        "images": [
+            "slammedenuff/slammedenuff1.jpg",
+            "slammedenuff/slammedenuff2.jpg",
+            "slammedenuff/slammedenuff3.jpg",
+            "slammedenuff/slammedenuff4.jpg",
+            "slammedenuff/slammedenuff5.jpg",
+            "slammedenuff/slammedenuff6.jpg",
+            "slammedenuff/slammedenuff7.jpg",
+            "slammedenuff/slammedenuff8.jpg",
+            "slammedenuff/slammedenuff9.jpg",
+            "slammedenuff/slammedenuff10.jpg",
+            "slammedenuff/slammedenuff11.jpg"
+        ]
     }
 ]

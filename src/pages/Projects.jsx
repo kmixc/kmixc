@@ -17,11 +17,14 @@ import EventFour from '../img/client_imgs/Event-4.jpg'
 import EventFive from '../img/client_imgs/Event-5.jpg'
 import EventSix from '../assets/img/projects/chamber_of_commerce/chamberofcommerce1.jpg'
 import EventSeven from '../assets/img/projects/brilliant_minded_women/brilliantmindedwomen11.jpg'
+import EventEight from '../img/client_imgs/Event-6.jpg'
+import EventNine from '../img/client_imgs/Event-7.jpg'
 import Renovation from '../img/client_imgs/CGR.jpg'
 import DentalOne from '../img/client_imgs/Dental_1.jpg'
 import DentalTwo from '../img/client_imgs/Dental_2.jpg'
 import DentalThree from '../img/client_imgs/Dental_3.jpg'
 import DentalFour from '../img/client_imgs/Dental_4.jpg'
+import DentalFive from '../img/client_imgs/Dental_5.jpg'
 import ConstructionOne from '../img/client_imgs/Construction_1.jpg'
 import ConstructionTwo from '../assets/img/projects/the_doors_ltd/thedoorsltd1.jpg'
 import Restaurant from '../img/client_imgs/Finkle.jpg'
@@ -51,12 +54,15 @@ const projectsData = [
     { id: 12, categories: ["Dental"], title: "North York Dental", img: DentalTwo, description: "Company Promo", route: "/projects/north-york-dental" },
     { id: 13, categories: ["Business"], title: "Finkle Street Tap & Grill", img: Restaurant, description: "Restaurant Coverage", route: "/projects/finkle-street-tap-&-grill" },
     { id: 14, categories: ["Special Event"], title: "Roberto & Lorena", img: SpecialEventFour, description: "Engagement Videography", route: "/projects/roberto-&-lorena" },
+    { id: 15, categories: ["Event", "Automotive"], title: "Slammedenuff Sevierville", img: EventNine, description: "Event Coverage", route: "/projects/slammedenuff-sevierville-2024", },
+    { id: 16, categories: ["Dental"], title: "Waterloo Family Dental", img: DentalFour, description: "Company Promo", route: "/projects/waterloo-family-dental", },
+    { id: 17, categories: ["Dental"], title: "Dentistry On Lawrence", img: DentalFive, description: "Company Promo", route: "/projects/dentistry-on-lawrence", },
 ];
 
 const projects = [
     { id: 1, image: `${ConstructionTwo}`, link: "/projects/the-doors-ltd", title: "The Doors Ltd", description: "Company Showcase" },
     { id: 2, image: `${EventFour}`, link: "/projects/copernicus-lodge-galaxy-ball", title: "Galaxy Ball", description: "Event Coverage" },
-    { id: 3, image: `${DentalFour}`, link: "/projects/waterloo-family-dental", title: "Waterloo Family Dental", description: "Company Promo" },
+    { id: 3, image: `${EventEight}`, link: "/projects/lululemon-madness", title: "Lululemon Madness", description: "Event Coverage" },
     { id: 4, image: `${EventFive}`, link: "/projects/JDRF-walk", title: "JDRF Walk", description: "Event Coverage" },
     { id: 5, image: `${EventSix}`, link: "/projects/chamber-of-commerce", title: "Chamber of Commerce", description: "Event Coverage" },
     { id: 6, image: `${EventSeven}`, link: "/projects/brilliant-minded-women", title: "Brilliant Minded Women", description: "Event Coverage" },
