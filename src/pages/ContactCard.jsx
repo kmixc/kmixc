@@ -48,7 +48,7 @@ export default function ContactCard() {
                             </div>
                         </a>
 
-                        <a href="https://kmixcvisuals.com" target="_blank" rel="noreferrer" className="action-item">
+                        <a href="https://kmixc.com" target="_blank" rel="noreferrer" className="action-item">
                             <FontAwesomeIcon icon={faGlobe} size='xl' />
                             <div>
                                 <strong>Website</strong>
