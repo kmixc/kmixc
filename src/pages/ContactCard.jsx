@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/ContactCard.css';
 
-import IMG from '../img/team/kmixcvisuals-1.jpg'
+import IMG from '../img/team/kmixcvisuals-4.jpg'
 import VCF from '../assets/kmixc-contact.vcf'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -27,9 +27,10 @@ export default function ContactCard() {
                         <div className="text">
                             <h2>Kmixc Visuals</h2>
                             <p className="title">CEO</p>
-                            <p>Your one-stop shop for all digital marketing needs.</p>
                         </div>
+                        <p>Your one-stop shop for all digital marketing needs.</p>
                     </section>
+
 
                     <div className="action-list">
                         <a href={VCF} download className="action-item">
