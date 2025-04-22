@@ -10,6 +10,7 @@ import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import NotFound from './pages/NotFound';
 import ProjectDetail from './pages/ProjectDetail';
+import ContactCard from './pages/ContactCard.jsx';
 
 //COMPONENTS
 import Navbar from './components/Navbar';
@@ -30,6 +31,7 @@ function App() {
         <Route path="/projects/:projectId" element={<ProjectDetail />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/contactcard' element={<ContactCard />} />
         <Route path='/dist/redirect.html' element={<Redirect />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
