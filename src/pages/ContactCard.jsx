@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/ContactCard.css';
 
-import IMG from '../img/team/kmixcvisuals-4.jpg'
+import IMG from '../img/logos/kmixc-studio.png'
 import VCF from '../assets/kmixc-contact.vcf'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -25,8 +25,8 @@ export default function ContactCard() {
                             className="profile-pic"
                         />
                         <div className="text">
-                            <h2>Kmixc Visuals</h2>
-                            <p className="title">CEO</p>
+                            <h2>Kmixc Studio</h2>
+                            <p className="title">Founder</p>
                         </div>
                         <p>Your one-stop shop for all digital marketing needs.</p>
                     </section>
@@ -60,6 +60,14 @@ export default function ContactCard() {
                             <div>
                                 <strong>Email Me</strong>
                                 <div className="subtext">oliver.kmixc@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <a href="https://instagram.com/kmixcstudio" target="_blank" rel="noreferrer" className="action-item">
+                            <FontAwesomeIcon icon={faInstagram} size='xl' />
+                            <div>
+                                <strong>Instagram</strong>
+                                <div className="subtext">@kmixcstudio</div>
                             </div>
                         </a>
 
