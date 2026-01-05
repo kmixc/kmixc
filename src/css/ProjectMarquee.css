@@ -1,0 +1,70 @@
+/* ROOT MARQUEE */
+.pm-marquee {
+    overflow: hidden;
+}
+
+/* FIXED CARD */
+.pm-item {
+    position: relative;
+    display: block;
+    width: 800px;
+    aspect-ratio: 6 / 3.7;
+    /* rectangle */
+    flex-shrink: 0;
+    overflow: hidden;
+    line-height: 0;
+
+}
+
+/* MEDIA WRAPPER */
+.pm-media {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    inset: 15px;
+    /* MATCH THE PADDING */
+    border-radius: 25px;
+}
+
+/* IMAGE + VIDEO HARD LOCK */
+.pm-image,
+.pm-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* VIDEO OVERRIDES (CRITICAL) */
+.pm-video {
+    opacity: 0;
+    pointer-events: none;
+    will-change: opacity;
+}
+
+/* HOVER SWAP */
+.pm-item:hover .pm-video {
+    opacity: 1;
+}
+
+.pm-item:hover .pm-image {
+    opacity: 0;
+}
+
+/* CENTERED LOGO OVERLAY */
+.pm-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.pm-logo {
+    width: 60%;
+    max-width: 260px;
+    filter: brightness(0) invert(1);
+}

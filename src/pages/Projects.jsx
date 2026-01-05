@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import '../css/Projects.css'
-import Logo from '../img/logos/logo-white.svg'
+import Logo from '../img/logos/logo-white_2.svg'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
 
@@ -145,7 +145,6 @@ export default function Projects() {
                 <div className="banner-overlay"></div>
             </div>
             <div className='projects-section'>
-                <h2 className="projects-section-title">PROJECTS</h2>
                 <div>
                     {/* Filter Buttons */}
                     <div className='projects-filter'>

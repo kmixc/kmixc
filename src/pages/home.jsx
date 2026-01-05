@@ -1,42 +1,32 @@
 import React, { useState } from 'react';
-import Logo from '../img/logos/logo-white.svg'
-
-//IMAGES
-import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
-import CompanyShowcase from '../img/client_imgs/Millworx-1.jpg'
-import Event from '../img/client_imgs/Event-3.jpg'
-import EventTwo from '../img/client_imgs/Yoga.jpg'
-import EventThree from '../img/client_imgs/Event.jpg'
+import Logo from '../img/logos/logo-white_2.svg'
 
 //VIDEOS
 import Video from '../img/backgrounds/Website_Banner.mp4'
-import EventVideo from "../img/videos/LZ_World_Tour.mp4";
 
 //COMPONENTS
-import ClientMarquee from '../components/clientMarquee.jsx'
+import ProjectsMarquee from '../components/projectsMarquee.jsx'
 import Footer from '../components/Footer.jsx'
 import Preloader from '../components/Preloader.jsx';
 
-//ICONS
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
+//CLIENT LOGOS
+import PycLogo from '../img/client_logos/pyc_logo.png'
+import FPLogo from '../img/client_logos/facilityplus_logo.png'
+import LululemonLogo from '../img/client_logos/lululemon_logo.png'
+import MillworxLogo from '../img/client_logos/millworx_logo.png'
+import CGRLogo from '../img/client_logos/customglassrailings_logo.png'
+import RoundLogo from '../img/client_logos/9round_kickboxing_logo.png'
+import OdinLogo from '../img/client_logos/odin_logo.png'
+import NBOLogo from '../img/client_logos/NBO_logo.png'
+import ImportFestLogo from '../img/client_logos/importfest_logo.png'
+import RWBLogo from '../img/client_logos/rwb_logo.png'
+import MckillansLogo from '../img/client_logos/mckillans_logo.png'
+import UndergroundLogo from '../img/client_logos/underground_logo.png'
+import CPCCLogo from '../img/client_logos/CPCC_logo.png'
+import OrbisLogo from '../img/client_logos/orbis_logo.png'
 
 const Home = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
-
-    function disableOverlay() {
-        let overlay = document.querySelector('.video-overlay');
-        overlay.style.opacity = 0;
-        overlay.style.visibility = "hidden";
-    }
-
-    function activateOverlay() {
-        let overlay = document.querySelector('.video-overlay');
-        setTimeout(() => {
-            overlay.style.opacity = 1;
-            overlay.style.visibility = "visible";
-        }, 5000);
-    }
 
     return (
         <div>
@@ -63,102 +53,101 @@ const Home = () => {
                     <div className="hero-logo">
                         <img src={Logo} alt="Kmixc Visuals Logo" />
                     </div>
-                    <h1 className="hero-text">
-                        <span>HARNESS THE</span>
-                        <span>POTENTIAL OF YOUR</span>
-                        <span>BUSINESS WITH STUNNING</span>
-                        <span>VISUALS & DIGITAL</span>
-                        <span>EXPERTISE.</span>
-                    </h1>
-                    <p className="hero-subtext">
-                        Providing businesses and companies with high-quality videography,
-                        photography, and marketing solutions.
-                    </p>
-                    <a href="/contact" className="hero-button">Contact Us</a>
+                    <div className="hero-text">
+                        <h1 className='hero-title'>
+                            Ideas, crafted with impact.
+                        </h1>
+                        <a href="/contact" className="hero-button">Let's Create</a>
+                    </div>
                 </div>
             </div>
 
-            <div className="services-section">
-                <h2 className="services-section-title">
-                    A <span className="highlight">production</span> partner for brands and agencies.
-                </h2>
+            <div className="trusted-section">
+                <p className="trusted-statement">
+                    Crafting meaningful visual stories through thoughtful strategy and creative execution.</p>
+
+                <p className="trusted-label">TRUSTED BY</p>
+
+                <div className="trusted-logos">
+                    <img src={PycLogo} alt="PYC Logo" />
+                    <img src={FPLogo} alt="FacilityPlus Logo" />
+                    <img src={LululemonLogo} alt="Lululemon Logo" />
+                    <img src={MillworxLogo} alt="Millworx Logo" />
+                    <img src={CGRLogo} alt="Custom Glass Railings Logo" />
+                    <img src={RoundLogo} alt="9Round Kickboxing Logo" />
+                    <img src={OdinLogo} alt="Odin Logo" />
+                    <img src={NBOLogo} alt="NBO Logo" />
+                    <img src={ImportFestLogo} alt="Import Fest Logo" />
+                    <img src={RWBLogo} alt="RWB Logo" />
+                    <img src={MckillansLogo} alt="Mckillans Logo" />
+                    <img src={UndergroundLogo} alt="Underground Logo" />
+                    <img src={CPCCLogo} alt="CPCC Logo" />
+                    <img src={OrbisLogo} alt="Orbis Logo" />
+
+                </div>
             </div>
 
             <div className="projects-section-home">
-                <div className='projects-recap'>
-                    <div onMouseEnter={disableOverlay} onMouseLeave={activateOverlay} className='video'>
-                        <div className='video-overlay'>
-                            <div>
-                                <p>see through my lens</p>
-                                <FontAwesomeIcon icon={faCirclePlay} />
-                            </div>
-                        </div>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/t0KDxGAAD0I?si=mki6Q-kBWQUL79fm" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                    </div>
-                </div>
-                <h2 className="projects-section-title">PROJECTS</h2>
-                <section className="projects">
-                    <div className="projects-grid">
-                        <a href='/projects/tommy-&-victoria' className="project-item">
-                            <img src={SpecialEventOne} alt="Tommy & Victoria" />
-                            <div className="project-info">
-                                <h3>Tommy & Victoria</h3>
-                                <p>Wedding Videography</p>
-                            </div>
-                        </a>
-                        <a href='/projects/millworx' className="project-item">
-                            <img src={CompanyShowcase} alt="Millworx" />
-                            <div className="project-info">
-                                <h3>Millworx</h3>
-                                <p>Company Showcase</p>
-                            </div>
-                        </a>
-                        <a href='/projects/lz-world-tour' className="project-item project-wide">
-                            <video
-                                id='hide-mobile'
-                                src={EventVideo}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className={"project-video"}
-                            ></video>
-                            <img id='hide-desktop' src={Event} alt="LZ World Tour" />
-                            <div className="project-info">
-                                <h3>LZ World Tour</h3>
-                                <p>Event Coverage</p>
-                            </div>
-                        </a>
-                        <a href='/projects/power-yoga-canada' className="project-item">
-                            <img src={EventTwo} alt="Power Yoga Canada" />
-                            <div className="project-info">
-                                <h3>Power Yoga Canada</h3>
-                                <p>Promotional & Event</p>
-                            </div>
-                        </a>
-                        <a
-                            href="/projects/facility-plus"
-                            className="project-item"
-                        >
-                            <img src={EventThree} alt="Facility Plus" />
-                            <div className="project-info">
-                                <h3>Facility Plus</h3>
-                                <p>Event Coverage</p>
-                            </div>
-                        </a>
-                    </div>
-                </section>
+                <ProjectsMarquee></ProjectsMarquee>
+                <a href="/projects" className='hero-button p-btn'>View Work</a>
             </div>
 
-            <div className="worked-with-section">
-                <div className='clients'>
-                    <div className='worked-with'>
-                        <h1 className='top'>We worked with</h1>
-                        <h1 className='bottom'>Not just <span className='underline'>clients</span>, but <span className='color'>partners</span>.</h1>
+            <div className="process-section">
+                <div className="process-grid">
+
+                    <div className="process-item">
+                        <span className="process-number">01</span>
+                        <h3>We Envision.</h3>
+
+                        <p className="process-lead">Bold ideas, smart strategies.</p>
+                        <p className="process-text">
+                            We craft innovative solutions to build your brand.
+                        </p>
+
+                        <ul>
+                            <li>Concept Development & Ideation</li>
+                            <li>Creative Direction</li>
+                            <li>Content Strategy</li>
+                        </ul>
                     </div>
+
+                    <div className="process-item">
+                        <span className="process-number accent">02</span>
+                        <h3>We Craft.</h3>
+
+                        <p className="process-lead">From concept to creation.</p>
+                        <p className="process-text">
+                            We craft visually striking content that sparks engagement.
+                        </p>
+
+                        <ul>
+                            <li>Scriptwriting & Storyboarding</li>
+                            <li>Full-Scale Video Production</li>
+                            <li>Editing & Post-Production</li>
+                        </ul>
+                    </div>
+
+                    <div className="process-item">
+                        <span className="process-number accent">03</span>
+                        <h3>We Deliver.</h3>
+
+                        <p className="process-lead">Turning vision into impact.</p>
+                        <p className="process-text">
+                            We ensure your content reaches the right audience and delivers results.
+                        </p>
+
+                        <ul>
+                            <li>Campaign Strategy & Management</li>
+                            <li>Data-Driven Optimization</li>
+                            <li>Video Tailored for Max Engagement</li>
+                        </ul>
+                    </div>
+
                 </div>
-                <ClientMarquee></ClientMarquee>
+
+                <button className="process-cta">Our Service's</button>
             </div>
+
 
             <div className="contact-section">
                 {/* Background Image */}

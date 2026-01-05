@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useLocation } from 'react-router-dom';
 import '../css/PageTransition.css';
-import Logo from '../img/logos/logo.svg'; // Adjust the path to your logo
+import Logo from '../img/logos/logo-white_2.svg'; // Adjust the path to your logo
 
 const PageTransition = () => {
     const transitionRef = useRef(null);

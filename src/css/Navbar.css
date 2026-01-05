@@ -8,11 +8,10 @@
     border: none;
     cursor: pointer;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 50px;
+    right: 60px;
     z-index: 3;
     color: #ffffff;
-    mix-blend-mode: difference;
 }
 
 /* Overlay */
@@ -35,7 +34,7 @@
     right: 0;
     width: 500px;
     height: 100vh;
-    background: white;
+    background: #161616;
     transform: translateX(100%);
     padding: 40px;
     display: flex;
@@ -61,7 +60,7 @@
 .nav__link {
     font-size: 5rem;
     text-decoration: none;
-    color: black;
+    color: #fff;
     margin-bottom: 15px;
     position: relative;
     transition: color 0.3s;
@@ -88,15 +87,16 @@
     margin-bottom: 10px;
     text-align: center;
     font-size: 1.5rem;
-    border: 1px solid black;
+    border: 1px solid #fff;
     text-decoration: none;
-    color: black;
+    color: #fff;
     transition: background 0.3s;
 }
 
 /* Footer */
 .nav__menuButton:hover {
-    background: #ff7000;
+    background: #fff;
+    color: #000000;
 }
 
 /* Footer */
@@ -114,7 +114,7 @@
 .nav__footer a {
     font-weight: 100;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 @media (max-width: 1024px) {

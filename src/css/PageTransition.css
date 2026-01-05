@@ -29,7 +29,7 @@
 }
 
 .block3 {
-    background: #ffffff;
+    background: #161616;
     /* Change to your desired color */
 }
 
@@ -43,9 +43,9 @@
 }
 
 .transition-logo {
-    width: 100px;
+    width: 200px;
     /* Adjust the size as needed */
-    height: 100px;
+    height: 200px;
     /* Adjust the size as needed */
     opacity: 0;
     /* Initial opacity for animation */
