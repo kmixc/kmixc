@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 
 //IMAGES & VIDEO
-import Logo from '../img/logos/logo.svg'
+import Logo from '../img/logos/logo-white_2.svg'
 
 //COMPONENTS
 import Preloader from '../components/Preloader.jsx'

@@ -1,6 +1,6 @@
 .services-page {
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #161616;
 }
 
 .services-page .logo img {
@@ -25,7 +25,7 @@
 .services-intro p {
     font-size: 2.1rem;
     font-weight: bold;
-    color: #000;
+    color: #fff;
 }
 
 .service-marquee {
@@ -68,7 +68,7 @@
 .service-number {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #333;
+    color: #ff7000;
     text-align: left;
 }
 
@@ -76,7 +76,7 @@
 .service-title {
     font-size: 4.5rem;
     font-weight: bold;
-    color: #000;
+    color: #fff;
     justify-content: flex-start;
     line-height: 0.8;
 }
@@ -84,13 +84,13 @@
 /* Right Column: Description */
 .service-description {
     font-size: 1.5rem;
-    color: #555;
+    color: #b1b1b1;
     text-align: left;
 }
 
 /* Call-to-Action Section */
 .services-cta {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #fff;
     padding: 50px 0;
     text-align: center;
     display: flex;
@@ -102,11 +102,11 @@
 
 .cta-text {
     font-size: 1.5rem;
-    color: #444;
+    color: #b1b1b1;
 }
 
 .cta-button {
-    background-color: #000;
+    background-color: #ff7000;
     color: #fff;
     padding: 12px 30px;
     font-size: 1.3rem;

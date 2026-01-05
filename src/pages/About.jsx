@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../css/About.css';
 import { Link } from 'react-router-dom';
-import Logo from '../img/logos/logo-white.svg';
-import Logo2 from '../img/logos/logo.svg';
+import Logo from '../img/logos/logo-white_2.svg';
 
 //IMAGES & VIDEO
 import Video from '../img/backgrounds/WEBSITE_MOTION_GRAPHIC.mp4';
@@ -50,7 +49,7 @@ export default function About() {
         <div className='about-page'>
             <Preloader />
             <Link className='logo' to={"/"}>
-                <img src={Logo2} alt="Kmixc Visuals" />
+                <img src={Logo} alt="Kmixc Visuals" />
             </Link>
             <div className="about-section">
                 {!videoLoaded && <div className="banner-placeholder"></div>}

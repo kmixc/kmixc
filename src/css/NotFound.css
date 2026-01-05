@@ -1,7 +1,7 @@
 .not-found-section {
     height: 100vh;
     padding: 20px;
-    background-color: #fff;
+    background-color: #161616;
 }
 
 .not-found-section img {
@@ -16,7 +16,7 @@
     justify-content: space-between;
     flex-direction: row-reverse;
     height: 100%;
-    background-color: #fff;
+    background-color: #161616;
 }
 
 .section-one {
@@ -26,7 +26,7 @@
     padding: 0 50px;
     width: 800px;
     float: left;
-    background-color: #fff;
+    background-color: #161616;
 }
 
 .section-one .links {
@@ -39,7 +39,7 @@
 .links .item-link {
     transition: 0.5s;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 .section-one .links .item-link:hover:not(:first-child) {
@@ -74,7 +74,7 @@
     font-size: 1.5rem;
     font-weight: 100;
     transition: 0.3s;
-    color: #000;
+    color: #fff;
 }
 
 .section-one .email:hover {
@@ -87,7 +87,7 @@
     padding-right: 10px;
     transition: 0.3s;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 .section-one .socials a:hover {
@@ -117,7 +117,7 @@
     font-weight: 100;
     transition: 0.3s;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 .section-two .bottom a:hover {
@@ -134,7 +134,7 @@
     text-decoration: underline;
     font-size: 2rem;
     transition: 0.3s;
-    color: #000;
+    color: #fff;
 }
 
 .middle-mobile .email:hover {
@@ -147,7 +147,7 @@
     transition: 0.3s;
     font-size: 1.5rem;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 .middle-mobile .socials a:hover {

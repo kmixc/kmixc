@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import '../css/Contact.css';
 import { Link } from 'react-router-dom';
-import Logo from '../img/logos/logo.svg';
+import Logo from '../img/logos/logo-white_2.svg';
 
 import Preloader from '../components/Preloader';
 import Footer from '../components/Footer';
