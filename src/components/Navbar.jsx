@@ -72,7 +72,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="nav__footer">
-                    <span>© Kmixc Visuals 2025</span>
+                    <span>© Kmixc Visuals 2026</span>
                     <span className="footer__spacer"> | </span>
                     <a href="#">Privacy Policy</a>
                 </div>

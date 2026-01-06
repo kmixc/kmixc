@@ -66,7 +66,7 @@ const Home = () => {
                 <p className="trusted-statement">
                     Crafting meaningful visual stories through thoughtful strategy and creative execution.</p>
 
-                <p className="trusted-label">TRUSTED BY</p>
+                <p className="trusted-label">SUPPORTED BY</p>
 
                 <div className="trusted-logos">
                     <img src={PycLogo} alt="PYC Logo" />
@@ -145,7 +145,7 @@ const Home = () => {
 
                 </div>
 
-                <button className="process-cta">Our Service's</button>
+                <button className="process-cta">Our Services</button>
             </div>
 
 

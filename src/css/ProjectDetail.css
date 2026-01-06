@@ -1,5 +1,5 @@
 .detail-page {
-    background-color: #fff;
+    background-color: #161616;
 }
 
 .detail-page .logo img {
@@ -25,6 +25,7 @@
     text-transform: uppercase;
     line-height: 1;
     font-weight: bold;
+    color: #fff;
 }
 
 .project-detail .info .description {
@@ -72,7 +73,7 @@
 
 .back-button {
     display: inline-block;
-    background-color: #000;
+    background-color: #ff7000;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;

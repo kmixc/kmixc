@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import "../css/ProjectDetail.css";
-import Logo from '../img/logos/logo.svg'
+import Logo from '../img/logos/logo-white_2.svg'
 import { Link } from 'react-router-dom'
 import Preloader from "../components/Preloader";
 import Footer from "../components/Footer";

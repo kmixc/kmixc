@@ -8,9 +8,13 @@ import CompanyShowcase from '../img/client_imgs/Millworx-1.jpg'
 import Event from '../img/client_imgs/Event-3.jpg'
 import EventTwo from '../img/client_imgs/Yoga.jpg'
 import EventThree from '../img/client_imgs/Event.jpg'
+import CGR from '../img/client_imgs/CGR.jpg'
 
 //VIDEOS
-import TestVideo from '../img/backgrounds/Website_Banner.mp4'
+import MillworxVideo from '../img/videos/Millworx.mp4'
+import FPVideo from '../img/videos/Facility_Plus.mp4'
+import CGRVideo from '../img/videos/CGR.mp4'
+import PYCVideo from '../img/videos/Power_Yoga_Canada.mp4'
 
 //CLIENT LOGOS
 import PycLogo from '../img/client_logos/pyc_logo.png'
@@ -64,7 +68,7 @@ export default function ProjectsMarquee() {
 
                     <video
                         className="pm-video"
-                        src={TestVideo}
+                        src={MillworxVideo}
                         muted
                         loop
                         playsInline
@@ -77,7 +81,6 @@ export default function ProjectsMarquee() {
                     <img className="pm-logo" src={MillworxLogo} alt="Power Yoga Canada" />
                 </div>
             </a>
-
             <a
                 href="/projects/power-yoga-canada"
                 className="pm-item"
@@ -93,7 +96,7 @@ export default function ProjectsMarquee() {
 
                     <video
                         className="pm-video"
-                        src={TestVideo}
+                        src={PYCVideo}
                         muted
                         loop
                         playsInline
@@ -106,7 +109,6 @@ export default function ProjectsMarquee() {
                     <img className="pm-logo" src={PycLogo} alt="Power Yoga Canada" />
                 </div>
             </a>
-
             <a
                 href="/projects/facility-plus"
                 className="pm-item"
@@ -117,12 +119,12 @@ export default function ProjectsMarquee() {
                     <img
                         className="pm-image"
                         src={EventThree}
-                        alt="Tommy & Victoria"
+                        alt="Facility Plus"
                     />
 
                     <video
                         className="pm-video"
-                        src={TestVideo}
+                        src={FPVideo}
                         muted
                         loop
                         playsInline
@@ -133,6 +135,34 @@ export default function ProjectsMarquee() {
 
                 <div className="pm-overlay">
                     <img className="pm-logo" src={FPLogo} alt="Power Yoga Canada" />
+                </div>
+            </a>
+            <a
+                href="/projects/custom-glass-railings"
+                className="pm-item"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                <div className="pm-media">
+                    <img
+                        className="pm-image"
+                        src={CGR}
+                        alt="CGR"
+                    />
+
+                    <video
+                        className="pm-video"
+                        src={CGRVideo}
+                        muted
+                        loop
+                        playsInline
+                        preload="none"
+
+                    />
+                </div>
+
+                <div className="pm-overlay">
+                    <img className="pm-logo" src={CGRLogo} alt="Power Yoga Canada" />
                 </div>
             </a>
 
