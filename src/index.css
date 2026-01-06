@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 * {
   padding: 0;
@@ -129,9 +130,11 @@ html {
 }
 
 .hero-title {
-  font-family: "Playfair Display", serif !important;
+  font-family: "Libre Baskerville", serif !important;
+  font-style: italic;
   font-size: 5em;
   padding: 20px;
+  font-weight: 600;
   color: #fff;
 }
 
