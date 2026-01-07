@@ -33,139 +33,84 @@ import CPCCLogo from '../img/client_logos/CPCC_logo.png'
 import OrbisLogo from '../img/client_logos/orbis_logo.png'
 
 export default function ProjectsMarquee() {
-    const videoRef1 = useRef(null)
+    const projects = [
+        {
+            href: "/projects/custom-glass-railings",
+            image: CGR,
+            video: CGRVideo,
+            logo: CGRLogo,
+            alt: "Custom Glass Railings"
+        },
+        {
+            href: "/projects/millworx",
+            image: CompanyShowcase,
+            video: MillworxVideo,
+            logo: MillworxLogo,
+            alt: "Millworx"
+        },
+        {
+            href: "/projects/power-yoga-canada",
+            image: EventTwo,
+            video: PYCVideo,
+            logo: PycLogo,
+            alt: "Power Yoga Canada"
+        },
+        {
+            href: "/projects/facility-plus",
+            image: EventThree,
+            video: FPVideo,
+            logo: FPLogo,
+            alt: "Facility Plus"
+        }
+    ];
 
-    const handleMouseEnter = (e) => {
-        const video = e.currentTarget.querySelector('.pm-video')
-        if (!video) return
+    const videoRefs = useRef([]);
 
-        video.currentTime = 0
-        video.play().catch(() => { })
-    }
+    const playVideo = (i) => {
+        const v = videoRefs.current[i];
+        if (v) v.play().catch(() => { });
+    };
 
-    const handleMouseLeave = (e) => {
-        const video = e.currentTarget.querySelector('.pm-video')
-        if (!video) return
-
-        video.pause()
-        video.currentTime = 0
-    }
+    const stopVideo = (i) => {
+        const v = videoRefs.current[i];
+        if (v) {
+            v.pause();
+            v.currentTime = 0;
+        }
+    };
 
     return (
         <Marquee speed={100} loop={0} className='pm-marquee'>
-            <a
-                href="/projects/millworx"
-                className="pm-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
-                <div className="pm-media">
-                    <img
-                        className="pm-image"
-                        src={CompanyShowcase}
-                        alt="Millworx"
-                    />
+            {projects.map((project, i) => (
+                <a
+                    key={i}
+                    href={project.href}
+                    className="pm-item"
+                    onMouseEnter={() => playVideo(i)}
+                    onMouseLeave={() => stopVideo(i)}
+                >
+                    <div className="pm-media">
+                        <img
+                            src={project.image}
+                            alt={project.alt}
+                            className="pm-image"
+                        />
 
-                    <video
-                        className="pm-video"
-                        src={MillworxVideo}
-                        muted
-                        loop
-                        playsInline
-                        preload="none"
-
-                    />
-                </div>
-
-                <div className="pm-overlay">
-                    <img className="pm-logo" src={MillworxLogo} alt="Power Yoga Canada" />
-                </div>
-            </a>
-            <a
-                href="/projects/power-yoga-canada"
-                className="pm-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
-                <div className="pm-media">
-                    <img
-                        className="pm-image"
-                        src={EventTwo}
-                        alt="Tommy & Victoria"
-                    />
-
-                    <video
-                        className="pm-video"
-                        src={PYCVideo}
-                        muted
-                        loop
-                        playsInline
-                        preload="none"
-
-                    />
-                </div>
-
-                <div className="pm-overlay">
-                    <img className="pm-logo" src={PycLogo} alt="Power Yoga Canada" />
-                </div>
-            </a>
-            <a
-                href="/projects/facility-plus"
-                className="pm-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
-                <div className="pm-media">
-                    <img
-                        className="pm-image"
-                        src={EventThree}
-                        alt="Facility Plus"
-                    />
-
-                    <video
-                        className="pm-video"
-                        src={FPVideo}
-                        muted
-                        loop
-                        playsInline
-                        preload="none"
-
-                    />
-                </div>
-
-                <div className="pm-overlay">
-                    <img className="pm-logo" src={FPLogo} alt="Power Yoga Canada" />
-                </div>
-            </a>
-            <a
-                href="/projects/custom-glass-railings"
-                className="pm-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
-                <div className="pm-media">
-                    <img
-                        className="pm-image"
-                        src={CGR}
-                        alt="CGR"
-                    />
-
-                    <video
-                        className="pm-video"
-                        src={CGRVideo}
-                        muted
-                        loop
-                        playsInline
-                        preload="none"
-
-                    />
-                </div>
-
-                <div className="pm-overlay">
-                    <img className="pm-logo" src={CGRLogo} alt="Power Yoga Canada" />
-                </div>
-            </a>
-
+                        <video
+                            ref={(el) => (videoRefs.current[i] = el)}
+                            src={project.video}
+                            muted
+                            loop
+                            playsInline
+                            autoPlay
+                            className="pm-video"
+                        />
+                    </div>
+                    <div className="pm-overlay pm-logo">
+                        <img src={project.logo} alt={`${project.alt} logo`} />
+                    </div>
+                </a>
+            ))}
         </Marquee>
     )
 }

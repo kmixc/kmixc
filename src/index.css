@@ -62,7 +62,6 @@ html {
 
 .hero-section .banner-overlay {
   position: absolute;
-  border: #ff7000 2px solid;
   inset: 0;
   /* covers entire .hero-section (top/right/bottom/left = 0) */
   background: rgba(0, 0, 0, 0.4);
@@ -631,7 +630,8 @@ html {
   }
 
   .hero-text {
-    font-size: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
   }
 
   .hero-subtext {
@@ -666,43 +666,28 @@ html {
     padding: 50px 10px;
   }
 
-  .projects-section-title {
-    font-size: 3.5rem;
-    line-height: 0.5;
+  .trusted-section {
+    padding: 40px 30px;
   }
 
-  .projects-recap .video {
-    height: 300px;
-    width: 100%;
+  .trusted-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-template-columns: none;
+    gap: 20px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
-  .project-info h3 {
-    font-size: 1.5rem;
-  }
-
-  .project-info p {
-    font-size: 1rem;
-  }
-
-  .project-wide {
-    height: 100%;
-  }
-
-  .project-wide img {
-    transform: translateY(-0%) scale(1);
-  }
-
-  .worked-with-section .clients {
-    padding: 10px;
-  }
-
-  .worked-with-section .clients .worked-with .top {
-    font-size: 2.5rem;
-  }
-
-  .worked-with-section .clients .worked-with .bottom {
-    font-size: 1.5rem;
-    line-height: 0.3;
+  .trusted-logos img {
+    max-height: 40px;
+    width: unset;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.3s ease, filter 0.3s ease;
   }
 
   .contact-section .content {
@@ -730,13 +715,6 @@ html {
     width: 150px;
   }
 
-  .worked-with-section .marquee-clients img {
-    height: 100px;
-    padding: 5px;
-    filter: grayscale(1);
-    transition: 0.4s;
-  }
-
   .home .overlay-transparent .countup-overlay {
     font-size: 5em;
     position: absolute;
@@ -756,6 +734,10 @@ html {
 
 /* HEIGHT RESPONSIVE */
 @media (max-height: 450px) {
+  .hero-text {
+    font-size: 0.3rem;
+  }
+
   .hero-logo img {
     height: 40px;
   }

@@ -64,7 +64,47 @@
 }
 
 .pm-logo {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.pm-logo img {
     width: 60%;
     max-width: 260px;
+    height: auto;
     filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.pm-media,
+.pm-image,
+.pm-video,
+.pm-logo {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+@media (max-width: 768px) {
+    .pm-item {
+        width: 500px;
+        aspect-ratio: 4 / 3;
+        margin-right: 16px;
+    }
+
+    .pm-logo img {
+        width: 70%;
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pm-item {
+        width: 450px;
+        aspect-ratio: 4 / 3;
+    }
 }
