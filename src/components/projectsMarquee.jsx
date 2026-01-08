@@ -3,18 +3,19 @@ import Marquee from "react-fast-marquee";
 import '../css/ProjectMarquee.css'
 
 //IMAGES
-import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
 import CompanyShowcase from '../img/client_imgs/Millworx-1.jpg'
 import Event from '../img/client_imgs/Event-3.jpg'
 import EventTwo from '../img/client_imgs/Yoga.jpg'
 import EventThree from '../img/client_imgs/Event.jpg'
 import CGR from '../img/client_imgs/CGR.jpg'
+import NBO from '../img/client_imgs/nbo_cover.jpg'
 
 //VIDEOS
 import MillworxVideo from '../img/videos/Millworx.mp4'
 import FPVideo from '../img/videos/Facility_Plus.mp4'
 import CGRVideo from '../img/videos/CGR.mp4'
 import PYCVideo from '../img/videos/Power_Yoga_Canada.mp4'
+import NBOVideo from '../img/videos/nbo_video.mp4'
 
 //CLIENT LOGOS
 import PycLogo from '../img/client_logos/pyc_logo.png'
@@ -61,6 +62,13 @@ export default function ProjectsMarquee() {
             video: FPVideo,
             logo: FPLogo,
             alt: "Facility Plus"
+        },
+        {
+            href: "/projects/national-bank-open",
+            image: NBO,
+            video: NBOVideo,
+            logo: NBOLogo,
+            alt: "National Bank Open"
         }
     ];
 
@@ -80,7 +88,7 @@ export default function ProjectsMarquee() {
     };
 
     return (
-        <Marquee speed={100} loop={0} className='pm-marquee'>
+        <Marquee speed={150} loop={0} className='pm-marquee'>
             {projects.map((project, i) => (
                 <a
                     key={i}

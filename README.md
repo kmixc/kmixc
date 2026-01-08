@@ -2,15 +2,13 @@
 
 <div align="center">
 
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 </div>
 
 <br />
 
 <div align="center">
   <a href="https://kmixc.com">
-    <img src="public/logo.svg" alt="Kmixc Visuals Logo" width="80" height="80">
+    <img src="/src/img/logos/logo-white_2.svg" alt="Kmixc Visuals Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Kmixc Visuals Website</h3>
@@ -83,13 +81,3 @@ This website is built using modern frontend tools and libraries:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
-
-## Getting Started
-
-To run the website locally:
-
-```bash
-git clone https://github.com/kmixc/kmixc-website.git
-cd kmixc-website
-npm install
-npm run dev
