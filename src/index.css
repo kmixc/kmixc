@@ -91,7 +91,7 @@ html {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url("./img/client_imgs/CGR.jpg") center/cover no-repeat;
+  background: url("./img/client_imgs/cgr_cover.jpg") center/cover no-repeat;
   z-index: -2;
   /* match container rounding so it doesn't overflow */
   border-radius: inherit;

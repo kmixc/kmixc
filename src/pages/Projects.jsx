@@ -19,7 +19,7 @@ import EventSix from '../assets/img/projects/chamber_of_commerce/chamberofcommer
 import EventSeven from '../assets/img/projects/brilliant_minded_women/brilliantmindedwomen11.jpg'
 import EventEight from '../img/client_imgs/Event-6.jpg'
 import EventNine from '../img/client_imgs/Event-7.jpg'
-import Renovation from '../img/client_imgs/CGR.jpg'
+import Renovation from '../img/client_imgs/cgr_cover.jpg'
 import DentalOne from '../img/client_imgs/Dental_1.jpg'
 import DentalTwo from '../img/client_imgs/Dental_2.jpg'
 import DentalThree from '../img/client_imgs/Dental_3.jpg'
@@ -32,7 +32,7 @@ import Restaurant from '../img/client_imgs/Finkle.jpg'
 //VIDEOS
 import Video from '../img/backgrounds/Projects_Banner.mp4'
 import EventVideo from "../img/videos/LZ_World_Tour.mp4";
-import EventTwoVideo from "../img/videos/Power_Yoga_Canada.mp4";
+import EventTwoVideo from "../img/videos/pyc_video.mp4";
 import RenovationVideo from '../img/videos/cgr_video.mp4'
 
 //COMPONENTS
