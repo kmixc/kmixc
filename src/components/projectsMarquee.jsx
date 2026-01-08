@@ -13,7 +13,7 @@ import NBO from '../img/client_imgs/nbo_cover.jpg'
 //VIDEOS
 import MillworxVideo from '../img/videos/Millworx.mp4'
 import FPVideo from '../img/videos/Facility_Plus.mp4'
-import CGRVideo from '../img/videos/CGR.mp4'
+import CGRVideo from '../img/videos/cgr_video.mp4'
 import PYCVideo from '../img/videos/Power_Yoga_Canada.mp4'
 import NBOVideo from '../img/videos/nbo_video.mp4'
 

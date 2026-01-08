@@ -33,7 +33,7 @@ import Restaurant from '../img/client_imgs/Finkle.jpg'
 import Video from '../img/backgrounds/Projects_Banner.mp4'
 import EventVideo from "../img/videos/LZ_World_Tour.mp4";
 import EventTwoVideo from "../img/videos/Power_Yoga_Canada.mp4";
-import RenovationVideo from '../img/videos/CGR.mp4'
+import RenovationVideo from '../img/videos/cgr_video.mp4'
 
 //COMPONENTS
 import Preloader from '../components/Preloader';
