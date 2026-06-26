@@ -33,6 +33,32 @@
     font-weight: 100;
 }
 
+.media-section {
+    margin-top: 40px;
+}
+
+.frames-section {
+    margin-top: 80px;
+}
+
+.media-section-title {
+    margin: 0 0 30px;
+    color: #fff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.single-video-grid {
+    grid-template-columns: minmax(0, 1fr);
+}
+
 /* Masonry using column-count trick */
 .media-masonry {
     column-count: 3;
@@ -45,6 +71,14 @@
     display: inline-block;
     width: 100%;
     margin-bottom: 5px;
+}
+
+.video-item {
+    margin-bottom: 0;
+}
+
+.single-video-item {
+    max-width: none;
 }
 
 /* Make sure images and videos fit well */
@@ -64,6 +98,10 @@
     /* Ensures it fills the container */
     aspect-ratio: 4.8/3.2;
     /* Maintains 16:9 ratio */
+}
+
+.single-video-item iframe {
+    aspect-ratio: 21 / 9;
 }
 
 .back-button-container {
@@ -105,6 +143,10 @@
         font-weight: 100;
     }
 
+    .media-section-title {
+        font-size: 2rem;
+    }
+
     .media-masonry {
         column-count: 2;
     }
@@ -125,6 +167,20 @@
     .project-detail .info .description {
         font-size: 1.1rem;
         font-weight: 100;
+    }
+
+    .frames-section {
+        margin-top: 50px;
+    }
+
+    .media-section-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .media-masonry {

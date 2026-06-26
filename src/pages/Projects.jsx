@@ -1,213 +1,95 @@
-import { useState, useEffect, useRef } from "react";
+import React from "react";
 import '../css/Projects.css'
-import Logo from '../img/logos/logo-white_2.svg'
-import { Link } from 'react-router-dom'
-import { gsap } from 'gsap';
 
 //IMAGES
-import SpecialEventOne from '../img/client_imgs/Special_Event_1.jpg'
-import SpecialEventTwo from '../img/client_imgs/Special_Event_2.jpg'
-import SpecialEventThree from '../img/client_imgs/Special_Event_3.jpg'
-import SpecialEventFour from '../img/client_imgs/Special_Event_4.jpg'
 import CompanyShowcase from '../img/client_imgs/Millworx-1.jpg'
 import Event from '../img/client_imgs/Event-3.jpg'
 import EventTwo from '../img/client_imgs/Yoga.jpg'
 import EventThree from '../img/client_imgs/Event.jpg'
-import EventFour from '../img/client_imgs/Event-4.jpg'
-import EventFive from '../img/client_imgs/Event-5.jpg'
-import EventSix from '../assets/img/projects/chamber_of_commerce/chamberofcommerce1.jpg'
-import EventSeven from '../assets/img/projects/brilliant_minded_women/brilliantmindedwomen11.jpg'
-import EventEight from '../img/client_imgs/Event-6.jpg'
 import EventNine from '../img/client_imgs/Event-7.jpg'
 import Renovation from '../img/client_imgs/cgr_cover.jpg'
-import DentalOne from '../img/client_imgs/Dental_1.jpg'
-import DentalTwo from '../img/client_imgs/Dental_2.jpg'
-import DentalThree from '../img/client_imgs/Dental_3.jpg'
-import DentalFour from '../img/client_imgs/Dental_4.jpg'
-import DentalFive from '../img/client_imgs/Dental_5.jpg'
-import ConstructionOne from '../img/client_imgs/Construction_1.jpg'
-import ConstructionTwo from '../assets/img/projects/the_doors_ltd/thedoorsltd1.jpg'
 import Restaurant from '../img/client_imgs/Finkle.jpg'
 
-//VIDEOS
-import Video from '../img/backgrounds/Projects_Banner.mp4'
 import EventVideo from "../img/videos/LZ_World_Tour.mp4";
 import EventTwoVideo from "../img/videos/pyc_video.mp4";
 import RenovationVideo from '../img/videos/cgr_video.mp4'
+import NBOVideo from '../img/videos/nbo_video.mp4'
+import MillworxVideo from '../img/videos/millworx_video.mp4'
+import FacilityPlusVideo from '../img/videos/fp_video.mp4'
+
+//LOGOS
+import MillworxLogo from '../img/client_logos/millworx_logo.png'
+import FacilityPlusLogo from '../img/client_logos/facilityplus_logo.png'
+import CGRLogo from '../img/client_logos/customglassrailings_logo.png'
+import PYCLogo from '../img/client_logos/pyc_logo.png'
+import NBOLogo from '../img/client_logos/NBO_logo.png'
+import NBOCover from '../img/client_imgs/nbo_cover.jpg'
 
 //COMPONENTS
 import Preloader from '../components/Preloader';
 import Footer from '../components/Footer.jsx'
 
 const projectsData = [
-    { id: 1, categories: ["Special Event"], title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography", route: "/projects/tommy-&-victoria" },
-    { id: 2, categories: ["Business", "Renovation"], title: "Millworx", img: CompanyShowcase, description: "Company Showcase", route: "/projects/millworx" },
-    { id: 3, categories: ["Event", "Automotive"], title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", route: "/projects/lz-world-tour" },
-    { id: 4, categories: ["Event"], title: "Facility Plus", img: EventThree, description: "Event Coverage", route: "/projects/facility-plus" },
-    { id: 5, categories: ["Special Event"], title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", route: "/projects/mike-&-brittany" },
-    { id: 6, categories: ["Renovation", "Business"], title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, description: "Renovation", route: "/projects/custom-glass-railings" },
-    { id: 7, categories: ["Special Event"], title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", route: "/projects/janine-&-lucas" },
-    { id: 8, categories: ["Dental"], title: "Luka Dental Care", img: DentalThree, description: "Company Promo", route: "/projects/luka-dental-care" },
-    { id: 9, categories: ["Event"], title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, description: "Promotional & Event", route: "/projects/power-yoga-canada" },
-    { id: 10, categories: ["Dental"], title: "Queen Street Dental", img: DentalOne, description: "Company Promo", route: "/projects/queen-street-dental" },
-    { id: 11, categories: ["Construction"], title: "Custom Glass Railings", img: ConstructionOne, description: "Company Showcase", route: "/projects/custom-glass-railings" },
-    { id: 12, categories: ["Dental"], title: "North York Dental", img: DentalTwo, description: "Company Promo", route: "/projects/north-york-dental" },
-    { id: 13, categories: ["Business"], title: "Finkle Street Tap & Grill", img: Restaurant, description: "Restaurant Coverage", route: "/projects/finkle-street-tap-&-grill" },
-    { id: 14, categories: ["Special Event"], title: "Roberto & Lorena", img: SpecialEventFour, description: "Engagement Videography", route: "/projects/roberto-&-lorena" },
-    { id: 15, categories: ["Event", "Automotive"], title: "Slammedenuff Sevierville", img: EventNine, description: "Event Coverage", route: "/projects/slammedenuff-sevierville-2024", },
-    { id: 16, categories: ["Dental"], title: "Waterloo Family Dental", img: DentalFour, description: "Company Promo", route: "/projects/waterloo-family-dental", },
-    { id: 17, categories: ["Dental"], title: "Dentistry On Lawrence", img: DentalFive, description: "Company Promo", route: "/projects/dentistry-on-lawrence", },
+    { id: 1, title: "Millworx", img: CompanyShowcase, video: MillworxVideo, logo: MillworxLogo, description: "Company Showcase", route: "/projects/millworx" },
+    { id: 2, title: "Facility Plus", img: EventThree, video: FacilityPlusVideo, logo: FacilityPlusLogo, description: "Event Coverage", route: "/projects/facility-plus" },
+    { id: 3, title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", route: "/projects/lz-world-tour" },
+    { id: 4, title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, logo: CGRLogo, description: "Renovation", route: "/projects/custom-glass-railings" },
+    { id: 5, title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, logo: PYCLogo, description: "Promotional & Event", route: "/projects/power-yoga-canada" },
+    { id: 6, title: "National Bank Open", img: NBOCover, video: NBOVideo, logo: NBOLogo, description: "Event Coverage", route: "/projects/national-bank-open" },
+    { id: 7, title: "Finkle Street Tap & Grill", img: Restaurant, description: "Restaurant Coverage", route: "/projects/finkle-street-tap-&-grill" },
+    { id: 8, title: "Slammedenuff Sevierville", img: EventNine, description: "Event Coverage", route: "/projects/slammedenuff-sevierville-2024" },
 ];
 
-const projects = [
-    { id: 1, image: `${ConstructionTwo}`, link: "/projects/the-doors-ltd", title: "The Doors Ltd", description: "Company Showcase" },
-    { id: 2, image: `${EventFour}`, link: "/projects/copernicus-lodge-galaxy-ball", title: "Galaxy Ball", description: "Event Coverage" },
-    { id: 3, image: `${EventEight}`, link: "/projects/lululemon-madness", title: "Lululemon Madness", description: "Event Coverage" },
-    { id: 4, image: `${EventFive}`, link: "/projects/JDRF-walk", title: "JDRF Walk", description: "Event Coverage" },
-    { id: 5, image: `${EventSix}`, link: "/projects/chamber-of-commerce", title: "Chamber of Commerce", description: "Event Coverage" },
-    { id: 6, image: `${EventSeven}`, link: "/projects/brilliant-minded-women", title: "Brilliant Minded Women", description: "Event Coverage" },
-];
+const handleMouseEnter = (e) => {
+    const video = e.currentTarget.querySelector('video');
+    if (video) {
+        video._playPromise = video.play();
+    }
+};
 
-const categories = ["All", "Event", "Business", "Special Event", "Dental", "Renovation"];
+const handleMouseLeave = (e) => {
+    const video = e.currentTarget.querySelector('video');
+    if (!video) return;
+    if (video._playPromise !== undefined) {
+        video._playPromise.then(() => {
+            video.pause();
+            video.currentTime = 0;
+        }).catch(() => {});
+    }
+};
 
 export default function Projects() {
-    const [videoLoaded, setVideoLoaded] = useState(false);
-    const [selectedCategory, setSelectedCategory] = useState("All");
-    const [visibleCount, setVisibleCount] = useState(6);
-    const [projectsPerRow, setProjectsPerRow] = useState(3);
-    const projectGridRef = useRef(null);
-
-    const filteredProjects = selectedCategory === "All"
-        ? projectsData
-        : projectsData.filter((project) => project.categories.includes(selectedCategory));
-
-    const visibleProjects = filteredProjects.slice(0, visibleCount);
-
-
-    // 🟢 **Animation when filtering or updating projects**
-    useEffect(() => {
-        if (projectGridRef.current) {
-            const newItems = Array.from(projectGridRef.current.children).slice(visibleCount - projectsPerRow);
-            gsap.fromTo(
-                newItems,
-                { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" }
-            );
-        }
-    }, [visibleCount]);
-
-    // 🟢 **Overlay animation when changing category**
-    useEffect(() => {
-        if (projectGridRef.current) {
-            const projectItems = projectGridRef.current.querySelectorAll(".project-item .overlay");
-            gsap.fromTo(
-                projectItems,
-                { y: "0%" },
-                { y: "-100%", duration: 0.6, stagger: 0.1, ease: "power2.out" }
-            );
-        }
-    }, [selectedCategory]);
-
-    const loadMoreProjects = () => {
-        const remaining = filteredProjects.length - visibleCount;
-        const nextCount = Math.min(projectsPerRow, remaining);
-        setVisibleCount(prev => prev + nextCount);
-    };
-
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 768);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
     return (
         <div className='projects-page'>
             <Preloader />
-            <Link className='logo' to={"/"}>
-                <img src={Logo} alt="Kmixc Visuals" />
-            </Link>
-            <div className="projects-hero">
-                {!videoLoaded && <div className="banner-placeholder"></div>}
-                {/* Video Element */}
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className={`background-video ${videoLoaded ? "loaded" : ""}`}
-                    onLoadedData={() => setVideoLoaded(true)}
-                >
-                    <source src={Video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-
-                <div className="banner-overlay"></div>
-            </div>
             <div className='projects-section'>
-                <div>
-                    {/* Filter Buttons */}
-                    <div className='projects-filter'>
-                        {categories.map(category => (
-                            <button
-                                key={category}
-                                onClick={() => {
-                                    setSelectedCategory(category);
-                                    setVisibleCount(6); // Reset to initial count when filtering
-                                }}
-                                className={selectedCategory === category ? "active" : ""}
-                            >
-                                {category}
-                            </button>
-                        ))}
-                    </div>
-                    <section className="projects">
-                        <div ref={projectGridRef} className="projects-grid">
-                            {visibleProjects.map((project, index) => {
-                                const isThirdItem = (index + 1) % 3 === 0;
-                                return (
-                                    <a key={project.id} href={project.route} className={`project-item ${isThirdItem ? "project-wide" : ""}`}>
-                                        <div className="overlay"></div>
-
-                                        {isThirdItem && project.video && !isMobile ? (
-                                            <video src={project.video} autoPlay loop muted playsInline className="project-video"></video>
-                                        ) : (
-                                            <img src={project.img} alt={project.title} />
-                                        )}
-
-                                        <div className="project-info">
+                <section className="projects">
+                    <div className="projects-grid">
+                        {projectsData.map((project) => (
+                            <a key={project.id} href={project.route} className="project-item"
+                               onMouseEnter={handleMouseEnter}
+                               onMouseLeave={handleMouseLeave}>
+                                <div className="overlay"></div>
+                                {project.img && <img src={project.img} alt={project.title} />}
+                                {project.video && (
+                                    <video src={project.video} muted loop playsInline className="project-video" />
+                                )}
+                                <div className="project-info">
+                                    {project.logo ? (
+                                        <img src={project.logo} alt={project.title} className="project-logo" />
+                                    ) : (
+                                        <>
                                             <h3>{project.title}</h3>
                                             <p>{project.description}</p>
-                                        </div>
-                                    </a>
-                                );
-                            })}
-                        </div>
-                    </section>
-                    {visibleCount < filteredProjects.length && (
-                        <div className="load-more-container">
-                            <button className="load-more" onClick={loadMoreProjects}>
-                                Load More Projects
-                            </button>
-                        </div>
-                    )}
-                </div>
+                                        </>
+                                    )}
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </section>
             </div>
-            <div className="more-projects-section">
-                <h2>MORE PROJECTS</h2>
-                <div className="more-projects-grid">
-                    {projects.map((project) => (
-                        <a key={project.id} href={project.link} className="project-item">
-                            <img src={project.image} alt={`Project ${project.id}`} loading="lazy" />
-                            <div className="project-info">
-                                <h3>{project.title}</h3>
-                                <p>{project.description}</p>
-                            </div>
-                        </a>
-                    ))}
-                </div>
-            </div>
-            <Footer></Footer>
+            <Footer />
         </div>
     )
 }

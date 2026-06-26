@@ -1,0 +1,429 @@
+.social-media-page {
+    background: #161616;
+}
+
+.social-media-page .webdev-hero__art {
+    font-size: clamp(4.4rem, 10.8vw, 11.25rem);
+}
+
+.social-studio {
+    background: #161616;
+    color: #f7f4ee;
+    padding: 70px 24px 110px;
+    overflow: hidden;
+}
+
+.social-studio__canvas {
+    position: relative;
+    width: min(1440px, 100%);
+    min-height: 1180px;
+    margin: 0 auto;
+}
+
+.social-studio__centerpiece {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(520px, 100%);
+    text-align: center;
+    z-index: 3;
+}
+
+.social-studio__heading-group {
+    display: grid;
+    gap: 6px;
+    justify-items: center;
+}
+
+.social-studio__script {
+    margin: 0;
+    font-family: "IvyPresto Display", "Playfair Display", "Libre Baskerville", serif;
+    font-size: clamp(4rem, 7vw, 6.5rem);
+    font-style: italic;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+}
+
+.social-studio__title {
+    margin: 0;
+    font-size: clamp(4rem, 8vw, 6.8rem);
+    font-weight: 800;
+    line-height: 0.88;
+    letter-spacing: -0.08em;
+}
+
+.social-studio__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(28px, 5vw, 72px);
+    margin-top: 22px;
+}
+
+.social-studio__play-badge {
+    position: relative;
+    width: 206px;
+    height: 206px;
+}
+
+.social-studio__play-ring {
+    position: absolute;
+    inset: 0;
+    border: 1.5px solid rgba(247, 244, 238, 0.55);
+    border-radius: 50%;
+    animation: social-spin 20s linear infinite;
+}
+
+.social-studio__play-ring span {
+    position: absolute;
+    inset: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    letter-spacing: 0.7em;
+    text-transform: uppercase;
+    color: rgba(247, 244, 238, 0.82);
+    transform: rotate(-90deg);
+}
+
+.social-studio__play-core {
+    position: absolute;
+    inset: 42px;
+    display: grid;
+    place-items: center;
+}
+
+.social-studio__play-icon {
+    width: 0;
+    height: 0;
+    border-top: 26px solid transparent;
+    border-bottom: 26px solid transparent;
+    border-left: 42px solid #22e8c3;
+    filter: drop-shadow(0 8px 18px rgba(34, 232, 195, 0.35));
+    margin-left: 10px;
+}
+
+.social-studio__approval {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.social-studio__approval-box {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    border: 1.5px solid rgba(247, 244, 238, 0.3);
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.social-studio__approval-check {
+    position: relative;
+    width: 30px;
+    height: 18px;
+    transform: rotate(-6deg);
+}
+
+.social-studio__approval-check::before,
+.social-studio__approval-check::after {
+    content: "";
+    position: absolute;
+    background: #22e8c3;
+    border-radius: 999px;
+}
+
+.social-studio__approval-check::before {
+    width: 8px;
+    height: 22px;
+    left: 5px;
+    top: 3px;
+    transform: rotate(-42deg);
+}
+
+.social-studio__approval-check::after {
+    width: 8px;
+    height: 36px;
+    right: 8px;
+    top: -5px;
+    transform: rotate(37deg);
+}
+
+.social-studio__approval-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+.social-studio__copy {
+    max-width: 470px;
+    margin: 28px auto 0;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: rgba(247, 244, 238, 0.72);
+}
+
+.social-studio__card {
+    position: absolute;
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.34);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.social-studio__card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-studio__card--top-left {
+    top: 2%;
+    left: 1.5%;
+    width: 112px;
+    height: 142px;
+}
+
+.social-studio__card--top-center {
+    top: 0.5%;
+    left: 49%;
+    width: 76px;
+    height: 96px;
+}
+
+.social-studio__card--left-large {
+    top: 24%;
+    left: 14%;
+    width: 255px;
+    height: 315px;
+}
+
+.social-studio__card--right-large {
+    top: 9%;
+    right: 10%;
+    width: 242px;
+    height: 296px;
+}
+
+.social-studio__card--right-small {
+    top: 27%;
+    right: 1.8%;
+    width: 116px;
+    height: 140px;
+}
+
+.social-studio__card--bottom-wide {
+    left: 43%;
+    bottom: 7%;
+    width: 305px;
+    height: 222px;
+}
+
+.social-studio__card--bottom-right {
+    right: 5.8%;
+    bottom: 8%;
+    width: 298px;
+    height: 240px;
+}
+
+.social-studio__label {
+    position: absolute;
+    z-index: 2;
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(247, 244, 238, 0.88);
+    letter-spacing: -0.02em;
+}
+
+.social-studio__label--photo {
+    top: 5.2%;
+    left: 22%;
+}
+
+.social-studio__label--tiktok {
+    top: 12.5%;
+    left: 36.2%;
+}
+
+.social-studio__label--video {
+    top: 41%;
+    right: 17%;
+}
+
+.social-studio__label--creators {
+    top: 48.5%;
+    left: 59.5%;
+}
+
+.social-studio__label--influencers {
+    bottom: 14%;
+    left: 19.5%;
+}
+
+@keyframes social-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .social-studio__canvas {
+        min-height: 1360px;
+    }
+
+    .social-studio__centerpiece {
+        top: 24%;
+        width: min(460px, calc(100% - 48px));
+    }
+
+    .social-studio__card--left-large {
+        left: 8%;
+    }
+
+    .social-studio__card--right-large {
+        right: 4%;
+    }
+
+    .social-studio__card--bottom-wide {
+        left: 30%;
+    }
+}
+
+@media (max-width: 900px) {
+    .social-studio {
+        padding: 56px 20px 84px;
+    }
+
+    .social-studio__canvas {
+        min-height: auto;
+        display: grid;
+        gap: 18px;
+    }
+
+    .social-studio__centerpiece,
+    .social-studio__card,
+    .social-studio__label {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+
+    .social-studio__centerpiece {
+        order: 1;
+        width: 100%;
+        margin: 0 auto 12px;
+    }
+
+    .social-studio__actions {
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .social-studio__card {
+        width: 100%;
+        height: clamp(220px, 46vw, 340px);
+    }
+
+    .social-studio__card--top-center,
+    .social-studio__card--right-small {
+        width: min(220px, 52%);
+        justify-self: end;
+    }
+
+    .social-studio__label {
+        font-size: 0.98rem;
+        text-align: center;
+        justify-self: center;
+    }
+
+    .social-studio__label--photo {
+        order: 2;
+    }
+
+    .social-studio__card--top-left {
+        order: 3;
+        width: min(220px, 52%);
+    }
+
+    .social-studio__label--tiktok {
+        order: 4;
+    }
+
+    .social-studio__card--top-center {
+        order: 5;
+    }
+
+    .social-studio__card--left-large {
+        order: 6;
+    }
+
+    .social-studio__label--video {
+        order: 7;
+    }
+
+    .social-studio__card--right-large {
+        order: 8;
+    }
+
+    .social-studio__label--creators {
+        order: 9;
+    }
+
+    .social-studio__card--right-small {
+        order: 10;
+    }
+
+    .social-studio__label--influencers {
+        order: 11;
+    }
+
+    .social-studio__card--bottom-wide {
+        order: 12;
+    }
+
+    .social-studio__card--bottom-right {
+        order: 13;
+    }
+}
+
+@media (max-width: 560px) {
+    .social-studio__script {
+        font-size: 3.1rem;
+    }
+
+    .social-studio__title {
+        font-size: 3.6rem;
+    }
+
+    .social-studio__play-badge {
+        width: 170px;
+        height: 170px;
+    }
+
+    .social-studio__play-core {
+        inset: 34px;
+    }
+
+    .social-studio__play-icon {
+        border-top-width: 22px;
+        border-bottom-width: 22px;
+        border-left-width: 34px;
+    }
+
+    .social-studio__copy {
+        font-size: 0.95rem;
+    }
+}

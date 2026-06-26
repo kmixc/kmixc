@@ -4,8 +4,6 @@ import Marquee from "react-fast-marquee";
 
 
 //IMAGES & VIDEO
-import Logo from '../img/logos/logo-white_2.svg'
-
 //COMPONENTS
 import Preloader from '../components/Preloader.jsx'
 import Footer from "../components/Footer.jsx";
@@ -29,6 +27,7 @@ const services = [
         title: "Web Design",
         description:
             "Create a user-friendly digital presence with our custom-designed, responsive websites. We fuse aesthetics and performance to deliver seamless online experiences that engage and convert.",
+        link: "/website-development",
     },
     {
         number: "04.",
@@ -55,10 +54,6 @@ export default function Services() {
     return (
         <div className="services-page">
             <Preloader />
-            <Link className="logo" to={"/"}>
-                <img src={Logo} alt="Kmixc Visuals" />
-            </Link>
-
             <div className="services-intro">
                 <p>Step into a world of creative possibilities. Our agency offers a range of services designed to elevate your brand and engage your audience. From captivating visuals to immersive storytelling, we specialize in crafting solutions that make an impact. Explore our services and let us bring your vision to life.                </p>
             </div>
@@ -74,11 +69,19 @@ export default function Services() {
                 <h1 className="services-header">(Services)</h1>
                 <div className="services-container">
                     {services.map((service, index) => (
-                        <div className="service-item" key={index}>
-                            <div className="service-number">{service.number}</div>
-                            <div className="service-title">{service.title}</div>
-                            <div className="service-description">{service.description}</div>
-                        </div>
+                        service.link ? (
+                            <Link to={service.link} className="service-item service-item--link" key={index}>
+                                <div className="service-number">{service.number}</div>
+                                <div className="service-title">{service.title}</div>
+                                <div className="service-description">{service.description}</div>
+                            </Link>
+                        ) : (
+                            <div className="service-item" key={index}>
+                                <div className="service-number">{service.number}</div>
+                                <div className="service-title">{service.title}</div>
+                                <div className="service-description">{service.description}</div>
+                            </div>
+                        )
                     ))}
                 </div>
             </div>

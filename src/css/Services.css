@@ -88,6 +88,21 @@
     text-align: left;
 }
 
+/* Linked service row */
+.service-item--link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.service-item--link:hover {
+    background-color: #1e1e1e;
+}
+
+.service-item--link .service-title {
+    color: #ff7000;
+}
+
 /* Call-to-Action Section */
 .services-cta {
     border-top: 1px solid #fff;

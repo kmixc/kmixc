@@ -2,7 +2,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import "../css/ProjectDetail.css";
-import Logo from '../img/logos/logo-white_2.svg'
 import { Link } from 'react-router-dom'
 import Preloader from "../components/Preloader";
 import Footer from "../components/Footer";
@@ -15,57 +14,55 @@ const ProjectDetail = () => {
         return <h1>Project Not Found</h1>;
     }
 
-    // Create arrays for videos and images
-    const videos = project.videos.map((video) => ({ type: "video", src: video }));
-    const images = project.images.map((image) => ({
-        type: "image",
+    const videos = project.videos || [];
+    const images = (project.images || []).map((image) => ({
         src: require(`../assets/img/projects/${image}`)
     }));
-
-    let mediaItems;
-
-    if (videos.length === 1) {
-        // If there's only one video, place it first, then shuffle images
-        mediaItems = [
-            videos[0],
-            ...images.sort(() => Math.random() - 0.5)
-        ];
-    } else {
-        // Otherwise, merge & shuffle all items
-        mediaItems = [...videos, ...images].sort(() => Math.random() - 0.5);
-    }
 
     return (
         <div className="detail-page">
             <Preloader />
-            <Link className='logo' to={"/"}>
-                <img src={Logo} alt="Kmixc Visuals" />
-            </Link>
             <div className="project-detail">
                 <div className="info">
                     <h1 className="title">{project.title}</h1>
                     <p className="description">{project.description}</p>
                 </div>
 
-                <div className="media-masonry">
-                    {mediaItems.map((item, index) => (
-                        <div className="media-item" key={index}>
-                            {item.type === "video" ? (
-                                <iframe
-                                    src={item.src}
-                                    title={`Video ${index + 1}`}
-                                    frameBorder="0"
-                                    allowFullScreen
-                                />
-                            ) : (
-                                <img
-                                    src={item.src}
-                                    alt={`Project image ${index + 1}`}
-                                />
-                            )}
+                {videos.length > 0 && (
+                    <div className="media-section">
+                        <div className={`video-grid ${videos.length === 1 ? "single-video-grid" : ""}`.trim()}>
+                            {videos.map((video, index) => (
+                                <div
+                                    className={`media-item video-item ${videos.length === 1 ? "single-video-item" : ""}`.trim()}
+                                    key={`video-${index}`}
+                                >
+                                    <iframe
+                                        src={video}
+                                        title={`Video ${index + 1}`}
+                                        frameBorder="0"
+                                        allowFullScreen
+                                    />
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                    </div>
+                )}
+
+                {images.length > 0 && (
+                    <div className="media-section frames-section">
+                        <h2 className="media-section-title">Frames</h2>
+                        <div className="media-masonry">
+                            {images.map((item, index) => (
+                                <div className="media-item" key={`image-${index}`}>
+                                    <img
+                                        src={item.src}
+                                        alt={`Frame ${index + 1}`}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
 
             <div className="back-button-container">

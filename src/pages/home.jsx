@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Logo from '../img/logos/logo-white_2.svg'
 
 //VIDEOS
 import Video from '../img/backgrounds/Website_Banner.mp4'
@@ -8,6 +7,12 @@ import Video from '../img/backgrounds/Website_Banner.mp4'
 import ProjectsMarquee from '../components/projectsMarquee.jsx'
 import Footer from '../components/Footer.jsx'
 import Preloader from '../components/Preloader.jsx';
+
+//IMAGES
+import ProcessVisualOne from '../img/client_imgs/Event.jpg'
+import ProcessVisualTwo from '../img/client_imgs/Millworx-1.jpg'
+import ProcessVisualThree from '../img/client_imgs/RX7.jpg'
+import TeamFeatureImage from '../img/team/kmixcvisuals-3.jpg'
 
 //CLIENT LOGOS
 import PycLogo from '../img/client_logos/pyc_logo.png'
@@ -25,14 +30,54 @@ import UndergroundLogo from '../img/client_logos/underground_logo.png'
 import CPCCLogo from '../img/client_logos/CPCC_logo.png'
 import OrbisLogo from '../img/client_logos/orbis_logo.png'
 
+const processItems = [
+    {
+        number: '01',
+        title: 'We Envision.',
+        lead: 'Bold ideas, smart strategies.',
+        points: [
+            'Concept Development & Ideation',
+            'Creative Direction',
+            'Content Strategy'
+        ],
+        image: ProcessVisualOne,
+        alt: 'Event coverage project still'
+    },
+    {
+        number: '02',
+        title: 'We Craft.',
+        lead: 'From concept to creation.',
+        points: [
+            'Scriptwriting & Storyboarding',
+            'Full-Scale Video Production',
+            'Editing & Post-Production'
+        ],
+        image: ProcessVisualTwo,
+        alt: 'Millworx production project still'
+    },
+    {
+        number: '03',
+        title: 'We Deliver.',
+        lead: 'Turning vision into impact.',
+        points: [
+            'Campaign Strategy & Management',
+            'Data-Driven Optimization',
+            'Video Tailored for Max Engagement'
+        ],
+        image: ProcessVisualThree,
+        alt: 'Automotive filming project still'
+    }
+]
+
 const Home = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
+    const [activeProcessIndex, setActiveProcessIndex] = useState(0);
 
     return (
         <div>
             <Preloader />
             <div className="home">
-                <div className="hero-section">
+                <div className="hero-section" data-navbar-theme="light">
 
                     {!videoLoaded && <div className="banner-placeholder"></div>}
 
@@ -50,19 +95,17 @@ const Home = () => {
                     </video>
 
                     <div className="banner-overlay"></div>
-                    <div className="hero-logo">
-                        <img src={Logo} alt="Kmixc Visuals Logo" />
-                    </div>
                     <div className="hero-text">
                         <h1 className='hero-title'>
-                            Ideas, crafted with impact.
+                            VISUALS THAT MOVE BRANDS FORWARD
                         </h1>
+                        <h2 className='hero-subtitle'>Made to <span className='hero-font-change'>perform</span>.</h2>
                         <a href="/contact" className="hero-button">Let's Create</a>
                     </div>
                 </div>
             </div>
 
-            <div className="trusted-section">
+            <div className="trusted-section" data-navbar-theme="dark">
                 <p className="trusted-statement">
                     Crafting meaningful visual stories through thoughtful strategy and creative execution.</p>
 
@@ -87,69 +130,68 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="projects-section-home">
+            <div className="projects-section-home" data-navbar-theme="light">
                 <ProjectsMarquee></ProjectsMarquee>
-                <a href="/projects" className='hero-button p-btn'>View Work</a>
             </div>
 
-            <div className="process-section">
-                <div className="process-grid">
-
-                    <div className="process-item">
-                        <span className="process-number">01</span>
-                        <h3>We Envision.</h3>
-
-                        <p className="process-lead">Bold ideas, smart strategies.</p>
-                        <p className="process-text">
-                            We craft innovative solutions to build your brand.
-                        </p>
-
-                        <ul>
-                            <li>Concept Development & Ideation</li>
-                            <li>Creative Direction</li>
-                            <li>Content Strategy</li>
-                        </ul>
-                    </div>
-
-                    <div className="process-item">
-                        <span className="process-number accent">02</span>
-                        <h3>We Craft.</h3>
-
-                        <p className="process-lead">From concept to creation.</p>
-                        <p className="process-text">
-                            We craft visually striking content that sparks engagement.
-                        </p>
-
-                        <ul>
-                            <li>Scriptwriting & Storyboarding</li>
-                            <li>Full-Scale Video Production</li>
-                            <li>Editing & Post-Production</li>
-                        </ul>
-                    </div>
-
-                    <div className="process-item">
-                        <span className="process-number accent">03</span>
-                        <h3>We Deliver.</h3>
-
-                        <p className="process-lead">Turning vision into impact.</p>
-                        <p className="process-text">
-                            We ensure your content reaches the right audience and delivers results.
-                        </p>
-
-                        <ul>
-                            <li>Campaign Strategy & Management</li>
-                            <li>Data-Driven Optimization</li>
-                            <li>Video Tailored for Max Engagement</li>
-                        </ul>
-                    </div>
-
+            <section className="home-story-section" data-navbar-theme="light">
+                <div className="home-story-media">
+                    <img src={TeamFeatureImage} alt="Kmixc Visuals founders on set" />
                 </div>
 
-                <button className="process-cta">Our Services</button>
+                <div className="home-story-content">
+                    <p className="home-story-kicker">About Kmixc</p>
+                    <h2>
+                        Founded by <span>filmmakers</span>.<br />
+                        Driven by <span>story</span>.
+                    </h2>
+                    <p className="home-story-copy">
+                        We blend production instincts with marketing strategy to create visual work that feels intentional, cinematic, and built to move brands forward.
+                    </p>
+                    <a href="/about" className="hero-button home-story-button">About Us</a>
+                </div>
+            </section>
+
+            <div className="process-section" data-navbar-theme="dark">
+                <div className="process-layout">
+                    <div className="process-copy">
+                        <div className="process-grid">
+                            {processItems.map((item, index) => (
+                                <div
+                                    key={item.number}
+                                    className={`process-item ${activeProcessIndex === index ? 'is-active' : ''}`}
+                                    onMouseEnter={() => setActiveProcessIndex(index)}
+                                    onFocus={() => setActiveProcessIndex(index)}
+                                    tabIndex={0}
+                                >
+                                    <div className="process-title-row">
+                                        <span className="process-number">{item.number}</span>
+                                        <h3>{item.title}</h3>
+                                    </div>
+
+                                    <p className="process-lead">{item.lead}</p>
+
+                                    <ul>
+                                        {item.points.map((point) => (
+                                            <li key={point}>{point}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="process-visual">
+                        <img
+                            src={processItems[activeProcessIndex].image}
+                            alt={processItems[activeProcessIndex].alt}
+                        />
+                    </div>
+                </div>
             </div>
 
 
-            <div className="contact-section">
+            <div className="contact-section" data-navbar-theme="light">
                 {/* Background Image */}
                 <div className="contact-image"></div>
 
@@ -164,7 +206,6 @@ const Home = () => {
                             Have a project in mind? We’re here to help bring your vision to life with high-quality videography, photography, and marketing solutions tailored to your brand. Whether you’re looking to elevate your business or create something truly unique, let’s make it happen. Get in touch today and let’s get started!
                         </p>
 
-                        {/* Contact Button */}
                         <a href="/contact" className="contact-button">
                             BOOK A CONSULT
                         </a>

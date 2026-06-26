@@ -1,52 +1,16 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import '../css/Contact.css';
-import { Link } from 'react-router-dom';
-import Logo from '../img/logos/logo-white_2.svg';
 
 import Preloader from '../components/Preloader';
 import Footer from '../components/Footer';
 
 export default function Contact() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [organization, setOrganization] = useState('');
-    const [message, setMessage] = useState('');
-    const [successMessage, setSuccessMessage] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const serviceId = "service_z8y12vk";
-        const formId = "kmixc_form";
-        const publicKey = "FB7tjAxo2Zs8SQ3nS";
-
-        const templateParams = {
-            from_name: name,
-            from_email: email,
-            from_organization: organization,
-            message: message,
-        };
-
-        emailjs.send(serviceId, formId, templateParams, publicKey)
-            .then((response) => {
-                console.log('Email sent successfully!', response);
-                setName('');
-                setEmail('');
-                setOrganization('');
-                setMessage('');
-                setSuccessMessage('Your message has been sent successfully!');
-                setTimeout(() => setSuccessMessage(''), 5000);
-            })
-            .catch((error) => {
-                console.error('Error sending email:', error);
-            });
-    };
+    const [state, handleSubmit] = useForm("xpqknrjj");
 
     return (
         <div className='contact-page'>
             <Preloader />
-            <Link to="/"><img className='logo' src={Logo} alt="Kmixc Visuals" /></Link>
             <div className='contact-container'>
                 <div className='contact-info'>
                     <h1>Contact Us</h1>
@@ -64,14 +28,38 @@ export default function Contact() {
                 <div className='contact-form'>
                     <h2>LET'S START SOMETHING.</h2>
                     <p className='form-subtext'>Ready to discuss your project? Feel like we might be a great fit? We would love to hear about it!</p>
-                    <form onSubmit={handleSubmit}>
-                        <input type='text' placeholder='Full Name' value={name} onChange={(e) => setName(e.target.value)} required />
-                        <input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
-                        <input type='text' placeholder='Organization/Business Name' value={organization} onChange={(e) => setOrganization(e.target.value)} required />
-                        <textarea placeholder='Message' value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
-                        <button type='submit'>SEND</button>
-                    </form>
-                    {successMessage && <p className='success-message fade-in'>{successMessage}</p>}
+                    {state.succeeded ? (
+                        <p className='success-message fade-in'>Your message has been sent successfully!</p>
+                    ) : (
+                        <form onSubmit={handleSubmit}>
+                            <div className='form-row'>
+                                <div className='form-field'>
+                                    <input type='text' name='name' placeholder='Full Name' required />
+                                    <ValidationError prefix='Name' field='name' errors={state.errors} />
+                                </div>
+                                <div className='form-field'>
+                                    <input type='email' name='email' placeholder='Email' required />
+                                    <ValidationError prefix='Email' field='email' errors={state.errors} />
+                                </div>
+                            </div>
+                            <input type='text' name='organization' placeholder='Organization/Business Name' required />
+                            <ValidationError prefix='Organization' field='organization' errors={state.errors} />
+                            <div className='services-group'>
+                                <p className='services-label'>Services Required <span>click to select</span></p>
+                                <div className='services-checkboxes'>
+                                    {['Videography', 'Photography', 'Website Development', 'Social Media Management', 'General Marketing', 'SEO'].map((service) => (
+                                        <label key={service} className='service-option'>
+                                            <input type='checkbox' name='services' value={service} />
+                                            {service}
+                                        </label>
+                                    ))}
+                                </div>
+                            </div>
+                            <textarea name='message' placeholder='Message' required></textarea>
+                            <ValidationError prefix='Message' field='message' errors={state.errors} />
+                            <button type='submit' disabled={state.submitting}>SEND</button>
+                        </form>
+                    )}
                 </div>
             </div>
             <Footer />

@@ -1,0 +1,23 @@
+.work-header {
+    background-color: #161616;
+    text-align: center;
+    padding: 60px 20px 40px;
+    line-height: 1;
+}
+
+.work-header-sub {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+    opacity: 0.6;
+}
+
+.work-header-title {
+    color: #fff;
+    font-size: clamp(5rem, 14vw, 14rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+}

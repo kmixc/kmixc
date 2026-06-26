@@ -48,9 +48,6 @@ export default function About() {
     return (
         <div className='about-page'>
             <Preloader />
-            <Link className='logo' to={"/"}>
-                <img src={Logo} alt="Kmixc Visuals" />
-            </Link>
             <div className="about-section">
                 {!videoLoaded && <div className="banner-placeholder"></div>}
                 <video

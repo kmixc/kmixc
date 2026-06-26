@@ -1,0 +1,103 @@
+.cs-page {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cs-placeholder {
+    position: absolute;
+    inset: 0;
+    background: #0a0a0a;
+}
+
+.cs-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.cs-video.loaded {
+    opacity: 1;
+}
+
+.cs-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.58);
+}
+
+.cs-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    gap: 3.5rem;
+}
+
+.cs-logo {
+    width: 140px;
+    opacity: 0.9;
+}
+
+.cs-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cs-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin: 0;
+}
+
+.cs-headline {
+    font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.cs-socials {
+    display: flex;
+    gap: 2.5rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.cs-socials a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.55;
+    transition: opacity 0.2s ease;
+}
+
+.cs-socials a:hover {
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+    .cs-socials {
+        gap: 1.5rem;
+    }
+
+    .cs-logo {
+        width: 110px;
+    }
+}

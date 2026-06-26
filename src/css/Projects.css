@@ -1,100 +1,5 @@
-.projects-page .logo img {
-    height: 50px;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 3;
-}
-
-.projects-hero {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    color: white;
-    overflow: hidden;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 50px;
-}
-
-.projects-hero .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    /* Adjust the opacity (0 = transparent, 1 = fully black) */
-    z-index: 2;
-}
-
-.projects-logo {
-    margin: auto auto;
-    z-index: 3;
-}
-
-.projects-logo img {
-    height: 250px;
-    /* Adjust size */
-    width: auto;
-}
-
-.projects-hero .banner-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url("../img/client_imgs/Millworx-1.jpg") center/cover no-repeat;
-    z-index: -2;
-}
-
-/* Background Video */
-.projects-hero .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    /* Ensures full width */
-    height: 100vh;
-    /* Ensures full height */
-    object-fit: cover;
-    /* Prevents white gaps */
-    z-index: -3;
-    opacity: 0;
-}
-
-.projects-hero .background-video.loaded {
-    opacity: 1;
-}
-
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-}
-
-.projects-logo {
-    margin: auto auto;
-    z-index: 3;
-}
-
-.projects-logo img {
-    height: 250px;
-    /* Adjust size */
-    width: auto;
-}
-
 .projects-section {
-    padding: 50px 0;
+    padding: 0;
     background-color: #161616;
 }
 
@@ -135,39 +40,67 @@
 }
 
 .projects {
-    padding: 50px 10px;
+    padding: 0;
     background-color: #161616;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* Two equal columns */
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
     width: 100%;
 }
 
-.project-item {
+.projects-grid .project-item {
     position: relative;
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: 0;
+    aspect-ratio: 16 / 9;
+    background: #0f0f0f;
 }
 
-.project-item .overlay {
+.projects-grid .project-item .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ff7000;
-    transform: translateY(100%);
+    background: rgba(0, 0, 0, 0.28);
+    transform: none;
     z-index: 1;
+    transition: background 0.35s ease;
 }
 
-.project-item img {
+.projects-grid .project-item > img {
+    height: 100%;
     width: 100%;
-    height: auto;
     display: block;
+    object-fit: cover;
+    transition: transform 0.55s ease, filter 0.55s ease;
+}
+
+.projects-grid .project-item:hover > img {
+    transform: scale(1.045);
+    filter: saturate(0.95);
+}
+
+.projects-grid .project-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.projects-grid .project-item:hover .project-video {
+    opacity: 1;
+}
+
+.projects-grid .project-item:hover .overlay {
+    background: rgba(0, 0, 0, 0.42);
 }
 
 .project-info {
@@ -189,42 +122,55 @@
     font-weight: 100;
 }
 
-.project-wide {
-    grid-column: span 2;
-    height: 600px;
-}
-
-.project-wide img {
-    transform: translateY(-35%) scale(1.2);
-}
-
-.project-image,
-.project-video {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.load-more-container {
+.projects-grid .project-info {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 20px;
-}
-
-.load-more {
-    background: black;
+    align-items: center;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+    padding: 24px;
+    text-align: center;
+    line-height: 1.05;
 }
 
-.load-more:hover {
-    background: #333;
+.projects-grid .project-info h3 {
+    font-size: clamp(2rem, 4.2vw, 5.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
+}
+
+.projects-grid .project-info p {
+    margin-top: 6px;
+    font-size: clamp(0.85rem, 1vw, 1.15rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.projects-grid .project-item:hover .project-info p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-logo {
+    max-width: 40%;
+    height: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.92;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.projects-grid .project-item:hover .project-logo {
+    opacity: 1;
+    transform: scale(1.04);
 }
 
 .more-projects-section {
@@ -276,16 +222,7 @@
     }
 
     .projects-grid {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .project-wide {
-        height: 100%;
-    }
-
-    .project-wide img {
-        transform: translateY(-0%) scale(1);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .more-projects-grid {
@@ -300,12 +237,7 @@
     }
 
     .projects-grid {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .project-wide {
-        height: 100%;
+        grid-template-columns: 1fr;
     }
 
     .more-projects-section h2 {
@@ -313,14 +245,15 @@
         line-height: 0.9;
     }
 
-    .project-wide img {
-        transform: translateY(-0%) scale(1);
+    .projects-grid .project-info p {
+        opacity: 1;
+        transform: none;
     }
 }
 
 @media (max-width: 480px) {
     .projects {
-        padding: 10px;
+        padding: 0;
     }
 
     .projects-hero .banner-overlay {
@@ -332,20 +265,12 @@
         line-height: 0.5;
     }
 
-    .project-info h3 {
+    .projects-grid .project-info h3 {
         font-size: 1.5rem;
     }
 
-    .project-info p {
+    .projects-grid .project-info p {
         font-size: 1rem;
-    }
-
-    .project-wide {
-        height: 100%;
-    }
-
-    .project-wide img {
-        transform: translateY(-0%) scale(1);
     }
 
     .more-projects-section h2 {
