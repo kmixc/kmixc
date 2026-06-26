@@ -18,7 +18,6 @@ import SocialMedia from './pages/SocialMedia.jsx';
 import Work from './pages/Work.jsx';
 
 //COMPONENTS
-import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop.jsx'
 import PageTransition from './components/PageTransition';
 import Redirect from './components/redirect.jsx';

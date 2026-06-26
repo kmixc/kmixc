@@ -6,7 +6,6 @@ import Logo from '../img/logos/logo-white_2.svg';
 //IMAGES & VIDEO
 import Video from '../img/backgrounds/WEBSITE_MOTION_GRAPHIC.mp4';
 import TeamOne from '../img/team/kmixcvisuals-1.jpg';
-import TeamTwo from '../img/team/kmixcvisuals-2.JPG';
 import TeamThree from '../img/team/kmixcvisuals-3.jpg';
 import TeamFour from '../img/team/kmixcvisuals-4.jpg';
 import TeamFive from '../img/team/kmixcvisuals-5.jpg';

@@ -1,6 +1,4 @@
-import { useEffect, useRef } from 'react';
 import '../css/clientGrid.css'
-import gsap from 'gsap';
 
 //CLIENT LOGOS
 import PycLogo from '../img/client_logos/pyc_logo.png'

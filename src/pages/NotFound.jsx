@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "../css/NotFound.css"
 import { Link } from 'react-router-dom'
-import { gsap } from 'gsap';
 
 import Preloader from '../components/Preloader';
 
@@ -43,7 +42,9 @@ export default function NotFound() {
                         <Link to="/contact" className="item-link">CONTACT</Link>
                     </div>
                     <div className="bottom">
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href="#">PRIVACY POLICY</a>
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href="#">COMMERCIAL COPYRIGHT</a>
                     </div>
                 </div>
