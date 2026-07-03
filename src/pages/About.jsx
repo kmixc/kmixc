@@ -1,7 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../css/About.css';
 import { Link } from 'react-router-dom';
-import Logo from '../img/logos/logo-white_2.svg';
+
+//ICONS
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 //IMAGES & VIDEO
 import Video from '../img/backgrounds/WEBSITE_MOTION_GRAPHIC.mp4';
@@ -9,6 +12,7 @@ import TeamOne from '../img/team/kmixcvisuals-1.jpg';
 import TeamThree from '../img/team/kmixcvisuals-3.jpg';
 import TeamFour from '../img/team/kmixcvisuals-4.jpg';
 import TeamFive from '../img/team/kmixcvisuals-5.jpg';
+import Headshot from '../img/team/headshot-min.jpg';
 
 //COMPONENTS
 import ClientGrid from '../components/clientGrid.jsx';
@@ -61,10 +65,34 @@ export default function About() {
                     Your browser does not support the video tag.
                 </video>
                 <div className="banner-overlay"></div>
-                <div className="about-logo">
-                    <img src={Logo} alt="Kmixc Visuals Logo" />
+                <div className="about-hero-text">
+                    <h1 className="about-hero-title">About Us.</h1>
+                    <Link to="/contact" className="hero-button">Let's Create</Link>
                 </div>
             </div>
+            <section className="about-founder">
+                <div className="about-founder-images">
+                    <img src={Headshot} alt="Oliver Kmiec" className="about-founder-img" />
+                </div>
+                <div className="about-founder-info">
+                    <h2 className="about-founder-name">Oliver Kmiec</h2>
+                    <p className="about-founder-role">Founder <span>&</span> Creative Director</p>
+                    <p className="about-founder-bio">
+                        I believe the best stories aren't just seen, they're felt. As a filmmaker and creative director, I'm committed to turning ideas into visuals that spark imagination, emotion, and meaning. For years I've been immersed in filmmaking, working with brands, businesses, and individuals to craft compelling videos that connect, inspire, and leave a lasting impact. From concept development to final edit, I love every part of the process, blending storytelling, cinematography, and post-production to create work that truly resonates.
+                    </p>
+                    <div className="about-founder-socials">
+                        <a href="https://instagram.com/kmixcvisuals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/oliver-kmiec-5b601b1b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <FontAwesomeIcon icon={faLinkedin} />
+                        </a>
+                        <a href="https://www.youtube.com/@kmixc" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <FontAwesomeIcon icon={faYoutube} />
+                        </a>
+                    </div>
+                </div>
+            </section>
             <div className="about-intro">
                 <p>Empowering brands to conjure up creative stories</p>
             </div>

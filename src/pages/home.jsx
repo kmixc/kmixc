@@ -12,7 +12,7 @@ import Preloader from '../components/Preloader.jsx';
 import ProcessVisualOne from '../img/client_imgs/Event.jpg'
 import ProcessVisualTwo from '../img/client_imgs/Millworx-1.jpg'
 import ProcessVisualThree from '../img/client_imgs/RX7.jpg'
-import TeamFeatureImage from '../img/team/kmixcvisuals-3.jpg'
+import TeamFeatureImage from '../img/team/bts_1.jpg'
 
 //CLIENT LOGOS
 import PycLogo from '../img/client_logos/pyc_logo.png'
@@ -153,6 +153,11 @@ const Home = () => {
             </section>
 
             <div className="process-section" data-navbar-theme="dark">
+                <div className="process-header">
+                    <p className="process-kicker">Our Process</p>
+                    <h2>From vision to <span>impact</span>.</h2>
+                </div>
+
                 <div className="process-layout">
                     <div className="process-copy">
                         <div className="process-grid">
@@ -183,6 +188,7 @@ const Home = () => {
 
                     <div className="process-visual">
                         <img
+                            key={activeProcessIndex}
                             src={processItems[activeProcessIndex].image}
                             alt={processItems[activeProcessIndex].alt}
                         />

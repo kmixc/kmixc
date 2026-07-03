@@ -314,9 +314,36 @@ html {
 
 /* Home Process Section */
 .process-section {
-  padding: 64px 40px 96px;
+  padding: 96px 40px 110px;
   background-color: #F7F5F0;
+}
 
+.process-header {
+  max-width: 1500px;
+  margin: 0 auto 56px;
+}
+
+.process-kicker {
+  margin-bottom: 18px;
+  font-size: 0.88rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(27, 36, 29, 0.6);
+}
+
+.process-header h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.4rem, 4vw, 4.4rem);
+  line-height: 0.98;
+  font-weight: 400;
+  color: #1b241d;
+}
+
+.process-header h2 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .process-layout {
@@ -324,12 +351,12 @@ html {
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
-  gap: 10px;
+  gap: clamp(48px, 5vw, 88px);
   align-items: center;
 }
 
 .process-copy {
-  padding: 18px 32px 18px 28px;
+  padding: 0;
 }
 
 .process-grid {
@@ -337,12 +364,13 @@ html {
   grid-template-columns: 1fr;
   gap: 0;
   max-width: 860px;
-  margin: 0 0 34px;
+  margin: 0;
 }
 
 .process-item {
   padding: 24px 0 28px;
   border-top: 1px solid rgba(27, 36, 29, 0.2);
+  opacity: 0.5;
   transition: opacity 0.25s ease, transform 0.25s ease;
   cursor: pointer;
   outline: none;
@@ -356,10 +384,6 @@ html {
 .process-item:focus-visible,
 .process-item.is-active {
   opacity: 1;
-}
-
-.process-grid:hover .process-item:not(:hover):not(.is-active) {
-  opacity: 0.7;
 }
 
 .process-item:focus-visible {
@@ -448,7 +472,9 @@ html {
 
 .process-visual {
   position: relative;
-  width: 750px;
+  width: 100%;
+  max-width: 680px;
+  justify-self: end;
   aspect-ratio: 1 / 1;
   border-radius: 15px;
   overflow: hidden;
@@ -461,7 +487,19 @@ html {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.35s ease;
+  animation: processImageIn 0.45s ease;
+}
+
+@keyframes processImageIn {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .process-visual::after {
@@ -469,10 +507,6 @@ html {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(14, 18, 15, 0.08) 0%, rgba(14, 18, 15, 0.16) 100%);
-}
-
-.process-item.is-active~.process-visual img {
-  transform: scale(1.02);
 }
 
 /* ContactSection.css */
@@ -611,12 +645,8 @@ html {
   }
 
   .process-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
-    gap: 36px;
-  }
-
-  .process-copy {
-    padding-right: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
+    gap: 48px;
   }
 }
 
@@ -827,7 +857,11 @@ html {
   }
 
   .process-section {
-    padding: 40px 18px 56px;
+    padding: 56px 18px 64px;
+  }
+
+  .process-header {
+    margin-bottom: 32px;
   }
 
   .process-copy {

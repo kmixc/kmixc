@@ -11,7 +11,7 @@ import NBO from '../img/client_imgs/nbo_cover.jpg'
 //VIDEOS
 import MillworxVideo from '../img/videos/millworx_video.mp4'
 import FPVideo from '../img/videos/fp_video.mp4'
-import CGRVideo from '../img/videos/cgr_video.mp4'
+import CGRVideo from '../img/videos/cgr_video_2.mp4'
 import PYCVideo from '../img/videos/pyc_video.mp4'
 import NBOVideo from '../img/videos/nbo_video.mp4'
 

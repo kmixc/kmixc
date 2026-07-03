@@ -18,6 +18,7 @@ import SocialMedia from './pages/SocialMedia.jsx';
 import Work from './pages/Work.jsx';
 
 //COMPONENTS
+import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop.jsx'
 import PageTransition from './components/PageTransition';
 import Redirect from './components/redirect.jsx';
@@ -25,11 +26,11 @@ import Redirect from './components/redirect.jsx';
 function App() {
   return (
     <>
+      <Navbar />
       <ScrollToTop />
       <PageTransition />
       <Routes>
-        <Route path='/' element={<ComingSoon />} />
-        <Route path='/dev' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/projects' element={<Projects />} />
         <Route path="/projects/:projectId" element={<ProjectDetail />} />

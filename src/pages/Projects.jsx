@@ -12,10 +12,11 @@ import Restaurant from '../img/client_imgs/Finkle.jpg'
 
 import EventVideo from "../img/videos/LZ_World_Tour.mp4";
 import EventTwoVideo from "../img/videos/pyc_video.mp4";
-import RenovationVideo from '../img/videos/cgr_video.mp4'
+import RenovationVideo from '../img/videos/cgr_video_2.mp4'
 import NBOVideo from '../img/videos/nbo_video.mp4'
 import MillworxVideo from '../img/videos/millworx_video.mp4'
 import FacilityPlusVideo from '../img/videos/fp_video.mp4'
+import RWBVideo from '../img/videos/rwb_video.mp4'
 
 //LOGOS
 import MillworxLogo from '../img/client_logos/millworx_logo.png'
@@ -24,6 +25,8 @@ import CGRLogo from '../img/client_logos/customglassrailings_logo.png'
 import PYCLogo from '../img/client_logos/pyc_logo.png'
 import NBOLogo from '../img/client_logos/NBO_logo.png'
 import NBOCover from '../img/client_imgs/nbo_cover.jpg'
+import RWBLogo from '../img/client_logos/rwb_logo.png'
+import RWBCover from '../img/client_imgs/rwb_cover.jpg'
 
 //COMPONENTS
 import Preloader from '../components/Preloader';
@@ -38,6 +41,7 @@ const projectsData = [
     { id: 6, title: "National Bank Open", img: NBOCover, video: NBOVideo, logo: NBOLogo, description: "Event Coverage", route: "/projects/national-bank-open" },
     { id: 7, title: "Finkle Street Tap & Grill", img: Restaurant, description: "Restaurant Coverage", route: "/projects/finkle-street-tap-&-grill" },
     { id: 8, title: "Slammedenuff Sevierville", img: EventNine, description: "Event Coverage", route: "/projects/slammedenuff-sevierville-2024" },
+    { id: 9, title: "RWB Kansha", video: RWBVideo, img: RWBCover, logo: RWBLogo, description: "Automotive", route: "/projects/rwb-kansha", videoStyle: { transform: 'scale(1.25)' } },
 ];
 
 const handleMouseEnter = (e) => {
@@ -72,7 +76,7 @@ export default function Projects() {
                                 <div className="overlay"></div>
                                 {project.img && <img src={project.img} alt={project.title} />}
                                 {project.video && (
-                                    <video src={project.video} muted loop playsInline className="project-video" />
+                                    <video src={project.video} muted loop playsInline className="project-video" style={project.videoStyle} />
                                 )}
                                 <div className="project-info">
                                     {project.logo ? (
