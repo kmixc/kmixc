@@ -33,36 +33,36 @@ import OrbisLogo from '../img/client_logos/orbis_logo.png'
 const processItems = [
     {
         number: '01',
-        title: 'We Envision.',
-        lead: 'Bold ideas, smart strategies.',
+        title: 'Define.',
+        lead: 'Building the foundation for your story.',
         points: [
-            'Concept Development & Ideation',
-            'Creative Direction',
-            'Content Strategy'
+            'Brand Discovery',
+            'Creative Strategy',
+            'Project Planning'
         ],
         image: ProcessVisualOne,
         alt: 'Event coverage project still'
     },
     {
         number: '02',
-        title: 'We Craft.',
-        lead: 'From concept to creation.',
+        title: 'Produce.',
+        lead: 'Creating visuals with intention.',
         points: [
-            'Scriptwriting & Storyboarding',
-            'Full-Scale Video Production',
-            'Editing & Post-Production'
+            'Cinematic Video',
+            'Professional Photography',
+            'Precision Editing'
         ],
         image: ProcessVisualTwo,
         alt: 'Millworx production project still'
     },
     {
         number: '03',
-        title: 'We Deliver.',
-        lead: 'Turning vision into impact.',
+        title: 'Refine.',
+        lead: 'Delivering work that performs.',
         points: [
-            'Campaign Strategy & Management',
-            'Data-Driven Optimization',
-            'Video Tailored for Max Engagement'
+            'Optimized Assets',
+            'Website Integration',
+            'Content Management'
         ],
         image: ProcessVisualThree,
         alt: 'Automotive filming project still'

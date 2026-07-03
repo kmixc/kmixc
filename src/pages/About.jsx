@@ -8,14 +8,29 @@ import { faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg
 
 //IMAGES & VIDEO
 import Video from '../img/videos/about_website.mp4';
-import TeamOne from '../img/team/kmixcvisuals-1.jpg';
-import TeamThree from '../img/team/kmixcvisuals-3.jpg';
-import TeamFour from '../img/team/kmixcvisuals-4.jpg';
-import TeamFive from '../img/team/kmixcvisuals-5.jpg';
 import Headshot from '../img/team/headshot-min.jpg';
+import TeamFeatureImage from '../img/team/bts_2.jpg';
+import ProcessVisualOne from '../img/client_imgs/Event.jpg';
+import ProcessVisualTwo from '../img/client_imgs/Millworx-1.jpg';
+import ProcessVisualThree from '../img/client_imgs/RX7.jpg';
+
+//CLIENT LOGOS
+import PycLogo from '../img/client_logos/pyc_logo.png';
+import FPLogo from '../img/client_logos/facilityplus_logo.png';
+import LululemonLogo from '../img/client_logos/lululemon_logo.png';
+import MillworxLogo from '../img/client_logos/millworx_logo.png';
+import CGRLogo from '../img/client_logos/customglassrailings_logo.png';
+import RoundLogo from '../img/client_logos/9round_kickboxing_logo.png';
+import OdinLogo from '../img/client_logos/odin_logo.png';
+import NBOLogo from '../img/client_logos/NBO_logo.png';
+import ImportFestLogo from '../img/client_logos/importfest_logo.png';
+import RWBLogo from '../img/client_logos/rwb_logo.png';
+import MckillansLogo from '../img/client_logos/mckillans_logo.png';
+import UndergroundLogo from '../img/client_logos/underground_logo.png';
+import CPCCLogo from '../img/client_logos/CPCC_logo.png';
+import OrbisLogo from '../img/client_logos/orbis_logo.png';
 
 //COMPONENTS
-import ClientGrid from '../components/clientGrid.jsx';
 import Footer from '../components/Footer.jsx';
 import Preloader from '../components/Preloader.jsx';
 
@@ -24,8 +39,48 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
+const processItems = [
+    {
+        number: '01',
+        title: 'Define.',
+        lead: 'Building the foundation for your story.',
+        points: [
+            'Brand Discovery',
+            'Creative Strategy',
+            'Project Planning'
+        ],
+        image: ProcessVisualOne,
+        alt: 'Event coverage project still'
+    },
+    {
+        number: '02',
+        title: 'Produce.',
+        lead: 'Creating visuals with intention.',
+        points: [
+            'Cinematic Video',
+            'Professional Photography',
+            'Precision Editing'
+        ],
+        image: ProcessVisualTwo,
+        alt: 'Millworx production project still'
+    },
+    {
+        number: '03',
+        title: 'Refine.',
+        lead: 'Delivering work that performs.',
+        points: [
+            'Optimized Assets',
+            'Website Integration',
+            'Content Management'
+        ],
+        image: ProcessVisualThree,
+        alt: 'Automotive filming project still'
+    }
+];
+
 export default function About() {
     const [videoLoaded, setVideoLoaded] = useState(false);
+    const [activeProcessIndex, setActiveProcessIndex] = useState(0);
     const imageRefs = useRef([]);
 
     useEffect(() => {
@@ -51,7 +106,7 @@ export default function About() {
     return (
         <div className='about-page'>
             <Preloader />
-            <div className="about-section">
+            <div className="about-section" data-navbar-theme="light">
                 {!videoLoaded && <div className="banner-placeholder"></div>}
                 <video
                     autoPlay
@@ -93,44 +148,81 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <div className="about-intro">
-                <p>Empowering brands to conjure up creative stories</p>
-            </div>
-            <div className="about-team about-team--single">
-                <img ref={el => imageRefs.current[0] = el} src={TeamThree} alt="Our Team" />
-            </div>
-            <section className="about-description-two">
-                <h1>
-                    <span>Fearlessly ambitious &</span>
-                    <span>thoughtfully authentic</span>
-                </h1>
-                <div className="about-content">
-                    <div className="about-buttons">
-                        <Link to="/contact" className="btn btn-primary">Start A Project</Link>
-                        <Link to="/projects" className="btn btn-secondary">See Projects</Link>
-                    </div>
-                    <div className="about-text">
-                        <p>We’re a full-stack video marketing agency. Yes, that is a thing. We help brands big and small think up great ideas and transform them into videos and marketing tactics that work. We know that video marketing is always changing and consistently becoming more important in the digital landscape.</p>
-                        <br />
-                        <p>We’re big geeks about what’s new and what’s interesting – but ultimately dedicated to what’s most effective for our clients.</p>
-                    </div>
+
+            <section className="about-story-section" data-navbar-theme="light">
+                <div className="about-story-media">
+                    <img src={TeamFeatureImage} alt="Kmixc Visuals founders on set" />
+                </div>
+
+                <div className="about-story-content">
+                    <p className="about-story-kicker">About Kmixc</p>
+                    <h2>
+                        Founded by <span>filmmakers</span>.<br />
+                        Driven by <span>story</span>.
+                    </h2>
+                    <p className="about-story-copy">
+                        We blend production instincts with marketing strategy to create visual work that feels intentional, cinematic, and built to move brands forward.
+                    </p>
+                    <a href="/about" className="hero-button about-story-button">About Us</a>
                 </div>
             </section>
 
-            <div className="about-team about-team--double">
-                <img ref={el => imageRefs.current[1] = el} src={TeamOne} id='hide-mobile' alt="Team Member 1" />
-                <img ref={el => imageRefs.current[2] = el} src={TeamFour} alt="Team Member 2" />
+            <div className="about-process-section" data-navbar-theme="dark">
+                <div className="about-process-header">
+                    <p className="about-process-kicker">Our Process</p>
+                    <h2>From vision to <span>impact</span>.</h2>
+                </div>
+
+                <div className="about-process-grid">
+                    {processItems.map((item, index) => (
+                        <div
+                            key={item.number}
+                            className={`about-process-item ${activeProcessIndex === index ? 'about-is-active' : ''}`}
+                            onMouseEnter={() => setActiveProcessIndex(index)}
+                            onFocus={() => setActiveProcessIndex(index)}
+                            tabIndex={0}
+                        >
+                            <div className="about-process-title-row">
+                                <span className="about-process-number">{item.number}</span>
+                                <h3>{item.title}</h3>
+                            </div>
+
+                            <p className="about-process-lead">{item.lead}</p>
+
+                            <ul>
+                                {item.points.map((point) => (
+                                    <li key={point}>{point}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="about-description-one">
-                <p><span>ABOUT</span>We’re a studio with diverse roots that want to help companies and organizations with everything creative, art, and technology. We work with a passion for the craft and embrace innovation in our process.</p>
+
+            <div className="about-trusted-section" data-navbar-theme="dark">
+                <p className="about-trusted-statement">
+                    Crafting meaningful visual stories through thoughtful strategy and creative execution.</p>
+
+                <p className="about-trusted-label">SUPPORTED BY</p>
+
+                <div className="about-trusted-logos">
+                    <img src={PycLogo} alt="PYC Logo" />
+                    <img src={FPLogo} alt="FacilityPlus Logo" />
+                    <img src={LululemonLogo} alt="Lululemon Logo" />
+                    <img src={MillworxLogo} alt="Millworx Logo" />
+                    <img src={CGRLogo} alt="Custom Glass Railings Logo" />
+                    <img src={RoundLogo} alt="9Round Kickboxing Logo" />
+                    <img src={OdinLogo} alt="Odin Logo" />
+                    <img src={NBOLogo} alt="NBO Logo" />
+                    <img src={ImportFestLogo} alt="Import Fest Logo" />
+                    <img src={RWBLogo} alt="RWB Logo" />
+                    <img src={MckillansLogo} alt="Mckillans Logo" />
+                    <img src={UndergroundLogo} alt="Underground Logo" />
+                    <img src={CPCCLogo} alt="CPCC Logo" />
+                    <img src={OrbisLogo} alt="Orbis Logo" />
+                </div>
             </div>
-            <div className="about-team about-team--single-btm">
-                <img ref={el => imageRefs.current[3] = el} src={TeamFive} alt="Team Member" />
-            </div>
-            <div className="about-clients">
-                <p>Some of the <span className='text-change'>brands</span> I've collaborated with over the years</p>
-                <ClientGrid />
-            </div>
+
             <Footer />
         </div>
     );
