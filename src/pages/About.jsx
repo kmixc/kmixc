@@ -155,15 +155,15 @@ export default function About() {
                 </div>
 
                 <div className="about-story-content">
-                    <p className="about-story-kicker">About Kmixc</p>
+                    <p className="about-story-kicker">Our Story</p>
                     <h2>
-                        Founded by <span>filmmakers</span>.<br />
-                        Driven by <span>story</span>.
+                        Built from <span>passion</span>.<br />
+                        Driven by <span>purpose</span>.
                     </h2>
                     <p className="about-story-copy">
-                        We blend production instincts with marketing strategy to create visual work that feels intentional, cinematic, and built to move brands forward.
+                        Kmixc was born out of a shared obsession with great filmmaking and a frustration with content that felt forgettable. We started because we believed brands deserved more than generic visuals — they deserved stories worth watching. Every project we take on is a chance to do something that actually means something.
                     </p>
-                    <a href="/about" className="hero-button about-story-button">About Us</a>
+                    <a href="/contact" className="hero-button about-story-button">Work With Us</a>
                 </div>
             </section>
 
