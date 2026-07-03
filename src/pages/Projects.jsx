@@ -17,6 +17,8 @@ import NBOVideo from '../img/videos/nbo_video.mp4'
 import MillworxVideo from '../img/videos/millworx_video.mp4'
 import FacilityPlusVideo from '../img/videos/fp_video.mp4'
 import RWBVideo from '../img/videos/rwb_video.mp4'
+import FinkleVideo from '../img/videos/finkle_video.mp4'
+import GATVideo from '../img/videos/gat_video.mp4'
 
 //LOGOS
 import MillworxLogo from '../img/client_logos/millworx_logo.png'
@@ -26,6 +28,9 @@ import PYCLogo from '../img/client_logos/pyc_logo.png'
 import NBOLogo from '../img/client_logos/NBO_logo.png'
 import NBOCover from '../img/client_imgs/nbo_cover.jpg'
 import RWBLogo from '../img/client_logos/rwb_logo.png'
+import GATLogo from '../img/client_logos/gat_logo.png'
+import LZLogo from '../img/client_logos/lzworldtour_logo.png'
+import FinkleLogo from '../img/client_logos/finkle_logo.png'
 import RWBCover from '../img/client_imgs/rwb_cover.jpg'
 
 //COMPONENTS
@@ -35,12 +40,12 @@ import Footer from '../components/Footer.jsx'
 const projectsData = [
     { id: 1, title: "Millworx", img: CompanyShowcase, video: MillworxVideo, logo: MillworxLogo, description: "Company Showcase", route: "/projects/millworx" },
     { id: 2, title: "Facility Plus", img: EventThree, video: FacilityPlusVideo, logo: FacilityPlusLogo, description: "Event Coverage", route: "/projects/facility-plus" },
-    { id: 3, title: "LZ World Tour", video: EventVideo, img: Event, description: "Event Coverage", route: "/projects/lz-world-tour" },
-    { id: 4, title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, logo: CGRLogo, description: "Renovation", route: "/projects/custom-glass-railings" },
+    { id: 3, title: "LZ World Tour", video: EventVideo, img: Event, logo: LZLogo, description: "Event Coverage", route: "/projects/lz-world-tour" },
+    { id: 4, title: "Custom Glass Railings", video: RenovationVideo, img: Renovation, logo: CGRLogo, logoStyle: { maxWidth: '55%' }, description: "Renovation", route: "/projects/custom-glass-railings" },
     { id: 5, title: "Power Yoga Canada", video: EventTwoVideo, img: EventTwo, logo: PYCLogo, description: "Promotional & Event", route: "/projects/power-yoga-canada" },
     { id: 6, title: "National Bank Open", img: NBOCover, video: NBOVideo, logo: NBOLogo, description: "Event Coverage", route: "/projects/national-bank-open" },
-    { id: 7, title: "Finkle Street Tap & Grill", img: Restaurant, description: "Restaurant Coverage", route: "/projects/finkle-street-tap-&-grill" },
-    { id: 8, title: "Slammedenuff Sevierville", img: EventNine, description: "Event Coverage", route: "/projects/slammedenuff-sevierville-2024" },
+    { id: 7, title: "Finkle Street Tap & Grill", img: Restaurant, video: FinkleVideo, videoStyle: { transform: 'scale(1.1)' }, logo: FinkleLogo, description: "Restaurant Coverage", route: "/projects/finkle-street-tap-&-grill" },
+    { id: 8, title: "Slammedenuff Sevierville", img: EventNine, video: GATVideo, videoStyle: { transform: 'scale(1.1)' }, logo: GATLogo, logoStyle: { maxWidth: '55%' }, description: "Event Coverage", route: "/projects/slammedenuff-sevierville-2024" },
     { id: 9, title: "RWB Kansha", video: RWBVideo, img: RWBCover, logo: RWBLogo, description: "Automotive", route: "/projects/rwb-kansha", videoStyle: { transform: 'scale(1.25)' } },
 ];
 
@@ -80,7 +85,7 @@ export default function Projects() {
                                 )}
                                 <div className="project-info">
                                     {project.logo ? (
-                                        <img src={project.logo} alt={project.title} className="project-logo" />
+                                        <img src={project.logo} alt={project.title} className="project-logo" style={project.logoStyle} />
                                     ) : (
                                         <>
                                             <h3>{project.title}</h3>

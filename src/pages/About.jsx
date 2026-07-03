@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 //IMAGES & VIDEO
-import Video from '../img/backgrounds/WEBSITE_MOTION_GRAPHIC.mp4';
+import Video from '../img/videos/about_website.mp4';
 import TeamOne from '../img/team/kmixcvisuals-1.jpg';
 import TeamThree from '../img/team/kmixcvisuals-3.jpg';
 import TeamFour from '../img/team/kmixcvisuals-4.jpg';
