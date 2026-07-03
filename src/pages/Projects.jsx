@@ -10,7 +10,7 @@ import EventNine from '../img/client_imgs/Event-7.jpg'
 import Renovation from '../img/client_imgs/cgr_cover.jpg'
 import Restaurant from '../img/client_imgs/Finkle.jpg'
 
-import EventVideo from "../img/videos/LZ_World_Tour.mp4";
+import EventVideo from "../img/videos/lzworldtour_video.mp4";
 import EventTwoVideo from "../img/videos/pyc_video.mp4";
 import RenovationVideo from '../img/videos/cgr_video_2.mp4'
 import NBOVideo from '../img/videos/nbo_video.mp4'

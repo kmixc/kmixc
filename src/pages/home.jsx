@@ -158,41 +158,29 @@ const Home = () => {
                     <h2>From vision to <span>impact</span>.</h2>
                 </div>
 
-                <div className="process-layout">
-                    <div className="process-copy">
-                        <div className="process-grid">
-                            {processItems.map((item, index) => (
-                                <div
-                                    key={item.number}
-                                    className={`process-item ${activeProcessIndex === index ? 'is-active' : ''}`}
-                                    onMouseEnter={() => setActiveProcessIndex(index)}
-                                    onFocus={() => setActiveProcessIndex(index)}
-                                    tabIndex={0}
-                                >
-                                    <div className="process-title-row">
-                                        <span className="process-number">{item.number}</span>
-                                        <h3>{item.title}</h3>
-                                    </div>
+                <div className="process-grid">
+                    {processItems.map((item, index) => (
+                        <div
+                            key={item.number}
+                            className={`process-item ${activeProcessIndex === index ? 'is-active' : ''}`}
+                            onMouseEnter={() => setActiveProcessIndex(index)}
+                            onFocus={() => setActiveProcessIndex(index)}
+                            tabIndex={0}
+                        >
+                            <div className="process-title-row">
+                                <span className="process-number">{item.number}</span>
+                                <h3>{item.title}</h3>
+                            </div>
 
-                                    <p className="process-lead">{item.lead}</p>
+                            <p className="process-lead">{item.lead}</p>
 
-                                    <ul>
-                                        {item.points.map((point) => (
-                                            <li key={point}>{point}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
+                            <ul>
+                                {item.points.map((point) => (
+                                    <li key={point}>{point}</li>
+                                ))}
+                            </ul>
                         </div>
-                    </div>
-
-                    <div className="process-visual">
-                        <img
-                            key={activeProcessIndex}
-                            src={processItems[activeProcessIndex].image}
-                            alt={processItems[activeProcessIndex].alt}
-                        />
-                    </div>
+                    ))}
                 </div>
             </div>
 

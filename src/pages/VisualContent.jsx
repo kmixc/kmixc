@@ -5,8 +5,8 @@ import Footer from '../components/Footer.jsx';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import HeroVideo from '../img/videos/LZ_World_Tour.mp4';
-import ShowcaseVideoOne from '../img/videos/cgr_video.mp4';
+import HeroVideo from '../img/videos/lzworldtour_video.mp4';
+import ShowcaseVideoOne from '../img/videos/cgr_video_2.mp4';
 import ShowcaseVideoTwo from '../img/videos/pyc_video.mp4';
 import ShowcaseVideoThree from '../img/videos/millworx_video.mp4';
 import ShowcaseImageOne from '../assets/img/projects/slammedenuff/slammedenuff9.jpg';

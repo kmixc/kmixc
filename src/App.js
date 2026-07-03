@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 
 
 //PAGES
-import ComingSoon from './pages/ComingSoon.jsx';
 import Home from './pages/home.jsx';
 import Projects from './pages/Projects.jsx';
 import Services from './pages/Services.jsx'
