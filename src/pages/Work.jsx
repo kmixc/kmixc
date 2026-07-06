@@ -23,7 +23,6 @@ import DentalTwo from '../img/client_imgs/Dental_2.jpg'
 import DentalThree from '../img/client_imgs/Dental_3.jpg'
 import DentalFour from '../img/client_imgs/Dental_4.jpg'
 import DentalFive from '../img/client_imgs/Dental_5.jpg'
-import ConstructionOne from '../img/client_imgs/Construction_1.jpg'
 import ConstructionTwo from '../assets/img/projects/the_doors_ltd/thedoorsltd1.jpg'
 import Restaurant from '../img/client_imgs/Finkle.jpg'
 
@@ -36,33 +35,32 @@ const CATEGORIES = [
     { key: "commercial", label: "COMMERCIAL" },
     { key: "events", label: "EVENTS" },
     { key: "weddings", label: "WEDDINGS" },
-    { key: "automotive", label: "AUTOMOTIVE" },
+    { key: "construction", label: "CONSTRUCTION" },
 ];
 
 const allProjects = [
-    { id: 1,  title: "Millworx",                    img: CompanyShowcase,  description: "Company Showcase",        category: "commercial", route: "/projects/millworx" },
-    { id: 2,  title: "LZ World Tour",               img: Event,            description: "Event Coverage",          category: "events",     route: "/projects/lz-world-tour" },
-    { id: 3,  title: "Custom Glass Railings",       img: Renovation,       description: "Renovation",              category: "commercial", route: "/projects/custom-glass-railings" },
-    { id: 4,  title: "Facility Plus",               img: EventThree,       description: "Event Coverage",          category: "events",     route: "/projects/facility-plus" },
-    { id: 5,  title: "Power Yoga Canada",           img: EventTwo,         description: "Promotional & Event",     category: "commercial", route: "/projects/power-yoga-canada" },
-    { id: 6,  title: "Tommy & Victoria",            img: SpecialEventOne,  description: "Wedding Videography",     category: "weddings",   route: "/projects/tommy-&-victoria" },
-    { id: 7,  title: "Mike & Brittany",             img: SpecialEventTwo,  description: "Engagement Videography",  category: "weddings",   route: "/projects/mike-&-brittany" },
-    { id: 8,  title: "Janine & Lucas",              img: SpecialEventThree,description: "Engagement Videography",  category: "weddings",   route: "/projects/janine-&-lucas" },
-    { id: 9,  title: "Roberto & Lorena",            img: SpecialEventFour, description: "Engagement Videography",  category: "weddings",   route: "/projects/roberto-&-lorena" },
-    { id: 10, title: "Luka Dental Care",            img: DentalThree,      description: "Company Promo",           category: "commercial", route: "/projects/luka-dental-care" },
-    { id: 11, title: "Queen Street Dental",         img: DentalOne,        description: "Company Promo",           category: "commercial", route: "/projects/queen-street-dental" },
-    { id: 12, title: "North York Dental",           img: DentalTwo,        description: "Company Promo",           category: "commercial", route: "/projects/north-york-dental" },
-    { id: 13, title: "Waterloo Family Dental",      img: DentalFour,       description: "Company Promo",           category: "commercial", route: "/projects/waterloo-family-dental" },
-    { id: 14, title: "Dentistry On Lawrence",       img: DentalFive,       description: "Company Promo",           category: "commercial", route: "/projects/dentistry-on-lawrence" },
-    { id: 15, title: "Custom Glass Railings",       img: ConstructionOne,  description: "Company Showcase",        category: "commercial", route: "/projects/custom-glass-railings" },
-    { id: 16, title: "Finkle Street Tap & Grill",  img: Restaurant,       description: "Restaurant Coverage",     category: "commercial", route: "/projects/finkle-street-tap-&-grill" },
-    { id: 17, title: "Slammedenuff Sevierville",    img: EventNine,        description: "Automotive Event",        category: "automotive", route: "/projects/slammedenuff-sevierville-2024" },
-    { id: 18, title: "The Doors Ltd",               img: ConstructionTwo,  description: "Company Showcase",        category: "commercial", route: "/projects/the-doors-ltd" },
-    { id: 19, title: "Copernicus Lodge Galaxy Ball",img: EventFour,        description: "Event Coverage",          category: "events",     route: "/projects/copernicus-lodge-galaxy-ball" },
-    { id: 20, title: "Lululemon Madness",           img: EventEight,       description: "Event Coverage",          category: "events",     route: "/projects/lululemon-madness" },
-    { id: 21, title: "JDRF Walk",                   img: EventFive,        description: "Event Coverage",          category: "events",     route: "/projects/JDRF-walk" },
-    { id: 22, title: "Chamber of Commerce",         img: EventSix,         description: "Event Coverage",          category: "events",     route: "/projects/chamber-of-commerce" },
-    { id: 23, title: "Brilliant Minded Women",      img: EventSeven,       description: "Event Coverage",          category: "events",     route: "/projects/brilliant-minded-women" },
+    { id: 1, title: "Millworx", img: CompanyShowcase, description: "Company Showcase", category: "construction", route: "/projects/millworx" },
+    { id: 2, title: "LZ World Tour", img: Event, description: "Event Coverage", category: "events", route: "/projects/lz-world-tour" },
+    { id: 3, title: "Custom Glass Railings", img: Renovation, description: "Company Showcase", category: "construction", route: "/projects/custom-glass-railings" },
+    { id: 4, title: "Facility Plus", img: EventThree, description: "Company Showcase", category: "events", route: "/projects/facility-plus" },
+    { id: 5, title: "Power Yoga Canada", img: EventTwo, description: "Promotional & Event", category: "commercial", route: "/projects/power-yoga-canada" },
+    { id: 6, title: "Tommy & Victoria", img: SpecialEventOne, description: "Wedding Videography", category: "weddings", route: "/projects/tommy-&-victoria" },
+    { id: 7, title: "Mike & Brittany", img: SpecialEventTwo, description: "Engagement Videography", category: "weddings", route: "/projects/mike-&-brittany" },
+    { id: 8, title: "Janine & Lucas", img: SpecialEventThree, description: "Engagement Videography", category: "weddings", route: "/projects/janine-&-lucas" },
+    { id: 9, title: "Roberto & Lorena", img: SpecialEventFour, description: "Engagement Videography", category: "weddings", route: "/projects/roberto-&-lorena" },
+    { id: 10, title: "Luka Dental Care", img: DentalThree, description: "Dental Practice Coverage", category: "commercial", route: "/projects/luka-dental-care" },
+    { id: 11, title: "Queen Street Dental", img: DentalOne, description: "Dental Practice Coverage", category: "commercial", route: "/projects/queen-street-dental" },
+    { id: 12, title: "North York Dental", img: DentalTwo, description: "Dental Practice Coverage", category: "commercial", route: "/projects/north-york-dental" },
+    { id: 13, title: "Waterloo Family Dental", img: DentalFour, description: "Dental Practice Coverage", category: "commercial", route: "/projects/waterloo-family-dental" },
+    { id: 14, title: "Dentistry On Lawrence", img: DentalFive, description: "Dental Practice Coverage", category: "commercial", route: "/projects/dentistry-on-lawrence" },
+    { id: 16, title: "Finkle Street Tap & Grill", img: Restaurant, description: "Restaurant Coverage", category: "commercial", route: "/projects/finkle-street-tap-&-grill" },
+    { id: 17, title: "Slammedenuff Sevierville", img: EventNine, description: "Automotive Event", category: "events", route: "/projects/slammedenuff-sevierville-2024" },
+    { id: 18, title: "The Doors Ltd", img: ConstructionTwo, description: "Company Showcase", category: "construction", route: "/projects/the-doors-ltd" },
+    { id: 19, title: "Copernicus Lodge Galaxy Ball", img: EventFour, description: "Event Coverage", category: "events", route: "/projects/copernicus-lodge-galaxy-ball" },
+    { id: 20, title: "Lululemon Madness", img: EventEight, description: "Event Coverage", category: "events", route: "/projects/lululemon-madness" },
+    { id: 21, title: "JDRF Walk", img: EventFive, description: "Event Coverage", category: "events", route: "/projects/JDRF-walk" },
+    { id: 22, title: "Chamber of Commerce", img: EventSix, description: "Event Coverage", category: "events", route: "/projects/chamber-of-commerce" },
+    { id: 23, title: "Brilliant Minded Women", img: EventSeven, description: "Event Coverage", category: "events", route: "/projects/brilliant-minded-women" },
 ];
 
 export default function Work() {
@@ -73,7 +71,7 @@ export default function Work() {
         : allProjects.filter(p => p.category === activeCategory);
 
     return (
-        <div className='projects-page'>
+        <div className='projects-page work-page'>
             <Preloader />
             <div className='work-header'>
                 <p className='work-header-sub'>PORTFOLIO</p>
