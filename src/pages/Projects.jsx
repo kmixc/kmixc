@@ -79,13 +79,13 @@ export default function Projects() {
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}>
                                 <div className="overlay"></div>
-                                {project.img && <img src={project.img} alt={project.title} />}
+                                {project.img && <img src={project.img} alt={project.title} loading="lazy" />}
                                 {project.video && (
                                     <video src={project.video} muted loop playsInline className="project-video" style={project.videoStyle} />
                                 )}
                                 <div className="project-info">
                                     {project.logo ? (
-                                        <img src={project.logo} alt={project.title} className="project-logo" style={project.logoStyle} />
+                                        <img src={project.logo} alt={project.title} className="project-logo" style={project.logoStyle} loading="lazy" />
                                     ) : (
                                         <>
                                             <h3>{project.title}</h3>

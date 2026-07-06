@@ -1,26 +1,26 @@
 import './App.css';
+import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-
-
-//PAGES
-import Home from './pages/home.jsx';
-import Projects from './pages/Projects.jsx';
-import Services from './pages/Services.jsx'
-import About from './pages/About.jsx';
-import Contact from './pages/Contact.jsx';
-import NotFound from './pages/NotFound';
-import ProjectDetail from './pages/ProjectDetail';
-import ContactCard from './pages/ContactCard.jsx';
-import WebsiteDevelopment from './pages/WebsiteDevelopment.jsx';
-import VisualContent from './pages/VisualContent.jsx';
-import SocialMedia from './pages/SocialMedia.jsx';
-import Work from './pages/Work.jsx';
 
 //COMPONENTS
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop.jsx'
 import PageTransition from './components/PageTransition';
-import Redirect from './components/redirect.jsx';
+
+//PAGES
+const Home = lazy(() => import('./pages/home.jsx'));
+const Projects = lazy(() => import('./pages/Projects.jsx'));
+const Services = lazy(() => import('./pages/Services.jsx'));
+const About = lazy(() => import('./pages/About.jsx'));
+const Contact = lazy(() => import('./pages/Contact.jsx'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
+const ContactCard = lazy(() => import('./pages/ContactCard.jsx'));
+const WebsiteDevelopment = lazy(() => import('./pages/WebsiteDevelopment.jsx'));
+const VisualContent = lazy(() => import('./pages/VisualContent.jsx'));
+const SocialMedia = lazy(() => import('./pages/SocialMedia.jsx'));
+const Work = lazy(() => import('./pages/Work.jsx'));
+const Redirect = lazy(() => import('./components/redirect.jsx'));
 
 function App() {
   return (
@@ -28,21 +28,23 @@ function App() {
       <Navbar />
       <ScrollToTop />
       <PageTransition />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path="/projects/:projectId" element={<ProjectDetail />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/visual-content' element={<VisualContent />} />
-        <Route path='/social-media' element={<SocialMedia />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/contactcard' element={<ContactCard />} />
-        <Route path='/website-development' element={<WebsiteDevelopment />} />
-        <Route path='/work' element={<Work />} />
-        <Route path='/dist/redirect.html' element={<Redirect />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path="/projects/:projectId" element={<ProjectDetail />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/visual-content' element={<VisualContent />} />
+          <Route path='/social-media' element={<SocialMedia />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/contactcard' element={<ContactCard />} />
+          <Route path='/website-development' element={<WebsiteDevelopment />} />
+          <Route path='/work' element={<Work />} />
+          <Route path='/dist/redirect.html' element={<Redirect />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }

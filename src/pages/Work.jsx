@@ -96,7 +96,7 @@ export default function Work() {
                         {filtered.map((project) => (
                             <a key={project.id} href={project.route} className="work-card">
                                 <div className="work-card-media">
-                                    <img src={project.img} alt={project.title} />
+                                    <img src={project.img} alt={project.title} loading="lazy" />
                                 </div>
                                 <div className="work-card-info">
                                     <span className="work-card-category">{project.category}</span>

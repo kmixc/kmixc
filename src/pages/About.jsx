@@ -150,7 +150,7 @@ export default function About() {
 
             <section className="about-story-section" data-navbar-theme="light">
                 <div className="about-story-media">
-                    <img src={TeamFeatureImage} alt="Kmixc Visuals founders on set" />
+                    <img src={TeamFeatureImage} alt="Kmixc Visuals founders on set" loading="lazy" />
                 </div>
 
                 <div className="about-story-content">
@@ -202,20 +202,20 @@ export default function About() {
                 <p className="about-trusted-label">SUPPORTED BY</p>
 
                 <div className="about-trusted-logos">
-                    <img src={PycLogo} alt="PYC Logo" />
-                    <img src={FPLogo} alt="FacilityPlus Logo" />
-                    <img src={LululemonLogo} alt="Lululemon Logo" />
-                    <img src={MillworxLogo} alt="Millworx Logo" />
-                    <img src={CGRLogo} alt="Custom Glass Railings Logo" />
-                    <img src={RoundLogo} alt="9Round Kickboxing Logo" />
-                    <img src={OdinLogo} alt="Odin Logo" />
-                    <img src={NBOLogo} alt="NBO Logo" />
-                    <img src={ImportFestLogo} alt="Import Fest Logo" />
-                    <img src={RWBLogo} alt="RWB Logo" />
-                    <img src={MckillansLogo} alt="Mckillans Logo" />
-                    <img src={UndergroundLogo} alt="Underground Logo" />
-                    <img src={CPCCLogo} alt="CPCC Logo" />
-                    <img src={OrbisLogo} alt="Orbis Logo" />
+                    <img src={PycLogo} alt="PYC Logo" loading="lazy" />
+                    <img src={FPLogo} alt="FacilityPlus Logo" loading="lazy" />
+                    <img src={LululemonLogo} alt="Lululemon Logo" loading="lazy" />
+                    <img src={MillworxLogo} alt="Millworx Logo" loading="lazy" />
+                    <img src={CGRLogo} alt="Custom Glass Railings Logo" loading="lazy" />
+                    <img src={RoundLogo} alt="9Round Kickboxing Logo" loading="lazy" />
+                    <img src={OdinLogo} alt="Odin Logo" loading="lazy" />
+                    <img src={NBOLogo} alt="NBO Logo" loading="lazy" />
+                    <img src={ImportFestLogo} alt="Import Fest Logo" loading="lazy" />
+                    <img src={RWBLogo} alt="RWB Logo" loading="lazy" />
+                    <img src={MckillansLogo} alt="Mckillans Logo" loading="lazy" />
+                    <img src={UndergroundLogo} alt="Underground Logo" loading="lazy" />
+                    <img src={CPCCLogo} alt="CPCC Logo" loading="lazy" />
+                    <img src={OrbisLogo} alt="Orbis Logo" loading="lazy" />
                 </div>
             </div>
 

@@ -94,6 +94,7 @@ const ProjectDetail = () => {
                                     <img
                                         src={item.src}
                                         alt={`Frame ${index + 1}`}
+                                        loading="lazy"
                                     />
                                 </div>
                             ))}

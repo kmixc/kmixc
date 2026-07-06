@@ -181,7 +181,7 @@ export default function SocialMedia() {
 
                     {showcaseCards.map((card) => (
                         <figure className={`social-studio__card ${card.className}`} key={card.className}>
-                            <img src={card.src} alt={card.alt} />
+                            <img src={card.src} alt={card.alt} loading="lazy" />
                         </figure>
                     ))}
 
