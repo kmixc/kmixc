@@ -246,6 +246,7 @@
 .vc-showcase__mosaic {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
     gap: 0.9rem;
     height: 100%;
 }
@@ -271,6 +272,7 @@
 }
 
 .vc-rail__item {
+    flex-shrink: 0;
     border-radius: 1.45rem;
     overflow: hidden;
     background: #121316;
