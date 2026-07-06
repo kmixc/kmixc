@@ -9,7 +9,7 @@ export default function Footer({ dark }) {
                 <div className="footer-links" id='hide-mobile'>
                     <Link to="/projects">Projects</Link>
                     <Link to="/about">About</Link>
-                    <Link to="/videography">Videography</Link>
+                    <Link to="/visual-content">Visual Content</Link>
                     <Link to="/website-development">Web Design</Link>
                 </div>
 
@@ -38,7 +38,7 @@ export default function Footer({ dark }) {
                 <div className="footer-links">
                     <Link to="/projects">Projects</Link>
                     <Link to="/about">About</Link>
-                    <Link to="/videography">Videography</Link>
+                    <Link to="/visual-content">Visual Content</Link>
                     <Link to="/website-development">Web Design</Link>
                 </div>
 
