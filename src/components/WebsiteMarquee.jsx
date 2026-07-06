@@ -38,7 +38,7 @@ const websites = [
         category: 'Architectural Glasswork',
     },
     {
-        href: 'https://kimscharacters.vercel.app/',
+        href: 'https://www.kimscharacters.com/',
         image: KimsThumb,
         alt: 'Kimscharacters',
         title: 'Kimscharacters',

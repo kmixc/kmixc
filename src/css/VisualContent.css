@@ -490,12 +490,16 @@
     }
 
     .vc-showcase__rail-shell {
-        height: 28rem;
+        height: 32rem;
     }
 
     .vc-showcase__mosaic {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 0.65rem;
+    }
+
+    .vc-showcase__column--2 {
+        display: none;
     }
 
     .vc-showcase__column {
