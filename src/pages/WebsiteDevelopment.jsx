@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import Marquee from 'react-fast-marquee';
 import '../css/WebsiteDevelopment.css';
 
 // COMPONENTS
@@ -470,10 +469,10 @@ export default function WebsiteDevelopment() {
 
             {/* ── TIMELINE (PRESERVED — do not modify) ── */}
             <section className="webdev-timeline">
-                <Marquee autoFill={true}>
-                    <h2 className="webdev-marquee">Process</h2>
-                </Marquee>
-                <h2 className="webdev-section-label">(From Mockup to Launch)</h2>
+                <div className="webdev-section-header">
+                    <span className="webdev-section-header__eyebrow">Our Process</span>
+                    <h2 className="webdev-section-header__title">From mockup to <em>launch</em></h2>
+                </div>
 
                 <div className="webdev-timeline__track" ref={trackRef}>
                     <div className="webdev-timeline__line">
@@ -528,10 +527,10 @@ export default function WebsiteDevelopment() {
                 UPGRADE 1 — HORIZONTAL DRAG CAROUSEL
             ──────────────────────────────────────────────────────── */}
             <section className="webdev-selected">
-                <Marquee autoFill={true}>
-                    <h2 className="webdev-marquee">Selected Work</h2>
-                </Marquee>
-                <h2 className="webdev-section-label">(What We've Built)</h2>
+                <div className="webdev-section-header">
+                    <span className="webdev-section-header__eyebrow">Selected Work</span>
+                    <h2 className="webdev-section-header__title">What we've <em>built</em></h2>
+                </div>
 
                 <WebsiteMarquee />
             </section>
@@ -540,10 +539,10 @@ export default function WebsiteDevelopment() {
                 UPGRADE 2 — WHAT WE DO / SERVICES CARDS
             ──────────────────────────────────────────────────────── */}
             <section className="webdev-services">
-                <Marquee autoFill={true}>
-                    <h2 className="webdev-marquee">What We Do</h2>
-                </Marquee>
-                <h2 className="webdev-section-label">(Our Specialities)</h2>
+                <div className="webdev-section-header">
+                    <span className="webdev-section-header__eyebrow">What We Do</span>
+                    <h2 className="webdev-section-header__title">Our <em>specialities</em></h2>
+                </div>
 
                 <div className="services-showcase">
                     <div className="services-showcase__layout">
@@ -667,7 +666,7 @@ export default function WebsiteDevelopment() {
                         Available for new projects
                     </span>
                     <h2 className="cta-headline cta-animate">
-                        Let's build<br />something great.
+                        Let's build <br />something great.
                     </h2>
                     <p className="cta-sub cta-animate">
                         Tell us about your project and we'll get back to you within 24 hours.

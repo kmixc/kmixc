@@ -70,6 +70,7 @@
         opacity: 0;
         transform: translateY(12px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -89,10 +90,21 @@
 /* Alternating pattern every 4 cards:
    row A: [wide: 4col] [narrow: 2col]
    row B: [half: 3col]  [half: 3col]  */
-.work-card:nth-child(4n+1) { grid-column: span 4; }
-.work-card:nth-child(4n+2) { grid-column: span 2; }
-.work-card:nth-child(4n+3) { grid-column: span 3; }
-.work-card:nth-child(4n+4) { grid-column: span 3; }
+.work-card:nth-child(4n+1) {
+    grid-column: span 4;
+}
+
+.work-card:nth-child(4n+2) {
+    grid-column: span 2;
+}
+
+.work-card:nth-child(4n+3) {
+    grid-column: span 3;
+}
+
+.work-card:nth-child(4n+4) {
+    grid-column: span 3;
+}
 
 /* ── Work card ── */
 
@@ -164,10 +176,21 @@
         padding: 0 24px 40px;
     }
 
-    .work-card:nth-child(4n+1) { grid-column: span 3; }
-    .work-card:nth-child(4n+2) { grid-column: span 1; }
-    .work-card:nth-child(4n+3) { grid-column: span 2; }
-    .work-card:nth-child(4n+4) { grid-column: span 2; }
+    .work-card:nth-child(4n+1) {
+        grid-column: span 3;
+    }
+
+    .work-card:nth-child(4n+2) {
+        grid-column: span 1;
+    }
+
+    .work-card:nth-child(4n+3) {
+        grid-column: span 2;
+    }
+
+    .work-card:nth-child(4n+4) {
+        grid-column: span 2;
+    }
 }
 
 @media (max-width: 640px) {

@@ -213,23 +213,35 @@
     will-change: transform, color;
 }
 
-/* ── MARQUEE ── */
-.webdev-marquee {
-    padding: 0 30px;
+/* ── SECTION HEADER ── */
+.webdev-section-header {
+    padding: clamp(48px, 7vw, 88px) 60px 0;
+}
+
+.webdev-section-header__eyebrow {
+    display: inline-block;
+    margin-bottom: 0.9rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
-    font-size: 5rem;
-    font-weight: bold;
-    white-space: nowrap;
+    letter-spacing: 0.24em;
+    color: #ff7000;
+    font-weight: 700;
+}
+
+.webdev-section-header__title {
+    margin: 0;
+    font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.04em;
     color: #fff;
 }
 
-/* ── SECTION LABEL ── */
-.webdev-section-label {
-    padding: 20px 60px;
-    font-size: 1rem;
-    color: #b1b1b1;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+.webdev-section-header__title em {
+    font-family: "IvyPresto Display", "Playfair Display", "Libre Baskerville", serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #ff7000;
 }
 
 /* ── TIMELINE ── */
@@ -363,14 +375,6 @@
     border-top: 1px solid #333;
     padding-bottom: 0;
     overflow: hidden;
-}
-
-.webdev-selected .webdev-marquee {
-    color: #ffffff;
-}
-
-.webdev-selected .webdev-section-label {
-    color: #b1b1b1;
 }
 
 .selected-gallery {
@@ -1809,12 +1813,9 @@
         padding: 120px 40px;
     }
 
-    .webdev-marquee {
-        font-size: 4rem;
-    }
-
-    .webdev-section-label {
-        padding: 18px 40px;
+    .webdev-section-header {
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .webdev-timeline__track {
@@ -1939,14 +1940,9 @@
         font-size: 1.6rem;
     }
 
-    .webdev-marquee {
-        font-size: 2.7rem;
-    }
-
-    .webdev-section-label {
-        padding: 20px 24px;
-        font-size: 0.82rem;
-        letter-spacing: 0.14em;
+    .webdev-section-header {
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     /* Timeline — collapse to single column on mobile */
@@ -1956,8 +1952,9 @@
     }
 
     .webdev-timeline__line {
-        left: 24px;
-        transform: none;
+        /* track padding (24px) + half the 32px dot column = dot centre */
+        left: 40px;
+        transform: translateX(-50%);
     }
 
     .webdev-timeline__step {
@@ -2003,10 +2000,6 @@
     .webdev-portfolio__grid {
         grid-template-columns: 1fr;
         margin: 20px 24px 0;
-    }
-
-    .webdev-marquee {
-        font-size: 2.7rem;
     }
 
     .selected-gallery__title-heading,
@@ -2094,8 +2087,9 @@
         line-height: 1.22;
     }
 
-    .webdev-section-label {
-        padding: 16px 18px;
+    .webdev-section-header {
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
     .webdev-timeline__track,
@@ -2108,7 +2102,8 @@
     }
 
     .webdev-timeline__line {
-        left: 18px;
+        /* track padding (18px) + half the 32px dot column = dot centre */
+        left: 34px;
     }
 
     .webdev-timeline__content--left,
@@ -2119,6 +2114,9 @@
     .selected-gallery__stage,
     .services-showcase__stage,
     .why-showcase__stage {
+        /* aspect-ratio must go: combined with min-height it transfers
+           into a min-WIDTH (300px × ratio) wider than the viewport */
+        aspect-ratio: auto;
         min-height: 300px;
     }
 
@@ -2223,9 +2221,13 @@
         font-size: clamp(2.6rem, 13vw, 4.5rem);
     }
 
-    /* Marquee heading: reduce further on very small screens */
-    .webdev-marquee {
-        font-size: 2.2rem;
+    /* Must come after the 768px aspect-ratio rules above: with the 300px
+       min-height, any aspect-ratio transfers into a min-width wider than
+       the viewport and the stage overflows off-screen */
+    .selected-gallery__stage,
+    .services-showcase__stage,
+    .why-showcase__stage {
+        aspect-ratio: auto;
     }
 
     /* Services item title */

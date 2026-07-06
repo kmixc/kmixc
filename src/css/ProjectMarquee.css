@@ -327,6 +327,16 @@
         pointer-events: auto;
     }
 
+    /* Text shows on every item, so every item needs the full scrim —
+       and darker than desktop since there's no hover state to rely on */
+    .wm-showcase .pm-item .pm-scrim,
+    .wm-showcase .pm-item:not(.is-active) .pm-scrim {
+        opacity: 1;
+        background:
+            linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.55) 44%, rgba(0, 0, 0, 0.75) 100%),
+            linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 42%, rgba(0, 0, 0, 0.5) 100%);
+    }
+
     /* Taller strips for screenshots */
     .wm-showcase .pm-item,
     .wm-showcase .pm-item.is-active {

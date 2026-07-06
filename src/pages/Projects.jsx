@@ -63,21 +63,21 @@ const handleMouseLeave = (e) => {
         video._playPromise.then(() => {
             video.pause();
             video.currentTime = 0;
-        }).catch(() => {});
+        }).catch(() => { });
     }
 };
 
 export default function Projects() {
     return (
-        <div className='projects-page'>
+        <div className='projects-page projects-standalone'>
             <Preloader />
             <div className='projects-section'>
                 <section className="projects">
                     <div className="projects-grid">
                         {projectsData.map((project) => (
                             <a key={project.id} href={project.route} className="project-item"
-                               onMouseEnter={handleMouseEnter}
-                               onMouseLeave={handleMouseLeave}>
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}>
                                 <div className="overlay"></div>
                                 {project.img && <img src={project.img} alt={project.title} />}
                                 {project.video && (

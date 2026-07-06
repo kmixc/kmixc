@@ -3,6 +3,12 @@
     background-color: #161616;
 }
 
+.projects-page.projects-standalone,
+.projects-page.projects-standalone .projects-section,
+.projects-page.projects-standalone .projects {
+    background-color: #161616;
+}
+
 .projects-section-title {
     text-align: center;
     font-size: 8em;
@@ -71,7 +77,7 @@
     transition: background 0.35s ease;
 }
 
-.projects-grid .project-item > img {
+.projects-grid .project-item>img {
     height: 100%;
     width: 100%;
     display: block;
@@ -79,7 +85,7 @@
     transition: transform 0.55s ease, filter 0.55s ease;
 }
 
-.projects-grid .project-item:hover > img {
+.projects-grid .project-item:hover>img {
     transform: scale(1.045);
     filter: saturate(0.95);
 }
@@ -231,6 +237,10 @@
 }
 
 @media (max-width: 768px) {
+    .projects-section {
+        padding-top: 100px;
+    }
+
     .projects-section-title {
         font-size: 4rem;
         line-height: 0.5;

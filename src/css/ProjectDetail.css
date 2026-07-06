@@ -217,8 +217,13 @@
     user-select: none;
 }
 
-.lightbox-prev { left: 0; }
-.lightbox-next { right: 0; }
+.lightbox-prev {
+    left: 0;
+}
+
+.lightbox-next {
+    right: 0;
+}
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
