@@ -80,7 +80,6 @@ const processItems = [
 
 export default function About() {
     const [videoLoaded, setVideoLoaded] = useState(false);
-    const [activeProcessIndex, setActiveProcessIndex] = useState(0);
     const imageRefs = useRef([]);
 
     useEffect(() => {
@@ -177,10 +176,7 @@ export default function About() {
                     {processItems.map((item, index) => (
                         <div
                             key={item.number}
-                            className={`about-process-item ${activeProcessIndex === index ? 'about-is-active' : ''}`}
-                            onMouseEnter={() => setActiveProcessIndex(index)}
-                            onFocus={() => setActiveProcessIndex(index)}
-                            tabIndex={0}
+                            className="about-process-item"
                         >
                             <div className="about-process-title-row">
                                 <span className="about-process-number">{item.number}</span>
@@ -223,7 +219,7 @@ export default function About() {
                 </div>
             </div>
 
-            <Footer />
+            <Footer dark />
         </div>
     );
 }

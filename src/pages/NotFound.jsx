@@ -7,14 +7,13 @@ import Preloader from '../components/Preloader';
 export default function NotFound() {
 
     return (
-        <div className='not-found-section'>
+        <div className='not-found-section' data-navbar-theme="dark">
             <Preloader />
             <div className='not-found-info'>
                 <div className='section-one'>
                     <div className="links">
                         <Link to="/projects" className="item-link big-link">PROJECTS</Link>
-                        <Link to="/videography" className="item-link">VIDEOGRAPHY</Link>
-                        <Link to="/photography" className="item-link">PHOTOGRAPHY</Link>
+                        <Link to="/visual-content" className="item-link">VISUAL CONTENT</Link>
                         <Link to="/website-development" className="item-link">WEBSITE DESIGN</Link>
                     </div>
                     <div>

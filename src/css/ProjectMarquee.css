@@ -259,7 +259,53 @@
     }
 }
 
+/* ── Website Marquee: keep image visible on active (no video to replace it) ── */
+.wm-showcase .pm-item.is-active .pm-image {
+    opacity: 1;
+    transform: scale(1.04);
+}
+
+/* ── Website Marquee: darker scrim so text is legible over screenshots ── */
+.wm-showcase .pm-scrim {
+    background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.45) 44%, rgba(0, 0, 0, 0.72) 100%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.18) 42%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+/* ── Website Marquee overlay text ── */
+.wm-title {
+    font-size: clamp(1.6rem, 3vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.wm-category {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ff7000;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* ── Section kicker label above a marquee ── */
+.pm-section-kicker {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #ff7000;
+    text-align: center;
+    margin: 0 0 24px;
+    padding: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
+
     .pm-item,
     .pm-image,
     .pm-video,
@@ -267,5 +313,31 @@
     .pm-scrim {
         transition-duration: 0.01ms;
         transition-delay: 0s;
+    }
+}
+
+/* ── Website Marquee: mobile overrides ── */
+@media (max-width: 768px) {
+
+    /* Accordion collapses to vertical stack — show overlay on all items */
+    .wm-showcase .pm-item .pm-content,
+    .wm-showcase .pm-item:not(.is-active) .pm-content {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    /* Taller strips for screenshots */
+    .wm-showcase .pm-item,
+    .wm-showcase .pm-item.is-active {
+        height: clamp(200px, 55vw, 280px);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .wm-showcase .pm-item,
+    .wm-showcase .pm-item.is-active {
+        height: clamp(160px, 48vw, 210px);
     }
 }

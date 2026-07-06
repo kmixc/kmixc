@@ -5,7 +5,7 @@ import Footer from '../components/Footer.jsx';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import HeroVideo from '../img/videos/lzworldtour_video.mp4';
+import HeroVideo from '../img/videos/about_website.mp4';
 import ShowcaseVideoOne from '../img/videos/cgr_video_2.mp4';
 import ShowcaseVideoTwo from '../img/videos/pyc_video.mp4';
 import ShowcaseVideoThree from '../img/videos/millworx_video.mp4';
@@ -183,6 +183,50 @@ export default function VisualContent() {
                     }
                 );
             }
+
+            const serviceCols = gsap.utils.toArray('.vc-services__col');
+            if (serviceCols.length) {
+                gsap.fromTo(serviceCols,
+                    { opacity: 0, y: 40 },
+                    {
+                        opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.1,
+                        scrollTrigger: { trigger: '.vc-services__grid', start: 'top 80%' },
+                    }
+                );
+            }
+
+            const processSteps = gsap.utils.toArray('.vc-process__step');
+            if (processSteps.length) {
+                gsap.fromTo(processSteps,
+                    { opacity: 0, y: 40 },
+                    {
+                        opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.12,
+                        scrollTrigger: { trigger: '.vc-process__steps', start: 'top 80%' },
+                    }
+                );
+            }
+
+            const statItems = gsap.utils.toArray('.vc-stats__item');
+            if (statItems.length) {
+                gsap.fromTo(statItems,
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1, y: 0, duration: 0.65, ease: 'power3.out', stagger: 0.08,
+                        scrollTrigger: { trigger: '.vc-stats__inner', start: 'top 80%' },
+                    }
+                );
+            }
+
+            const ctaInner = document.querySelector('.vc-cta__inner');
+            if (ctaInner) {
+                gsap.fromTo(ctaInner.children,
+                    { opacity: 0, y: 28 },
+                    {
+                        opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.1,
+                        scrollTrigger: { trigger: ctaInner, start: 'top 82%' },
+                    }
+                );
+            }
         }, pageRef);
 
         return () => {
@@ -194,7 +238,7 @@ export default function VisualContent() {
         <div className="visual-page" ref={pageRef}>
             <Preloader />
 
-            <section className="vc-hero">
+            <section className="vc-hero" data-navbar-theme="light">
                 <div className="vc-hero__media-wrap">
                     <div className={`vc-hero__video-mask ${videoLoaded ? 'is-loaded' : ''}`}>
                         <video
@@ -242,7 +286,7 @@ export default function VisualContent() {
                 </div>
             </section>
 
-            <section className="vc-showcase">
+            <section className="vc-showcase" data-navbar-theme="dark">
                 <div className="vc-showcase__rail-shell">
                     <div className="vc-showcase__mosaic">
                         {mediaColumns.map((column, columnIndex) => (
@@ -275,9 +319,18 @@ export default function VisualContent() {
                     <p>
                         We build photo and video together so the final rollout feels connected across websites, reels, campaigns, and launch assets.
                     </p>
+                </div>
+            </section>
 
-                    <div className="vc-showcase__lists">
-                        <div>
+            {/* ── Services ────────────────────────────────────────── */}
+            <section className="vc-services" data-navbar-theme="light">
+                <div className="vc-services__inner">
+                    <div className="vc-services__header">
+                        <span className="vc-services__eyebrow">What We Offer</span>
+                        <h2 className="vc-services__title">Built for every <em>format</em></h2>
+                    </div>
+                    <div className="vc-services__grid">
+                        <div className="vc-services__col">
                             <h3>Video</h3>
                             <ul>
                                 <li>Brand films</li>
@@ -287,8 +340,7 @@ export default function VisualContent() {
                                 <li>Event coverage</li>
                             </ul>
                         </div>
-
-                        <div>
+                        <div className="vc-services__col">
                             <h3>Photography</h3>
                             <ul>
                                 <li>Editorial stills</li>
@@ -298,7 +350,84 @@ export default function VisualContent() {
                                 <li>Print and digital delivery</li>
                             </ul>
                         </div>
+                        <div className="vc-services__col">
+                            <h3>Social &amp; Digital</h3>
+                            <ul>
+                                <li>Instagram and TikTok reels</li>
+                                <li>Story and carousel assets</li>
+                                <li>Thumbnail and cover design</li>
+                                <li>Platform-optimized formats</li>
+                                <li>Campaign rollout packages</li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
+            </section>
+
+            {/* ── Process ─────────────────────────────────────────── */}
+            <section className="vc-process" data-navbar-theme="dark">
+                <div className="vc-process__inner">
+                    <div className="vc-process__header">
+                        <span className="vc-process__eyebrow">How It Works</span>
+                        <h2 className="vc-process__title">
+                            Simple process.
+                            <strong>Serious results.</strong>
+                        </h2>
+                    </div>
+                    <div className="vc-process__steps">
+                        <div className="vc-process__step">
+                            <span className="vc-process__num">01</span>
+                            <h3>Creative Direction</h3>
+                            <p>We learn your brand, your goals, and the story you need told — then we build the shot list around it.</p>
+                        </div>
+                        <div className="vc-process__step">
+                            <span className="vc-process__num">02</span>
+                            <h3>Production Day</h3>
+                            <p>On-location with a full crew — cameras, lighting, and creative direction built to capture what matters.</p>
+                        </div>
+                        <div className="vc-process__step">
+                            <span className="vc-process__num">03</span>
+                            <h3>Final Delivery</h3>
+                            <p>Edited, colour-graded, and exported in every format you need — ready to deploy across all platforms.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Stats ───────────────────────────────────────────── */}
+            <section className="vc-stats" data-navbar-theme="light">
+                <div className="vc-stats__inner">
+                    <div className="vc-stats__item">
+                        <span className="vc-stats__num">50<span>+</span></span>
+                        <span className="vc-stats__label">Brands Worked With</span>
+                    </div>
+                    <div className="vc-stats__item">
+                        <span className="vc-stats__num">200<span>+</span></span>
+                        <span className="vc-stats__label">Projects Delivered</span>
+                    </div>
+                    <div className="vc-stats__item">
+                        <span className="vc-stats__num">3</span>
+                        <span className="vc-stats__label">Formats in Every Package</span>
+                    </div>
+                    <div className="vc-stats__item">
+                        <span className="vc-stats__num">1<span>M+</span></span>
+                        <span className="vc-stats__label">Views Generated</span>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── CTA ─────────────────────────────────────────────── */}
+            <section className="vc-cta" data-navbar-theme="light">
+                <div className="vc-cta__inner">
+                    <span className="vc-cta__eyebrow">Let's Work Together</span>
+                    <h2 className="vc-cta__title">
+                        Ready to make
+                        <em>content that converts?</em>
+                    </h2>
+                    <p className="vc-cta__sub">
+                        Tell us about your brand and we'll put together a package built around your goals.
+                    </p>
+                    <a href="/contact" className="vc-cta__btn">Start a Project</a>
                 </div>
             </section>
 

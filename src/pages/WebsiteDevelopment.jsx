@@ -6,6 +6,7 @@ import '../css/WebsiteDevelopment.css';
 // COMPONENTS
 import Preloader from '../components/Preloader.jsx';
 import Footer from '../components/Footer.jsx';
+import WebsiteMarquee from '../components/WebsiteMarquee.jsx';
 
 // GSAP
 import { gsap } from 'gsap';
@@ -51,72 +52,6 @@ const timelineSteps = [
         step: '07',
         title: 'Launch',
         description: 'Deployment, DNS, post-launch monitoring — we handle it all and stay on call so your go-live is seamless.',
-    },
-];
-
-// UPGRADE 1 — selected work gallery
-const galleryProjects = [
-    {
-        client: 'Millworx',
-        category: 'Luxury Millwork',
-        description: 'Custom European Cabinetry',
-        industry: 'Luxury / Home',
-        href: 'https://millworx.vercel.app/',
-        image: require('../img/web_dev/millworx_thumb.png'),
-        accent: 'Precision-built interiors with a digital presence to match.',
-    },
-    {
-        client: 'WOLFF Landscaping',
-        category: 'Landscape Design',
-        description: 'Ecological Design & Property Care',
-        industry: 'Landscaping',
-        href: 'https://www.wolfflandscaping.ca/',
-        image: require('../img/web_dev/wolff_thumb.png'),
-        accent: 'A cleaner digital presence for a detail-driven outdoor brand.',
-        placeholderTone: 'olive',
-        placeholderLabel: 'WOLFF',
-    },
-    {
-        client: 'Kimscharacters',
-        category: 'Events & Entertainment',
-        description: 'Character Performance & Events',
-        industry: 'Events / Entertainment',
-        href: 'https://kimscharacters.vercel.app/',
-        image: require('../img/web_dev/kimscharacters_thumb.png'),
-        accent: 'Playful presentation with sharper structure and booking clarity.',
-        placeholderTone: 'rose',
-        placeholderLabel: 'KIMS',
-    },
-    {
-        client: 'Custom Glass Railings',
-        category: 'Architectural Glasswork',
-        description: 'Architectural Fabrication',
-        industry: 'Construction / Luxury',
-        href: 'https://cgrcanada.com/',
-        image: require('../img/web_dev/cgr_thumb.png'),
-        accent: 'A premium showcase built around detail, finish, and trust.',
-    },
-    {
-        client: 'AFTRMRKT',
-        category: 'Automotive Culture',
-        description: 'Automotive Culture & Film',
-        industry: 'Lifestyle',
-        href: 'https://www.aftrmrkt.club/',
-        image: require('../img/web_dev/aftrmrkt_thumb.png'),
-        accent: 'High-contrast storytelling built for a culture-first audience.',
-        placeholderTone: 'charcoal',
-        placeholderLabel: 'AFTR',
-    },
-    {
-        client: 'Cedonia',
-        category: 'Construction & Development',
-        description: 'Construction & Development',
-        industry: 'Corporate / Development',
-        href: 'https://cedonia.vercel.app/',
-        image: require('../img/web_dev/cedonia_thumb.png'),
-        accent: 'Minimal structure and credibility-focused messaging for a refined brand.',
-        placeholderTone: 'sand',
-        placeholderLabel: 'CEDONIA',
     },
 ];
 
@@ -189,23 +124,19 @@ const serviceCards = [
 const whyPoints = [
     {
         title: 'Fast Turnaround',
-        body: "We move without sacrificing quality. You get a site that's live, polished, and ready to perform.",
-        proof: 'Most projects go live in 3–6 weeks from first call.',
+        body: "Most projects go live in 3–6 weeks from first call — without compromising on quality.",
     },
     {
         title: 'Built to Convert',
-        body: 'Every layout decision is made with your conversion goals in mind — not just aesthetics.',
-        proof: 'Every layout decision is mapped to a conversion goal before design starts.',
+        body: 'Every layout decision is mapped to a conversion goal before design starts. Not just aesthetics.',
     },
     {
         title: 'Clean Code',
-        body: 'No page builders. No bloat. Hand-written React or vanilla JS that actually scales.',
-        proof: 'Hand-written React or vanilla JS — no page builders, no plugin dependencies.',
+        body: 'Hand-written React or vanilla JS — no page builders, no plugin dependencies, no bloat.',
     },
     {
         title: 'One Point of Contact',
-        body: 'You talk directly to the person designing and building your site. No middlemen.',
-        proof: 'You work directly with the designer and developer. No account managers.',
+        body: 'You work directly with the designer and developer. No account managers, no middlemen.',
     },
 ];
 
@@ -228,7 +159,6 @@ function renderSplitWord(text, className = '') {
 // ─────────────────────────────────────────────
 
 export default function WebsiteDevelopment() {
-    const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
     const [activeServiceIndex, setActiveServiceIndex] = useState(0);
     const [activeWhyIndex, setActiveWhyIndex] = useState(0);
 
@@ -239,7 +169,6 @@ export default function WebsiteDevelopment() {
     const cardRefs = useRef([]);
 
     // Upgrade refs
-    const selectedSectionRef = useRef(null);
     const whyColRefs = useRef([]);
     const statRefs = useRef([]);
     const svcCardRefs = useRef([]);
@@ -458,13 +387,13 @@ export default function WebsiteDevelopment() {
                         },
                     });
 
-                    // Scrubbed color: gray → orange → white
+                    // Scrubbed color: gray → orange → dark
                     const tl = gsap.timeline();
                     tl.fromTo(word,
-                        { color: '#444444' },
+                        { color: '#999999' },
                         { color: '#ff7000', ease: 'none', duration: 1 }
                     ).to(word,
-                        { color: '#ffffff', ease: 'none', duration: 1 }
+                        { color: '#111111', ease: 'none', duration: 1 }
                     );
                     ScrollTrigger.create({
                         trigger: word,
@@ -604,54 +533,7 @@ export default function WebsiteDevelopment() {
                 </Marquee>
                 <h2 className="webdev-section-label">(What We've Built)</h2>
 
-                <div className="selected-gallery" ref={selectedSectionRef}>
-                    <div className="selected-gallery__pin">
-                        <div className="selected-gallery__layout">
-                            <div className="selected-gallery__titles projects_list_wrapper w-dyn-list">
-                                <div className="selected-gallery__list projects_list">
-                                    {galleryProjects.map((project, i) => (
-                                        <a
-                                            key={project.client}
-                                            href={project.href}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="selected-gallery__title-link project_list_item"
-                                            onMouseEnter={() => setActiveGalleryIndex(i)}
-                                            onFocus={() => setActiveGalleryIndex(i)}
-                                        >
-                                            <span className="selected-gallery__title-label">
-                                                <span className="selected-gallery__title-heading">
-                                                    <span className="selected-gallery__title-text">{project.client}</span>
-                                                    <span className="selected-gallery__floating-tag">Open Project</span>
-                                                </span>
-                                                <span className="selected-gallery__title-category">{project.category}</span>
-                                            </span>
-                                        </a>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="selected-gallery__stage">
-                                {galleryProjects.map((project, i) => (
-                                    <div
-                                        key={project.client}
-                                        className={`selected-gallery__media-card ${activeGalleryIndex === i ? 'is-active' : ''}`}
-                                        aria-hidden={activeGalleryIndex === i ? 'false' : 'true'}
-                                    >
-                                        {project.image ? (
-                                            <img className="selected-gallery__media-image" src={project.image} alt={project.client} />
-                                        ) : (
-                                            <div className={`selected-gallery__media-placeholder selected-gallery__media-placeholder--${project.placeholderTone || 'charcoal'}`}>
-                                                <span className="selected-gallery__media-kicker">{project.client}</span>
-                                                <span className="selected-gallery__media-label">Preview Placeholder</span>
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <WebsiteMarquee />
             </section>
 
             {/* ────────────────────────────────────────────────────────
@@ -725,9 +607,9 @@ export default function WebsiteDevelopment() {
                     <div className="why-showcase__layout">
                         <div className="why-showcase__intro">
                             <span className="why-showcase__kicker">Why teams choose us</span>
-                            <h2 className="why-showcase__headline">Built with the same care your clients expect from you.</h2>
+                            <h2 className="why-showcase__headline">No templates. No excuses.</h2>
                             <p className="why-showcase__lede">
-                                Strategy, design, and development stay under one roof, so the final site feels coherent from first impression to final conversion.
+                                Design, development, and strategy under one roof — so nothing gets lost in translation.
                             </p>
 
                             <div className="why-showcase__list" role="tablist" aria-label="Why choose Kmixc">
@@ -737,6 +619,7 @@ export default function WebsiteDevelopment() {
                                         className={`why-showcase__item ${activeWhyIndex === i ? 'is-active' : ''}`}
                                         key={pt.title}
                                         ref={el => whyColRefs.current[i] = el}
+                                        onMouseEnter={() => setActiveWhyIndex(i)}
                                         onFocus={() => setActiveWhyIndex(i)}
                                         onClick={() => setActiveWhyIndex(i)}
                                         role="tab"
@@ -766,43 +649,9 @@ export default function WebsiteDevelopment() {
                                     </div>
                                     <h3 className="why-showcase__panel-title">{pt.title}</h3>
                                     <p className="why-showcase__panel-body">{pt.body}</p>
-                                    <p className="why-showcase__panel-proof">{pt.proof}</p>
-                                    <div className="why-showcase__panel-metrics">
-                                        <div className="why-showcase__panel-metric">
-                                            <span className="why-showcase__panel-metric-value">3-6</span>
-                                            <span className="why-showcase__panel-metric-label">Weeks to launch</span>
-                                        </div>
-                                        <div className="why-showcase__panel-metric">
-                                            <span className="why-showcase__panel-metric-value">1:1</span>
-                                            <span className="why-showcase__panel-metric-label">Direct collaboration</span>
-                                        </div>
-                                    </div>
                                 </article>
                             ))}
                         </div>
-                    </div>
-                </div>
-
-                <div className="why-stats">
-                    <div className="why-stat">
-                        <span
-                            className="why-stat__num"
-                            ref={el => statRefs.current[0] = el}
-                            data-end="6"
-                            data-suffix=" Weeks"
-                        >0</span>
-                        <span className="why-stat__label">Average Delivery</span>
-                        <span className="why-stat__copy">Most brochure and service sites ship in under a month and a half.</span>
-                    </div>
-                    <div className="why-stat">
-                        <span
-                            className="why-stat__num"
-                            ref={el => statRefs.current[1] = el}
-                            data-end="100"
-                            data-suffix="%"
-                        >0</span>
-                        <span className="why-stat__label">Custom Built</span>
-                        <span className="why-stat__copy">No templates, no page-builder lock-in, and no generic plugin stack.</span>
                     </div>
                 </div>
             </section>
@@ -817,7 +666,6 @@ export default function WebsiteDevelopment() {
                         <span className="cta-avail__dot"></span>
                         Available for new projects
                     </span>
-                    <span className="webdev-hero__label cta-animate">Get In Touch</span>
                     <h2 className="cta-headline cta-animate">
                         Let's build<br />something great.
                     </h2>

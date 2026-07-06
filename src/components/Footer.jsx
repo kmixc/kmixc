@@ -2,9 +2,9 @@ import React from 'react'
 import '../css/Footer.css'
 import { Link } from 'react-router-dom'
 
-export default function Footer() {
+export default function Footer({ dark }) {
     return (
-        <footer className="footer">
+        <footer className={`footer${dark ? ' footer--dark' : ''}`}>
             <div className="footer-section">
                 <div className="footer-links" id='hide-mobile'>
                     <Link to="/projects">Projects</Link>

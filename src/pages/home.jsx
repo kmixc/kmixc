@@ -71,7 +71,6 @@ const processItems = [
 
 const Home = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
-    const [activeProcessIndex, setActiveProcessIndex] = useState(0);
 
     return (
         <div>
@@ -162,10 +161,7 @@ const Home = () => {
                     {processItems.map((item, index) => (
                         <div
                             key={item.number}
-                            className={`process-item ${activeProcessIndex === index ? 'is-active' : ''}`}
-                            onMouseEnter={() => setActiveProcessIndex(index)}
-                            onFocus={() => setActiveProcessIndex(index)}
-                            tabIndex={0}
+                            className="process-item"
                         >
                             <div className="process-title-row">
                                 <span className="process-number">{item.number}</span>

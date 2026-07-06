@@ -6,8 +6,8 @@
     flex-wrap: wrap;
     flex-direction: column;
     padding: 40px 60px;
-    background-color: #161616;
-    color: #fff;
+    background-color: #F7F5F0;
+    color: #000;
     font-size: 20px;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .footer-section a {
-    color: #fff;
+    color: #000;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
@@ -34,7 +34,7 @@
 }
 
 .footer-links a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 
@@ -81,9 +81,9 @@
 }
 
 .footer-bottom a,
-span {
+.footer-bottom span {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-weight: 500;
 }
 
@@ -93,6 +93,26 @@ span {
 
 #hide-desktop {
     display: none;
+}
+
+/* Dark footer variant */
+.footer--dark {
+    background-color: #111;
+    color: #F7F5F0;
+}
+
+.footer--dark .footer-section a,
+.footer--dark .footer-links a,
+.footer--dark .footer-links p,
+.footer--dark .footer-title,
+.footer--dark .footer-bottom a,
+.footer--dark .footer-bottom span {
+    color: #F7F5F0;
+}
+
+.footer--dark .footer-section a:hover,
+.footer--dark .footer-bottom a:hover {
+    color: #FF7300;
 }
 
 /* RESPONSIVE DESIGN */
@@ -117,28 +137,29 @@ span {
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
     .footer {
-        padding: 20px;
-        font-size: 20px;
+        padding: 16px;
+        font-size: 14px;
     }
 
     .footer-section {
-        padding-bottom: 30px;
+        padding-bottom: 16px;
     }
 
     .footer-links,
     .footer-socials {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .footer-title {
-        font-size: 2em;
+        font-size: 1.4em;
         max-width: 100%;
         text-align: justify;
         padding: 0;
     }
 
     .footer-bottom {
-        font-size: 16px;
+        font-size: 12px;
+        margin-top: 10px;
     }
 
     #hide-mobile {

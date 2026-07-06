@@ -11,8 +11,8 @@
 }
 
 .navbar--dark {
-    --navbar-foreground: #161616;
-    --navbar-logo-filter: brightness(0) saturate(100%);
+    --navbar-foreground: #111111;
+    --navbar-logo-filter: invert(1);
 }
 
 .navbar--light {
@@ -189,6 +189,7 @@
     font-weight: 500;
     line-height: 1.02;
     letter-spacing: -0.05em;
+    color: #ffffff;
     transition: color 0.25s ease, transform 0.25s ease;
 }
 

@@ -333,7 +333,7 @@ export default function Navbar() {
     const closeMenu = () => setMenuOpen(false);
 
     return (
-        <div className={`navbar navbar--${navTheme}`}>
+        <div className={`navbar navbar--${menuVisible ? 'light' : navTheme}`}>
             <div className="navbar__bar">
                 <Link to="/" className="navbar__brand" aria-label="Kmixc Visuals home">
                     <img src={Logo} alt="Kmixc Visuals" className="navbar__logo" />

@@ -297,6 +297,7 @@ html {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 400;
+  color: #ff7000;
 }
 
 .home-story-copy {
@@ -359,21 +360,6 @@ html {
   padding: 24px 0 28px;
   border-top: 1px solid rgba(27, 36, 29, 0.2);
   border-bottom: 1px solid rgba(27, 36, 29, 0.2);
-  opacity: 0.5;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  cursor: pointer;
-  outline: none;
-}
-
-
-.process-item:hover,
-.process-item:focus-visible,
-.process-item.is-active {
-  opacity: 1;
-}
-
-.process-item:focus-visible {
-  transform: translateX(4px);
 }
 
 .process-title-row {
@@ -392,12 +378,7 @@ html {
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.process-item:hover .process-number,
-.process-item:focus-visible .process-number,
-.process-item.is-active .process-number {
-  color: #c46a26;
-  transform: translateX(2px);
-}
+
 
 .process-item h3 {
   margin: 0;
@@ -740,17 +721,17 @@ html {
   }
 
   .trusted-logos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px 24px;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px 16px;
     max-width: 1400px;
     margin: 0 auto;
   }
 
   .trusted-logos img {
+    width: calc(33.333% - 12px);
     max-height: 50px;
-    width: 100%;
     object-fit: contain;
     filter: brightness(0) invert(0);
     transition: opacity 0.3s ease, filter 0.3s ease;
@@ -976,19 +957,16 @@ html {
 
   .trusted-logos {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
-    grid-template-columns: none;
-    gap: 20px;
-    align-items: center;
+    justify-content: center;
+    gap: 24px 16px;
     max-width: 1400px;
     margin: 0 auto;
   }
 
   .trusted-logos img {
-    max-height: 40px;
-    width: unset;
+    width: calc(33.333% - 12px);
+    max-height: 36px;
     object-fit: contain;
     filter: brightness(0) invert(0);
     transition: opacity 0.3s ease, filter 0.3s ease;

@@ -736,20 +736,6 @@
     padding: 24px 0 28px;
     border-top: 1px solid rgba(27, 36, 29, 0.2);
     border-bottom: 1px solid rgba(27, 36, 29, 0.2);
-    opacity: 0.5;
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    cursor: pointer;
-    outline: none;
-}
-
-.about-process-item:hover,
-.about-process-item:focus-visible,
-.about-process-item.about-is-active {
-    opacity: 1;
-}
-
-.about-process-item:focus-visible {
-    transform: translateX(4px);
 }
 
 .about-process-title-row {
@@ -768,12 +754,7 @@
     transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.about-process-item:hover .about-process-number,
-.about-process-item:focus-visible .about-process-number,
-.about-process-item.about-is-active .about-process-number {
-    color: #c46a26;
-    transform: translateX(2px);
-}
+
 
 .about-process-item h3 {
     margin: 0;
@@ -939,17 +920,17 @@
     }
 
     .about-trusted-logos {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px 24px;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 28px 16px;
         max-width: 1400px;
         margin: 0 auto;
     }
 
     .about-trusted-logos img {
+        width: calc(33.333% - 12px);
         max-height: 50px;
-        width: 100%;
         object-fit: contain;
         filter: brightness(0) invert(0);
     }
@@ -1026,17 +1007,16 @@
 
     .about-trusted-logos {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
-        align-items: center;
-        gap: 20px;
+        justify-content: center;
+        gap: 24px 16px;
         max-width: 1400px;
         margin: 0 auto;
     }
 
     .about-trusted-logos img {
-        max-height: 40px;
-        width: unset;
+        width: calc(33.333% - 12px);
+        max-height: 36px;
         object-fit: contain;
         filter: brightness(0) invert(0);
     }
