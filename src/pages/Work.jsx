@@ -25,6 +25,7 @@ import DentalFour from '../img/client_imgs/Dental_4.jpg'
 import DentalFive from '../img/client_imgs/Dental_5.jpg'
 import ConstructionTwo from '../assets/img/projects/the_doors_ltd/thedoorsltd1.jpg'
 import Restaurant from '../img/client_imgs/Finkle.jpg'
+import ShipAndZach from '../assets/img/projects/ship_and_zach/15.jpg'
 
 //COMPONENTS
 import Preloader from '../components/Preloader';
@@ -61,6 +62,7 @@ const allProjects = [
     { id: 21, title: "JDRF Walk", img: EventFive, description: "Event Coverage", category: "events", route: "/projects/JDRF-walk" },
     { id: 22, title: "Chamber of Commerce", img: EventSix, description: "Event Coverage", category: "events", route: "/projects/chamber-of-commerce" },
     { id: 23, title: "Brilliant Minded Women", img: EventSeven, description: "Event Coverage", category: "events", route: "/projects/brilliant-minded-women" },
+    { id: 24, title: "Ship & Zach", img: ShipAndZach, description: "Wedding Videography & Photography", category: "weddings", route: "/projects/ship-&-zach" },
 ];
 
 export default function Work() {

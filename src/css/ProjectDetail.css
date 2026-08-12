@@ -44,6 +44,7 @@
 
 .media-section {
     margin-top: 40px;
+    padding: 0 160px;
 }
 
 .frames-section {
@@ -88,7 +89,15 @@
 }
 
 .single-video-item {
-    max-width: none;
+    max-width: 1920px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 /* Make sure images and videos fit well */
@@ -111,7 +120,10 @@
 }
 
 .single-video-item iframe {
-    aspect-ratio: 21 / 9;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .project-info-sections {
@@ -262,6 +274,10 @@
 
     .project-meta {
         padding: 16px 60px;
+    }
+
+    .media-section {
+        padding: 0 60px;
     }
 
     .frames-section {

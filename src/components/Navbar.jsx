@@ -149,9 +149,13 @@ export default function Navbar() {
         window.addEventListener("scroll", requestThemeUpdate, { passive: true });
         window.addEventListener("resize", requestThemeUpdate);
 
+        const bodyObserver = new MutationObserver(requestThemeUpdate);
+        bodyObserver.observe(document.body, { childList: true, subtree: true });
+
         return () => {
             window.removeEventListener("scroll", requestThemeUpdate);
             window.removeEventListener("resize", requestThemeUpdate);
+            bodyObserver.disconnect();
 
             if (frameId !== null) {
                 window.cancelAnimationFrame(frameId);

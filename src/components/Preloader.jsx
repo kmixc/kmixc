@@ -26,7 +26,7 @@ const Preloader = () => {
     }, []);
 
     return (
-        <div ref={preloaderRef} className="preloader">
+        <div ref={preloaderRef} className="preloader" data-navbar-theme="light">
             <div className="preloader-content">
                 <img ref={logoRef} src={Logo} alt="Logo" className="preloader-logo" />
             </div>

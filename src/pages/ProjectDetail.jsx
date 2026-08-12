@@ -57,6 +57,7 @@ const ProjectDetail = () => {
                                         title={`Video ${index + 1}`}
                                         frameBorder="0"
                                         allowFullScreen
+                                        style={project.videoAspectRatio ? { aspectRatio: project.videoAspectRatio } : undefined}
                                     />
                                 </div>
                             ))}
