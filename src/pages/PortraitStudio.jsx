@@ -245,7 +245,7 @@ function useReveal(rootRef) {
     }, [rootRef]);
 }
 
-function EnquiryForm({ experience, onExperienceChange }) {
+function InquiryForm({ experience, onExperienceChange }) {
     const [state, handleSubmit] = useForm('mqppdwyw');
 
     if (state.succeeded) {
@@ -258,7 +258,7 @@ function EnquiryForm({ experience, onExperienceChange }) {
 
     return (
         <form className="tps-form" onSubmit={handleSubmit}>
-            <input type="hidden" name="_subject" value="The Portrait Studio enquiry" />
+            <input type="hidden" name="_subject" value="The Portrait Studio inquiry" />
             <input type="hidden" name="service" value="Portrait Studio" />
 
             <label className="tps-field">
@@ -314,7 +314,7 @@ function EnquiryForm({ experience, onExperienceChange }) {
 
             <div className="tps-field--full tps-form__actions">
                 <button type="submit" className="tps-btn tps-btn--gold" disabled={state.submitting}>
-                    {state.submitting ? 'Sending' : 'Send Enquiry'}
+                    {state.submitting ? 'Sending' : 'Send Inquiry'}
                 </button>
             </div>
         </form>
@@ -339,7 +339,7 @@ export default function PortraitStudio() {
                         <a href="#experiences">Experiences</a>
                         <a href="#faq">FAQ</a>
                     </nav>
-                    <a href="#enquire" className="tps-header__cta">Enquire</a>
+                    <a href="#inquire" className="tps-header__cta">Inquire</a>
                 </div>
             </header>
 
@@ -357,7 +357,7 @@ export default function PortraitStudio() {
                         <p className="tps-hero__lede tps-reveal" style={{ '--tps-delay': '500ms' }}>
                             A lit portrait set at your event. Every guest is directed and photographed, then handed a premium print in a folio within a minute.
                         </p>
-                        <a href="#enquire" className="tps-btn tps-reveal" style={{ '--tps-delay': '650ms' }}>Enquire</a>
+                        <a href="#inquire" className="tps-btn tps-reveal" style={{ '--tps-delay': '650ms' }}>Inquire</a>
                     </div>
                     <span className="tps-hero__cue" aria-hidden="true"></span>
                 </section>
@@ -453,8 +453,8 @@ export default function PortraitStudio() {
                                             <li key={feature}>{feature}</li>
                                         ))}
                                     </ul>
-                                    <a href="#enquire" className="tps-btn tps-btn--gold" onClick={() => setExperience(item.name)}>
-                                        Enquire
+                                    <a href="#inquire" className="tps-btn tps-btn--gold" onClick={() => setExperience(item.name)}>
+                                        Inquire
                                     </a>
                                 </article>
                             ))}
@@ -470,7 +470,7 @@ export default function PortraitStudio() {
                         </div>
 
                         <div className="tps-experiences__note tps-reveal">
-                            <p>Every event is tailored. Enquire for availability and pricing.</p>
+                            <p>Every event is tailored. Inquire for availability and pricing.</p>
                             <span>Additional hours available on request.</span>
                         </div>
                     </div>
@@ -562,14 +562,14 @@ export default function PortraitStudio() {
                     </div>
                 </section>
 
-                {/* ── Enquire ─────────────────────────────────────── */}
-                <section className="tps-section tps-section--dark tps-enquire" id="enquire">
+                {/* ── Inquire ─────────────────────────────────────── */}
+                <section className="tps-section tps-section--dark tps-inquire" id="inquire">
                     <div className="tps-container">
-                        <div className="tps-enquire__logo tps-reveal">
+                        <div className="tps-inquire__logo tps-reveal">
                             <Logo />
                         </div>
                         <header className="tps-heading tps-reveal">
-                            <span className="tps-label">Enquire</span>
+                            <span className="tps-label">Inquire</span>
                             <h2 className="tps-title">Host the studio</h2>
                             <p className="tps-heading__intro">
                                 Tell us about your event and we&apos;ll be in touch with availability and a tailored proposal.
@@ -577,7 +577,7 @@ export default function PortraitStudio() {
                         </header>
 
                         <div className="tps-reveal">
-                            <EnquiryForm experience={experience} onExperienceChange={setExperience} />
+                            <InquiryForm experience={experience} onExperienceChange={setExperience} />
                         </div>
                     </div>
                 </section>
