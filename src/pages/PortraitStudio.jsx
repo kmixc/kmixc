@@ -2,17 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import '../css/PortraitStudio.css';
 import { ReactComponent as LogoSvg } from '../img/logos/portrait_studio_logo.svg';
+// Shared with scripts/portraitstudio-meta.js, which bakes these tags into the static HTML for link previews
+import seo from '../data/portraitStudioSeo.json';
 
-const PAGE_URL = 'https://www.kmixc.com/portraitstudio';
+const PAGE_URL = seo.url;
 const FONTS_URL = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap';
-
-const seo = {
-    title: 'The Portrait Studio | Directed Event Portraits, Printed on the Spot',
-    description: 'A pop-up portrait studio for galas, weddings and brand events. Professionally directed, studio-lit portraits printed on premium paper and presented in a folio.',
-    siteName: 'The Portrait Studio',
-    // TODO: replace with a 1200x630 Portrait Studio share image (the current default carries Kmixc branding)
-    image: 'https://www.kmixc.com/og-image.jpg',
-};
 
 const steps = [
     {
@@ -587,6 +581,9 @@ export default function PortraitStudio() {
             <footer className="tps-footer">
                 <div className="tps-container tps-footer__inner">
                     <span>&copy; {new Date().getFullYear()} The Portrait Studio</span>
+                    <a href="https://instagram.com/portraitstudio.to" target="_blank" rel="noopener noreferrer">
+                        Instagram @portraitstudio.to
+                    </a>
                     <span>
                         by <a href="https://www.kmixc.com">Kmixc Studio</a>
                     </span>
