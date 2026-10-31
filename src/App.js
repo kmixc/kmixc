@@ -1,6 +1,6 @@
 import './App.css';
 import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
 //COMPONENTS
 import Navbar from './components/Navbar';
@@ -20,14 +20,21 @@ const WebsiteDevelopment = lazy(() => import('./pages/WebsiteDevelopment.jsx'));
 const VisualContent = lazy(() => import('./pages/VisualContent.jsx'));
 const SocialMedia = lazy(() => import('./pages/SocialMedia.jsx'));
 const Work = lazy(() => import('./pages/Work.jsx'));
+const PortraitStudio = lazy(() => import('./pages/PortraitStudio.jsx'));
 const Redirect = lazy(() => import('./components/redirect.jsx'));
 
+// Standalone-brand pages render without the main site's navbar and page transition
+const STANDALONE_PATHS = ['/portraitstudio'];
+
 function App() {
+  const { pathname } = useLocation();
+  const isStandalone = STANDALONE_PATHS.includes(pathname.replace(/\/+$/, ''));
+
   return (
     <>
-      <Navbar />
+      {!isStandalone && <Navbar />}
       <ScrollToTop />
-      <PageTransition />
+      {!isStandalone && <PageTransition />}
       <Suspense fallback={null}>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -41,6 +48,7 @@ function App() {
           <Route path='/contactcard' element={<ContactCard />} />
           <Route path='/website-development' element={<WebsiteDevelopment />} />
           <Route path='/work' element={<Work />} />
+          <Route path='/portraitstudio' element={<PortraitStudio />} />
           <Route path='/dist/redirect.html' element={<Redirect />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

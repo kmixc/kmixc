@@ -15,7 +15,7 @@ export default function Contact() {
                 <div className='contact-info'>
                     <h1>Contact Us</h1>
                     <p className='subtext'>FOR BUSINESS INQUIRIES</p>
-                    <a href='mailto:oliver.kmixc@gmail.com' className='contact-link'>oliver.kmixc@gmail.com</a>
+                    <a href='mailto:oliver@kmixc.com' className='contact-link'>oliver@kmixc.com</a>
                     <p className='subtext'>SCHEDULE A CALL</p>
                     <a href='https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1SqVFfx3zs2lGoBdVfsfDYqdxb9QiF8-bwpy_992TauerAHMR2DVrSyq_glCfMfW4jpCErrDog' target='_blank' rel='noreferrer' className='contact-link'>Book a Time</a>
                     {
