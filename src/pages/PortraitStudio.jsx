@@ -1,11 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import '../css/PortraitStudio.css';
 import { ReactComponent as LogoSvg } from '../img/logos/portrait_studio_logo.svg';
 // Shared with scripts/portraitstudio-meta.js, which bakes these tags into the static HTML for link previews
 import seo from '../data/portraitStudioSeo.json';
 
+//IMAGES
+import PhotoTrio from '../img/portraitstudio/Baby-Shower-86.jpg';
+import PhotoPortrait from '../img/portraitstudio/Baby-Shower-85.jpg';
+import PhotoPrints from '../img/portraitstudio/Baby-Shower-84.jpg';
+import PhotoPair from '../img/portraitstudio/Baby-Shower-54.jpg';
+import PhotoChildren from '../img/portraitstudio/Baby-Shower-6.jpg';
+
 const PAGE_URL = seo.url;
+const INSTAGRAM_URL = 'https://instagram.com/portraitstudio.to';
 const FONTS_URL = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap';
 
 const steps = [
@@ -137,15 +147,18 @@ function Logo({ className = '' }) {
     );
 }
 
-// Black-and-white photo placeholder. Swap for <img> inside .tps-photo once event photos are ready.
-// Unused while the PHOTOS blocks below are commented out.
-// eslint-disable-next-line no-unused-vars
-function ImagePlaceholder({ label, ratio, className = '' }) {
+// Event photo, cropped to its frame and shown in black and white by CSS.
+// `position` sets object-position to keep faces in frame when the crop is tight.
+function Photo({ src, alt, className = '', position }) {
     return (
-        <div className={`tps-photo tps-placeholder ${className}`.trim()} role="img" aria-label={`Image placeholder: ${label}`}>
-            <span className="tps-placeholder__tag">Image placeholder</span>
-            <span className="tps-placeholder__label">{label}</span>
-            {ratio && <span className="tps-placeholder__ratio">{ratio}</span>}
+        <div className={`tps-photo ${className}`.trim()}>
+            <img
+                src={src}
+                alt={alt}
+                loading="lazy"
+                decoding="async"
+                style={position ? { objectPosition: position } : undefined}
+            />
         </div>
     );
 }
@@ -333,7 +346,18 @@ export default function PortraitStudio() {
                         <a href="#experiences">Experiences</a>
                         <a href="#faq">FAQ</a>
                     </nav>
-                    <a href="#inquire" className="tps-header__cta">Inquire</a>
+                    <div className="tps-header__actions">
+                        <a
+                            href={INSTAGRAM_URL}
+                            className="tps-header__social"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="The Portrait Studio on Instagram (@portraitstudio.to)"
+                        >
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                        <a href="#inquire" className="tps-header__cta">Inquire</a>
+                    </div>
                 </div>
             </header>
 
@@ -356,15 +380,14 @@ export default function PortraitStudio() {
                     <span className="tps-hero__cue" aria-hidden="true"></span>
                 </section>
 
-                {/* PHOTOS (hidden until first event photos): replace placeholder with <div className="tps-photo"><img src={...} alt="..." /></div>
                 <div className="tps-container tps-reveal">
-                    <ImagePlaceholder
-                        className="tps-placeholder--wide"
-                        label="Wide editorial shot of the lit portrait set at an event"
-                        ratio="Landscape · 21:9 · black and white"
+                    <Photo
+                        src={PhotoTrio}
+                        alt="Three guests photographed together in front of the draped studio backdrop"
+                        className="tps-photo--wide"
+                        position="50% 30%"
                     />
                 </div>
-                */}
 
                 {/* ── The experience ──────────────────────────────── */}
                 <section className="tps-section" id="experience">
@@ -390,15 +413,13 @@ export default function PortraitStudio() {
                 {/* ── Not a photo booth ───────────────────────────── */}
                 <section className="tps-section tps-section--dark">
                     <div className="tps-container tps-difference">
-                        {/* PHOTOS (hidden until first event photos): replace placeholder with <div className="tps-photo"><img src={...} alt="..." /></div>
                         <div className="tps-difference__media tps-reveal">
-                            <ImagePlaceholder
-                                className="tps-placeholder--dark"
-                                label="Photographer directing a guest on set"
-                                ratio="Portrait · 4:5 · black and white"
+                            <Photo
+                                src={PhotoPortrait}
+                                alt="A guest's directed portrait against the draped studio backdrop"
+                                position="50% 25%"
                             />
                         </div>
-                        */}
 
                         <div className="tps-difference__copy">
                             <header className="tps-heading tps-heading--left tps-reveal">
@@ -493,14 +514,12 @@ export default function PortraitStudio() {
                             </ul>
                         </div>
 
-                        {/* PHOTOS (hidden until first event photos): replace placeholder with <div className="tps-photo"><img src={...} alt="..." /></div>
                         <div className="tps-after__media tps-reveal">
-                            <ImagePlaceholder
-                                label="Open folio with a finished print"
-                                ratio="Portrait · 4:5 · black and white"
+                            <Photo
+                                src={PhotoPrints}
+                                alt="Finished portrait prints from the evening laid out on a table"
                             />
                         </div>
-                        */}
                     </div>
                 </section>
 
@@ -516,20 +535,20 @@ export default function PortraitStudio() {
                             ))}
                         </ul>
 
-                        {/* PHOTOS (hidden until first event photos): replace placeholders with <div className="tps-photo"><img src={...} alt="..." /></div>
                         <div className="tps-gallery">
-                            <ImagePlaceholder
+                            <Photo
+                                src={PhotoPair}
+                                alt="Two guests embracing at a baby shower portrait session"
                                 className="tps-reveal"
-                                label="Guest portrait, finished print"
-                                ratio="Portrait · 4:5 · black and white"
+                                position="52% 50%"
                             />
-                            <ImagePlaceholder
+                            <Photo
+                                src={PhotoChildren}
+                                alt="Two children smiling in front of the studio backdrop"
                                 className="tps-reveal tps-gallery__offset"
-                                label="Print presented in the folio"
-                                ratio="Portrait · 4:5 · black and white"
+                                position="50% 35%"
                             />
                         </div>
-                        */}
                     </div>
                 </section>
 
@@ -581,7 +600,7 @@ export default function PortraitStudio() {
             <footer className="tps-footer">
                 <div className="tps-container tps-footer__inner">
                     <span>&copy; {new Date().getFullYear()} The Portrait Studio</span>
-                    <a href="https://instagram.com/portraitstudio.to" target="_blank" rel="noopener noreferrer">
+                    <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
                         Instagram @portraitstudio.to
                     </a>
                     <span>
